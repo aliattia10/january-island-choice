@@ -3,10 +3,15 @@
 
 body {
   background:
-    radial-gradient(900px 520px at 8% -8%, #f3d5cc 0%, transparent 55%),
-    radial-gradient(700px 420px at 100% 8%, color-mix(in srgb, var(--color-sea) 14%, white) 0%, transparent 48%),
-    radial-gradient(800px 400px at 70% 100%, #f0e0c8 0%, transparent 50%),
-    var(--color-paper);
+    radial-gradient(920px 580px at -8% -12%, #f08a82 0%, transparent 58%),
+    radial-gradient(760px 520px at 108% -6%, #5eb0aa 0%, transparent 52%),
+    radial-gradient(680px 520px at 0% 34%, #f08a82 0%, transparent 56%),
+    radial-gradient(720px 500px at 100% 38%, #5eb0aa 0%, transparent 54%),
+    radial-gradient(780px 540px at 82% 58%, #f3a8b0 0%, transparent 58%),
+    radial-gradient(640px 460px at 8% 64%, #7ec4bf 0%, transparent 55%),
+    radial-gradient(820px 480px at 92% 108%, #f0b45a 0%, transparent 55%),
+    radial-gradient(640px 420px at 12% 88%, #f3c0c8 0%, transparent 50%),
+    linear-gradient(180deg, #fbcfc4 0%, #fde6dc 38%, #f7ddd4 100%);
   color: var(--color-ink-2);
 }
 
@@ -16,13 +21,9 @@ body {
 .hero {
   position: relative;
   min-height: 92dvh;
-  color: var(--color-accent-ink);
+  color: var(--color-wine);
   isolation: isolate;
-}
-.hero h1,
-.hero h2,
-.hero h3 {
-  color: var(--color-accent-ink);
+  overflow: hidden;
 }
 .hero-stage { position: absolute; inset: 0; }
 .hero-photo {
@@ -40,25 +41,39 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.92) contrast(1.04);
+  filter: saturate(1.12) contrast(1.04);
 }
 .hero-photo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(100deg, rgba(40, 22, 20, 0.66) 0%, rgba(40, 22, 20, 0.32) 36%, rgba(40, 22, 20, 0.08) 58%, rgba(40, 22, 20, 0.18) 100%),
-    linear-gradient(180deg, rgba(40, 22, 20, 0.22) 0%, transparent 38%, rgba(40, 22, 20, 0.62) 100%);
-  box-shadow: inset 0 0 140px rgba(40, 22, 20, 0.28);
+  pointer-events: none;
+}
+.hero-photo[data-dest="palma"]::after {
+  background: linear-gradient(160deg, rgba(232, 176, 72, 0.32) 0%, rgba(240, 150, 100, 0.22) 48%, rgba(255, 200, 140, 0.26) 100%);
+}
+.hero-photo[data-dest="maspalomas"]::after {
+  background: linear-gradient(160deg, rgba(232, 110, 72, 0.32) 0%, rgba(240, 140, 80, 0.22) 50%, rgba(255, 176, 120, 0.28) 100%);
+}
+.hero-photo[data-dest="laspalmas"]::after {
+  background: linear-gradient(160deg, rgba(56, 150, 148, 0.3) 0%, rgba(240, 160, 120, 0.2) 52%, rgba(90, 176, 170, 0.26) 100%);
 }
 .masthead {
-  position: relative;
+  position: absolute;
+  top: 16px;
+  left: var(--gutter);
+  right: var(--gutter);
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 20px var(--gutter) 0;
+  margin: 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 241, 234, 0.92);
+  color: var(--color-wine);
+  box-shadow: var(--shadow-soft);
 }
 .wordmark {
   font-family: var(--font-display);
@@ -71,43 +86,47 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   display: flex;
   gap: 16px;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: lowercase;
 }
-.masthead nav a { color: inherit; text-decoration: none; opacity: 0.88; }
-.masthead nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 0.25em; }
+.masthead nav a { color: var(--color-sea); text-decoration: none; }
+.masthead nav a:hover { text-decoration: underline; text-underline-offset: 0.25em; }
 .hero-plate {
-  position: relative;
+  position: absolute;
   z-index: 2;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 28px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 92dvh;
-  padding: 0 var(--gutter) 56px;
-  max-width: 38rem;
+  max-width: 34rem;
+  padding: 26px 26px 22px;
+  border-radius: 28px;
+  background: rgba(255, 236, 228, 0.94);
+  color: var(--color-ink);
+  box-shadow: 0 22px 50px rgba(138, 47, 72, 0.22);
+  border: 2px solid rgba(232, 140, 120, 0.55);
+}
+.hero-plate h1 {
+  color: var(--color-wine);
 }
 .kicker {
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-gold) 70%, white);
-  margin-bottom: 12px;
-}
-.hero-plate h1,
-.hero-plate .lead,
-.hero-plate .kicker {
-  text-shadow: 0 2px 22px rgba(40, 22, 20, 0.45);
+  color: var(--color-terracotta-ink);
+  margin-bottom: 10px;
 }
 .hero .lead {
-  margin-top: 14px;
+  margin-top: 12px;
   font-size: var(--text-lead);
   line-height: 1.45;
   max-width: 28ch;
-  color: color-mix(in srgb, var(--color-accent-ink) 94%, var(--color-blush));
+  color: var(--color-ink-2);
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -115,8 +134,8 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   min-height: 44px;
   padding: 0.55rem 1.15rem;
   border-radius: 999px;
-  background: var(--color-accent-ink);
-  color: var(--color-ink);
+  background: var(--color-wine);
+  color: var(--color-accent-ink);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.92rem;
@@ -125,9 +144,9 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 }
 .btn:hover { transform: translateY(-2px); }
 .btn--ghost {
-  background: transparent;
+  background: var(--color-sea);
   color: var(--color-accent-ink);
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, white 55%, transparent);
+  box-shadow: none;
 }
 
 /* Intro */
@@ -141,7 +160,7 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--text-lead);
-  color: var(--color-ink);
+  color: var(--color-wine);
   max-width: 36ch;
   line-height: 1.45;
 }
@@ -156,6 +175,18 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   margin-bottom: 28px;
   max-width: 36rem;
 }
+.head h2 {
+  color: var(--color-wine);
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 5px solid var(--color-rose);
+}
+#islands .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
+#place .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
+#days .head h2 { border-bottom-color: var(--color-terracotta); }
+#numbers .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
+#tradeoffs .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
+#practical .head h2 { color: var(--color-terracotta-ink); border-bottom-color: var(--color-rose); }
 .head p {
   margin-top: 10px;
   color: var(--color-muted);
@@ -175,8 +206,41 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   padding: 10px 10px 18px;
   box-shadow: var(--shadow-soft);
   cursor: pointer;
+  overflow: hidden;
+  border: 3px solid transparent;
   transition: transform var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out);
 }
+.postcard::before {
+  content: "";
+  display: block;
+  height: 14px;
+  margin: -10px -10px 10px;
+  border-radius: 19px 19px 0 0;
+}
+.postcard:has([value="palma"]) {
+  border-color: var(--color-palma);
+  background: #fff8ec;
+}
+.postcard:has([value="palma"])::before {
+  background: linear-gradient(90deg, #f0c24a, #e08a32);
+}
+.postcard:has([value="palma"]) .postcard-body h3 { color: var(--color-gold-ink); }
+.postcard:has([value="maspalomas"]) {
+  border-color: var(--color-maspalomas);
+  background: #fff3ee;
+}
+.postcard:has([value="maspalomas"])::before {
+  background: linear-gradient(90deg, #f07048, #e23a4a);
+}
+.postcard:has([value="maspalomas"]) .postcard-body h3 { color: var(--color-terracotta-ink); }
+.postcard:has([value="laspalmas"]) {
+  border-color: var(--color-laspalmas);
+  background: #eef7f6;
+}
+.postcard:has([value="laspalmas"])::before {
+  background: linear-gradient(90deg, #2a9a94, #1f6f6c);
+}
+.postcard:has([value="laspalmas"]) .postcard-body h3 { color: var(--color-sea); }
 .postcard input {
   position: absolute;
   opacity: 0;
@@ -186,7 +250,17 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 }
 .postcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .postcard:has(:checked) {
-  box-shadow: var(--shadow), 0 0 0 2px var(--color-wine);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+.postcard:has([value="palma"]:checked) {
+  box-shadow: var(--shadow), 0 0 0 5px rgba(212, 160, 58, 0.45);
+}
+.postcard:has([value="maspalomas"]:checked) {
+  box-shadow: var(--shadow), 0 0 0 5px rgba(226, 90, 60, 0.4);
+}
+.postcard:has([value="laspalmas"]:checked) {
+  box-shadow: var(--shadow), 0 0 0 5px rgba(31, 111, 108, 0.4);
 }
 .postcard:has(:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 .postcard figure {
@@ -200,14 +274,13 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.92) contrast(1.04);
+  filter: saturate(1.12) contrast(1.04);
 }
 .postcard figure::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(40, 22, 20, 0.28));
-  box-shadow: inset 0 0 60px rgba(40, 22, 20, 0.12);
+  background: linear-gradient(180deg, transparent 58%, rgba(138, 47, 72, 0.12));
 }
 .postcard-body { padding: 16px 10px 2px; }
 .postcard-body h3 {
@@ -227,7 +300,7 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 }
 .stamp {
   position: absolute;
-  top: 18px;
+  top: 22px;
   right: 18px;
   z-index: 1;
   font-size: 0.68rem;
@@ -235,19 +308,21 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent-ink);
-  background: color-mix(in srgb, var(--color-wine) 82%, black);
   padding: 6px 9px;
   border-radius: 999px;
   opacity: 0;
 }
+.postcard:has([value="palma"]) .stamp { background: var(--color-gold-ink); }
+.postcard:has([value="maspalomas"]) .stamp { background: var(--color-terracotta); }
+.postcard:has([value="laspalmas"]) .stamp { background: var(--color-sea); }
 .postcard:has(:checked) .stamp { opacity: 1; }
 
 /* Nights bar */
 .nights-bar {
   margin-top: 28px;
-  background: color-mix(in srgb, var(--color-card) 88%, transparent);
+  background: #fde4dc;
   backdrop-filter: blur(10px);
-  border: 1px solid var(--color-rule);
+  border: 2px solid #f0a090;
   border-radius: 999px;
   padding: 8px;
   display: flex;
@@ -258,10 +333,10 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 }
 .nights-bar p {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-terracotta);
   padding-left: 12px;
 }
 .nights-pills { display: flex; flex: 1; gap: 6px; }
@@ -276,11 +351,20 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   font-weight: 700;
   font-size: 0.92rem;
   cursor: pointer;
-  color: var(--color-ink-2);
+  color: var(--color-wine);
+  background: #f8c8bc;
 }
 .nights-pills input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.nights-pills label:has(:checked) {
+.nights-pills label:has(#nights-2:checked) {
   background: var(--color-wine);
+  color: var(--color-accent-ink);
+}
+.nights-pills label:has(#nights-3:checked) {
+  background: var(--color-terracotta);
+  color: var(--color-accent-ink);
+}
+.nights-pills label:has(#nights-7:checked) {
+  background: var(--color-sea);
   color: var(--color-accent-ink);
 }
 .nights-pills label:has(:focus-visible) { outline: 2px solid var(--color-focus); }
@@ -309,12 +393,15 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
 }
+.panel[data-dest="palma"] .frame { border: 3px solid var(--color-palma); background: #fff8ec; }
+.panel[data-dest="maspalomas"] .frame { border: 3px solid var(--color-maspalomas); background: #fff3ee; }
+.panel[data-dest="laspalmas"] .frame { border: 3px solid var(--color-laspalmas); background: #eef7f6; }
 .frame img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 14px;
-  filter: saturate(0.92) contrast(1.04);
+  filter: saturate(1.12) contrast(1.04);
 }
 .frame--lead img { aspect-ratio: 16 / 10; min-height: 220px; }
 .frame--side img { aspect-ratio: 4 / 3; }
@@ -331,8 +418,9 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   border-radius: var(--radius);
   padding: 22px 24px;
   box-shadow: var(--shadow-soft);
+  border-left: 6px solid var(--color-rose);
 }
-.weather h3 { font-style: italic; margin-bottom: 8px; }
+.weather h3 { font-style: italic; margin-bottom: 8px; color: var(--color-wine); }
 .weather p { color: var(--color-ink-2); }
 .meta-line {
   margin-top: 10px;
@@ -356,7 +444,7 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 .days time {
   font-family: var(--font-display);
   font-style: italic;
-  color: var(--color-wine);
+  color: var(--color-terracotta-ink);
   font-size: 1.15rem;
 }
 
@@ -366,17 +454,38 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   gap: 16px;
 }
 .price-card {
+  position: relative;
   background: var(--color-card);
   border-radius: var(--radius);
-  padding: 22px 22px 20px;
+  padding: 28px 22px 20px;
   box-shadow: var(--shadow-soft);
-  border: 2px solid transparent;
+  border: 3px solid transparent;
+  overflow: hidden;
   transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
 }
+.price-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+}
+.price-card[data-highlight="palma"] { border-color: var(--color-palma); background: #fff8ec; }
+.price-card[data-highlight="palma"]::before { background: linear-gradient(90deg, #f0c24a, #e08a32); }
+.price-card[data-highlight="palma"] h3,
+.price-card[data-highlight="palma"] .amount { color: var(--color-gold-ink); }
+.price-card[data-highlight="maspalomas"] { border-color: var(--color-maspalomas); background: #fff3ee; }
+.price-card[data-highlight="maspalomas"]::before { background: linear-gradient(90deg, #f07048, #e23a4a); }
+.price-card[data-highlight="maspalomas"] h3,
+.price-card[data-highlight="maspalomas"] .amount { color: var(--color-terracotta-ink); }
+.price-card[data-highlight="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
+.price-card[data-highlight="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
+.price-card[data-highlight="laspalmas"] h3,
+.price-card[data-highlight="laspalmas"] .amount { color: var(--color-sea); }
 html:has(#dest-palma:checked) .price-card[data-highlight="palma"],
 html:has(#dest-maspalomas:checked) .price-card[data-highlight="maspalomas"],
 html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"] {
-  border-color: var(--color-wine);
   transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
@@ -386,7 +495,6 @@ html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"] {
   font-weight: 600;
   font-style: italic;
   font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--color-ink);
   margin: 8px 0 6px;
   font-variant-numeric: lining-nums;
 }
@@ -410,7 +518,9 @@ html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"] {
   padding: 22px;
   box-shadow: var(--shadow-soft);
 }
-.trade h3 { font-style: italic; margin-bottom: 8px; }
+.trade > div:first-child { border-top: 6px solid var(--color-sea); }
+.trade > div:last-child { border-top: 6px solid var(--color-terracotta); }
+.trade h3 { font-style: italic; margin-bottom: 8px; color: var(--color-wine); }
 
 /* Panels */
 .panel { display: none; }
@@ -460,6 +570,7 @@ details.fold {
   margin-bottom: 10px;
   box-shadow: var(--shadow-soft);
   padding: 4px 18px 4px;
+  border-left: 5px solid var(--color-rose);
 }
 details.fold > summary {
   cursor: pointer;
@@ -467,7 +578,7 @@ details.fold > summary {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.2rem;
-  color: var(--color-ink);
+  color: var(--color-wine);
   padding: 16px 0;
 }
 details.fold > summary::-webkit-details-marker { display: none; }
@@ -518,7 +629,7 @@ th { color: var(--color-muted); font-weight: 700; }
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.6rem;
-  color: var(--color-ink);
+  color: var(--color-wine);
   margin-bottom: 16px;
 }
 
@@ -536,5 +647,4 @@ th { color: var(--color-muted); font-weight: 700; }
 
 @media (max-width: 47.99rem) {
   .masthead nav { display: none; }
-  .hero-plate { padding-bottom: 40px; }
 }

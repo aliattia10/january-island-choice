@@ -185,6 +185,7 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 #place .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
 #days .head h2 { border-bottom-color: var(--color-terracotta); }
 #numbers .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
+#book .head h2 { color: var(--color-wine); border-bottom-color: var(--color-rose); }
 #tradeoffs .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
 #practical .head h2 { color: var(--color-terracotta-ink); border-bottom-color: var(--color-rose); }
 .head p {
@@ -506,6 +507,78 @@ html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"] {
   color: var(--color-muted);
   max-width: 60ch;
 }
+
+/* Book this plan */
+.book-plan,
+.book-later {
+  position: relative;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 26px 24px 22px;
+  box-shadow: var(--shadow-soft);
+  border: 3px solid transparent;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.book-plan::before,
+.book-later::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+}
+.book-plan[data-dest="palma"] { border-color: var(--color-palma); background: #fff8ec; }
+.book-plan[data-dest="palma"]::before { background: linear-gradient(90deg, #f0c24a, #e08a32); }
+.book-plan[data-dest="palma"] h3 { color: var(--color-gold-ink); }
+.book-plan[data-dest="maspalomas"] { border-color: var(--color-maspalomas); background: #fff3ee; }
+.book-plan[data-dest="maspalomas"]::before { background: linear-gradient(90deg, #f07048, #e23a4a); }
+.book-plan[data-dest="maspalomas"] h3 { color: var(--color-terracotta-ink); }
+.book-plan[data-dest="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
+.book-plan[data-dest="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
+.book-plan[data-dest="laspalmas"] h3 { color: var(--color-sea); }
+.book-later { border-color: var(--color-wine); background: #fff0f3; }
+.book-later::before { background: linear-gradient(90deg, var(--color-wine), var(--color-rose)); }
+.book-later h3 { color: var(--color-wine); font-style: italic; }
+.book-plan h3 { font-style: italic; }
+.book-note {
+  margin: 8px 0 16px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 56ch;
+}
+.book-later p {
+  margin: 8px 0 16px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 56ch;
+}
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.book-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  color: var(--color-accent-ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--dur-short) var(--ease-out);
+}
+.book-link:hover { transform: translateY(-2px); }
+.book-link--flight { background: var(--color-wine); }
+.book-link--stay { background: var(--color-sea); }
+.book-link--search { background: var(--color-terracotta); }
+.book-link--home { background: var(--color-gold-ink); }
+.book-link--later { background: var(--color-wine); }
 
 /* Trade */
 .trade {

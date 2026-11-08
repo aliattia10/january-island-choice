@@ -21,10 +21,16 @@
     live.textContent = labels[dest] + ", " + nights + " nights.";
   }
 
+  function isChoiceHash(raw) {
+    const parts = (raw || "").replace(/^#/, "").split("/");
+    return Boolean(parts[0] && document.getElementById("dest-" + parts[0]));
+  }
+
   function writeHash() {
     const dest = selected("dest");
     const nights = selected("nights");
     if (!dest || !nights) return;
+    if (location.hash && !isChoiceHash(location.hash)) return;
     const next = "#" + dest + "/" + nights;
     if (location.hash !== next) history.replaceState(null, "", next);
   }

@@ -26,18 +26,14 @@
     const nights = selected("nights");
     if (!dest || !nights) return;
     const next = "#" + dest + "/" + nights;
-    if (location.hash !== next) {
-      history.replaceState(null, "", next);
-    }
+    if (location.hash !== next) history.replaceState(null, "", next);
   }
 
   function readHash() {
     const raw = location.hash.replace(/^#/, "");
     const parts = raw.split("/");
-    const dest = parts[0];
-    const nights = parts[1];
-    const destEl = dest && document.getElementById("dest-" + dest);
-    const nightEl = nights && document.getElementById("nights-" + nights);
+    const destEl = parts[0] && document.getElementById("dest-" + parts[0]);
+    const nightEl = parts[1] && document.getElementById("nights-" + parts[1]);
     if (destEl) destEl.checked = true;
     if (nightEl) nightEl.checked = true;
   }
@@ -63,24 +59,4 @@
   readHash();
   writeHash();
   announce();
-
-  window.hallmarkSlots = function (map) {
-    Object.entries(map).forEach(function (entry) {
-      const slot = document.querySelector('[data-slot="' + entry[0] + '"]');
-      if (!slot) return;
-      const value = entry[1];
-      const image = new Image();
-      image.src = typeof value === "string" ? value : value.src;
-      image.alt = (typeof value === "object" && value.alt) || slot.dataset.alt || "";
-      slot.querySelectorAll(":scope > img").forEach(function (old) {
-        old.remove();
-      });
-      slot.prepend(image);
-    });
-  };
-
-  document.querySelectorAll("[data-slot] img").forEach(function (img) {
-    if (img.complete && !img.naturalWidth) img.remove();
-    else img.addEventListener("error", function () { img.remove(); }, { once: true });
-  });
 }());

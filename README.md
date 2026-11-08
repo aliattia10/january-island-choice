@@ -1,6 +1,6 @@
 # January island choice
 
-A public, mobile-friendly page so Ali’s girlfriend can tap through three January 2027 bases and pick an island:
+A public, mobile-friendly love letter so Ali’s girlfriend can tap through three January 2027 bases and pick an island:
 
 - Palma (Mallorca)
 - Maspalomas (Gran Canaria south)
@@ -8,11 +8,11 @@ A public, mobile-friendly page so Ali’s girlfriend can tap through three Janua
 
 Trip lengths are 2, 3 or 7 nights. There are no bookings and no forms that collect data.
 
-**Live site (once Pages is on):** [https://aliattia10.github.io/january-island-choice/](https://aliattia10.github.io/january-island-choice/)
+**Live site:** [https://aliattia10.github.io/january-island-choice/](https://aliattia10.github.io/january-island-choice/)
 
 This is a GitHub Pages *project* site. Asset URLs are relative (`./styles.css`, `./photos/…`) so they resolve under `/january-island-choice/`.
 
-The site files are on `main` at the repo root. Enable Pages in the GitHub UI: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / root.** First publish can take a few minutes. Do not add a custom domain.
+GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is designed as a warm, mobile-first invitation (cream and rose, postcard islands, practical tables folded away), not a spreadsheet.
 
 ## What the numbers are
 

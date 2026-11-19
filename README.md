@@ -16,13 +16,13 @@ GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is des
 
 ## What the numbers are
 
-Flight prices are a Google Flights snapshot from Wednesday 18 November 2026: economy, taxes included, bags extra. Inbound is one adult. Island to Asturias is the total for two adults.
+Flight prices are a Google Flights snapshot from Thursday 19 November 2026: economy, taxes included, bags extra. Inbound is one adult. Island to Asturias is the total for two adults.
 
-Hotel figures are Booking.com, Wednesday 18 November 2026: 2 adults, 1 room, review score 8+, taxes and fees included, cheapest non-refundable private room suitable for two. Hostel dorms and a Palma tent are not used in the couple totals.
+Hotel figures are Booking.com, Thursday 19 November 2026: 2 adults, 1 room, review score 8+, cheapest non-refundable private room suitable for two. Figures may exclude local VAT (10% in Palma, 7% in Gran Canaria). Hostel dorms and a Palma tent are not used in the couple totals.
 
-Headline private-room hotels used in the totals: Palma Hotel Amic Horizonte (€146 / €208 / €477) because Hostal Bonany 2-night and 7-night rates are currently sold out (last quotes €134 / €468, recheck); Maspalomas HH Riz Resort (€225 / €293 / €676); Las Palmas Viviendas Vacacionales SOSA REYES, shared bathroom (€75 / €112 / €241).
+Headline private-room hotels used in the totals: Palma Hostal Bonany (€134 / €204 / €465), cheaper than Hotel Amic Horizonte (€146 / €208 / €477); Maspalomas HH Riz Resort (€225 / €293 / €719, 7 nights a Superior Double); Las Palmas Viviendas Vacacionales SOSA REYES, shared bathroom (€93 / €140 / €327).
 
-Trip subtotals (inbound pair + headline hotel + island to Asturias): Palma €295 / €337 / €642; Maspalomas €626 / €722 / €911; Las Palmas €476 / €541 / €476. Mallorca inbound €100 cheapest nonstop pair; Gran Canaria inbound €116 cheapest nonstop pair (add €2 if she takes the TUI nonstop).
+Trip subtotals (inbound pair + headline hotel + island to Asturias): Palma €257 / €313 / €614; Maspalomas €431 / €562 / €930; Las Palmas €299 / €409 / €538. Mallorca inbound €89 cheapest nonstop pair; Gran Canaria inbound €98 cheapest nonstop pair (add €44 if she takes the TUI nonstop).
 
 A trip total is inbound pair + hotel + island to Asturias. Food, local buses, airport transfers, attraction tickets, bags, insurance, connection-night hotels and her later Frankfurt ticket are not included.
 

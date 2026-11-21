@@ -34,7 +34,9 @@ body {
 }
 html:has(#dest-palma:checked) .hero-photo[data-dest="palma"],
 html:has(#dest-maspalomas:checked) .hero-photo[data-dest="maspalomas"],
-html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
+html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"],
+html:has(#dest-malaga:checked) .hero-photo[data-dest="malaga"],
+html:has(#dest-barcelona:checked) .hero-photo[data-dest="barcelona"] {
   display: block;
 }
 .hero-photo img {
@@ -57,6 +59,12 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 }
 .hero-photo[data-dest="laspalmas"]::after {
   background: linear-gradient(160deg, rgba(56, 150, 148, 0.3) 0%, rgba(240, 160, 120, 0.2) 52%, rgba(90, 176, 170, 0.26) 100%);
+}
+.hero-photo[data-dest="malaga"]::after {
+  background: linear-gradient(160deg, rgba(224, 112, 56, 0.34) 0%, rgba(240, 150, 80, 0.22) 50%, rgba(255, 188, 120, 0.28) 100%);
+}
+.hero-photo[data-dest="barcelona"]::after {
+  background: linear-gradient(160deg, rgba(168, 56, 88, 0.34) 0%, rgba(232, 130, 140, 0.22) 50%, rgba(255, 176, 160, 0.26) 100%);
 }
 .masthead {
   position: absolute;
@@ -242,6 +250,22 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   background: linear-gradient(90deg, #2a9a94, #1f6f6c);
 }
 .postcard:has([value="laspalmas"]) .postcard-body h3 { color: var(--color-sea); }
+.postcard:has([value="malaga"]) {
+  border-color: var(--color-malaga);
+  background: #fff4ec;
+}
+.postcard:has([value="malaga"])::before {
+  background: linear-gradient(90deg, #e07a38, #c45c28);
+}
+.postcard:has([value="malaga"]) .postcard-body h3 { color: var(--color-malaga); }
+.postcard:has([value="barcelona"]) {
+  border-color: var(--color-barcelona);
+  background: #fff0f4;
+}
+.postcard:has([value="barcelona"])::before {
+  background: linear-gradient(90deg, #c45c78, #9b3658);
+}
+.postcard:has([value="barcelona"]) .postcard-body h3 { color: var(--color-barcelona); }
 .postcard input {
   position: absolute;
   opacity: 0;
@@ -262,6 +286,12 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 }
 .postcard:has([value="laspalmas"]:checked) {
   box-shadow: var(--shadow), 0 0 0 5px rgba(31, 111, 108, 0.4);
+}
+.postcard:has([value="malaga"]:checked) {
+  box-shadow: var(--shadow), 0 0 0 5px rgba(196, 92, 40, 0.42);
+}
+.postcard:has([value="barcelona"]:checked) {
+  box-shadow: var(--shadow), 0 0 0 5px rgba(155, 54, 88, 0.42);
 }
 .postcard:has(:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 .postcard figure {
@@ -316,6 +346,8 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 .postcard:has([value="palma"]) .stamp { background: var(--color-gold-ink); }
 .postcard:has([value="maspalomas"]) .stamp { background: var(--color-terracotta); }
 .postcard:has([value="laspalmas"]) .stamp { background: var(--color-sea); }
+.postcard:has([value="malaga"]) .stamp { background: var(--color-malaga); }
+.postcard:has([value="barcelona"]) .stamp { background: var(--color-barcelona); }
 .postcard:has(:checked) .stamp { opacity: 1; }
 
 /* Nights bar */
@@ -356,10 +388,6 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
   background: #f8c8bc;
 }
 .nights-pills input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.nights-pills label:has(#nights-2:checked) {
-  background: var(--color-wine);
-  color: var(--color-accent-ink);
-}
 .nights-pills label:has(#nights-3:checked) {
   background: var(--color-terracotta);
   color: var(--color-accent-ink);
@@ -397,6 +425,17 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 .panel[data-dest="palma"] .frame { border: 3px solid var(--color-palma); background: #fff8ec; }
 .panel[data-dest="maspalomas"] .frame { border: 3px solid var(--color-maspalomas); background: #fff3ee; }
 .panel[data-dest="laspalmas"] .frame { border: 3px solid var(--color-laspalmas); background: #eef7f6; }
+.panel[data-dest="malaga"] .frame { border: 3px solid var(--color-malaga); background: #fff4ec; }
+.panel[data-dest="barcelona"] .frame { border: 3px solid var(--color-barcelona); background: #fff0f4; }
+.jump-note {
+  background: #fff3ee;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-soft);
+  border-left: 6px solid var(--color-terracotta);
+}
+.jump-note h3 { font-style: italic; margin-bottom: 8px; color: var(--color-terracotta-ink); }
 .frame img {
   width: 100%;
   height: auto;
@@ -484,12 +523,36 @@ html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"] {
 .price-card[data-highlight="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
 .price-card[data-highlight="laspalmas"] h3,
 .price-card[data-highlight="laspalmas"] .amount { color: var(--color-sea); }
+.price-card[data-highlight="malaga"] { border-color: var(--color-malaga); background: #fff4ec; }
+.price-card[data-highlight="malaga"]::before { background: linear-gradient(90deg, #e07a38, #c45c28); }
+.price-card[data-highlight="malaga"] h3,
+.price-card[data-highlight="malaga"] .amount { color: var(--color-malaga); }
+.price-card[data-highlight="barcelona"] { border-color: var(--color-barcelona); background: #fff0f4; }
+.price-card[data-highlight="barcelona"]::before { background: linear-gradient(90deg, #c45c78, #9b3658); }
+.price-card[data-highlight="barcelona"] h3,
+.price-card[data-highlight="barcelona"] .amount { color: var(--color-barcelona); }
 html:has(#dest-palma:checked) .price-card[data-highlight="palma"],
 html:has(#dest-maspalomas:checked) .price-card[data-highlight="maspalomas"],
-html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"] {
+html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"],
+html:has(#dest-malaga:checked) .price-card[data-highlight="malaga"],
+html:has(#dest-barcelona:checked) .price-card[data-highlight="barcelona"] {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
+.best-tag {
+  display: inline-block;
+  margin: 4px 0 0;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-ink);
+  background: var(--color-wine);
+  padding: 5px 9px;
+  border-radius: 999px;
+}
+.price-card[data-highlight="palma"] .best-tag { background: var(--color-gold-ink); }
+.price-card[data-highlight="malaga"] .best-tag { background: var(--color-malaga); }
 .price-card h3 { font-style: italic; }
 .amount {
   font-family: var(--font-display);
@@ -538,6 +601,12 @@ html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"] {
 .book-plan[data-dest="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
 .book-plan[data-dest="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
 .book-plan[data-dest="laspalmas"] h3 { color: var(--color-sea); }
+.book-plan[data-dest="malaga"] { border-color: var(--color-malaga); background: #fff4ec; }
+.book-plan[data-dest="malaga"]::before { background: linear-gradient(90deg, #e07a38, #c45c28); }
+.book-plan[data-dest="malaga"] h3 { color: var(--color-malaga); }
+.book-plan[data-dest="barcelona"] { border-color: var(--color-barcelona); background: #fff0f4; }
+.book-plan[data-dest="barcelona"]::before { background: linear-gradient(90deg, #c45c78, #9b3658); }
+.book-plan[data-dest="barcelona"] h3 { color: var(--color-barcelona); }
 .book-later { border-color: var(--color-wine); background: #fff0f3; }
 .book-later::before { background: linear-gradient(90deg, var(--color-wine), var(--color-rose)); }
 .book-later h3 { color: var(--color-wine); font-style: italic; }
@@ -602,21 +671,25 @@ html:has(#dest-palma:checked) .panel[data-dest="palma"][data-nights="all"],
 html:has(#dest-maspalomas:checked) .panel[data-dest="maspalomas"]:not([data-nights]),
 html:has(#dest-maspalomas:checked) .panel[data-dest="maspalomas"][data-nights="all"],
 html:has(#dest-laspalmas:checked) .panel[data-dest="laspalmas"]:not([data-nights]),
-html:has(#dest-laspalmas:checked) .panel[data-dest="laspalmas"][data-nights="all"] {
+html:has(#dest-laspalmas:checked) .panel[data-dest="laspalmas"][data-nights="all"],
+html:has(#dest-malaga:checked) .panel[data-dest="malaga"]:not([data-nights]),
+html:has(#dest-malaga:checked) .panel[data-dest="malaga"][data-nights="all"],
+html:has(#dest-barcelona:checked) .panel[data-dest="barcelona"]:not([data-nights]),
+html:has(#dest-barcelona:checked) .panel[data-dest="barcelona"][data-nights="all"] {
   display: block;
 }
-html:has(#dest-palma:checked):has(#nights-2:checked) .panel[data-dest="palma"][data-nights="2"],
 html:has(#dest-palma:checked):has(#nights-3:checked) .panel[data-dest="palma"][data-nights="3"],
 html:has(#dest-palma:checked):has(#nights-7:checked) .panel[data-dest="palma"][data-nights="7"],
-html:has(#dest-maspalomas:checked):has(#nights-2:checked) .panel[data-dest="maspalomas"][data-nights="2"],
 html:has(#dest-maspalomas:checked):has(#nights-3:checked) .panel[data-dest="maspalomas"][data-nights="3"],
 html:has(#dest-maspalomas:checked):has(#nights-7:checked) .panel[data-dest="maspalomas"][data-nights="7"],
-html:has(#dest-laspalmas:checked):has(#nights-2:checked) .panel[data-dest="laspalmas"][data-nights="2"],
 html:has(#dest-laspalmas:checked):has(#nights-3:checked) .panel[data-dest="laspalmas"][data-nights="3"],
-html:has(#dest-laspalmas:checked):has(#nights-7:checked) .panel[data-dest="laspalmas"][data-nights="7"] {
+html:has(#dest-laspalmas:checked):has(#nights-7:checked) .panel[data-dest="laspalmas"][data-nights="7"],
+html:has(#dest-malaga:checked):has(#nights-3:checked) .panel[data-dest="malaga"][data-nights="3"],
+html:has(#dest-malaga:checked):has(#nights-7:checked) .panel[data-dest="malaga"][data-nights="7"],
+html:has(#dest-barcelona:checked):has(#nights-3:checked) .panel[data-dest="barcelona"][data-nights="3"],
+html:has(#dest-barcelona:checked):has(#nights-7:checked) .panel[data-dest="barcelona"][data-nights="7"] {
   display: block;
 }
-html:has(#nights-2:checked) .panel[data-nights="2"]:not([data-dest]),
 html:has(#nights-3:checked) .panel[data-nights="3"]:not([data-dest]),
 html:has(#nights-7:checked) .panel[data-nights="7"]:not([data-dest]) {
   display: block;
@@ -624,9 +697,13 @@ html:has(#nights-7:checked) .panel[data-nights="7"]:not([data-dest]) {
 html:has(#dest-palma:checked) .trade.panel[data-dest="palma"][data-nights="all"],
 html:has(#dest-maspalomas:checked) .trade.panel[data-dest="maspalomas"][data-nights="all"],
 html:has(#dest-laspalmas:checked) .trade.panel[data-dest="laspalmas"][data-nights="all"],
+html:has(#dest-malaga:checked) .trade.panel[data-dest="malaga"][data-nights="all"],
+html:has(#dest-barcelona:checked) .trade.panel[data-dest="barcelona"][data-nights="all"],
 html:has(#dest-palma:checked) .ground.panel[data-dest="palma"][data-nights="all"],
 html:has(#dest-maspalomas:checked) .ground.panel[data-dest="maspalomas"][data-nights="all"],
-html:has(#dest-laspalmas:checked) .ground.panel[data-dest="laspalmas"][data-nights="all"] {
+html:has(#dest-laspalmas:checked) .ground.panel[data-dest="laspalmas"][data-nights="all"],
+html:has(#dest-malaga:checked) .ground.panel[data-dest="malaga"][data-nights="all"],
+html:has(#dest-barcelona:checked) .ground.panel[data-dest="barcelona"][data-nights="all"] {
   display: grid;
 }
 
@@ -716,6 +793,11 @@ th { color: var(--color-muted); font-weight: 700; }
   .ground { grid-template-columns: 1fr 1fr; }
   .intro .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; }
   .section { padding-block: 80px; }
+}
+
+@media (min-width: 70rem) {
+  .islands { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .price-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 @media (max-width: 47.99rem) {

@@ -6,7 +6,9 @@
   const labels = {
     palma: "Palma, Mallorca",
     maspalomas: "Maspalomas, Gran Canaria south",
-    laspalmas: "Las Palmas, Gran Canaria city"
+    laspalmas: "Las Palmas, Gran Canaria city",
+    malaga: "Málaga",
+    barcelona: "Barcelona"
   };
 
   function selected(name) {

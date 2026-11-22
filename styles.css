@@ -194,6 +194,7 @@ html:has(#dest-barcelona:checked) .hero-photo[data-dest="barcelona"] {
 #days .head h2 { border-bottom-color: var(--color-terracotta); }
 #numbers .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
 #book .head h2 { color: var(--color-wine); border-bottom-color: var(--color-rose); }
+#nicer .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
 #tradeoffs .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
 #practical .head h2 { color: var(--color-terracotta-ink); border-bottom-color: var(--color-rose); }
 .head p {
@@ -624,30 +625,106 @@ html:has(#dest-barcelona:checked) .price-card[data-highlight="barcelona"] {
   max-width: 56ch;
 }
 .book-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 10px;
 }
 .book-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0.55rem 1.15rem;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 1.1rem;
   border-radius: 999px;
   color: var(--color-accent-ink);
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  text-align: center;
   box-shadow: var(--shadow-soft);
   transition: transform var(--dur-short) var(--ease-out);
 }
 .book-link:hover { transform: translateY(-2px); }
-.book-link--flight { background: var(--color-wine); }
-.book-link--stay { background: var(--color-sea); }
+.book-link--flight,
+.book-link--ella { background: var(--color-wine); }
+.book-link--stay,
+.book-link--ali { background: var(--color-sea); }
 .book-link--search { background: var(--color-terracotta); }
 .book-link--home { background: var(--color-gold-ink); }
 .book-link--later { background: var(--color-wine); }
+
+.days-head {
+  font-style: italic;
+  margin: 8px 0 4px;
+  color: var(--color-wine);
+}
+.days-head + .days { margin-bottom: 12px; }
+
+.nicer-rate {
+  margin: -8px 0 22px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 60ch;
+}
+.nicer-callout {
+  background: #fff0f4;
+  border: 3px solid var(--color-barcelona);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-soft);
+}
+.nicer-callout p { color: var(--color-barcelona); font-family: var(--font-display); font-style: italic; }
+.nicer-list {
+  display: grid;
+  gap: 14px;
+}
+.nicer-card {
+  position: relative;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 22px 20px 18px;
+  box-shadow: var(--shadow-soft);
+  border: 3px solid transparent;
+  overflow: hidden;
+}
+.nicer-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+}
+.nicer-card[data-dest="palma"] { border-color: var(--color-palma); background: #fff8ec; }
+.nicer-card[data-dest="palma"]::before { background: linear-gradient(90deg, #f0c24a, #e08a32); }
+.nicer-card[data-dest="palma"] h3 { color: var(--color-gold-ink); }
+.nicer-card[data-dest="maspalomas"] { border-color: var(--color-maspalomas); background: #fff3ee; }
+.nicer-card[data-dest="maspalomas"]::before { background: linear-gradient(90deg, #f07048, #e23a4a); }
+.nicer-card[data-dest="maspalomas"] h3 { color: var(--color-terracotta-ink); }
+.nicer-card[data-dest="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
+.nicer-card[data-dest="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
+.nicer-card[data-dest="laspalmas"] h3 { color: var(--color-sea); }
+.nicer-card[data-dest="malaga"] { border-color: var(--color-malaga); background: #fff4ec; }
+.nicer-card[data-dest="malaga"]::before { background: linear-gradient(90deg, #e07a38, #c45c28); }
+.nicer-card[data-dest="malaga"] h3 { color: var(--color-malaga); }
+.nicer-card[data-dest="barcelona"] { border-color: var(--color-barcelona); background: #fff0f4; }
+.nicer-card[data-dest="barcelona"]::before { background: linear-gradient(90deg, #c45c78, #9b3658); }
+.nicer-card[data-dest="barcelona"] h3 { color: var(--color-barcelona); }
+.nicer-card h3 { font-style: italic; margin-bottom: 6px; padding-right: 4.5rem; }
+.nicer-meta { font-size: var(--text-sm); color: var(--color-muted); }
+.nicer-price {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 10px 0 4px;
+  font-variant-numeric: lining-nums;
+}
+.nicer-approx { font-size: var(--text-sm); color: var(--color-muted); margin-bottom: 14px; }
+.nicer-card .best-tag { position: absolute; top: 18px; right: 14px; }
+.nicer-card .book-link { margin-top: 4px; }
 
 /* Trade */
 .trade {
@@ -705,6 +782,14 @@ html:has(#dest-laspalmas:checked) .ground.panel[data-dest="laspalmas"][data-nigh
 html:has(#dest-malaga:checked) .ground.panel[data-dest="malaga"][data-nights="all"],
 html:has(#dest-barcelona:checked) .ground.panel[data-dest="barcelona"][data-nights="all"] {
   display: grid;
+}
+html:has(#dest-palma:checked) .nicer-card.panel[data-dest="palma"],
+html:has(#dest-maspalomas:checked) .nicer-card.panel[data-dest="maspalomas"],
+html:has(#dest-laspalmas:checked) .nicer-card.panel[data-dest="laspalmas"],
+html:has(#dest-malaga:checked) .nicer-card.panel[data-dest="malaga"],
+html:has(#dest-barcelona:checked) .nicer-card.panel[data-dest="barcelona"] {
+  display: flex;
+  flex-direction: column;
 }
 
 @supports not selector(:has(*)) {
@@ -791,6 +876,8 @@ th { color: var(--color-muted); font-weight: 700; }
   .price-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .trade { grid-template-columns: 1fr 1fr; }
   .ground { grid-template-columns: 1fr 1fr; }
+  .book-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .nicer-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .intro .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; }
   .section { padding-block: 80px; }
 }
@@ -798,6 +885,7 @@ th { color: var(--color-muted); font-weight: 700; }
 @media (min-width: 70rem) {
   .islands { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .price-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .nicer-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 47.99rem) {

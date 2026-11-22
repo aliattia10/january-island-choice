@@ -18,11 +18,13 @@ GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is des
 
 ## What the numbers are
 
-Prices are a snapshot from Sunday 22 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices are totals for two adults.
+Prices are a snapshot from Sunday 22 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices in the euro totals are for two adults.
 
-Hotel figures are Booking.com prices before about 10% tax. Named hotels are what we priced; the buttons open a city search (review score 8+, private bathroom), not a hotel page.
+Budget hotel figures are Booking.com prices in euros, before about 10% tax. Named hotels are what we priced; the plan buttons open a city search (review score 8+, private bathroom). Each date option also has two one-adult Google Flights buttons: Ella from Hannover, and Ali from Asturias (round trip home to OVD). Ella’s link includes the shared return to Asturias where that return was priced.
 
-Headline cheapest: 3 nights Palma €374 (Brick Palma); 7 nights Málaga €564 (Hostal NV Palacio Congresos).
+Nicer 3- and 4-star rooms from this check came back in US dollars and are shown in USD as returned, with an approximate 1 USD ≈ 0.86 EUR conversion beside them. Barcelona is the best value for a proper hotel (Hotel Arc La Rambla $231 for 15–18 Dec). Maspalomas was not checked for 3/4-star rooms. Málaga has a second three-night window, 18–21 December, on Ella’s Eurowings nonstop (≈$130); Ali’s OVD–AGP round trip is ≈$111; her 21 December return was not priced, so that total is partial.
+
+Headline cheapest (budget euro totals): 3 nights Palma €374 (Brick Palma); 7 nights Málaga €564 (Hostal NV Palacio Congresos).
 
 Trip subtotals (both inbound flights + headline room + home to Asturias):
 

@@ -18,17 +18,17 @@ GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is des
 
 ## What the numbers are
 
-Prices are a snapshot from Friday 20 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices are totals for two adults.
+Prices are a snapshot from Sunday 22 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices are totals for two adults.
 
 Hotel figures are Booking.com prices before about 10% tax. Named hotels are what we priced; the buttons open a city search (review score 8+, private bathroom), not a hotel page.
 
-Headline cheapest: 3 nights Palma €383 (Brick Palma); 7 nights Málaga €564 (Hostal NV Palacio Congresos).
+Headline cheapest: 3 nights Palma €374 (Brick Palma); 7 nights Málaga €564 (Hostal NV Palacio Congresos).
 
 Trip subtotals (both inbound flights + headline room + home to Asturias):
 
 | City | 3 nights | 7 nights |
 | --- | --- | --- |
-| Palma | €383 (14–17 Dec) | €656 (14–21 Dec) |
+| Palma | €374 (14–17 Dec) | €647 (14–21 Dec) |
 | Maspalomas | €463 (16–19 Dec) | €798 (15–22 Dec) |
 | Las Palmas | €388 (16–19 Dec) | €730 (15–22 Dec) |
 | Málaga | €417 (15–18 Dec) | €564 (18–25 Dec) |

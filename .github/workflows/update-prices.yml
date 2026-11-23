@@ -1,0 +1,53 @@
+name: Update prices
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Date guard
+        id: guard
+        run: |
+          today=$(date -u +%F)
+          if [[ "$today" > "2026-12-14" ]]; then
+            echo "expired=true" >> "$GITHUB_OUTPUT"
+            echo "Past 2026-12-14; skipping price updates."
+          else
+            echo "expired=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.expired == 'false'
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.expired == 'false'
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        if: steps.guard.outputs.expired == 'false'
+        run: pip install -r requirements.txt
+
+      - name: Fetch prices
+        if: steps.guard.outputs.expired == 'false'
+        run: python scripts/update_prices.py
+
+      - name: Commit if prices.json changed
+        if: steps.guard.outputs.expired == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json
+          if git diff --cached --quiet; then
+            echo "No price changes."
+          else
+            git commit -m "Update flight prices from Google Flights"
+            git push
+          fi

@@ -18,7 +18,9 @@ GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is des
 
 ## What the numbers are
 
-Prices are a snapshot from Monday 23 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices in the euro totals are for two adults.
+Prices on the page come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`, a Google Flights scraper) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. Hotels stay as last checked — there is no free reliable hotel source in that pipeline.
+
+The current flight snapshot is 23 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices in the euro totals are for two adults. Hotel euro figures were last checked 22 November 2026.
 
 Budget hotel figures are Booking.com prices in euros, before about 10% tax. Named hotels are what we priced; the plan buttons open a city search (review score 8+, private bathroom). Each date option also has two one-adult Google Flights buttons: Ella from Hannover, and Ali from Asturias (round trip home to OVD). Ella’s link includes the shared return to Asturias where that return was priced.
 

@@ -56,7 +56,7 @@
   <section class="section intro">
     <div class="container inner">
       <p class="lede">A love letter with plane tickets. Five cities, a handful of nights, and the place that feels most like us.</p>
-      <p class="aside">Ella’s vacation is the last two weeks of December — 14 December 2026 to 1 January 2027. Ali flies from Asturias (OVD). Ella flies from Hannover (HAJ). They meet in the city, then fly home to Asturias together. This is a private page for two people. It does not process payment. When you are ready, Book this plan opens Google Flights or Booking.com with the dates already filled in. Recheck fares before you pay — snapshot 23 November 2026.</p>
+      <p class="aside">Ella’s vacation is the last two weeks of December — 14 December 2026 to 1 January 2027. Ali flies from Asturias (OVD). Ella flies from Hannover (HAJ). They meet in the city, then fly home to Asturias together. This is a private page for two people. It does not process payment. When you are ready, Book this plan opens Google Flights or Booking.com with the dates already filled in. Recheck fares before you pay — snapshot <span data-bind="snapshot">23 November 2026</span>.</p>
     </div>
   </section>
 
@@ -103,7 +103,7 @@
           <div class="postcard-body">
             <h3>Las Palmas</h3>
             <p class="feeling">City streets, and a real beach at the end of the day.</p>
-            <p class="practical">Gran Canaria city. Cheapest three-night total after Palma.</p>
+            <p class="practical">Gran Canaria city. <span data-if-cheapest="laspalmas:3" hidden>Cheapest three-night total.</span><span data-if-cheapest="palma:3">Cheapest three-night total after Palma.</span></p>
           </div>
         </label>
 
@@ -116,7 +116,7 @@
           <div class="postcard-body">
             <h3>Málaga</h3>
             <p class="feeling">Andalusian lanes, the cathedral, the port at dusk.</p>
-            <p class="practical">She has a direct from Hannover. Cheapest seven-night total.</p>
+            <p class="practical">She has a direct from Hannover. <span data-if-cheapest="malaga:7">Cheapest seven-night total.</span></p>
           </div>
         </label>
 
@@ -176,10 +176,10 @@
         </div>
         <div class="weather">
           <h3>December in Palma</h3>
-          <p>A walkable city, with village days if we want them. She has a Eurowings nonstop from Hannover. The cheapest three-night total in this snapshot is here.</p>
-          <p class="meta-line">Arrive Monday 14 December 2026. She: Hannover to Palma, Eurowings 07:55 nonstop, €84. Ali: Asturias to Palma, Vueling 08:50, €23. Home to Asturias is Vueling for two, €68.</p>
-          <p class="meta-line panel" data-dest="palma" data-nights="3">Leave Thursday 17 December, Palma to Asturias 08:00. Room from €199 Brick Palma (score 9.0). Together, about €374. Hostal Bonany is €214, total €389.</p>
-          <p class="meta-line panel" data-dest="palma" data-nights="7">Leave Monday 21 December, Vueling 06:30 — an early start. Room from €472 Hesperia Mallorca. Together, about €647. Hostal Bonany is €489, total €664.</p>
+          <p>A walkable city, with village days if we want them. She has a Eurowings nonstop from Hannover.<span data-if-cheapest="palma:3"> The cheapest three-night total in this snapshot is here.</span></p>
+          <p class="meta-line">Arrive Monday 14 December 2026. She: Hannover to Palma, Eurowings 07:55 nonstop, <span data-bind="f:haj-pmi-14">€84</span>. Ali: Asturias to Palma, Vueling 08:50, <span data-bind="f:ovd-pmi-14">€23</span>. Home to Asturias is Vueling for two, <span data-bind="f:pmi-ovd-17">€68</span>.</p>
+          <p class="meta-line panel" data-dest="palma" data-nights="3">Leave Thursday 17 December, Palma to Asturias 08:00. Room from <span data-bind="h:brick-palma-3">€199</span> Brick Palma (score 9.0). Together, about <span data-bind="p:palma-3">€374</span>. Hostal Bonany is <span data-bind="h:bonany-palma-3">€214</span>, total <span data-bind="p:palma-3:alt">€389</span>.</p>
+          <p class="meta-line panel" data-dest="palma" data-nights="7">Leave Monday 21 December, Vueling 06:30 — an early start. Room from <span data-bind="h:hesperia-palma-7">€472</span> Hesperia Mallorca. Together, about <span data-bind="p:palma-7">€647</span>. Hostal Bonany is <span data-bind="h:bonany-palma-7">€489</span>, total <span data-bind="p:palma-7:alt">€664</span>.</p>
         </div>
       </div>
 
@@ -203,8 +203,8 @@
         <div class="weather">
           <h3>December in Maspalomas</h3>
           <p>Dunes and lighthouse on the doorstep. Same Gran Canaria airport as Las Palmas; the south is a bus or taxi from there.</p>
-          <p class="meta-line panel" data-dest="maspalomas" data-nights="3">Arrive Wednesday 16 December. She: Hannover to Las Palmas, Eurowings 12:50 nonstop, €72. Ali: Asturias to Las Palmas, Air Europa via Madrid, €76 (Binter nonstop €186). Home: Volotea 18:45 for two, €77. Flights €225. Casa Ohana €230, total €455. HH Riz €264, total €489.</p>
-          <p class="meta-line panel" data-dest="maspalomas" data-nights="7">Arrive Tuesday 15 December, leave 22 December. Flights €262 — her Vueling via Barcelona €124, return €62. Maspalomas total €798. HH Riz is unavailable these dates; search for rooms instead. Arriving a day later, 16–22 December, keeps her on the €72 nonstop and drops flights to €210.</p>
+          <p class="meta-line panel" data-dest="maspalomas" data-nights="3">Arrive Wednesday 16 December. She: Hannover to Las Palmas, Eurowings 12:50 nonstop, <span data-bind="f:haj-lpa-16">€72</span>. Ali: Asturias to Las Palmas, Air Europa via Madrid, <span data-bind="f:ovd-lpa-16">€76</span> (Binter nonstop <span data-bind="f:ovd-lpa-16-binter">€186</span>). Home: Volotea 18:45 for two, <span data-bind="f:lpa-ovd-19">€77</span>. Flights <span data-bind="b:gc-3">€225</span>. Casa Ohana <span data-bind="h:ohana-masp-3">€230</span>, total <span data-bind="p:masp-3">€455</span>. HH Riz <span data-bind="h:hhriz-masp-3">€264</span>, total <span data-bind="p:masp-3:alt">€489</span>.</p>
+          <p class="meta-line panel" data-dest="maspalomas" data-nights="7">Arrive Tuesday 15 December, leave 22 December. Flights <span data-bind="b:gc-7">€262</span> — her Vueling via Barcelona <span data-bind="f:haj-lpa-15">€124</span>, return <span data-bind="f:lpa-ovd-22">€62</span>. Maspalomas total <span data-bind="p:masp-7">€798</span>. HH Riz is unavailable these dates; search for rooms instead. Arriving a day later, 16–22 December, keeps her on the <span data-bind="f:haj-lpa-16">€72</span> nonstop and drops flights to <span data-bind="b:gc-16-22">€210</span>.</p>
         </div>
       </div>
 
@@ -228,8 +228,8 @@
         <div class="weather">
           <h3>December in Las Palmas</h3>
           <p>City streets, then a beach at the end of the day. Same flights as Maspalomas; the rooms are cheaper in this snapshot.</p>
-          <p class="meta-line panel" data-dest="laspalmas" data-nights="3">Arrive Wednesday 16 December, leave 19 December. Flights €225, same Gran Canaria pair. La Isleta Linda studio (score 9.6) €155, total €380. Casa Canaria €216, total €441.</p>
-          <p class="meta-line panel" data-dest="laspalmas" data-nights="7">Arrive Tuesday 15 December, leave 22 December. Flights €262. Apartamentos Vegueta total €730. Casa Canaria total €775. Arriving 16–22 December keeps her on the €72 nonstop (flights €210).</p>
+          <p class="meta-line panel" data-dest="laspalmas" data-nights="3">Arrive Wednesday 16 December, leave 19 December. Flights <span data-bind="b:gc-3">€225</span>, same Gran Canaria pair. La Isleta Linda studio (score 9.6) <span data-bind="h:isleta-lp-3">€155</span>, total <span data-bind="p:lp-3">€380</span>. Casa Canaria <span data-bind="h:canaria-lp-3">€216</span>, total <span data-bind="p:lp-3:alt">€441</span>.</p>
+          <p class="meta-line panel" data-dest="laspalmas" data-nights="7">Arrive Tuesday 15 December, leave 22 December. Flights <span data-bind="b:gc-7">€262</span>. Apartamentos Vegueta total <span data-bind="p:lp-7">€730</span>. Casa Canaria total <span data-bind="p:lp-7:alt">€775</span>. Arriving 16–22 December keeps her on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (flights <span data-bind="b:gc-16-22">€210</span>).</p>
         </div>
       </div>
 
@@ -252,10 +252,10 @@
         </div>
         <div class="weather">
           <h3>December in Málaga</h3>
-          <p>A compact old town, the cathedral, the fortress, the port. She has a direct from Hannover — and the cheapest seven-night total in this snapshot.</p>
-          <p class="meta-line panel" data-dest="malaga" data-nights="3">Arrive Tuesday 15 December, leave 18 December. Ella: Vueling, 1 stop, €152. Ali: Asturias to Málaga, Volotea, €28. Home for two €124. Hostal NV Palacio Congresos (score 8.4) €115. Together, about €419.</p>
-          <p class="meta-line panel" data-dest="malaga" data-nights="3">Or Friday 18 December to Monday 21 December, on Ella’s Eurowings 07:10 nonstop. That inbound was about $130 in this check. Ali’s Asturias to Málaga round trip 18–21 December was about $111 (Volotea 11:10 out nonstop, Air Europa 06:20 back via Madrid). Ella’s return on 21 December was not priced, so there is no full trip total. Rooms for those dates are in Nicer stay. A partial figure — her inbound, his round trip, and Malaga Alameda Centro, excluding her return — is about $651.</p>
-          <p class="meta-line panel" data-dest="malaga" data-nights="7">Arrive Friday 18 December, leave 25 December. Ella: Eurowings 07:10 nonstop, €150. Ali: Volotea €24. Home: Volotea 25 December for two, €66. Hostal NV €324. Together, about €564.</p>
+          <p>A compact old town, the cathedral, the fortress, the port. She has a direct from Hannover<span data-if-cheapest="malaga:7"> — and the cheapest seven-night total in this snapshot</span>.</p>
+          <p class="meta-line panel" data-dest="malaga" data-nights="3">Arrive Tuesday 15 December, leave 18 December. Ella: Vueling, 1 stop, <span data-bind="f:haj-agp-15">€152</span>. Ali: Asturias to Málaga, Volotea, <span data-bind="f:ovd-agp-15">€28</span>. Home for two <span data-bind="f:agp-ovd-18">€124</span>. Hostal NV Palacio Congresos (score 8.4) <span data-bind="h:nv-agp-3">€115</span>. Together, about <span data-bind="p:malaga-3">€419</span>.</p>
+          <p class="meta-line panel" data-dest="malaga" data-nights="3">Or Friday 18 December to Monday 21 December, on Ella’s Eurowings 07:10 nonstop. That inbound was about <span data-bind="usd:haj-agp-18-usd">$130</span> in this check. Ali’s Asturias to Málaga round trip 18–21 December was about <span data-bind="usd:ovd-agp-rt-18-21">$111</span> (Volotea 11:10 out nonstop, Air Europa 06:20 back via Madrid). Ella’s return on 21 December was not priced, so there is no full trip total. Rooms for those dates are in Nicer stay. A partial figure — her inbound, his round trip, and Malaga Alameda Centro, excluding her return — is about <span data-bind="partial:alameda">$651</span>.</p>
+          <p class="meta-line panel" data-dest="malaga" data-nights="7">Arrive Friday 18 December, leave 25 December. Ella: Eurowings 07:10 nonstop, <span data-bind="f:haj-agp-18">€150</span>. Ali: Volotea <span data-bind="f:ovd-agp-18">€24</span>. Home: Volotea 25 December for two, <span data-bind="f:agp-ovd-25">€66</span>. Hostal NV <span data-bind="h:nv-agp-7">€324</span>. Together, about <span data-bind="p:malaga-7">€564</span>.</p>
         </div>
       </div>
 
@@ -279,8 +279,8 @@
         <div class="weather">
           <h3>December in Barcelona</h3>
           <p>Christmas lights and a city we can walk. She has a Vueling nonstop from Hannover.</p>
-          <p class="meta-line panel" data-dest="barcelona" data-nights="3">Arrive Tuesday 15 December, leave 18 December. Ella: Vueling 10:10 nonstop, €83. Ali: Asturias to Barcelona, Vueling 20:55, €23. Home: Vueling 07:20 for two, €144. Hotel BestPrice Maragall €147. Together, about €397.</p>
-          <p class="meta-line panel" data-dest="barcelona" data-nights="7">Arrive Tuesday 15 December, leave 22 December. Same outbound. Home: Air Europa for two, €165. Hostal Argo €427, total €698. Hostal House is the cheaper of the two rooms we priced, total €681.</p>
+          <p class="meta-line panel" data-dest="barcelona" data-nights="3">Arrive Tuesday 15 December, leave 18 December. Ella: Vueling 10:10 nonstop, <span data-bind="f:haj-bcn-15">€83</span>. Ali: Asturias to Barcelona, Vueling 20:55, <span data-bind="f:ovd-bcn-15">€23</span>. Home: Vueling 07:20 for two, <span data-bind="f:bcn-ovd-18">€144</span>. Hotel BestPrice Maragall <span data-bind="h:maragall-bcn-3">€147</span>. Together, about <span data-bind="p:bcn-3">€397</span>.</p>
+          <p class="meta-line panel" data-dest="barcelona" data-nights="7">Arrive Tuesday 15 December, leave 22 December. Same outbound. Home: Air Europa for two, <span data-bind="f:bcn-ovd-22">€165</span>. Hostal Argo <span data-bind="h:argo-bcn-7">€427</span>, total <span data-bind="p:bcn-7">€698</span>. Hostal House is the cheaper of the two rooms we priced, total <span data-bind="p:bcn-7:alt">€681</span>.</p>
         </div>
       </div>
     </div>
@@ -308,7 +308,7 @@
         </li>
         <li>
           <time datetime="2026-12-17">Thu 17 Dec</time>
-          <p>Home to Asturias, Vueling 08:00, €68 for two.</p>
+          <p>Home to Asturias, Vueling 08:00, <span data-bind="f:pmi-ovd-17">€68</span> for two.</p>
         </li>
       </ol>
 
@@ -343,7 +343,7 @@
         </li>
         <li>
           <time datetime="2026-12-21">Mon 21 Dec</time>
-          <p>Home, Vueling 06:30, €68 for two. An early start.</p>
+          <p>Home, Vueling 06:30, <span data-bind="f:pmi-ovd-21">€68</span> for two. An early start.</p>
         </li>
       </ol>
 
@@ -545,7 +545,7 @@
         </li>
         <li>
           <time datetime="2026-12-18">Fri 18 Dec</time>
-          <p>Home, Vueling 07:20, €144 for two.</p>
+          <p>Home, Vueling 07:20, <span data-bind="f:bcn-ovd-18">€144</span> for two.</p>
         </li>
       </ol>
 
@@ -580,7 +580,7 @@
         </li>
         <li>
           <time datetime="2026-12-22">Tue 22 Dec</time>
-          <p>Home on Air Europa, €165 for two.</p>
+          <p>Home on Air Europa, <span data-bind="f:bcn-ovd-22">€165</span> for two.</p>
         </li>
       </ol>
     </div>
@@ -595,43 +595,51 @@
       <div class="price-row">
         <article class="price-card" data-highlight="palma">
           <h3>Palma</h3>
-          <p class="best-tag">Cheapest 3 nights</p>
-          <p class="amount panel" data-nights="3">€374</p>
-          <p class="amount panel" data-nights="7">€647</p>
+          <p class="best-tag" data-badge="3">Cheapest 3 nights</p>
+          <p class="best-tag" data-badge="7" hidden>Cheapest 7 nights</p>
+          <p class="amount panel" data-nights="3" data-bind="p:palma-3">€374</p>
+          <p class="amount panel" data-nights="7" data-bind="p:palma-7">€647</p>
           <p class="why panel" data-nights="3">14–17 December. Brick Palma, her Eurowings nonstop.</p>
           <p class="why panel" data-nights="7">14–21 December. Hesperia Mallorca. Home is a 06:30 start.</p>
         </article>
         <article class="price-card" data-highlight="maspalomas">
           <h3>Maspalomas</h3>
-          <p class="amount panel" data-nights="3">€455</p>
-          <p class="amount panel" data-nights="7">€798</p>
+          <p class="best-tag" data-badge="3" hidden>Cheapest 3 nights</p>
+          <p class="best-tag" data-badge="7" hidden>Cheapest 7 nights</p>
+          <p class="amount panel" data-nights="3" data-bind="p:masp-3">€455</p>
+          <p class="amount panel" data-nights="7" data-bind="p:masp-7">€798</p>
           <p class="why panel" data-nights="3">16–19 December. Casa Ohana. Dunes on the doorstep.</p>
           <p class="why panel" data-nights="7">15–22 December. HH Riz unavailable; this total is the south-coast search we priced.</p>
         </article>
         <article class="price-card" data-highlight="laspalmas">
           <h3>Las Palmas</h3>
-          <p class="amount panel" data-nights="3">€380</p>
-          <p class="amount panel" data-nights="7">€730</p>
+          <p class="best-tag" data-badge="3" hidden>Cheapest 3 nights</p>
+          <p class="best-tag" data-badge="7" hidden>Cheapest 7 nights</p>
+          <p class="amount panel" data-nights="3" data-bind="p:lp-3">€380</p>
+          <p class="amount panel" data-nights="7" data-bind="p:lp-7">€730</p>
           <p class="why panel" data-nights="3">16–19 December. La Isleta Linda studio (9.6). City and a beach.</p>
-          <p class="why panel" data-nights="7">15–22 December. Apartamentos Vegueta. Casa Canaria is €775.</p>
+          <p class="why panel" data-nights="7">15–22 December. Apartamentos Vegueta. Casa Canaria is <span data-bind="p:lp-7:alt">€775</span>.</p>
         </article>
         <article class="price-card" data-highlight="malaga">
           <h3>Málaga</h3>
-          <p class="best-tag">Cheapest 7 nights</p>
-          <p class="amount panel" data-nights="3">€419</p>
-          <p class="amount panel" data-nights="7">€564</p>
+          <p class="best-tag" data-badge="3" hidden>Cheapest 3 nights</p>
+          <p class="best-tag" data-badge="7">Cheapest 7 nights</p>
+          <p class="amount panel" data-nights="3" data-bind="p:malaga-3">€419</p>
+          <p class="amount panel" data-nights="7" data-bind="p:malaga-7">€564</p>
           <p class="why panel" data-nights="3">15–18 December. Hostal NV Palacio Congresos. Ella has a one-stop Vueling. A second window, 18–21 December, uses her Eurowings nonstop; that total is partial because her return was not priced.</p>
           <p class="why panel" data-nights="7">18–25 December. Hostal NV. Ella has a Eurowings nonstop.</p>
         </article>
         <article class="price-card" data-highlight="barcelona">
           <h3>Barcelona</h3>
-          <p class="amount panel" data-nights="3">€397</p>
-          <p class="amount panel" data-nights="7">€698</p>
+          <p class="best-tag" data-badge="3" hidden>Cheapest 3 nights</p>
+          <p class="best-tag" data-badge="7" hidden>Cheapest 7 nights</p>
+          <p class="amount panel" data-nights="3" data-bind="p:bcn-3">€397</p>
+          <p class="amount panel" data-nights="7" data-bind="p:bcn-7">€698</p>
           <p class="why panel" data-nights="3">15–18 December. Hotel BestPrice Maragall. Her Vueling nonstop.</p>
-          <p class="why panel" data-nights="7">15–22 December. Hostal Argo. Hostal House is cheaper at €681.</p>
+          <p class="why panel" data-nights="7">15–22 December. Hostal Argo. Hostal House is cheaper at <span data-bind="p:bcn-7:alt">€681</span>.</p>
         </article>
       </div>
-      <p class="fine">Headline cheapest: 3 nights Palma €374; 7 nights Málaga €564. Hotel prices on the budget picks are Booking.com prices in euros, before about 10% tax. Nicer-stay rooms from this check came back in US dollars and are labelled USD below; 1 USD ≈ 0.86 EUR is an approximate rate only. Flights have no checked bags. Return flight prices in the euro totals are for two. A trip total is both inbound flights plus the room plus home to Asturias. Food, local buses, airport transfers, attraction tickets, bags and insurance are not included. Snapshot 23 November 2026.</p>
+      <p class="fine"><span data-bind="cheapestHeadline">Headline cheapest: 3 nights Palma €374; 7 nights Málaga €564.</span> Hotel prices on the budget picks are Booking.com prices in euros, before about 10% tax. Nicer-stay rooms from this check came back in US dollars and are labelled USD below; 1 USD ≈ 0.86 EUR is an approximate rate only. Flights have no checked bags. Return flight prices in the euro totals are for two. A trip total is both inbound flights plus the room plus home to Asturias. Food, local buses, airport transfers, attraction tickets, bags and insurance are not included. Snapshot <span data-bind="snapshot">23 November 2026</span>.</p>
     </div>
   </section>
 
@@ -641,10 +649,10 @@
         <h2>Nicer stay: 3- and 4-star hotels</h2>
         <p>If the budget rooms feel too plain, these are 3- and 4-star hotels we actually priced. Three nights, two adults, one room. The budget picks above stay as they are.</p>
       </div>
-      <p class="nicer-rate">These room prices came back in US dollars, so we show USD as the search returned it. For a rough euro sense, 1 USD ≈ 0.86 EUR (approximate). Snapshot 23 November 2026.</p>
+      <p class="nicer-rate">These room prices came back in US dollars, so we show USD as the search returned it. For a rough euro sense, 1 USD ≈ 0.86 EUR (approximate). Hotels last checked <span data-bind="hotels_checked">22 November 2026</span>.</p>
 
       <div class="nicer-callout panel" data-dest="barcelona" data-nights="all">
-        <p>Barcelona is the best value for a proper hotel in this check — a well-reviewed 3-star from $231 for three nights.</p>
+        <p>Barcelona is the best value for a proper hotel in this check — a well-reviewed 3-star from <span data-bind="usd:arc-rambla">$231</span> for three nights.</p>
       </div>
 
       <div class="nicer-list">
@@ -652,67 +660,67 @@
           <p class="best-tag">Best value</p>
           <h3>Hotel Arc La Rambla</h3>
           <p class="nicer-meta">Barcelona · 15–18 Dec · 3★ · score 8.8</p>
-          <p class="nicer-price">$231</p>
-          <p class="nicer-approx">USD, as returned. About €199 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:arc-rambla">$231</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:arc-rambla">€199</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Hotel%20Arc%20La%20Rambla&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Hotel Arc La Rambla</a>
         </article>
         <article class="nicer-card panel" data-dest="barcelona" data-nights="all">
           <h3>Hotel Arcelon</h3>
           <p class="nicer-meta">Barcelona · 15–18 Dec · 4★ · score 8.8</p>
-          <p class="nicer-price">$238</p>
-          <p class="nicer-approx">USD, as returned. About €205 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:arcelon">$238</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:arcelon">€205</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Hotel%20Arcelon&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Hotel Arcelon</a>
         </article>
         <article class="nicer-card panel" data-dest="barcelona" data-nights="all">
           <h3>Pestana Arena Barcelona</h3>
           <p class="nicer-meta">Barcelona · 15–18 Dec · 4★ · score 8.8</p>
-          <p class="nicer-price">$261</p>
-          <p class="nicer-approx">USD, as returned. About €224 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:pestana-arena">$261</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:pestana-arena">€224</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Pestana%20Arena%20Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Pestana Arena Barcelona</a>
         </article>
 
         <article class="nicer-card panel" data-dest="laspalmas" data-nights="all">
           <h3>Hotel Matilde Las Palmas</h3>
           <p class="nicer-meta">Las Palmas · 16–19 Dec · 3★ · score 8.8</p>
-          <p class="nicer-price">$243</p>
-          <p class="nicer-approx">USD, as returned. About €209 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:matilde-lp">$243</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:matilde-lp">€209</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Hotel%20Matilde%20Las%20Palmas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Hotel Matilde Las Palmas</a>
         </article>
         <article class="nicer-card panel" data-dest="laspalmas" data-nights="all">
           <h3>Boutique Hotel Cordial Galdós Jardín</h3>
           <p class="nicer-meta">Las Palmas · 16–19 Dec · 4★ · score 9.4</p>
-          <p class="nicer-price">$352</p>
-          <p class="nicer-approx">USD, as returned. About €303 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:cordial-galdos">$352</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:cordial-galdos">€303</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Boutique%20Hotel%20Cordial%20Gald%C3%B3s%20Jard%C3%ADn&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Cordial Galdós Jardín</a>
         </article>
         <article class="nicer-card panel" data-dest="laspalmas" data-nights="all">
           <h3>AC Hotel Gran Canaria</h3>
           <p class="nicer-meta">Las Palmas · 16–19 Dec · 4★ · score 8.4</p>
-          <p class="nicer-price">$354</p>
-          <p class="nicer-approx">USD, as returned. About €304 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:ac-gran-canaria">$354</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:ac-gran-canaria">€304</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=AC%20Hotel%20Gran%20Canaria&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search AC Hotel Gran Canaria</a>
         </article>
 
         <article class="nicer-card panel" data-dest="palma" data-nights="all">
           <h3>Hotel Nou Baleares</h3>
           <p class="nicer-meta">Palma, central · 14–17 Dec · 4★ · score 9.4</p>
-          <p class="nicer-price">$387</p>
-          <p class="nicer-approx">USD, as returned. About €333 at 1 USD ≈ 0.86 EUR.</p>
+          <p class="nicer-price" data-bind="usd:nou-baleares">$387</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:nou-baleares">€333</span> at 1 USD ≈ 0.86 EUR.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Hotel%20Nou%20Baleares&amp;checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Hotel Nou Baleares</a>
         </article>
 
         <article class="nicer-card panel" data-dest="malaga" data-nights="all">
           <h3>Malaga Alameda Centro Affiliated by Meliá</h3>
           <p class="nicer-meta">Málaga · 18–21 Dec · 4★ · score 8.8</p>
-          <p class="nicer-price">$410</p>
-          <p class="nicer-approx">USD, as returned. About €353 at 1 USD ≈ 0.86 EUR. Dates are the 18–21 December window, not 15–18.</p>
+          <p class="nicer-price" data-bind="usd:alameda-agp">$410</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:alameda-agp">€353</span> at 1 USD ≈ 0.86 EUR. Dates are the 18–21 December window, not 15–18.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Malaga%20Alameda%20Centro%20Affiliated%20by%20Meli%C3%A1&amp;checkin=2026-12-18&amp;checkout=2026-12-21&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search Malaga Alameda Centro</a>
         </article>
         <article class="nicer-card panel" data-dest="malaga" data-nights="all">
           <h3>ICON Malabar</h3>
           <p class="nicer-meta">Málaga · 18–21 Dec · 4★ · score 9.1</p>
-          <p class="nicer-price">$465</p>
-          <p class="nicer-approx">USD, as returned. About €400 at 1 USD ≈ 0.86 EUR. Dates are the 18–21 December window, not 15–18.</p>
+          <p class="nicer-price" data-bind="usd:icon-malabar">$465</p>
+          <p class="nicer-approx">USD, as returned. About <span data-bind="usdapprox:icon-malabar">€400</span> at 1 USD ≈ 0.86 EUR. Dates are the 18–21 December window, not 15–18.</p>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=ICON%20Malabar&amp;checkin=2026-12-18&amp;checkout=2026-12-21&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">Search ICON Malabar</a>
         </article>
 
@@ -729,12 +737,12 @@
     <div class="container">
       <div class="head">
         <h2>When you’re ready</h2>
-        <p>This page does not process payment. Each plan has two flight buttons — Ella from Hannover, Ali from Asturias — plus a hotel search. The Google Flights links are in euros, one adult, with the dates already filled in. Ella’s link includes the shared flight home to Asturias where that return was priced. Recheck the fare before you pay — snapshot 23 November 2026.</p>
+        <p>This page does not process payment. Each plan has two flight buttons — Ella from Hannover, Ali from Asturias — plus a hotel search. The Google Flights links are in euros, one adult, with the dates already filled in. Ella’s link includes the shared flight home to Asturias where that return was priced. Recheck the fare before you pay — snapshot <span data-bind="snapshot">23 November 2026</span>.</p>
       </div>
 
       <div class="book-plan panel" data-dest="palma" data-nights="3">
         <h3>Palma, three nights</h3>
-        <p class="book-note">Arrive 14 December, leave 17 December. The total on this page uses Brick Palma (€199, score 9.0). Hostal Bonany is €214, total €389. Together, about €374. Ella’s button is Hannover to Palma plus the shared Vueling home to Asturias. Ali’s is Asturias to Palma and back.</p>
+        <p class="book-note">Arrive 14 December, leave 17 December. The total on this page uses Brick Palma (<span data-bind="h:brick-palma-3">€199</span>, score 9.0). Hostal Bonany is <span data-bind="h:bonany-palma-3">€214</span>, total <span data-bind="p:palma-3:alt">€389</span>. Together, about <span data-bind="p:palma-3">€374</span>. Ella’s button is Hannover to Palma plus the shared Vueling home to Asturias. Ali’s is Asturias to Palma and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JGh4SCjIwMjYtMTItMTdqBwgBEgNQTUlyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JGh4SCjIwMjYtMTItMTdqBwgBEgNQTUlyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -744,7 +752,7 @@
 
       <div class="book-plan panel" data-dest="palma" data-nights="7">
         <h3>Palma, seven nights</h3>
-        <p class="book-note">Arrive 14 December, leave 21 December. Home is Vueling 06:30. The total uses Hesperia Mallorca (€472). Hostal Bonany is €489, total €664. Together, about €647. Ella’s button includes that shared early flight home. Ali’s is Asturias to Palma and back.</p>
+        <p class="book-note">Arrive 14 December, leave 21 December. Home is Vueling 06:30. The total uses Hesperia Mallorca (<span data-bind="h:hesperia-palma-7">€472</span>). Hostal Bonany is <span data-bind="h:bonany-palma-7">€489</span>, total <span data-bind="p:palma-7:alt">€664</span>. Together, about <span data-bind="p:palma-7">€647</span>. Ella’s button includes that shared early flight home. Ali’s is Asturias to Palma and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JGh4SCjIwMjYtMTItMjFqBwgBEgNQTUlyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JGh4SCjIwMjYtMTItMjFqBwgBEgNQTUlyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -754,7 +762,7 @@
 
       <div class="book-plan panel" data-dest="maspalomas" data-nights="3">
         <h3>Maspalomas, three nights</h3>
-        <p class="book-note">Arrive 16 December, leave 19 December. Flights €225. Casa Ohana €230, total €455. HH Riz €264, total €489. Ella’s button is Hannover to Las Palmas plus the shared Volotea home. Ali’s is Asturias to Las Palmas and back.</p>
+        <p class="book-note">Arrive 16 December, leave 19 December. Flights <span data-bind="b:gc-3">€225</span>. Casa Ohana <span data-bind="h:ohana-masp-3">€230</span>, total <span data-bind="p:masp-3">€455</span>. HH Riz <span data-bind="h:hhriz-masp-3">€264</span>, total <span data-bind="p:masp-3:alt">€489</span>. Ella’s button is Hannover to Las Palmas plus the shared Volotea home. Ali’s is Asturias to Las Palmas and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBGh4SCjIwMjYtMTItMTlqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBGh4SCjIwMjYtMTItMTlqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -764,7 +772,7 @@
 
       <div class="book-plan panel" data-dest="maspalomas" data-nights="7">
         <h3>Maspalomas, seven nights</h3>
-        <p class="book-note">Arrive 15 December, leave 22 December. Flights €262. Maspalomas total €798. HH Riz is unavailable these dates. Arriving 16–22 December keeps Ella on the €72 nonstop (flights €210). Ella’s button includes the shared flight home on 22 December. Ali’s is Asturias to Las Palmas and back.</p>
+        <p class="book-note">Arrive 15 December, leave 22 December. Flights <span data-bind="b:gc-7">€262</span>. Maspalomas total <span data-bind="p:masp-7">€798</span>. HH Riz is unavailable these dates. Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (flights <span data-bind="b:gc-16-22">€210</span>). Ella’s button includes the shared flight home on 22 December. Ali’s is Asturias to Las Palmas and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBGh4SCjIwMjYtMTItMjJqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBGh4SCjIwMjYtMTItMjJqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -774,7 +782,7 @@
 
       <div class="book-plan panel" data-dest="laspalmas" data-nights="3">
         <h3>Las Palmas, three nights</h3>
-        <p class="book-note">Arrive 16 December, leave 19 December. Flights €225. La Isleta Linda studio (9.6) €155, total €380. Casa Canaria €216, total €441. Ella’s button is Hannover to Las Palmas plus the shared Volotea home. Ali’s is Asturias to Las Palmas and back.</p>
+        <p class="book-note">Arrive 16 December, leave 19 December. Flights <span data-bind="b:gc-3">€225</span>. La Isleta Linda studio (9.6) <span data-bind="h:isleta-lp-3">€155</span>, total <span data-bind="p:lp-3">€380</span>. Casa Canaria <span data-bind="h:canaria-lp-3">€216</span>, total <span data-bind="p:lp-3:alt">€441</span>. Ella’s button is Hannover to Las Palmas plus the shared Volotea home. Ali’s is Asturias to Las Palmas and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBGh4SCjIwMjYtMTItMTlqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBGh4SCjIwMjYtMTItMTlqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -784,7 +792,7 @@
 
       <div class="book-plan panel" data-dest="laspalmas" data-nights="7">
         <h3>Las Palmas, seven nights</h3>
-        <p class="book-note">Arrive 15 December, leave 22 December. Flights €262. Apartamentos Vegueta total €730. Casa Canaria total €775. Arriving 16–22 December keeps Ella on the €72 nonstop (flights €210). Ella’s button includes the shared flight home on 22 December. Ali’s is Asturias to Las Palmas and back.</p>
+        <p class="book-note">Arrive 15 December, leave 22 December. Flights <span data-bind="b:gc-7">€262</span>. Apartamentos Vegueta total <span data-bind="p:lp-7">€730</span>. Casa Canaria total <span data-bind="p:lp-7:alt">€775</span>. Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (flights <span data-bind="b:gc-16-22">€210</span>). Ella’s button includes the shared flight home on 22 December. Ali’s is Asturias to Las Palmas and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBGh4SCjIwMjYtMTItMjJqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBGh4SCjIwMjYtMTItMjJqBwgBEgNMUEFyBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -794,7 +802,7 @@
 
       <div class="book-plan panel" data-dest="malaga" data-nights="3">
         <h3>Málaga, three nights · 15–18 December</h3>
-        <p class="book-note">Arrive 15 December, leave 18 December. Hostal NV Palacio Congresos (8.4) €115. Together, about €419. Ella’s button is Hannover to Málaga plus the shared flight home. Ali’s is Asturias to Málaga and back.</p>
+        <p class="book-note">Arrive 15 December, leave 18 December. Hostal NV Palacio Congresos (8.4) <span data-bind="h:nv-agp-3">€115</span>. Together, about <span data-bind="p:malaga-3">€419</span>. Ella’s button is Hannover to Málaga plus the shared flight home. Ali’s is Asturias to Málaga and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQUdQGh4SCjIwMjYtMTItMThqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQUdQGh4SCjIwMjYtMTItMThqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -804,7 +812,7 @@
 
       <div class="book-plan panel" data-dest="malaga" data-nights="3">
         <h3>Málaga, three nights · 18–21 December</h3>
-        <p class="book-note">Ella’s Eurowings 07:10 nonstop, about $130. Ali’s Asturias round trip about $111 (Volotea 11:10 out, Air Europa 06:20 back via Madrid). Ella’s return on 21 December was not priced — her button is the outbound only. A partial figure with Malaga Alameda Centro ($410), excluding her return, is about $651. ICON Malabar is $465; that partial figure is about $706. USD as the search returned it.</p>
+        <p class="book-note">Ella’s Eurowings 07:10 nonstop, about <span data-bind="usd:haj-agp-18-usd">$130</span>. Ali’s Asturias round trip about <span data-bind="usd:ovd-agp-rt-18-21">$111</span> (Volotea 11:10 out, Air Europa 06:20 back via Madrid). Ella’s return on 21 December was not priced — her button is the outbound only. A partial figure with Malaga Alameda Centro (<span data-bind="usd:alameda-agp">$410</span>), excluding her return, is about <span data-bind="partial:alameda">$651</span>. ICON Malabar is <span data-bind="usd:icon-malabar">$465</span>; that partial figure is about <span data-bind="partial:malabar">$706</span>. USD as the search returned it.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQGh4SCjIwMjYtMTItMjFqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -814,7 +822,7 @@
 
       <div class="book-plan panel" data-dest="malaga" data-nights="7">
         <h3>Málaga, seven nights</h3>
-        <p class="book-note">Arrive 18 December, leave 25 December. Hostal NV €324. Together, about €564 — the cheapest week in this snapshot. Ella’s button includes the shared Volotea home on Christmas Day. Ali’s is Asturias to Málaga and back.</p>
+        <p class="book-note">Arrive 18 December, leave 25 December. Hostal NV <span data-bind="h:nv-agp-7">€324</span>. Together, about <span data-bind="p:malaga-7">€564</span><span data-if-cheapest="malaga:7"> — the cheapest week in this snapshot</span>. Ella’s button includes the shared Volotea home on Christmas Day. Ali’s is Asturias to Málaga and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQGh4SCjIwMjYtMTItMjVqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQGh4SCjIwMjYtMTItMjVqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -824,7 +832,7 @@
 
       <div class="book-plan panel" data-dest="barcelona" data-nights="3">
         <h3>Barcelona, three nights</h3>
-        <p class="book-note">Arrive 15 December, leave 18 December. Hotel BestPrice Maragall €147. Together, about €397. Ella’s button is Hannover to Barcelona plus the shared Vueling home. Ali’s is Asturias to Barcelona and back.</p>
+        <p class="book-note">Arrive 15 December, leave 18 December. Hotel BestPrice Maragall <span data-bind="h:maragall-bcn-3">€147</span>. Together, about <span data-bind="p:bcn-3">€397</span>. Ella’s button is Hannover to Barcelona plus the shared Vueling home. Ali’s is Asturias to Barcelona and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOGh4SCjIwMjYtMTItMThqBwgBEgNCQ05yBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOGh4SCjIwMjYtMTItMThqBwgBEgNCQ05yBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -834,7 +842,7 @@
 
       <div class="book-plan panel" data-dest="barcelona" data-nights="7">
         <h3>Barcelona, seven nights</h3>
-        <p class="book-note">Arrive 15 December, leave 22 December. Hostal Argo €427, total €698. Hostal House is cheaper, total €681. Ella’s button includes the shared Air Europa home. Ali’s is Asturias to Barcelona and back.</p>
+        <p class="book-note">Arrive 15 December, leave 22 December. Hostal Argo <span data-bind="h:argo-bcn-7">€427</span>, total <span data-bind="p:bcn-7">€698</span>. Hostal House is cheaper, total <span data-bind="p:bcn-7:alt">€681</span>. Ella’s button includes the shared Air Europa home. Ali’s is Asturias to Barcelona and back.</p>
         <div class="book-actions">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOGh4SCjIwMjYtMTItMjJqBwgBEgNCQ05yBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella — book from Hannover</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOGh4SCjIwMjYtMTItMjJqBwgBEgNCQ05yBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali — book from Asturias</a>
@@ -848,13 +856,13 @@
     <div class="container">
       <div class="head">
         <h2>The honest part</h2>
-        <p>Palma still wins on money for three nights. Málaga wins for a week. Barcelona is the Christmas-city option. Gran Canaria is the dunes-and-beach option, dearer once you stay seven nights.</p>
+        <p><span data-bind="winsLine">Palma still wins on money for three nights. Málaga wins for a week. Barcelona is the Christmas-city option. Gran Canaria is the dunes-and-beach option, dearer once you stay seven nights.</span></p>
       </div>
 
       <div class="trade panel" data-dest="palma" data-nights="all">
         <div>
           <h3>Why Palma</h3>
-          <p>Cheapest three-night total (€374). Nonstop for her, a cheap inbound for him, a cheap Vueling home. A walkable city.</p>
+          <p>Cheapest three-night total (<span data-bind="p:palma-3">€374</span>). Nonstop for her, a cheap inbound for him, a cheap Vueling home. A walkable city.</p>
         </div>
         <div>
           <h3>Hold in mind</h3>
@@ -868,13 +876,13 @@
         </div>
         <div>
           <h3>Hold in mind</h3>
-          <p>His inbound is via Madrid (€76); the Binter nonstop is €186. The week is the dearest total here (€798), and HH Riz is unavailable. After 22 December, Hannover to Las Palmas jumps to €332–450.</p>
+          <p>His inbound is via Madrid (<span data-bind="f:ovd-lpa-16">€76</span>); the Binter nonstop is <span data-bind="f:ovd-lpa-16-binter">€186</span>. The week is the dearest total here (<span data-bind="p:masp-7">€798</span>), and HH Riz is unavailable. After 22 December, Hannover to Las Palmas jumps to €332–450.</p>
         </div>
       </div>
       <div class="trade panel" data-dest="laspalmas" data-nights="all">
         <div>
           <h3>Why Las Palmas</h3>
-          <p>A real city beach. The three-night studio at La Isleta Linda is €380 — just behind Palma.</p>
+          <p>A real city beach. The three-night studio at La Isleta Linda is <span data-bind="p:lp-3">€380</span> — just behind Palma.</p>
         </div>
         <div>
           <h3>Hold in mind</h3>
@@ -884,7 +892,7 @@
       <div class="trade panel" data-dest="malaga" data-nights="all">
         <div>
           <h3>Why Málaga</h3>
-          <p>Cheapest seven-night total (€564). Ella has a direct from Hannover on the week trip. Compact old town.</p>
+          <p>Cheapest seven-night total (<span data-bind="p:malaga-7">€564</span>). Ella has a direct from Hannover on the week trip. Compact old town.</p>
         </div>
         <div>
           <h3>Hold in mind</h3>
@@ -894,11 +902,11 @@
       <div class="trade panel" data-dest="barcelona" data-nights="all">
         <div>
           <h3>Why Barcelona</h3>
-          <p>Christmas lights and a Vueling nonstop for Ella. Three nights sit close to Palma (€397). The nicer 3- and 4-star rooms here are the best value for a proper hotel in this check.</p>
+          <p>Christmas lights and a Vueling nonstop for Ella. Three nights sit close to Palma (<span data-bind="p:bcn-3">€397</span>). The nicer 3- and 4-star rooms here are the best value for a proper hotel in this check.</p>
         </div>
         <div>
           <h3>Hold in mind</h3>
-          <p>Home on the short trip is 07:20 and €144 for two. The week is €698 with Hostal Argo, or €681 with Hostal House — still above Málaga.</p>
+          <p>Home on the short trip is 07:20 and <span data-bind="f:bcn-ovd-18">€144</span> for two. The week is <span data-bind="p:bcn-7">€698</span> with Hostal Argo, or <span data-bind="p:bcn-7:alt">€681</span> with Hostal House — still above Málaga.</p>
         </div>
       </div>
     </div>
@@ -908,22 +916,22 @@
     <div class="container">
       <div class="head">
         <h2>The practical bits</h2>
-        <p>Fares, rooms and the small print, folded away until you want them. Snapshot 23 November 2026.</p>
+        <p>Fares, rooms and the small print, folded away until you want them. Snapshot <span data-bind="snapshot">23 November 2026</span>.</p>
       </div>
 
       <details class="fold">
         <summary>The flights</summary>
         <div class="fold-body">
-          <p>Google Flights snapshot, Monday 23 November 2026. Economy, no checked bags. Inbound is 1 adult. City to Asturias is the total for 2 adults. Self-transfers are separate tickets: a delay can mean buying a new onward flight.</p>
+          <p>Google Flights snapshot, <span data-bind="snapshot">23 November 2026</span>. Economy, no checked bags. Inbound is 1 adult. City to Asturias is the total for 2 adults. Self-transfers are separate tickets: a delay can mean buying a new onward flight.</p>
           <h3>Palma, 14 December out</h3>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Route</th><th>What</th><th class="num">Fare</th></tr></thead>
               <tbody>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to PMI</a></td><td>Eurowings nonstop, 07:55</td><td class="num">€84</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to PMI</a></td><td>Vueling, 08:50</td><td class="num">€23</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">PMI to OVD, 17 Dec</a></td><td>Vueling 08:00. Pair for 2 adults.</td><td class="num">€68</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">PMI to OVD, 21 Dec</a></td><td>Vueling 06:30. Pair for 2 adults.</td><td class="num">€68</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to PMI</a></td><td>Eurowings nonstop, 07:55</td><td class="num" data-bind="f:haj-pmi-14">€84</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to PMI</a></td><td>Vueling, 08:50</td><td class="num" data-bind="f:ovd-pmi-14">€23</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">PMI to OVD, 17 Dec</a></td><td>Vueling 08:00. Pair for 2 adults.</td><td class="num" data-bind="f:pmi-ovd-17">€68</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">PMI to OVD, 21 Dec</a></td><td>Vueling 06:30. Pair for 2 adults.</td><td class="num" data-bind="f:pmi-ovd-21">€68</td></tr>
               </tbody>
             </table>
           </div>
@@ -932,15 +940,15 @@
             <table>
               <thead><tr><th>Route</th><th>What</th><th class="num">Fare</th></tr></thead>
               <tbody>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to LPA, 16 Dec</a></td><td>Eurowings nonstop, 12:50. Used for the three-night plans.</td><td class="num">€72</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to LPA, 16 Dec</a></td><td>Air Europa via Madrid. Binter nonstop €186.</td><td class="num">€76</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">LPA to OVD, 19 Dec</a></td><td>Volotea 18:45. Pair for 2 adults.</td><td class="num">€77</td></tr>
-                <tr><td>3-night flight total</td><td>Her €72 plus his €76 plus home €77.</td><td class="num">€225</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to LPA, 15 Dec</a></td><td>Vueling via Barcelona. Used for the seven-night plans.</td><td class="num">€124</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to LPA, 15 Dec</a></td><td>His inbound is in the €262 flight total.</td><td class="num">—</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">LPA to OVD, 22 Dec</a></td><td>Pair for 2 adults.</td><td class="num">€62</td></tr>
-                <tr><td>7-night flight total</td><td>Her €124 plus return €62, in €262.</td><td class="num">€262</td></tr>
-                <tr><td>16–22 Dec note</td><td>Keeps her on the €72 nonstop. Flights €210. Not a separate hotel total.</td><td class="num">€210</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to LPA, 16 Dec</a></td><td>Eurowings nonstop, 12:50. Used for the three-night plans.</td><td class="num" data-bind="f:haj-lpa-16">€72</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to LPA, 16 Dec</a></td><td>Air Europa via Madrid. Binter nonstop <span data-bind="f:ovd-lpa-16-binter">€186</span>.</td><td class="num" data-bind="f:ovd-lpa-16">€76</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">LPA to OVD, 19 Dec</a></td><td>Volotea 18:45. Pair for 2 adults.</td><td class="num" data-bind="f:lpa-ovd-19">€77</td></tr>
+                <tr><td>3-night flight total</td><td>Her <span data-bind="f:haj-lpa-16">€72</span> plus his <span data-bind="f:ovd-lpa-16">€76</span> plus home <span data-bind="f:lpa-ovd-19">€77</span>.</td><td class="num" data-bind="b:gc-3">€225</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to LPA, 15 Dec</a></td><td>Vueling via Barcelona. Used for the seven-night plans.</td><td class="num" data-bind="f:haj-lpa-15">€124</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to LPA, 15 Dec</a></td><td>His inbound is in the <span data-bind="b:gc-7">€262</span> flight total.</td><td class="num" data-bind="f:ovd-lpa-15">€76</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">LPA to OVD, 22 Dec</a></td><td>Pair for 2 adults.</td><td class="num" data-bind="f:lpa-ovd-22">€62</td></tr>
+                <tr><td>7-night flight total</td><td>Her <span data-bind="f:haj-lpa-15">€124</span> plus return <span data-bind="f:lpa-ovd-22">€62</span>, in <span data-bind="b:gc-7">€262</span>.</td><td class="num" data-bind="b:gc-7">€262</td></tr>
+                <tr><td>16–22 Dec note</td><td>Keeps her on the <span data-bind="f:haj-lpa-16">€72</span> nonstop. Flights <span data-bind="b:gc-16-22">€210</span>. Not a separate hotel total.</td><td class="num" data-bind="b:gc-16-22">€210</td></tr>
               </tbody>
             </table>
           </div>
@@ -949,13 +957,13 @@
             <table>
               <thead><tr><th>Route</th><th>What</th><th class="num">Fare</th></tr></thead>
               <tbody>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to AGP, 15 Dec</a></td><td>Vueling, 1 stop. Three-night plan.</td><td class="num">€152</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to AGP, 15 Dec</a></td><td>Volotea</td><td class="num">€28</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">AGP to OVD, 18 Dec</a></td><td>Pair for 2 adults.</td><td class="num">€124</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to AGP, 18 Dec</a></td><td>Eurowings 07:10 nonstop. Seven-night euro fare €150. Same flight read in USD for the 18–21 Dec window ≈$130.</td><td class="num">€150</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to AGP, 18 Dec</a></td><td>Volotea. One-way euro fare for the seven-night plan.</td><td class="num">€24</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI1agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">AGP to OVD, 25 Dec</a></td><td>Volotea. Pair for 2 adults.</td><td class="num">€66</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQGh4SCjIwMjYtMTItMjFqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to AGP round trip, 18–21 Dec</a></td><td>Volotea 11:10 out nonstop, Air Europa 06:20 back via Madrid. 1 adult.</td><td class="num">≈$111</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to AGP, 15 Dec</a></td><td>Vueling, 1 stop. Three-night plan.</td><td class="num" data-bind="f:haj-agp-15">€152</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to AGP, 15 Dec</a></td><td>Volotea</td><td class="num" data-bind="f:ovd-agp-15">€28</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">AGP to OVD, 18 Dec</a></td><td>Pair for 2 adults.</td><td class="num" data-bind="f:agp-ovd-18">€124</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to AGP, 18 Dec</a></td><td>Eurowings 07:10 nonstop. Seven-night euro fare <span data-bind="f:haj-agp-18">€150</span>. Same flight read in USD for the 18–21 Dec window ≈<span data-bind="usd:haj-agp-18-usd">$130</span>.</td><td class="num" data-bind="f:haj-agp-18">€150</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to AGP, 18 Dec</a></td><td>Volotea. One-way euro fare for the seven-night plan.</td><td class="num" data-bind="f:ovd-agp-18">€24</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI1agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">AGP to OVD, 25 Dec</a></td><td>Volotea. Pair for 2 adults.</td><td class="num" data-bind="f:agp-ovd-25">€66</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQGh4SCjIwMjYtMTItMjFqBwgBEgNBR1ByBwgBEgNPVkRAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to AGP round trip, 18–21 Dec</a></td><td>Volotea 11:10 out nonstop, Air Europa 06:20 back via Madrid. 1 adult.</td><td class="num">≈<span data-bind="usd:ovd-agp-rt-18-21">$111</span></td></tr>
                 <tr><td>AGP return, 21 Dec, Ella</td><td>Not priced in this check. Do not invent a fare. The 18–21 Dec total is partial without it.</td><td class="num">—</td></tr>
               </tbody>
             </table>
@@ -965,10 +973,10 @@
             <table>
               <thead><tr><th>Route</th><th>What</th><th class="num">Fare</th></tr></thead>
               <tbody>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to BCN, 15 Dec</a></td><td>Vueling 10:10 nonstop.</td><td class="num">€83</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to BCN, 15 Dec</a></td><td>Vueling 20:55</td><td class="num">€23</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">BCN to OVD, 18 Dec</a></td><td>Vueling 07:20. Pair for 2 adults.</td><td class="num">€144</td></tr>
-                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">BCN to OVD, 22 Dec</a></td><td>Air Europa. Pair for 2 adults.</td><td class="num">€165</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">HAJ to BCN, 15 Dec</a></td><td>Vueling 10:10 nonstop.</td><td class="num" data-bind="f:haj-bcn-15">€83</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">OVD to BCN, 15 Dec</a></td><td>Vueling 20:55</td><td class="num" data-bind="f:ovd-bcn-15">€23</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">BCN to OVD, 18 Dec</a></td><td>Vueling 07:20. Pair for 2 adults.</td><td class="num" data-bind="f:bcn-ovd-18">€144</td></tr>
+                <tr><td><a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">BCN to OVD, 22 Dec</a></td><td>Air Europa. Pair for 2 adults.</td><td class="num" data-bind="f:bcn-ovd-22">€165</td></tr>
               </tbody>
             </table>
           </div>
@@ -979,17 +987,17 @@
       <details class="fold">
         <summary>The rooms we priced</summary>
         <div class="fold-body">
-          <p>Booking.com, Monday 23 November 2026. 2 adults, 1 room. Euro figures below are the budget rooms used in the trip totals, before about 10% tax. Nicer 3- and 4-star rooms from this check are in USD in Nicer stay. Named hotels are what we priced; the plan buttons search the city, and the nicer cards search the hotel name.</p>
+          <p>Booking.com, <span data-bind="hotels_checked">22 November 2026</span>. 2 adults, 1 room. Euro figures below are the budget rooms used in the trip totals, before about 10% tax. Nicer 3- and 4-star rooms from this check are in USD in Nicer stay. Named hotels are what we priced; the plan buttons search the city, and the nicer cards search the hotel name.</p>
 
           <div class="panel" data-dest="palma" data-nights="all">
             <h3>Palma</h3>
             <dl class="facts-dl">
-              <div class="panel" data-dest="palma" data-nights="3"><dt>3 nights, 14–17 Dec</dt><dd>€199 Brick Palma (score 9.0). Hostal Bonany €214. The 3-night total uses Brick Palma.</dd></div>
-              <div class="panel" data-dest="palma" data-nights="7"><dt>7 nights, 14–21 Dec</dt><dd>€472 Hesperia Mallorca. Hostal Bonany €489. The 7-night total uses Hesperia Mallorca.</dd></div>
-              <div class="panel" data-dest="palma" data-nights="3"><dt>Home to Asturias</dt><dd>€68 Vueling 08:00, for two</dd></div>
-              <div class="panel" data-dest="palma" data-nights="7"><dt>Home to Asturias</dt><dd>€68 Vueling 06:30, for two</dd></div>
-              <div class="panel" data-dest="palma" data-nights="3"><dt>Subtotal</dt><dd>€374 (Bonany total €389)</dd></div>
-              <div class="panel" data-dest="palma" data-nights="7"><dt>Subtotal</dt><dd>€647 (Bonany total €664)</dd></div>
+              <div class="panel" data-dest="palma" data-nights="3"><dt>3 nights, 14–17 Dec</dt><dd><span data-bind="h:brick-palma-3">€199</span> Brick Palma (score 9.0). Hostal Bonany <span data-bind="h:bonany-palma-3">€214</span>. The 3-night total uses Brick Palma.</dd></div>
+              <div class="panel" data-dest="palma" data-nights="7"><dt>7 nights, 14–21 Dec</dt><dd><span data-bind="h:hesperia-palma-7">€472</span> Hesperia Mallorca. Hostal Bonany <span data-bind="h:bonany-palma-7">€489</span>. The 7-night total uses Hesperia Mallorca.</dd></div>
+              <div class="panel" data-dest="palma" data-nights="3"><dt>Home to Asturias</dt><dd><span data-bind="f:pmi-ovd-17">€68</span> Vueling 08:00, for two</dd></div>
+              <div class="panel" data-dest="palma" data-nights="7"><dt>Home to Asturias</dt><dd><span data-bind="f:pmi-ovd-21">€68</span> Vueling 06:30, for two</dd></div>
+              <div class="panel" data-dest="palma" data-nights="3"><dt>Subtotal</dt><dd><span data-bind="p:palma-3">€374</span> (Bonany total <span data-bind="p:palma-3:alt">€389</span>)</dd></div>
+              <div class="panel" data-dest="palma" data-nights="7"><dt>Subtotal</dt><dd><span data-bind="p:palma-7">€647</span> (Bonany total <span data-bind="p:palma-7:alt">€664</span>)</dd></div>
             </dl>
             <p><a href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Palma 14–17 Dec</a> · <a href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-21&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Palma 14–21 Dec</a></p>
           </div>
@@ -997,12 +1005,12 @@
           <div class="panel" data-dest="maspalomas" data-nights="all">
             <h3>Maspalomas</h3>
             <dl class="facts-dl">
-              <div class="panel" data-dest="maspalomas" data-nights="3"><dt>3 nights, 16–19 Dec</dt><dd>€230 Casa Ohana. HH Riz €264. The 3-night total uses Casa Ohana.</dd></div>
-              <div class="panel" data-dest="maspalomas" data-nights="7"><dt>7 nights, 15–22 Dec</dt><dd>HH Riz unavailable. Search only. Maspalomas total €798.</dd></div>
-              <div class="panel" data-dest="maspalomas" data-nights="3"><dt>Flights</dt><dd>€225</dd></div>
-              <div class="panel" data-dest="maspalomas" data-nights="7"><dt>Flights</dt><dd>€262</dd></div>
-              <div class="panel" data-dest="maspalomas" data-nights="3"><dt>Subtotal</dt><dd>€455 (HH Riz total €489)</dd></div>
-              <div class="panel" data-dest="maspalomas" data-nights="7"><dt>Subtotal</dt><dd>€798</dd></div>
+              <div class="panel" data-dest="maspalomas" data-nights="3"><dt>3 nights, 16–19 Dec</dt><dd><span data-bind="h:ohana-masp-3">€230</span> Casa Ohana. HH Riz <span data-bind="h:hhriz-masp-3">€264</span>. The 3-night total uses Casa Ohana.</dd></div>
+              <div class="panel" data-dest="maspalomas" data-nights="7"><dt>7 nights, 15–22 Dec</dt><dd>HH Riz unavailable. Search only. Maspalomas total <span data-bind="p:masp-7">€798</span>.</dd></div>
+              <div class="panel" data-dest="maspalomas" data-nights="3"><dt>Flights</dt><dd data-bind="b:gc-3">€225</dd></div>
+              <div class="panel" data-dest="maspalomas" data-nights="7"><dt>Flights</dt><dd data-bind="b:gc-7">€262</dd></div>
+              <div class="panel" data-dest="maspalomas" data-nights="3"><dt>Subtotal</dt><dd><span data-bind="p:masp-3">€455</span> (HH Riz total <span data-bind="p:masp-3:alt">€489</span>)</dd></div>
+              <div class="panel" data-dest="maspalomas" data-nights="7"><dt>Subtotal</dt><dd data-bind="p:masp-7">€798</dd></div>
             </dl>
             <p><a href="https://www.booking.com/searchresults.html?ss=Maspalomas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Maspalomas 16–19 Dec</a> · <a href="https://www.booking.com/searchresults.html?ss=Maspalomas&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Maspalomas 15–22 Dec</a></p>
           </div>
@@ -1010,12 +1018,12 @@
           <div class="panel" data-dest="laspalmas" data-nights="all">
             <h3>Las Palmas</h3>
             <dl class="facts-dl">
-              <div class="panel" data-dest="laspalmas" data-nights="3"><dt>3 nights, 16–19 Dec</dt><dd>€155 La Isleta Linda studio (score 9.6). Casa Canaria €216. The 3-night total uses La Isleta Linda.</dd></div>
-              <div class="panel" data-dest="laspalmas" data-nights="7"><dt>7 nights, 15–22 Dec</dt><dd>Apartamentos Vegueta total €730. Casa Canaria total €775. The 7-night total uses Apartamentos Vegueta.</dd></div>
-              <div class="panel" data-dest="laspalmas" data-nights="3"><dt>Flights</dt><dd>€225</dd></div>
-              <div class="panel" data-dest="laspalmas" data-nights="7"><dt>Flights</dt><dd>€262</dd></div>
-              <div class="panel" data-dest="laspalmas" data-nights="3"><dt>Subtotal</dt><dd>€380 (Casa Canaria total €441)</dd></div>
-              <div class="panel" data-dest="laspalmas" data-nights="7"><dt>Subtotal</dt><dd>€730 (Casa Canaria total €775)</dd></div>
+              <div class="panel" data-dest="laspalmas" data-nights="3"><dt>3 nights, 16–19 Dec</dt><dd><span data-bind="h:isleta-lp-3">€155</span> La Isleta Linda studio (score 9.6). Casa Canaria <span data-bind="h:canaria-lp-3">€216</span>. The 3-night total uses La Isleta Linda.</dd></div>
+              <div class="panel" data-dest="laspalmas" data-nights="7"><dt>7 nights, 15–22 Dec</dt><dd>Apartamentos Vegueta total <span data-bind="p:lp-7">€730</span>. Casa Canaria total <span data-bind="p:lp-7:alt">€775</span>. The 7-night total uses Apartamentos Vegueta.</dd></div>
+              <div class="panel" data-dest="laspalmas" data-nights="3"><dt>Flights</dt><dd data-bind="b:gc-3">€225</dd></div>
+              <div class="panel" data-dest="laspalmas" data-nights="7"><dt>Flights</dt><dd data-bind="b:gc-7">€262</dd></div>
+              <div class="panel" data-dest="laspalmas" data-nights="3"><dt>Subtotal</dt><dd><span data-bind="p:lp-3">€380</span> (Casa Canaria total <span data-bind="p:lp-3:alt">€441</span>)</dd></div>
+              <div class="panel" data-dest="laspalmas" data-nights="7"><dt>Subtotal</dt><dd><span data-bind="p:lp-7">€730</span> (Casa Canaria total <span data-bind="p:lp-7:alt">€775</span>)</dd></div>
             </dl>
             <p><a href="https://www.booking.com/searchresults.html?ss=Las%20Palmas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Las Palmas 16–19 Dec</a> · <a href="https://www.booking.com/searchresults.html?ss=Las%20Palmas&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Las Palmas 15–22 Dec</a></p>
           </div>
@@ -1023,11 +1031,11 @@
           <div class="panel" data-dest="malaga" data-nights="all">
             <h3>Málaga</h3>
             <dl class="facts-dl">
-              <div class="panel" data-dest="malaga" data-nights="3"><dt>3 nights, 15–18 Dec</dt><dd>€115 Hostal NV Palacio Congresos (score 8.4)</dd></div>
-              <div class="panel" data-dest="malaga" data-nights="3"><dt>3 nights, 18–21 Dec</dt><dd>USD rooms: Malaga Alameda Centro Affiliated by Meliá 4★ 8.8 $410; ICON Malabar 4★ 9.1 $465. Ella inbound ≈$130. Ali round trip ≈$111. Her 21 Dec return was not priced. Partial with Alameda, excluding her return: about $651.</dd></div>
-              <div class="panel" data-dest="malaga" data-nights="7"><dt>7 nights, 18–25 Dec</dt><dd>€324 Hostal NV Palacio Congresos</dd></div>
-              <div class="panel" data-dest="malaga" data-nights="3"><dt>Subtotal 15–18 Dec</dt><dd>€419</dd></div>
-              <div class="panel" data-dest="malaga" data-nights="7"><dt>Subtotal</dt><dd>€564</dd></div>
+              <div class="panel" data-dest="malaga" data-nights="3"><dt>3 nights, 15–18 Dec</dt><dd><span data-bind="h:nv-agp-3">€115</span> Hostal NV Palacio Congresos (score 8.4)</dd></div>
+              <div class="panel" data-dest="malaga" data-nights="3"><dt>3 nights, 18–21 Dec</dt><dd>USD rooms: Malaga Alameda Centro Affiliated by Meliá 4★ 8.8 <span data-bind="usd:alameda-agp">$410</span>; ICON Malabar 4★ 9.1 <span data-bind="usd:icon-malabar">$465</span>. Ella inbound ≈<span data-bind="usd:haj-agp-18-usd">$130</span>. Ali round trip ≈<span data-bind="usd:ovd-agp-rt-18-21">$111</span>. Her 21 Dec return was not priced. Partial with Alameda, excluding her return: about <span data-bind="partial:alameda">$651</span>.</dd></div>
+              <div class="panel" data-dest="malaga" data-nights="7"><dt>7 nights, 18–25 Dec</dt><dd><span data-bind="h:nv-agp-7">€324</span> Hostal NV Palacio Congresos</dd></div>
+              <div class="panel" data-dest="malaga" data-nights="3"><dt>Subtotal 15–18 Dec</dt><dd data-bind="p:malaga-3">€419</dd></div>
+              <div class="panel" data-dest="malaga" data-nights="7"><dt>Subtotal</dt><dd data-bind="p:malaga-7">€564</dd></div>
             </dl>
             <p><a href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Málaga 15–18 Dec</a> · <a href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-18&amp;checkout=2026-12-21&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Málaga 18–21 Dec</a> · <a href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-18&amp;checkout=2026-12-25&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Málaga 18–25 Dec</a></p>
           </div>
@@ -1035,10 +1043,10 @@
           <div class="panel" data-dest="barcelona" data-nights="all">
             <h3>Barcelona</h3>
             <dl class="facts-dl">
-              <div class="panel" data-dest="barcelona" data-nights="3"><dt>3 nights, 15–18 Dec</dt><dd>€147 Hotel BestPrice Maragall</dd></div>
-              <div class="panel" data-dest="barcelona" data-nights="7"><dt>7 nights, 15–22 Dec</dt><dd>€427 Hostal Argo, total €698. Hostal House total €681.</dd></div>
-              <div class="panel" data-dest="barcelona" data-nights="3"><dt>Subtotal</dt><dd>€397</dd></div>
-              <div class="panel" data-dest="barcelona" data-nights="7"><dt>Subtotal</dt><dd>€698 (Hostal House total €681)</dd></div>
+              <div class="panel" data-dest="barcelona" data-nights="3"><dt>3 nights, 15–18 Dec</dt><dd><span data-bind="h:maragall-bcn-3">€147</span> Hotel BestPrice Maragall</dd></div>
+              <div class="panel" data-dest="barcelona" data-nights="7"><dt>7 nights, 15–22 Dec</dt><dd><span data-bind="h:argo-bcn-7">€427</span> Hostal Argo, total <span data-bind="p:bcn-7">€698</span>. Hostal House total <span data-bind="p:bcn-7:alt">€681</span>.</dd></div>
+              <div class="panel" data-dest="barcelona" data-nights="3"><dt>Subtotal</dt><dd data-bind="p:bcn-3">€397</dd></div>
+              <div class="panel" data-dest="barcelona" data-nights="7"><dt>Subtotal</dt><dd><span data-bind="p:bcn-7">€698</span> (Hostal House total <span data-bind="p:bcn-7:alt">€681</span>)</dd></div>
             </dl>
             <p><a href="https://www.booking.com/searchresults.html?ss=Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Barcelona 15–18 Dec</a> · <a href="https://www.booking.com/searchresults.html?ss=Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Search Barcelona 15–22 Dec</a></p>
           </div>
@@ -1144,7 +1152,7 @@
         <div class="fold-body">
           <ul class="checklist">
             <li>This is a private page for two people, not an official tourism site. It does not process payment. The Book this plan links open Google Flights (Ella from Hannover, Ali from Asturias, one adult, euros) or a Booking.com city search with the dates already filled in.</li>
-            <li>Recheck fares before you pay. The prices are a snapshot from 23 November 2026.</li>
+            <li>Recheck fares before you pay. The prices are a snapshot from <span data-bind="snapshot">23 November 2026</span>.</li>
             <li>Budget hotel prices are Booking.com prices in euros, before about 10% tax. Nicer-stay rooms from this check are in USD as the search returned them; 1 USD ≈ 0.86 EUR is approximate. Flights have no checked bags. Return flight prices in the euro totals are for two.</li>
             <li>Prices jump after 22 December (Hannover to Las Palmas €332–450, Hannover to Palma €235–275), so arriving 14–18 December is best.</li>
             <li>Self-transfers are two tickets. A missed connection is a new fare.</li>
@@ -1174,7 +1182,7 @@
             <li>Gothic Quarter: Richard Mortel, <a href="https://commons.wikimedia.org/wiki/File:Gothic_Quarter,_Barcelona_(61)_(31141168861).jpg">Gothic Quarter, Barcelona (61)</a>, CC BY 2.0</li>
             <li>Gothic lanes: Richard Mortel, <a href="https://commons.wikimedia.org/wiki/File:Gothic_Quarter,_Barcelona_(55)_(31255984345).jpg">Gothic Quarter, Barcelona (55)</a>, CC BY 2.0</li>
           </ul>
-          <p>Flight and hotel prices from the 23 November 2026 snapshot. Booking.com searches use review score 8+ and a private bathroom filter.</p>
+          <p>Flight prices from the <span data-bind="snapshot">23 November 2026</span> snapshot. Hotel prices last checked <span data-bind="hotels_checked">22 November 2026</span>. Booking.com searches use review score 8+ and a private bathroom filter.</p>
           <ul>
             <li><a href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Booking.com Palma 3 nights</a></li>
             <li><a href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-21&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=review_score%3D80%3Broomfacility%3D38" target="_blank" rel="noopener noreferrer">Booking.com Palma 7 nights</a></li>

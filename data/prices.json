@@ -1,0 +1,709 @@
+{
+  "snapshot": "2026-11-23",
+  "hotels_checked": "2026-11-22",
+  "usd_to_eur": 0.86,
+  "flights": [
+    {
+      "id": "haj-pmi-14",
+      "origin": "HAJ",
+      "destination": "PMI",
+      "date": "2026-12-14",
+      "airline": "Eurowings",
+      "depart": "07:55",
+      "notes": "nonstop",
+      "adults": 1,
+      "nonstop": true,
+      "fetch": true,
+      "price_eur": 84
+    },
+    {
+      "id": "ovd-pmi-14",
+      "origin": "OVD",
+      "destination": "PMI",
+      "date": "2026-12-14",
+      "airline": "Vueling",
+      "depart": "08:50",
+      "notes": "",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 23
+    },
+    {
+      "id": "pmi-ovd-17",
+      "origin": "PMI",
+      "destination": "OVD",
+      "date": "2026-12-17",
+      "airline": "Vueling",
+      "depart": "08:00",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 68
+    },
+    {
+      "id": "pmi-ovd-21",
+      "origin": "PMI",
+      "destination": "OVD",
+      "date": "2026-12-21",
+      "airline": "Vueling",
+      "depart": "06:30",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 68
+    },
+    {
+      "id": "haj-lpa-16",
+      "origin": "HAJ",
+      "destination": "LPA",
+      "date": "2026-12-16",
+      "airline": "Eurowings",
+      "depart": "12:50",
+      "notes": "nonstop",
+      "adults": 1,
+      "nonstop": true,
+      "fetch": true,
+      "price_eur": 72
+    },
+    {
+      "id": "ovd-lpa-16",
+      "origin": "OVD",
+      "destination": "LPA",
+      "date": "2026-12-16",
+      "airline": "Air Europa",
+      "depart": "",
+      "notes": "via Madrid",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 76
+    },
+    {
+      "id": "ovd-lpa-16-binter",
+      "origin": "OVD",
+      "destination": "LPA",
+      "date": "2026-12-16",
+      "airline": "Binter",
+      "depart": "",
+      "notes": "nonstop alternative, not used in totals",
+      "adults": 1,
+      "nonstop": true,
+      "fetch": true,
+      "price_eur": 186
+    },
+    {
+      "id": "lpa-ovd-19",
+      "origin": "LPA",
+      "destination": "OVD",
+      "date": "2026-12-19",
+      "airline": "Volotea",
+      "depart": "18:45",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 77
+    },
+    {
+      "id": "haj-lpa-15",
+      "origin": "HAJ",
+      "destination": "LPA",
+      "date": "2026-12-15",
+      "airline": "Vueling",
+      "depart": "",
+      "notes": "via Barcelona",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 124
+    },
+    {
+      "id": "ovd-lpa-15",
+      "origin": "OVD",
+      "destination": "LPA",
+      "date": "2026-12-15",
+      "airline": "",
+      "depart": "",
+      "notes": "his inbound in the 7-night Gran Canaria flight total",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 76
+    },
+    {
+      "id": "lpa-ovd-22",
+      "origin": "LPA",
+      "destination": "OVD",
+      "date": "2026-12-22",
+      "airline": "",
+      "depart": "",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 62
+    },
+    {
+      "id": "haj-agp-15",
+      "origin": "HAJ",
+      "destination": "AGP",
+      "date": "2026-12-15",
+      "airline": "Vueling",
+      "depart": "",
+      "notes": "1 stop",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 152
+    },
+    {
+      "id": "ovd-agp-15",
+      "origin": "OVD",
+      "destination": "AGP",
+      "date": "2026-12-15",
+      "airline": "Volotea",
+      "depart": "",
+      "notes": "",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 28
+    },
+    {
+      "id": "agp-ovd-18",
+      "origin": "AGP",
+      "destination": "OVD",
+      "date": "2026-12-18",
+      "airline": "",
+      "depart": "",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 124
+    },
+    {
+      "id": "haj-agp-18",
+      "origin": "HAJ",
+      "destination": "AGP",
+      "date": "2026-12-18",
+      "airline": "Eurowings",
+      "depart": "07:10",
+      "notes": "nonstop",
+      "adults": 1,
+      "nonstop": true,
+      "fetch": true,
+      "price_eur": 150
+    },
+    {
+      "id": "ovd-agp-18",
+      "origin": "OVD",
+      "destination": "AGP",
+      "date": "2026-12-18",
+      "airline": "Volotea",
+      "depart": "",
+      "notes": "",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 24
+    },
+    {
+      "id": "agp-ovd-25",
+      "origin": "AGP",
+      "destination": "OVD",
+      "date": "2026-12-25",
+      "airline": "Volotea",
+      "depart": "",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 66
+    },
+    {
+      "id": "haj-bcn-15",
+      "origin": "HAJ",
+      "destination": "BCN",
+      "date": "2026-12-15",
+      "airline": "Vueling",
+      "depart": "10:10",
+      "notes": "nonstop",
+      "adults": 1,
+      "nonstop": true,
+      "fetch": true,
+      "price_eur": 83
+    },
+    {
+      "id": "ovd-bcn-15",
+      "origin": "OVD",
+      "destination": "BCN",
+      "date": "2026-12-15",
+      "airline": "Vueling",
+      "depart": "20:55",
+      "notes": "",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 23
+    },
+    {
+      "id": "bcn-ovd-18",
+      "origin": "BCN",
+      "destination": "OVD",
+      "date": "2026-12-18",
+      "airline": "Vueling",
+      "depart": "07:20",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 144
+    },
+    {
+      "id": "bcn-ovd-22",
+      "origin": "BCN",
+      "destination": "OVD",
+      "date": "2026-12-22",
+      "airline": "Air Europa",
+      "depart": "",
+      "notes": "pair for 2 adults",
+      "adults": 2,
+      "nonstop": false,
+      "fetch": true,
+      "price_eur": 165
+    },
+    {
+      "id": "haj-agp-18-usd",
+      "origin": "HAJ",
+      "destination": "AGP",
+      "date": "2026-12-18",
+      "airline": "Eurowings",
+      "depart": "07:10",
+      "notes": "USD reading of the 18–21 Dec inbound; not fetched",
+      "adults": 1,
+      "nonstop": true,
+      "fetch": false,
+      "currency": "USD",
+      "price_usd": 130
+    },
+    {
+      "id": "ovd-agp-rt-18-21",
+      "origin": "OVD",
+      "destination": "AGP",
+      "date": "2026-12-18",
+      "return_date": "2026-12-21",
+      "airline": "Volotea / Air Europa",
+      "depart": "11:10",
+      "notes": "USD round trip 1 adult; return via Madrid 06:20. Not fetched.",
+      "adults": 1,
+      "nonstop": false,
+      "fetch": false,
+      "currency": "USD",
+      "price_usd": 111
+    }
+  ],
+  "hotels": [
+    {
+      "id": "brick-palma-3",
+      "name": "Brick Palma",
+      "dest": "palma",
+      "nights": 3,
+      "score": 9.0,
+      "currency": "EUR",
+      "price": 199
+    },
+    {
+      "id": "bonany-palma-3",
+      "name": "Hostal Bonany",
+      "dest": "palma",
+      "nights": 3,
+      "currency": "EUR",
+      "price": 214
+    },
+    {
+      "id": "hesperia-palma-7",
+      "name": "Hesperia Mallorca",
+      "dest": "palma",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 472
+    },
+    {
+      "id": "bonany-palma-7",
+      "name": "Hostal Bonany",
+      "dest": "palma",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 489
+    },
+    {
+      "id": "ohana-masp-3",
+      "name": "Casa Ohana",
+      "dest": "maspalomas",
+      "nights": 3,
+      "currency": "EUR",
+      "price": 230
+    },
+    {
+      "id": "hhriz-masp-3",
+      "name": "HH Riz",
+      "dest": "maspalomas",
+      "nights": 3,
+      "currency": "EUR",
+      "price": 264
+    },
+    {
+      "id": "masp-south-7",
+      "name": "south-coast search",
+      "dest": "maspalomas",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 536
+    },
+    {
+      "id": "isleta-lp-3",
+      "name": "La Isleta Linda studio",
+      "dest": "laspalmas",
+      "nights": 3,
+      "score": 9.6,
+      "currency": "EUR",
+      "price": 155
+    },
+    {
+      "id": "canaria-lp-3",
+      "name": "Casa Canaria",
+      "dest": "laspalmas",
+      "nights": 3,
+      "currency": "EUR",
+      "price": 216
+    },
+    {
+      "id": "vegueta-lp-7",
+      "name": "Apartamentos Vegueta",
+      "dest": "laspalmas",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 468
+    },
+    {
+      "id": "canaria-lp-7",
+      "name": "Casa Canaria",
+      "dest": "laspalmas",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 513
+    },
+    {
+      "id": "nv-agp-3",
+      "name": "Hostal NV Palacio Congresos",
+      "dest": "malaga",
+      "nights": 3,
+      "score": 8.4,
+      "currency": "EUR",
+      "price": 115
+    },
+    {
+      "id": "nv-agp-7",
+      "name": "Hostal NV Palacio Congresos",
+      "dest": "malaga",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 324
+    },
+    {
+      "id": "maragall-bcn-3",
+      "name": "Hotel BestPrice Maragall",
+      "dest": "barcelona",
+      "nights": 3,
+      "currency": "EUR",
+      "price": 147
+    },
+    {
+      "id": "argo-bcn-7",
+      "name": "Hostal Argo",
+      "dest": "barcelona",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 427
+    },
+    {
+      "id": "house-bcn-7",
+      "name": "Hostal House",
+      "dest": "barcelona",
+      "nights": 7,
+      "currency": "EUR",
+      "price": 410
+    },
+    {
+      "id": "arc-rambla",
+      "name": "Hotel Arc La Rambla",
+      "dest": "barcelona",
+      "nights": 3,
+      "stars": 3,
+      "score": 8.8,
+      "currency": "USD",
+      "price": 231
+    },
+    {
+      "id": "arcelon",
+      "name": "Hotel Arcelon",
+      "dest": "barcelona",
+      "nights": 3,
+      "stars": 4,
+      "score": 8.8,
+      "currency": "USD",
+      "price": 238
+    },
+    {
+      "id": "pestana-arena",
+      "name": "Pestana Arena Barcelona",
+      "dest": "barcelona",
+      "nights": 3,
+      "stars": 4,
+      "score": 8.8,
+      "currency": "USD",
+      "price": 261
+    },
+    {
+      "id": "matilde-lp",
+      "name": "Hotel Matilde Las Palmas",
+      "dest": "laspalmas",
+      "nights": 3,
+      "stars": 3,
+      "score": 8.8,
+      "currency": "USD",
+      "price": 243
+    },
+    {
+      "id": "cordial-galdos",
+      "name": "Boutique Hotel Cordial Galdós Jardín",
+      "dest": "laspalmas",
+      "nights": 3,
+      "stars": 4,
+      "score": 9.4,
+      "currency": "USD",
+      "price": 352
+    },
+    {
+      "id": "ac-gran-canaria",
+      "name": "AC Hotel Gran Canaria",
+      "dest": "laspalmas",
+      "nights": 3,
+      "stars": 4,
+      "score": 8.4,
+      "currency": "USD",
+      "price": 354
+    },
+    {
+      "id": "nou-baleares",
+      "name": "Hotel Nou Baleares",
+      "dest": "palma",
+      "nights": 3,
+      "stars": 4,
+      "score": 9.4,
+      "currency": "USD",
+      "price": 387
+    },
+    {
+      "id": "alameda-agp",
+      "name": "Malaga Alameda Centro Affiliated by Meliá",
+      "dest": "malaga",
+      "nights": 3,
+      "stars": 4,
+      "score": 8.8,
+      "currency": "USD",
+      "price": 410
+    },
+    {
+      "id": "icon-malabar",
+      "name": "ICON Malabar",
+      "dest": "malaga",
+      "nights": 3,
+      "stars": 4,
+      "score": 9.1,
+      "currency": "USD",
+      "price": 465
+    }
+  ],
+  "plans": [
+    {
+      "id": "palma-3",
+      "dest": "palma",
+      "nights": 3,
+      "headline": true,
+      "flights": [
+        "haj-pmi-14",
+        "ovd-pmi-14",
+        "pmi-ovd-17"
+      ],
+      "hotel": "brick-palma-3",
+      "alt_hotel": "bonany-palma-3",
+      "total_eur": 374,
+      "alt_total_eur": 389
+    },
+    {
+      "id": "palma-7",
+      "dest": "palma",
+      "nights": 7,
+      "headline": true,
+      "flights": [
+        "haj-pmi-14",
+        "ovd-pmi-14",
+        "pmi-ovd-21"
+      ],
+      "hotel": "hesperia-palma-7",
+      "alt_hotel": "bonany-palma-7",
+      "total_eur": 647,
+      "alt_total_eur": 664
+    },
+    {
+      "id": "masp-3",
+      "dest": "maspalomas",
+      "nights": 3,
+      "headline": true,
+      "flights": [
+        "haj-lpa-16",
+        "ovd-lpa-16",
+        "lpa-ovd-19"
+      ],
+      "hotel": "ohana-masp-3",
+      "alt_hotel": "hhriz-masp-3",
+      "total_eur": 455,
+      "alt_total_eur": 489
+    },
+    {
+      "id": "masp-7",
+      "dest": "maspalomas",
+      "nights": 7,
+      "headline": true,
+      "flights": [
+        "haj-lpa-15",
+        "ovd-lpa-15",
+        "lpa-ovd-22"
+      ],
+      "hotel": "masp-south-7",
+      "total_eur": 798
+    },
+    {
+      "id": "lp-3",
+      "dest": "laspalmas",
+      "nights": 3,
+      "headline": true,
+      "flights": [
+        "haj-lpa-16",
+        "ovd-lpa-16",
+        "lpa-ovd-19"
+      ],
+      "hotel": "isleta-lp-3",
+      "alt_hotel": "canaria-lp-3",
+      "total_eur": 380,
+      "alt_total_eur": 441
+    },
+    {
+      "id": "lp-7",
+      "dest": "laspalmas",
+      "nights": 7,
+      "headline": true,
+      "flights": [
+        "haj-lpa-15",
+        "ovd-lpa-15",
+        "lpa-ovd-22"
+      ],
+      "hotel": "vegueta-lp-7",
+      "alt_hotel": "canaria-lp-7",
+      "total_eur": 730,
+      "alt_total_eur": 775
+    },
+    {
+      "id": "malaga-3",
+      "dest": "malaga",
+      "nights": 3,
+      "headline": true,
+      "flights": [
+        "haj-agp-15",
+        "ovd-agp-15",
+        "agp-ovd-18"
+      ],
+      "hotel": "nv-agp-3",
+      "total_eur": 419
+    },
+    {
+      "id": "malaga-7",
+      "dest": "malaga",
+      "nights": 7,
+      "headline": true,
+      "flights": [
+        "haj-agp-18",
+        "ovd-agp-18",
+        "agp-ovd-25"
+      ],
+      "hotel": "nv-agp-7",
+      "total_eur": 564
+    },
+    {
+      "id": "bcn-3",
+      "dest": "barcelona",
+      "nights": 3,
+      "headline": true,
+      "flights": [
+        "haj-bcn-15",
+        "ovd-bcn-15",
+        "bcn-ovd-18"
+      ],
+      "hotel": "maragall-bcn-3",
+      "total_eur": 397
+    },
+    {
+      "id": "bcn-7",
+      "dest": "barcelona",
+      "nights": 7,
+      "headline": true,
+      "flights": [
+        "haj-bcn-15",
+        "ovd-bcn-15",
+        "bcn-ovd-22"
+      ],
+      "hotel": "argo-bcn-7",
+      "alt_hotel": "house-bcn-7",
+      "total_eur": 698,
+      "alt_total_eur": 681
+    }
+  ],
+  "bundles": [
+    {
+      "id": "gc-3",
+      "flights": [
+        "haj-lpa-16",
+        "ovd-lpa-16",
+        "lpa-ovd-19"
+      ],
+      "total_eur": 225
+    },
+    {
+      "id": "gc-7",
+      "flights": [
+        "haj-lpa-15",
+        "ovd-lpa-15",
+        "lpa-ovd-22"
+      ],
+      "total_eur": 262
+    },
+    {
+      "id": "gc-16-22",
+      "flights": [
+        "haj-lpa-16",
+        "ovd-lpa-16",
+        "lpa-ovd-22"
+      ],
+      "total_eur": 210
+    }
+  ],
+  "usd_partials": {
+    "alameda": 651,
+    "malabar": 706
+  }
+}

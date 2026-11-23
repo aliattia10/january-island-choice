@@ -552,8 +552,12 @@ html:has(#dest-barcelona:checked) .price-card[data-highlight="barcelona"] {
   padding: 5px 9px;
   border-radius: 999px;
 }
+.best-tag[hidden] { display: none; }
 .price-card[data-highlight="palma"] .best-tag { background: var(--color-gold-ink); }
+.price-card[data-highlight="maspalomas"] .best-tag { background: var(--color-maspalomas); }
+.price-card[data-highlight="laspalmas"] .best-tag { background: var(--color-laspalmas); }
 .price-card[data-highlight="malaga"] .best-tag { background: var(--color-malaga); }
+.price-card[data-highlight="barcelona"] .best-tag { background: var(--color-barcelona); }
 .price-card h3 { font-style: italic; }
 .amount {
   font-family: var(--font-display);

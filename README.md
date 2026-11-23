@@ -1,50 +1,56 @@
 # December getaway choice
 
-A public, mobile-friendly love letter so Ali’s girlfriend can tap through five December 2026 cities and pick the one that feels most like them:
+A public, mobile-friendly page so Ella and Ali can pick a December 2026 city. Live: [https://aliattia10.github.io/january-island-choice/](https://aliattia10.github.io/january-island-choice/)
 
-- Palma (Mallorca)
-- Maspalomas (Gran Canaria south)
-- Las Palmas (Gran Canaria city)
-- Málaga
-- Barcelona
+This is a GitHub Pages *project* site. Asset URLs are relative (`./styles.css`, `./photos/…`) so they resolve under `/january-island-choice/`. Pages serves `main` from `/`. No custom domain.
 
-The trip window is 14 December 2026 to 1 January 2027. Trip lengths are 3 or 7 nights. There are no bookings and no forms that collect data.
+## The trip shape
 
-**Live site:** [https://aliattia10.github.io/january-island-choice/](https://aliattia10.github.io/january-island-choice/)
+Every destination uses the same itinerary, in **1, 2, 3 or 7 nights**. There is no flight back to Hannover.
 
-This is a GitHub Pages *project* site. Asset URLs are relative (`./styles.css`, `./photos/…`) so they resolve under `/january-island-choice/`.
+1. Ella: Hannover (HAJ) → the city
+2. Ali: Oviedo / Asturias (OVD) → the city
+3. Hotel: N nights in a private double for two. Check-in on arrival day, check-out on the day you both fly to Asturias. Totals use the cheapest private room we priced — never a shared dorm.
+4. Both: the city → Asturias (OVD), two people
+5. Two days together in Asturias at home (no hotel)
+6. Ella: Asturias (OVD) → Frankfurt (FRA), one way, after those days, to go home to Germany
 
-GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is designed as a warm, mobile-first invitation (cream and rose, postcard cities, practical tables folded away), not a spreadsheet.
+If OVD→FRA has no verified fare, the page says **check live price** and the total is the city stay **plus her flight to Frankfurt**. There is no December nonstop; Lufthansa’s direct starts in March 2027. Priced options are one-stop. Santander and Bilbao are dated Google Flights links only — no stored prices.
+
+A euro trip total is Ella inbound + Ali inbound + dest→OVD (already a two-adult pair) + hotel + Ella OVD→FRA when known.
 
 ## What the numbers are
 
-Prices on the page come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`, a Google Flights scraper) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. Hotels stay as last checked — there is no free reliable hotel source in that pipeline.
+Prices come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. Hotels stay as last checked.
 
-The current flight snapshot is 23 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices in the euro totals are for two adults. Hotel euro figures were last checked 22 November 2026.
+Flight snapshot is 23 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults. Hotel euro figures were last checked 22 November 2026 (Booking.com, before about 10% tax). Nicer 3–4★ rooms from that check came back in USD and are labelled USD, with 1 USD ≈ 0.86 EUR as an approximate conversion only.
 
-Budget hotel figures are Booking.com prices in euros, before about 10% tax. Named hotels are what we priced; the plan buttons open a city search (review score 8+, private bathroom). Each date option also has two one-adult Google Flights buttons: Ella from Hannover, and Ali from Asturias (round trip home to OVD). Ella’s link includes the shared return to Asturias where that return was priced.
+OVD→FRA verified 23 November 2026: 17 Dec €123, 18 Dec €141, 19 Dec €141, 20 Dec €91, 22 Dec €169 (Air Europa, 1 stop). 21, 23, 24 and 27 December: check live (fetch returned no results).
 
-Nicer 3- and 4-star rooms from this check came back in US dollars and are shown in USD as returned, with an approximate 1 USD ≈ 0.86 EUR conversion beside them. Barcelona is the best value for a proper hotel (Hotel Arc La Rambla $231 for 15–18 Dec). Maspalomas was not checked for 3/4-star rooms. Málaga has a second three-night window, 18–21 December, on Ella’s Eurowings nonstop (≈$130); Ali’s OVD–AGP round trip is ≈$111; her 21 December return was not priced, so that total is partial.
+Headline cheapest complete trip (Frankfurt included): 3 nights Barcelona €488. Best value per city is the cheapest full city stay (3n or 7n until 1n/2n rooms are priced).
 
-Headline cheapest (budget euro totals): 3 nights Palma €374 (Brick Palma); 7 nights Málaga €564 (Hostal NV Palacio Congresos).
+1-night and 2-night plans reuse the cheapest known inbounds. Together (city→OVD) fares were fetched 23 November 2026. Private-room prices for 1n/2n are **check live** — not stored, not invented — so those columns are flights only plus the room search.
 
-Trip subtotals (both inbound flights + headline room + home to Asturias):
+| City | 1 night | 2 nights | 3 nights | 7 nights |
+| --- | --- | --- | --- | --- |
+| Palma | 14–15 Dec, flights €213 + room check live (FRA €123) | 14–16 Dec, flights €213 + room check live (FRA €141) | €374 (14–17 Dec) + FRA €141 → €515 | €647 (14–21 Dec) + FRA check live |
+| Las Palmas | 16–17 Dec, flights €358 + room check live (FRA €141) | 16–18 Dec, flights €464 + room check live (FRA €91) | €380 (16–19 Dec) + FRA check live | €730 (15–22 Dec) + FRA check live |
+| Maspalomas | same LPA flights as Las Palmas 1n | same LPA flights as Las Palmas 2n | €455 (16–19 Dec) + FRA check live | €798 (15–22 Dec) + FRA check live |
+| Málaga | 18–19 Dec, flights €328 + room check live + FRA 21 Dec check live | 18–20 Dec, flights €328 + room check live (FRA €169) | €419 (15–18 Dec) + FRA €91 → €510 | €564 (18–25 Dec) + FRA check live |
+| Barcelona | 15–16 Dec, flights €280 + room check live (FRA €141) | 15–17 Dec, flights €496 + room check live (FRA €141) | €397 (15–18 Dec) + FRA €91 → €488 | €681 (15–22 Dec, Hostal House) + FRA check live |
 
-| City | 3 nights | 7 nights |
-| --- | --- | --- |
-| Palma | €374 (14–17 Dec) | €647 (14–21 Dec) |
-| Maspalomas | €455 (16–19 Dec) | €798 (15–22 Dec) |
-| Las Palmas | €380 (16–19 Dec) | €730 (15–22 Dec) |
-| Málaga | €419 (15–18 Dec) | €564 (18–25 Dec) |
-| Barcelona | €397 (15–18 Dec) | €698 (15–22 Dec; Hostal House €681) |
+Still needs a live check (so we can fill the 1n/2n columns without inventing a figure):
 
-Prices jump after 22 December (Hannover→Las Palmas €332–450, Hannover→Palma €235–275), so arriving 14–18 December is best. Food, local buses, airport transfers, attraction tickets, bags and insurance are not included.
+- Every 1n/2n **private double room** (10 Booking searches; no named hotel stored)
+- Ella **OVD→FRA on 21 December** (Málaga 1-night, after two days in Asturias)
 
-Self-transfers are separate tickets. A delay can mean buying a new onward flight.
+All 1n/2n **returns to Asturias are verified**. Do not fetch those again unless they look stale.
+
+Málaga 18–21 December is not a headline plan: Ella’s return to Asturias on 21 December was not priced.
+
+Prices jump after 22 December, so arriving 14–18 December is best. Food, local buses, airport transfers, attraction tickets, bags and insurance are not included. Self-transfers are separate tickets.
 
 ## Local preview
-
-Open `index.html` in a browser, or from this folder:
 
 ```bash
 python3 -m http.server 8080
@@ -54,8 +60,8 @@ Then visit `http://localhost:8080/`.
 
 ## Photographs
 
-Real Wikimedia Commons files, downloaded and committed in `photos/`. Credits are on the page footer and in [`photos/CREDITS.md`](photos/CREDITS.md). They are reference photographs from various seasons, not a promise of December weather.
+Real Wikimedia Commons files in `photos/`. Hotel cards use a city photograph labelled as the city, not a hotel façade. Credits: [`photos/CREDITS.md`](photos/CREDITS.md).
 
 ## Licence
 
-Site code is MIT (see `LICENSE`). Photographs remain under their Wikimedia licences (CC BY, CC BY-SA, or CC0).
+Site code is MIT (see `LICENSE`). Photographs remain under their Wikimedia licences.

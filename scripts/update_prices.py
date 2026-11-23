@@ -3,6 +3,12 @@
 
 Hotels are left as-is. A fetch that errors or looks insane keeps the stored value.
 Stops doing work after 2026-12-14 (UTC).
+
+Plan totals are:
+  Ella inbound + Ali inbound + dest→OVD (already a 2-adult pair) + hotel
+  + Ella OVD→FRA when that fare is known.
+Missing / check_live FRA fares leave total_complete false and do not invent a number.
+A missing dest→OVD or hotel (1n/2n rooms) is excluded from subtotal_eur and noted.
 """
 
 from __future__ import annotations
@@ -104,30 +110,82 @@ def sane(new: int, old: int | None, segs: int | None) -> str | None:
     return None
 
 
+def fare_eur(fare: dict) -> int | None:
+    if fare.get("currency") == "USD":
+        return None
+    if fare.get("price_status") == "check_live":
+        return None
+    price = fare.get("price_eur")
+    if price is None:
+        return None
+    return int(price)
+
+
 def recompute(data: dict) -> None:
     flights = {item["id"]: item for item in data["flights"]}
     hotels = {item["id"]: item for item in data["hotels"]}
 
-    def eur_sum(ids: list[str]) -> int:
-        total = 0
-        for fid in ids:
-            fare = flights[fid]
-            if fare.get("currency") == "USD":
-                raise ValueError(f"{fid} is USD and cannot enter an EUR total")
-            total += int(fare["price_eur"])
-        return total
-
     for plan in data["plans"]:
-        flight_total = eur_sum(plan["flights"])
+        ella = fare_eur(flights.get(plan.get("ella_in") or "", {}))
+        ali = fare_eur(flights.get(plan.get("ali_in") or "", {}))
+        tog = fare_eur(flights.get(plan.get("together") or "", {}))
         hotel = hotels[plan["hotel"]]
-        plan["total_eur"] = flight_total + int(hotel["price"])
+        room = None
+        if hotel.get("currency") != "USD" and hotel.get("price") is not None and hotel.get("price_status") != "check_live":
+            room = int(hotel["price"])
+        home_id = plan.get("ella_home")
+        home = fare_eur(flights[home_id]) if home_id else None
+        plan["together_missing"] = tog is None
+        plan["hotel_missing"] = room is None
+        plan["fra_known"] = home is not None
+        plan["inbound_eur"] = None if ella is None or ali is None else ella + ali
+        pieces: list[int] = []
+        if ella is not None:
+            pieces.append(ella)
+        if ali is not None:
+            pieces.append(ali)
+        if tog is not None:
+            pieces.append(tog)
+        if room is not None:
+            pieces.append(room)
+        plan["partial_eur"] = sum(pieces) if ella is not None and ali is not None else None
+        if ella is None or ali is None or tog is None or room is None:
+            plan["subtotal_eur"] = None
+            plan["total_eur"] = None
+            plan["total_complete"] = False
+            continue
+        subtotal = ella + ali + tog + room
+        plan["subtotal_eur"] = subtotal
+        if home is None:
+            plan["total_eur"] = None
+            plan["total_complete"] = False
+        else:
+            plan["total_eur"] = subtotal + home
+            plan["total_complete"] = True
         alt_id = plan.get("alt_hotel")
         if alt_id:
             alt = hotels[alt_id]
-            plan["alt_total_eur"] = flight_total + int(alt["price"])
+            if (
+                alt.get("currency") != "USD"
+                and alt.get("price") is not None
+                and alt.get("price_status") != "check_live"
+            ):
+                plan["alt_subtotal_eur"] = ella + ali + tog + int(alt["price"])
+                plan["alt_total_eur"] = (
+                    plan["alt_subtotal_eur"] + home if home is not None else None
+                )
 
     for bundle in data.get("bundles") or []:
-        bundle["total_eur"] = eur_sum(bundle["flights"])
+        total = 0
+        ok = True
+        for fid in bundle["flights"]:
+            value = fare_eur(flights[fid])
+            if value is None:
+                ok = False
+                break
+            total += value
+        if ok:
+            bundle["total_eur"] = total
 
 
 def dump(data: dict) -> str:
@@ -160,6 +218,7 @@ def main() -> int:
         adults = int(leg.get("adults") or 1)
         want_nonstop = bool(leg.get("nonstop"))
         old = leg.get("price_eur")
+        old_int = old if isinstance(old, int) else None
         label = f"{leg['id']} {leg['origin']}→{leg['destination']} {leg['date']}"
 
         new_one = None
@@ -187,17 +246,18 @@ def main() -> int:
             continue
 
         new = new_one * adults
-        problem = sane(new, old if isinstance(old, int) else None, segs)
+        problem = sane(new, old_int, segs)
         if problem:
             skipped.append(f"{label}: {problem}")
             print(f"SKIP {label}: {problem}")
             continue
 
         any_success = True
-        if old != new:
+        if old != new or leg.get("price_status") == "check_live":
             leg["price_eur"] = new
-            changed.append(f"{label}: €{old} → €{new}")
-            print(f"UPDATE {label}: €{old} → €{new}")
+            leg["price_status"] = "known"
+            changed.append(f"{label}: {old} → €{new}")
+            print(f"UPDATE {label}: {old} → €{new}")
         else:
             print(f"OK {label}: still €{new}")
 

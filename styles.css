@@ -1,897 +1,373 @@
 @import url("./tokens.css");
 @import url("./base.css");
 
+html { scroll-padding-top: 4.75rem; }
+
 body {
   background:
     radial-gradient(920px 580px at -8% -12%, #f08a82 0%, transparent 58%),
     radial-gradient(760px 520px at 108% -6%, #5eb0aa 0%, transparent 52%),
-    radial-gradient(680px 520px at 0% 34%, #f08a82 0%, transparent 56%),
-    radial-gradient(720px 500px at 100% 38%, #5eb0aa 0%, transparent 54%),
-    radial-gradient(780px 540px at 82% 58%, #f3a8b0 0%, transparent 58%),
-    radial-gradient(640px 460px at 8% 64%, #7ec4bf 0%, transparent 55%),
-    radial-gradient(820px 480px at 92% 108%, #f0b45a 0%, transparent 55%),
-    radial-gradient(640px 420px at 12% 88%, #f3c0c8 0%, transparent 50%),
+    radial-gradient(680px 520px at 50% 120%, #f0b45a 0%, transparent 55%),
     linear-gradient(180deg, #fbcfc4 0%, #fde6dc 38%, #f7ddd4 100%);
   color: var(--color-ink-2);
 }
 
+.kicker {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-rose);
+}
+
+.fine { font-size: var(--text-sm); color: var(--color-muted); }
+.aside { color: var(--color-ink-2); }
 .live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 
-/* Hero */
-.hero {
-  position: relative;
-  min-height: 92dvh;
-  color: var(--color-wine);
-  isolation: isolate;
-  overflow: hidden;
-}
-.hero-stage { position: absolute; inset: 0; }
-.hero-photo {
-  display: none;
-  position: absolute;
-  inset: 0;
-  margin: 0;
-}
-html:has(#dest-palma:checked) .hero-photo[data-dest="palma"],
-html:has(#dest-maspalomas:checked) .hero-photo[data-dest="maspalomas"],
-html:has(#dest-laspalmas:checked) .hero-photo[data-dest="laspalmas"],
-html:has(#dest-malaga:checked) .hero-photo[data-dest="malaga"],
-html:has(#dest-barcelona:checked) .hero-photo[data-dest="barcelona"] {
-  display: block;
-}
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(1.12) contrast(1.04);
-}
-.hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.hero-photo[data-dest="palma"]::after {
-  background: linear-gradient(160deg, rgba(232, 176, 72, 0.32) 0%, rgba(240, 150, 100, 0.22) 48%, rgba(255, 200, 140, 0.26) 100%);
-}
-.hero-photo[data-dest="maspalomas"]::after {
-  background: linear-gradient(160deg, rgba(232, 110, 72, 0.32) 0%, rgba(240, 140, 80, 0.22) 50%, rgba(255, 176, 120, 0.28) 100%);
-}
-.hero-photo[data-dest="laspalmas"]::after {
-  background: linear-gradient(160deg, rgba(56, 150, 148, 0.3) 0%, rgba(240, 160, 120, 0.2) 52%, rgba(90, 176, 170, 0.26) 100%);
-}
-.hero-photo[data-dest="malaga"]::after {
-  background: linear-gradient(160deg, rgba(224, 112, 56, 0.34) 0%, rgba(240, 150, 80, 0.22) 50%, rgba(255, 188, 120, 0.28) 100%);
-}
-.hero-photo[data-dest="barcelona"]::after {
-  background: linear-gradient(160deg, rgba(168, 56, 88, 0.34) 0%, rgba(232, 130, 140, 0.22) 50%, rgba(255, 176, 160, 0.26) 100%);
-}
 .masthead {
-  position: absolute;
-  top: 16px;
-  left: var(--gutter);
-  right: var(--gutter);
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 40;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  margin: 0;
-  padding: 10px 18px;
+  gap: 12px;
+  margin: 10px var(--gutter) 0;
+  padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(255, 241, 234, 0.92);
+  background: rgba(255, 241, 234, 0.94);
   color: var(--color-wine);
   box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
 }
 .wordmark {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: inherit;
   text-decoration: none;
 }
 .masthead nav {
   display: flex;
-  gap: 16px;
-  font-size: 0.82rem;
+  gap: 14px;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: lowercase;
 }
 .masthead nav a { color: var(--color-sea); text-decoration: none; }
 .masthead nav a:hover { text-decoration: underline; text-underline-offset: 0.25em; }
+
+.hero {
+  position: relative;
+  min-height: 72dvh;
+  margin: 12px var(--gutter) 0;
+  border-radius: 28px;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: var(--shadow);
+}
+.hero-photo { margin: 0; height: 100%; }
+.hero-photo img {
+  width: 100%;
+  height: 72dvh;
+  min-height: 420px;
+  object-fit: cover;
+  filter: saturate(1.1) contrast(1.04);
+}
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(74, 36, 50, 0.05) 0%, rgba(74, 36, 50, 0.18) 48%, rgba(74, 36, 50, 0.45) 100%);
+}
 .hero-plate {
   position: absolute;
   z-index: 2;
-  left: var(--gutter);
-  right: var(--gutter);
-  bottom: 28px;
-  display: flex;
-  flex-direction: column;
+  left: 16px;
+  right: 16px;
+  bottom: 18px;
   max-width: 34rem;
-  padding: 26px 26px 22px;
-  border-radius: 28px;
-  background: rgba(255, 236, 228, 0.94);
+  padding: 22px 22px 18px;
+  border-radius: 24px;
+  background: rgba(255, 236, 228, 0.95);
   color: var(--color-ink);
-  box-shadow: 0 22px 50px rgba(138, 47, 72, 0.22);
-  border: 2px solid rgba(232, 140, 120, 0.55);
+  border: 2px solid rgba(232, 140, 120, 0.5);
 }
-.hero-plate h1 {
-  color: var(--color-wine);
-}
-.kicker {
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-terracotta-ink);
-  margin-bottom: 10px;
-}
-.hero .lead {
-  margin-top: 12px;
-  font-size: var(--text-lead);
-  line-height: 1.45;
-  max-width: 28ch;
-  color: var(--color-ink-2);
-}
-.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.btn {
+.hero-plate h1 { color: var(--color-wine); max-width: 14ch; }
+.lead { margin-top: 10px; font-size: var(--text-lead); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+.btn, .book-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: 0.55rem 1.15rem;
+  padding: 10px 16px;
   border-radius: 999px;
-  background: var(--color-wine);
-  color: var(--color-accent-ink);
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.92rem;
-  box-shadow: var(--shadow-soft);
-  transition: transform var(--dur-short) var(--ease-out);
-}
-.btn:hover { transform: translateY(-2px); }
-.btn--ghost {
-  background: var(--color-sea);
-  color: var(--color-accent-ink);
-  box-shadow: none;
-}
-
-/* Intro */
-.section { padding-block: 64px; }
-.section--tight { padding-top: 8px; }
-.intro {
-  padding-top: 56px;
-  padding-bottom: 32px;
-}
-.intro .lede {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: var(--text-lead);
-  color: var(--color-wine);
-  max-width: 36ch;
-  line-height: 1.45;
-}
-.intro .aside {
-  margin-top: 16px;
-  color: var(--color-muted);
-  font-size: var(--text-sm);
-  max-width: 52ch;
-}
-
-.head {
-  margin-bottom: 28px;
-  max-width: 36rem;
-}
-.head h2 {
-  color: var(--color-wine);
-  display: inline-block;
-  padding-bottom: 8px;
-  border-bottom: 5px solid var(--color-rose);
-}
-#islands .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
-#place .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
-#days .head h2 { border-bottom-color: var(--color-terracotta); }
-#numbers .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
-#book .head h2 { color: var(--color-wine); border-bottom-color: var(--color-rose); }
-#nicer .head h2 { color: var(--color-gold-ink); border-bottom-color: var(--color-gold); }
-#tradeoffs .head h2 { color: var(--color-sea); border-bottom-color: var(--color-sea); }
-#practical .head h2 { color: var(--color-terracotta-ink); border-bottom-color: var(--color-rose); }
-.head p {
-  margin-top: 10px;
-  color: var(--color-muted);
-  font-size: var(--text-sm);
-}
-
-/* Island postcards */
-.islands {
-  display: grid;
-  gap: 18px;
-}
-.postcard {
-  position: relative;
-  display: block;
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 10px 10px 18px;
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
-  overflow: hidden;
-  border: 3px solid transparent;
-  transition: transform var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out);
-}
-.postcard::before {
-  content: "";
-  display: block;
-  height: 14px;
-  margin: -10px -10px 10px;
-  border-radius: 19px 19px 0 0;
-}
-.postcard:has([value="palma"]) {
-  border-color: var(--color-palma);
-  background: #fff8ec;
-}
-.postcard:has([value="palma"])::before {
-  background: linear-gradient(90deg, #f0c24a, #e08a32);
-}
-.postcard:has([value="palma"]) .postcard-body h3 { color: var(--color-gold-ink); }
-.postcard:has([value="maspalomas"]) {
-  border-color: var(--color-maspalomas);
-  background: #fff3ee;
-}
-.postcard:has([value="maspalomas"])::before {
-  background: linear-gradient(90deg, #f07048, #e23a4a);
-}
-.postcard:has([value="maspalomas"]) .postcard-body h3 { color: var(--color-terracotta-ink); }
-.postcard:has([value="laspalmas"]) {
-  border-color: var(--color-laspalmas);
-  background: #eef7f6;
-}
-.postcard:has([value="laspalmas"])::before {
-  background: linear-gradient(90deg, #2a9a94, #1f6f6c);
-}
-.postcard:has([value="laspalmas"]) .postcard-body h3 { color: var(--color-sea); }
-.postcard:has([value="malaga"]) {
-  border-color: var(--color-malaga);
-  background: #fff4ec;
-}
-.postcard:has([value="malaga"])::before {
-  background: linear-gradient(90deg, #e07a38, #c45c28);
-}
-.postcard:has([value="malaga"]) .postcard-body h3 { color: var(--color-malaga); }
-.postcard:has([value="barcelona"]) {
-  border-color: var(--color-barcelona);
-  background: #fff0f4;
-}
-.postcard:has([value="barcelona"])::before {
-  background: linear-gradient(90deg, #c45c78, #9b3658);
-}
-.postcard:has([value="barcelona"]) .postcard-body h3 { color: var(--color-barcelona); }
-.postcard input {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.postcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-.postcard:has(:checked) {
-  box-shadow: var(--shadow);
-  transform: translateY(-4px);
-}
-.postcard:has([value="palma"]:checked) {
-  box-shadow: var(--shadow), 0 0 0 5px rgba(212, 160, 58, 0.45);
-}
-.postcard:has([value="maspalomas"]:checked) {
-  box-shadow: var(--shadow), 0 0 0 5px rgba(226, 90, 60, 0.4);
-}
-.postcard:has([value="laspalmas"]:checked) {
-  box-shadow: var(--shadow), 0 0 0 5px rgba(31, 111, 108, 0.4);
-}
-.postcard:has([value="malaga"]:checked) {
-  box-shadow: var(--shadow), 0 0 0 5px rgba(196, 92, 40, 0.42);
-}
-.postcard:has([value="barcelona"]:checked) {
-  box-shadow: var(--shadow), 0 0 0 5px rgba(155, 54, 88, 0.42);
-}
-.postcard:has(:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: 3px; }
-.postcard figure {
-  position: relative;
-  margin: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 5 / 4;
-}
-.postcard img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(1.12) contrast(1.04);
-}
-.postcard figure::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 58%, rgba(138, 47, 72, 0.12));
-}
-.postcard-body { padding: 16px 10px 2px; }
-.postcard-body h3 {
-  font-style: italic;
-  margin-bottom: 8px;
-}
-.feeling {
-  font-family: var(--font-display);
-  font-style: italic;
-  color: var(--color-ink);
-  line-height: 1.4;
-}
-.practical {
-  margin-top: 8px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-}
-.stamp {
-  position: absolute;
-  top: 22px;
-  right: 18px;
-  z-index: 1;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-accent-ink);
-  padding: 6px 9px;
-  border-radius: 999px;
-  opacity: 0;
-}
-.postcard:has([value="palma"]) .stamp { background: var(--color-gold-ink); }
-.postcard:has([value="maspalomas"]) .stamp { background: var(--color-terracotta); }
-.postcard:has([value="laspalmas"]) .stamp { background: var(--color-sea); }
-.postcard:has([value="malaga"]) .stamp { background: var(--color-malaga); }
-.postcard:has([value="barcelona"]) .stamp { background: var(--color-barcelona); }
-.postcard:has(:checked) .stamp { opacity: 1; }
-
-/* Nights bar */
-.nights-bar {
-  margin-top: 28px;
-  background: #fde4dc;
-  backdrop-filter: blur(10px);
-  border: 2px solid #f0a090;
-  border-radius: 999px;
-  padding: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 10px;
-  justify-content: space-between;
-}
-.nights-bar p {
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-terracotta);
-  padding-left: 12px;
-}
-.nights-pills { display: flex; flex: 1; gap: 6px; }
-.nights-pills label {
-  flex: 1;
   text-align: center;
-  min-height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.92rem;
-  cursor: pointer;
-  color: var(--color-wine);
-  background: #f8c8bc;
 }
-.nights-pills input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.nights-pills label:has(#nights-3:checked) {
-  background: var(--color-terracotta);
-  color: var(--color-accent-ink);
-}
-.nights-pills label:has(#nights-7:checked) {
-  background: var(--color-sea);
-  color: var(--color-accent-ink);
-}
-.nights-pills label:has(:focus-visible) { outline: 2px solid var(--color-focus); }
-
-@media (max-width: 40rem) {
-  .nights-bar {
-    position: sticky;
-    bottom: 12px;
-    z-index: 20;
-    margin-inline: 0;
-    box-shadow: var(--shadow);
-  }
-  .section { padding-bottom: 96px; }
-}
-
-/* Story */
-.story { padding-top: 48px; }
-.gallery {
-  display: grid;
-  gap: 14px;
-}
-.frame {
-  margin: 0;
-  background: var(--color-card);
-  padding: 10px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-}
-.panel[data-dest="palma"] .frame { border: 3px solid var(--color-palma); background: #fff8ec; }
-.panel[data-dest="maspalomas"] .frame { border: 3px solid var(--color-maspalomas); background: #fff3ee; }
-.panel[data-dest="laspalmas"] .frame { border: 3px solid var(--color-laspalmas); background: #eef7f6; }
-.panel[data-dest="malaga"] .frame { border: 3px solid var(--color-malaga); background: #fff4ec; }
-.panel[data-dest="barcelona"] .frame { border: 3px solid var(--color-barcelona); background: #fff0f4; }
-.jump-note {
-  background: #fff3ee;
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  margin-bottom: 28px;
-  box-shadow: var(--shadow-soft);
-  border-left: 6px solid var(--color-terracotta);
-}
-.jump-note h3 { font-style: italic; margin-bottom: 8px; color: var(--color-terracotta-ink); }
-.frame img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 14px;
-  filter: saturate(1.12) contrast(1.04);
-}
-.frame--lead img { aspect-ratio: 16 / 10; min-height: 220px; }
-.frame--side img { aspect-ratio: 4 / 3; }
-.frame figcaption {
-  margin-top: 8px;
-  padding: 0 6px 4px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-}
-.photo-stack { display: grid; gap: 14px; }
-.weather {
-  margin-top: 22px;
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  box-shadow: var(--shadow-soft);
-  border-left: 6px solid var(--color-rose);
-}
-.weather h3 { font-style: italic; margin-bottom: 8px; color: var(--color-wine); }
-.weather p { color: var(--color-ink-2); }
-.meta-line {
-  margin-top: 10px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-}
-
-/* Days */
-.days {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.days li {
-  display: grid;
-  gap: 6px;
-  padding: 18px 0;
-  border-top: 1px solid var(--color-rule);
-}
-.days li:first-child { border-top: 0; }
-.days time {
-  font-family: var(--font-display);
-  font-style: italic;
-  color: var(--color-terracotta-ink);
-  font-size: 1.15rem;
-}
-
-/* Price cards */
-.price-row {
-  display: grid;
-  gap: 16px;
-}
-.price-card {
-  position: relative;
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 28px 22px 20px;
-  box-shadow: var(--shadow-soft);
-  border: 3px solid transparent;
-  overflow: hidden;
-  transition: transform var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
-}
-.price-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 10px;
-}
-.price-card[data-highlight="palma"] { border-color: var(--color-palma); background: #fff8ec; }
-.price-card[data-highlight="palma"]::before { background: linear-gradient(90deg, #f0c24a, #e08a32); }
-.price-card[data-highlight="palma"] h3,
-.price-card[data-highlight="palma"] .amount { color: var(--color-gold-ink); }
-.price-card[data-highlight="maspalomas"] { border-color: var(--color-maspalomas); background: #fff3ee; }
-.price-card[data-highlight="maspalomas"]::before { background: linear-gradient(90deg, #f07048, #e23a4a); }
-.price-card[data-highlight="maspalomas"] h3,
-.price-card[data-highlight="maspalomas"] .amount { color: var(--color-terracotta-ink); }
-.price-card[data-highlight="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
-.price-card[data-highlight="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
-.price-card[data-highlight="laspalmas"] h3,
-.price-card[data-highlight="laspalmas"] .amount { color: var(--color-sea); }
-.price-card[data-highlight="malaga"] { border-color: var(--color-malaga); background: #fff4ec; }
-.price-card[data-highlight="malaga"]::before { background: linear-gradient(90deg, #e07a38, #c45c28); }
-.price-card[data-highlight="malaga"] h3,
-.price-card[data-highlight="malaga"] .amount { color: var(--color-malaga); }
-.price-card[data-highlight="barcelona"] { border-color: var(--color-barcelona); background: #fff0f4; }
-.price-card[data-highlight="barcelona"]::before { background: linear-gradient(90deg, #c45c78, #9b3658); }
-.price-card[data-highlight="barcelona"] h3,
-.price-card[data-highlight="barcelona"] .amount { color: var(--color-barcelona); }
-html:has(#dest-palma:checked) .price-card[data-highlight="palma"],
-html:has(#dest-maspalomas:checked) .price-card[data-highlight="maspalomas"],
-html:has(#dest-laspalmas:checked) .price-card[data-highlight="laspalmas"],
-html:has(#dest-malaga:checked) .price-card[data-highlight="malaga"],
-html:has(#dest-barcelona:checked) .price-card[data-highlight="barcelona"] {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-}
-.best-tag {
-  display: inline-block;
-  margin: 4px 0 0;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent-ink);
+.btn {
   background: var(--color-wine);
-  padding: 5px 9px;
-  border-radius: 999px;
+  color: #fff7f2;
 }
-.best-tag[hidden] { display: none; }
-.price-card[data-highlight="palma"] .best-tag { background: var(--color-gold-ink); }
-.price-card[data-highlight="maspalomas"] .best-tag { background: var(--color-maspalomas); }
-.price-card[data-highlight="laspalmas"] .best-tag { background: var(--color-laspalmas); }
-.price-card[data-highlight="malaga"] .best-tag { background: var(--color-malaga); }
-.price-card[data-highlight="barcelona"] .best-tag { background: var(--color-barcelona); }
-.price-card h3 { font-style: italic; }
-.amount {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-style: italic;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  margin: 8px 0 6px;
-  font-variant-numeric: lining-nums;
-}
-.amount--text { font-size: clamp(1.35rem, 2.4vw, 1.7rem); }
-.price-card .why { font-size: var(--text-sm); color: var(--color-muted); }
-.fine {
-  margin-top: 18px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-  max-width: 60ch;
+.btn--ghost {
+  background: transparent;
+  color: var(--color-wine);
+  border: 2px solid var(--color-rose);
 }
 
-/* Book this plan */
-.book-plan,
-.book-later {
-  position: relative;
+.dest-nav {
+  position: sticky;
+  top: 3.7rem;
+  z-index: 30;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 14px 0 0;
+  padding: 8px var(--gutter);
+  background: color-mix(in srgb, var(--color-paper) 82%, white);
+  border-block: 1px solid var(--color-rule);
+  scrollbar-width: none;
+}
+.dest-nav::-webkit-scrollbar { display: none; }
+.dest-nav a {
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  border-radius: 999px;
   background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 26px 24px 22px;
-  box-shadow: var(--shadow-soft);
-  border: 3px solid transparent;
-  overflow: hidden;
-  margin-bottom: 18px;
+  color: var(--color-wine);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: 1px solid var(--color-rule);
 }
-.book-plan::before,
-.book-later::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 10px;
+.dest-nav a[aria-current="true"],
+.dest-nav a:hover {
+  background: var(--color-wine);
+  color: #fff7f2;
+  border-color: transparent;
 }
-.book-plan[data-dest="palma"] { border-color: var(--color-palma); background: #fff8ec; }
-.book-plan[data-dest="palma"]::before { background: linear-gradient(90deg, #f0c24a, #e08a32); }
-.book-plan[data-dest="palma"] h3 { color: var(--color-gold-ink); }
-.book-plan[data-dest="maspalomas"] { border-color: var(--color-maspalomas); background: #fff3ee; }
-.book-plan[data-dest="maspalomas"]::before { background: linear-gradient(90deg, #f07048, #e23a4a); }
-.book-plan[data-dest="maspalomas"] h3 { color: var(--color-terracotta-ink); }
-.book-plan[data-dest="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
-.book-plan[data-dest="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
-.book-plan[data-dest="laspalmas"] h3 { color: var(--color-sea); }
-.book-plan[data-dest="malaga"] { border-color: var(--color-malaga); background: #fff4ec; }
-.book-plan[data-dest="malaga"]::before { background: linear-gradient(90deg, #e07a38, #c45c28); }
-.book-plan[data-dest="malaga"] h3 { color: var(--color-malaga); }
-.book-plan[data-dest="barcelona"] { border-color: var(--color-barcelona); background: #fff0f4; }
-.book-plan[data-dest="barcelona"]::before { background: linear-gradient(90deg, #c45c78, #9b3658); }
-.book-plan[data-dest="barcelona"] h3 { color: var(--color-barcelona); }
-.book-later { border-color: var(--color-wine); background: #fff0f3; }
-.book-later::before { background: linear-gradient(90deg, var(--color-wine), var(--color-rose)); }
-.book-later h3 { color: var(--color-wine); font-style: italic; }
-.book-plan h3 { font-style: italic; }
-.book-note {
-  margin: 8px 0 16px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-  max-width: 56ch;
-}
-.book-later p {
-  margin: 8px 0 16px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-  max-width: 56ch;
-}
-.book-actions {
+
+.intro, .compare, .dest-section, .site-foot { padding-block: var(--space-2xl); }
+.intro h2, .compare h2 { margin-bottom: 12px; }
+.intro p, .compare p { max-width: 62ch; }
+
+.shape {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   gap: 10px;
 }
-.book-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 48px;
-  padding: 0.7rem 1.1rem;
-  border-radius: 999px;
-  color: var(--color-accent-ink);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.25;
-  text-align: center;
-  box-shadow: var(--shadow-soft);
-  transition: transform var(--dur-short) var(--ease-out);
-}
-.book-link:hover { transform: translateY(-2px); }
-.book-link--flight,
-.book-link--ella { background: var(--color-wine); }
-.book-link--stay,
-.book-link--ali { background: var(--color-sea); }
-.book-link--search { background: var(--color-terracotta); }
-.book-link--home { background: var(--color-gold-ink); }
-.book-link--later { background: var(--color-wine); }
-
-.days-head {
-  font-style: italic;
-  margin: 8px 0 4px;
-  color: var(--color-wine);
-}
-.days-head + .days { margin-bottom: 12px; }
-
-.nicer-rate {
-  margin: -8px 0 22px;
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-  max-width: 60ch;
-}
-.nicer-callout {
-  background: #fff0f4;
-  border: 3px solid var(--color-barcelona);
-  border-radius: var(--radius);
-  padding: 16px 20px;
-  margin-bottom: 18px;
-  box-shadow: var(--shadow-soft);
-}
-.nicer-callout p { color: var(--color-barcelona); font-family: var(--font-display); font-style: italic; }
-.nicer-list {
-  display: grid;
-  gap: 14px;
-}
-.nicer-card {
-  position: relative;
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 22px 20px 18px;
-  box-shadow: var(--shadow-soft);
-  border: 3px solid transparent;
-  overflow: hidden;
-}
-.nicer-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 10px;
-}
-.nicer-card[data-dest="palma"] { border-color: var(--color-palma); background: #fff8ec; }
-.nicer-card[data-dest="palma"]::before { background: linear-gradient(90deg, #f0c24a, #e08a32); }
-.nicer-card[data-dest="palma"] h3 { color: var(--color-gold-ink); }
-.nicer-card[data-dest="maspalomas"] { border-color: var(--color-maspalomas); background: #fff3ee; }
-.nicer-card[data-dest="maspalomas"]::before { background: linear-gradient(90deg, #f07048, #e23a4a); }
-.nicer-card[data-dest="maspalomas"] h3 { color: var(--color-terracotta-ink); }
-.nicer-card[data-dest="laspalmas"] { border-color: var(--color-laspalmas); background: #eef7f6; }
-.nicer-card[data-dest="laspalmas"]::before { background: linear-gradient(90deg, #2a9a94, #1f6f6c); }
-.nicer-card[data-dest="laspalmas"] h3 { color: var(--color-sea); }
-.nicer-card[data-dest="malaga"] { border-color: var(--color-malaga); background: #fff4ec; }
-.nicer-card[data-dest="malaga"]::before { background: linear-gradient(90deg, #e07a38, #c45c28); }
-.nicer-card[data-dest="malaga"] h3 { color: var(--color-malaga); }
-.nicer-card[data-dest="barcelona"] { border-color: var(--color-barcelona); background: #fff0f4; }
-.nicer-card[data-dest="barcelona"]::before { background: linear-gradient(90deg, #c45c78, #9b3658); }
-.nicer-card[data-dest="barcelona"] h3 { color: var(--color-barcelona); }
-.nicer-card h3 { font-style: italic; margin-bottom: 6px; padding-right: 4.5rem; }
-.nicer-meta { font-size: var(--text-sm); color: var(--color-muted); }
-.nicer-price {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  margin: 10px 0 4px;
-  font-variant-numeric: lining-nums;
-}
-.nicer-approx { font-size: var(--text-sm); color: var(--color-muted); margin-bottom: 14px; }
-.nicer-card .best-tag { position: absolute; top: 18px; right: 14px; }
-.nicer-card .book-link { margin-top: 4px; }
-
-/* Trade */
-.trade {
-  display: grid;
-  gap: 14px;
-}
-.trade > div {
-  background: var(--color-card);
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow-soft);
-}
-.trade > div:first-child { border-top: 6px solid var(--color-sea); }
-.trade > div:last-child { border-top: 6px solid var(--color-terracotta); }
-.trade h3 { font-style: italic; margin-bottom: 8px; color: var(--color-wine); }
-
-/* Panels */
-.panel { display: none; }
-html:has(#dest-palma:checked) .panel[data-dest="palma"]:not([data-nights]),
-html:has(#dest-palma:checked) .panel[data-dest="palma"][data-nights="all"],
-html:has(#dest-maspalomas:checked) .panel[data-dest="maspalomas"]:not([data-nights]),
-html:has(#dest-maspalomas:checked) .panel[data-dest="maspalomas"][data-nights="all"],
-html:has(#dest-laspalmas:checked) .panel[data-dest="laspalmas"]:not([data-nights]),
-html:has(#dest-laspalmas:checked) .panel[data-dest="laspalmas"][data-nights="all"],
-html:has(#dest-malaga:checked) .panel[data-dest="malaga"]:not([data-nights]),
-html:has(#dest-malaga:checked) .panel[data-dest="malaga"][data-nights="all"],
-html:has(#dest-barcelona:checked) .panel[data-dest="barcelona"]:not([data-nights]),
-html:has(#dest-barcelona:checked) .panel[data-dest="barcelona"][data-nights="all"] {
-  display: block;
-}
-html:has(#dest-palma:checked):has(#nights-3:checked) .panel[data-dest="palma"][data-nights="3"],
-html:has(#dest-palma:checked):has(#nights-7:checked) .panel[data-dest="palma"][data-nights="7"],
-html:has(#dest-maspalomas:checked):has(#nights-3:checked) .panel[data-dest="maspalomas"][data-nights="3"],
-html:has(#dest-maspalomas:checked):has(#nights-7:checked) .panel[data-dest="maspalomas"][data-nights="7"],
-html:has(#dest-laspalmas:checked):has(#nights-3:checked) .panel[data-dest="laspalmas"][data-nights="3"],
-html:has(#dest-laspalmas:checked):has(#nights-7:checked) .panel[data-dest="laspalmas"][data-nights="7"],
-html:has(#dest-malaga:checked):has(#nights-3:checked) .panel[data-dest="malaga"][data-nights="3"],
-html:has(#dest-malaga:checked):has(#nights-7:checked) .panel[data-dest="malaga"][data-nights="7"],
-html:has(#dest-barcelona:checked):has(#nights-3:checked) .panel[data-dest="barcelona"][data-nights="3"],
-html:has(#dest-barcelona:checked):has(#nights-7:checked) .panel[data-dest="barcelona"][data-nights="7"] {
-  display: block;
-}
-html:has(#nights-3:checked) .panel[data-nights="3"]:not([data-dest]),
-html:has(#nights-7:checked) .panel[data-nights="7"]:not([data-dest]) {
-  display: block;
-}
-html:has(#dest-palma:checked) .trade.panel[data-dest="palma"][data-nights="all"],
-html:has(#dest-maspalomas:checked) .trade.panel[data-dest="maspalomas"][data-nights="all"],
-html:has(#dest-laspalmas:checked) .trade.panel[data-dest="laspalmas"][data-nights="all"],
-html:has(#dest-malaga:checked) .trade.panel[data-dest="malaga"][data-nights="all"],
-html:has(#dest-barcelona:checked) .trade.panel[data-dest="barcelona"][data-nights="all"],
-html:has(#dest-palma:checked) .ground.panel[data-dest="palma"][data-nights="all"],
-html:has(#dest-maspalomas:checked) .ground.panel[data-dest="maspalomas"][data-nights="all"],
-html:has(#dest-laspalmas:checked) .ground.panel[data-dest="laspalmas"][data-nights="all"],
-html:has(#dest-malaga:checked) .ground.panel[data-dest="malaga"][data-nights="all"],
-html:has(#dest-barcelona:checked) .ground.panel[data-dest="barcelona"][data-nights="all"] {
-  display: grid;
-}
-html:has(#dest-palma:checked) .nicer-card.panel[data-dest="palma"],
-html:has(#dest-maspalomas:checked) .nicer-card.panel[data-dest="maspalomas"],
-html:has(#dest-laspalmas:checked) .nicer-card.panel[data-dest="laspalmas"],
-html:has(#dest-malaga:checked) .nicer-card.panel[data-dest="malaga"],
-html:has(#dest-barcelona:checked) .nicer-card.panel[data-dest="barcelona"] {
-  display: flex;
-  flex-direction: column;
-}
-
-@supports not selector(:has(*)) {
-  .panel { display: block; }
-  .hero-photo { display: block; position: relative; min-height: 50dvh; }
-}
-
-/* Practical */
-.practical-wrap { padding-bottom: 72px; }
-details.fold {
-  background: var(--color-card);
+.shape li {
+  padding: 12px 14px;
   border-radius: var(--radius-sm);
-  margin-bottom: 10px;
-  box-shadow: var(--shadow-soft);
-  padding: 4px 18px 4px;
-  border-left: 5px solid var(--color-rose);
+  background: var(--color-card);
+  border: 1px solid var(--color-rule);
 }
-details.fold > summary {
-  cursor: pointer;
-  list-style: none;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--color-wine);
-  padding: 16px 0;
-}
-details.fold > summary::-webkit-details-marker { display: none; }
-details.fold > summary::after {
-  content: "＋";
-  float: right;
-  font-style: normal;
-  color: var(--color-rose);
-}
-details.fold[open] > summary::after { content: "–"; }
-.fold-body { padding-bottom: 18px; color: var(--color-ink-2); }
-.fold-body p, .fold-body li { font-size: var(--text-sm); }
-.fold-body h3 { font-size: 1.05rem; margin: 16px 0 8px; }
-.table-wrap { overflow-x: auto; margin: 10px 0 16px; }
-table {
+
+.table-wrap { overflow-x: auto; margin-top: 20px; }
+.compare-table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: var(--text-sm);
+  min-width: 52rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
-th, td {
+.compare-table th, .compare-table td {
+  padding: 14px 16px;
   text-align: left;
-  padding: 8px 10px 8px 0;
   border-bottom: 1px solid var(--color-rule);
   vertical-align: top;
+  font-size: 0.92rem;
+  line-height: 1.4;
 }
-th { color: var(--color-muted); font-weight: 700; }
-.num { text-align: right; font-variant-numeric: tabular-nums; }
-.rows { display: grid; gap: 10px; }
-.row { display: grid; gap: 2px; padding-bottom: 10px; border-bottom: 1px solid var(--color-rule); }
-.row-k { font-weight: 700; color: var(--color-ink); font-size: var(--text-sm); }
-.row-v { font-size: var(--text-sm); color: var(--color-ink-2); }
-.checklist { margin: 0; padding-left: 1.1rem; }
-.checklist li { margin: 8px 0; }
-.fold-body a { color: var(--color-sea); }
-.facts-dl { margin: 0; }
-.facts-dl > div { padding: 10px 0; border-top: 1px solid var(--color-rule); }
-.facts-dl dt { font-size: var(--text-xs); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); }
-.facts-dl dd { margin: 4px 0 0; }
-.ground { gap: 18px; }
+.compare-table td {
+  max-width: 12.5rem;
+}
+.compare-table thead th {
+  background: color-mix(in srgb, var(--color-blush) 45%, white);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.compare-table tbody th a { color: var(--color-wine); font-weight: 700; text-decoration: none; }
+.compare-table tbody tr:last-child th,
+.compare-table tbody tr:last-child td { border-bottom: 0; }
 
-/* Footer */
-.site-footer {
-  padding: 48px var(--gutter) 64px;
-  color: var(--color-muted);
-  font-size: var(--text-sm);
+.best-tag {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: #4a2a08;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
-.footer-line {
+.best-tag[hidden] {
+  display: none;
+}
+.best-tag--value {
+  background: var(--color-sea);
+  color: #fff7f2;
+}
+.best-tag--trip {
+  background: var(--color-wine);
+  color: #fff7f2;
+  vertical-align: middle;
+}
+
+.dest-head {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.dest-hero { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
+.dest-hero img { width: 100%; height: 220px; object-fit: cover; }
+
+.stay {
+  margin-bottom: 28px;
+  padding: 20px 18px 22px;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-rule);
+  box-shadow: var(--shadow-soft);
+}
+.stay-head h3 { margin-top: 4px; }
+.timeline {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.step-n {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-wine);
+  color: #fff7f2;
+  font-weight: 800;
   font-family: var(--font-display);
+}
+.timeline h4 { margin: 2px 0 4px; font-size: 1.02rem; }
+.timeline p { color: var(--color-ink-2); }
+.alt-airports { margin-top: 8px; font-size: var(--text-sm); }
+.alt-airports a { color: var(--color-sea); font-weight: 700; }
+.room-line, .alt-stay, .stay-total { margin-top: 12px; }
+.stay-total {
+  font-size: 1.05rem;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-blush) 40%, white);
+}
+
+.book-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+.book-link--ella { background: var(--color-rose); color: #fff7f2; }
+.book-link--ali { background: var(--color-sea); color: #fff7f2; }
+.book-link--together { background: var(--color-terracotta); color: #fff7f2; }
+.book-link--home { background: var(--color-wine); color: #fff7f2; }
+.book-link--hotel, .book-link--search {
+  background: transparent;
+  color: var(--color-wine);
+  border: 2px solid var(--color-rose);
+}
+
+.room-badge {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-sea) 18%, white);
+  color: var(--color-sea);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hotel-card--nicer .room-badge {
+  background: color-mix(in srgb, var(--color-gold) 35%, white);
+  color: var(--color-gold-ink);
+}
+.hotel-nights { font-weight: 700; margin: 4px 0 8px; }
+.hotels-title { margin: 28px 0 8px; }
+.hotel-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+.hotel-card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--color-rule);
+  box-shadow: var(--shadow-soft);
+}
+.hotel-card--nicer {
+  border-color: color-mix(in srgb, var(--color-gold) 55%, var(--color-rule));
+}
+.hotel-card figure { margin: 0; }
+.hotel-card img { width: 100%; height: 180px; object-fit: cover; }
+.hotel-card figcaption {
+  padding: 6px 14px 0;
+  font-size: 0.75rem;
+  color: var(--color-muted);
   font-style: italic;
+}
+.hotel-body { padding: 10px 16px 18px; }
+.hotel-meta { font-size: var(--text-sm); color: var(--color-muted); margin: 6px 0; }
+.hotel-price {
+  font-family: var(--font-display);
   font-size: 1.6rem;
   color: var(--color-wine);
-  margin-bottom: 16px;
+  margin: 4px 0;
+}
+.hotel-approx, .hotel-used { font-size: var(--text-sm); margin: 4px 0 10px; }
+.hotel-card .book-link { width: 100%; }
+
+.dest-palma .step-n { background: var(--color-palma); color: #4a2a08; }
+.dest-laspalmas .step-n { background: var(--color-laspalmas); }
+.dest-maspalomas .step-n { background: var(--color-maspalomas); }
+.dest-malaga .step-n { background: var(--color-malaga); }
+.dest-barcelona .step-n { background: var(--color-barcelona); }
+
+.site-foot {
+  background: color-mix(in srgb, var(--color-wine) 88%, black);
+  color: #fde6dc;
+}
+.site-foot a { color: #ffd7c8; }
+
+@media (min-width: 40rem) {
+  .hero-plate { left: 28px; bottom: 28px; }
+  .book-grid { grid-template-columns: 1fr 1fr; }
+  .hotel-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (min-width: 48rem) {
-  .islands { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .gallery { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: stretch; }
-  .photo-stack { grid-template-rows: 1fr 1fr; height: 100%; }
-  .days li { grid-template-columns: 9rem minmax(0, 1fr); gap: 24px; align-items: baseline; }
-  .price-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .trade { grid-template-columns: 1fr 1fr; }
-  .ground { grid-template-columns: 1fr 1fr; }
-  .book-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .nicer-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .intro .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; }
-  .section { padding-block: 80px; }
-}
-
-@media (min-width: 70rem) {
-  .islands { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .price-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .nicer-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-
-@media (max-width: 47.99rem) {
-  .masthead nav { display: none; }
+@media (min-width: 64rem) {
+  .dest-head { grid-template-columns: 1.1fr 1fr; align-items: center; }
+  .dest-hero img { height: 320px; }
+  .hotel-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero { margin-inline: max(var(--gutter), calc((100% - var(--container)) / 2)); }
 }

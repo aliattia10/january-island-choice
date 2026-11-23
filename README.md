@@ -18,7 +18,7 @@ GitHub Pages serves `main` from `/`. Do not add a custom domain. The page is des
 
 ## What the numbers are
 
-Prices are a snapshot from Sunday 22 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices in the euro totals are for two adults.
+Prices are a snapshot from Monday 23 November 2026. Flight prices are Google Flights, economy, no checked bags. Inbound is one adult. Return flight prices in the euro totals are for two adults.
 
 Budget hotel figures are Booking.com prices in euros, before about 10% tax. Named hotels are what we priced; the plan buttons open a city search (review score 8+, private bathroom). Each date option also has two one-adult Google Flights buttons: Ella from Hannover, and Ali from Asturias (round trip home to OVD). Ella’s link includes the shared return to Asturias where that return was priced.
 
@@ -31,10 +31,10 @@ Trip subtotals (both inbound flights + headline room + home to Asturias):
 | City | 3 nights | 7 nights |
 | --- | --- | --- |
 | Palma | €374 (14–17 Dec) | €647 (14–21 Dec) |
-| Maspalomas | €463 (16–19 Dec) | €798 (15–22 Dec) |
-| Las Palmas | €388 (16–19 Dec) | €730 (15–22 Dec) |
-| Málaga | €417 (15–18 Dec) | €564 (18–25 Dec) |
-| Barcelona | €391 (15–18 Dec) | €692 (15–22 Dec; Hostal House €675) |
+| Maspalomas | €455 (16–19 Dec) | €798 (15–22 Dec) |
+| Las Palmas | €380 (16–19 Dec) | €730 (15–22 Dec) |
+| Málaga | €419 (15–18 Dec) | €564 (18–25 Dec) |
+| Barcelona | €397 (15–18 Dec) | €698 (15–22 Dec; Hostal House €681) |
 
 Prices jump after 22 December (Hannover→Las Palmas €332–450, Hannover→Palma €235–275), so arriving 14–18 December is best. Food, local buses, airport transfers, attraction tickets, bags and insurance are not included.
 

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-23",
+  "snapshot": "2026-11-24",
   "hotels_checked": "2026-11-22",
   "usd_to_eur": 0.86,
   "flights": [
@@ -31,7 +31,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 23
+      "price_eur": 26
     },
     {
       "id": "pmi-ovd-17",
@@ -61,7 +61,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 68
+      "price_eur": 86
     },
     {
       "id": "haj-lpa-16",
@@ -121,7 +121,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 77
+      "price_eur": 66
     },
     {
       "id": "haj-lpa-15",
@@ -136,7 +136,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 124
+      "price_eur": 131
     },
     {
       "id": "ovd-lpa-15",
@@ -166,7 +166,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 62
+      "price_eur": 103
     },
     {
       "id": "haj-agp-15",
@@ -196,7 +196,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 28
+      "price_eur": 24
     },
     {
       "id": "agp-ovd-18",
@@ -226,7 +226,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 150
+      "price_eur": 130
     },
     {
       "id": "ovd-agp-18",
@@ -241,7 +241,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 24
+      "price_eur": 28
     },
     {
       "id": "agp-ovd-25",
@@ -256,7 +256,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI1agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 66
+      "price_eur": 77
     },
     {
       "id": "haj-bcn-15",
@@ -286,7 +286,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 23
+      "price_eur": 18
     },
     {
       "id": "bcn-ovd-18",
@@ -1292,8 +1292,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 107,
-      "partial_eur": 213,
+      "inbound_eur": 110,
+      "partial_eur": 216,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1319,8 +1319,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 107,
-      "partial_eur": 213,
+      "inbound_eur": 110,
+      "partial_eur": 216,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1347,13 +1347,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": true,
-      "inbound_eur": 107,
-      "partial_eur": 374,
-      "subtotal_eur": 374,
-      "total_eur": 515,
+      "inbound_eur": 110,
+      "partial_eur": 377,
+      "subtotal_eur": 377,
+      "total_eur": 518,
       "total_complete": true,
-      "alt_subtotal_eur": 389,
-      "alt_total_eur": 530
+      "alt_subtotal_eur": 392,
+      "alt_total_eur": 533
     },
     {
       "id": "palma-7",
@@ -1377,12 +1377,12 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 107,
-      "partial_eur": 647,
-      "subtotal_eur": 647,
+      "inbound_eur": 110,
+      "partial_eur": 668,
+      "subtotal_eur": 668,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 664,
+      "alt_subtotal_eur": 685,
       "alt_total_eur": null
     },
     {
@@ -1462,11 +1462,11 @@
       "hotel_missing": false,
       "fra_known": false,
       "inbound_eur": 148,
-      "partial_eur": 455,
-      "subtotal_eur": 455,
+      "partial_eur": 444,
+      "subtotal_eur": 444,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 489,
+      "alt_subtotal_eur": 478,
       "alt_total_eur": null
     },
     {
@@ -1490,9 +1490,9 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 200,
-      "partial_eur": 798,
-      "subtotal_eur": 798,
+      "inbound_eur": 207,
+      "partial_eur": 846,
+      "subtotal_eur": 846,
       "total_eur": null,
       "total_complete": false
     },
@@ -1573,11 +1573,11 @@
       "hotel_missing": false,
       "fra_known": false,
       "inbound_eur": 148,
-      "partial_eur": 380,
-      "subtotal_eur": 380,
+      "partial_eur": 369,
+      "subtotal_eur": 369,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 441,
+      "alt_subtotal_eur": 430,
       "alt_total_eur": null
     },
     {
@@ -1602,12 +1602,12 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 200,
-      "partial_eur": 730,
-      "subtotal_eur": 730,
+      "inbound_eur": 207,
+      "partial_eur": 778,
+      "subtotal_eur": 778,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 775,
+      "alt_subtotal_eur": 823,
       "alt_total_eur": null
     },
     {
@@ -1631,8 +1631,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": false,
-      "inbound_eur": 174,
-      "partial_eur": 328,
+      "inbound_eur": 158,
+      "partial_eur": 312,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1658,8 +1658,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 174,
-      "partial_eur": 328,
+      "inbound_eur": 158,
+      "partial_eur": 312,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1685,10 +1685,10 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": true,
-      "inbound_eur": 180,
-      "partial_eur": 419,
-      "subtotal_eur": 419,
-      "total_eur": 510,
+      "inbound_eur": 176,
+      "partial_eur": 415,
+      "subtotal_eur": 415,
+      "total_eur": 506,
       "total_complete": true
     },
     {
@@ -1712,9 +1712,9 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 174,
-      "partial_eur": 564,
-      "subtotal_eur": 564,
+      "inbound_eur": 158,
+      "partial_eur": 559,
+      "subtotal_eur": 559,
       "total_eur": null,
       "total_complete": false
     },
@@ -1739,8 +1739,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 106,
-      "partial_eur": 280,
+      "inbound_eur": 101,
+      "partial_eur": 275,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1766,8 +1766,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 106,
-      "partial_eur": 496,
+      "inbound_eur": 101,
+      "partial_eur": 491,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1793,10 +1793,10 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": true,
-      "inbound_eur": 106,
-      "partial_eur": 397,
-      "subtotal_eur": 397,
-      "total_eur": 488,
+      "inbound_eur": 101,
+      "partial_eur": 392,
+      "subtotal_eur": 392,
+      "total_eur": 483,
       "total_complete": true
     },
     {
@@ -1821,12 +1821,12 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 106,
-      "partial_eur": 681,
-      "subtotal_eur": 681,
+      "inbound_eur": 101,
+      "partial_eur": 676,
+      "subtotal_eur": 676,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 698,
+      "alt_subtotal_eur": 693,
       "alt_total_eur": null
     }
   ],
@@ -1838,7 +1838,7 @@
         "ovd-lpa-16",
         "lpa-ovd-19"
       ],
-      "total_eur": 225
+      "total_eur": 214
     },
     {
       "id": "gc-7",
@@ -1847,7 +1847,7 @@
         "ovd-lpa-15",
         "lpa-ovd-22"
       ],
-      "total_eur": 262
+      "total_eur": 310
     },
     {
       "id": "gc-16-22",
@@ -1856,7 +1856,7 @@
         "ovd-lpa-16",
         "lpa-ovd-22"
       ],
-      "total_eur": 210
+      "total_eur": 251
     }
   ],
   "usd_partials": {

@@ -289,11 +289,11 @@ def plan_totals(plan, flights, hotels):
 def build_prices() -> dict:
     flights = [
         flight("haj-pmi-14", "HAJ", "PMI", "2026-12-14", "Eurowings", "07:55", "nonstop", 1, True, True, 84),
-        flight("ovd-pmi-14", "OVD", "PMI", "2026-12-14", "Vueling", "08:50", "", 1, False, True, 26),
+        flight("ovd-pmi-14", "OVD", "PMI", "2026-12-14", "Vueling", "08:50", "", 1, False, True, 23),
         flight("pmi-ovd-17", "PMI", "OVD", "2026-12-17", "Vueling", "08:00", "pair for 2 adults", 2, False, True, 68),
         flight("pmi-ovd-21", "PMI", "OVD", "2026-12-21", "Vueling", "06:30", "pair for 2 adults", 2, False, True, 86),
         flight("haj-lpa-16", "HAJ", "LPA", "2026-12-16", "Eurowings", "12:50", "nonstop", 1, True, True, 72),
-        flight("ovd-lpa-16", "OVD", "LPA", "2026-12-16", "Air Europa", "", "via Madrid", 1, False, True, 76),
+        flight("ovd-lpa-16", "OVD", "LPA", "2026-12-16", "Air Europa", "", "via Madrid", 1, False, True, 66),
         flight("ovd-lpa-16-binter", "OVD", "LPA", "2026-12-16", "Binter", "", "nonstop alternative, not used in totals", 1, True, True, 186),
         flight("lpa-ovd-19", "LPA", "OVD", "2026-12-19", "Volotea", "18:45", "pair for 2 adults", 2, False, True, 66),
         flight("haj-lpa-15", "HAJ", "LPA", "2026-12-15", "Vueling", "", "via Barcelona", 1, False, True, 131),
@@ -305,7 +305,7 @@ def build_prices() -> dict:
         flight("haj-agp-18", "HAJ", "AGP", "2026-12-18", "Eurowings", "07:10", "nonstop", 1, True, True, 130),
         flight("ovd-agp-18", "OVD", "AGP", "2026-12-18", "Volotea", "", "", 1, False, True, 28),
         flight("agp-ovd-25", "AGP", "OVD", "2026-12-25", "Volotea", "", "pair for 2 adults", 2, False, True, 77),
-        flight("haj-bcn-15", "HAJ", "BCN", "2026-12-15", "Vueling", "10:10", "nonstop", 1, True, True, 83),
+        flight("haj-bcn-15", "HAJ", "BCN", "2026-12-15", "Vueling", "10:10", "nonstop", 1, True, True, 77),
         flight("ovd-bcn-15", "OVD", "BCN", "2026-12-15", "Vueling", "20:55", "", 1, False, True, 18),
         flight("bcn-ovd-18", "BCN", "OVD", "2026-12-18", "Vueling", "07:20", "pair for 2 adults", 2, False, True, 144),
         flight("bcn-ovd-22", "BCN", "OVD", "2026-12-22", "Air Europa", "", "pair for 2 adults", 2, False, True, 165),
@@ -526,7 +526,7 @@ def build_prices() -> dict:
         plan["flights"] = [plan["ella_in"], plan["ali_in"], plan["together"]]
 
     data = {
-        "snapshot": "2026-11-24",
+        "snapshot": "2026-11-25",
         "hotels_checked": "2026-11-22",
         "usd_to_eur": 0.86,
         "flights": flights,
@@ -844,7 +844,7 @@ DESTS = [
         "extra": {
             "lp-1": '<p class="fine">Uses Ella’s <span data-bind="f:haj-lpa-16">€72</span> nonstop on 16 December. The 17 December flight home for two is dearer than the 19 December three-night return. Room not stored.</p>',
             "lp-2": '<p class="fine">Same cheap 16 December inbounds. The 18 December flight home for two is expensive; room not stored.</p>',
-            "lp-7": '<p class="fine">Arriving a day later, 16–22 December, keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop and drops city flights to <span data-bind="b:gc-16-22">€210</span>. That is not the headline seven-night total.</p>',
+            "lp-7": '<p class="fine">Arriving a day later, 16–22 December, keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop and drops city flights to <span data-bind="b:gc-16-22">€241</span>. That is not the headline seven-night total.</p>',
         },
     },
     {
@@ -867,8 +867,8 @@ DESTS = [
         "extra": {
             "masp-1": '<p class="fine">Same Gran Canaria flights as Las Palmas — airport LPA, Ella’s 16 December nonstop. Room not stored.</p>',
             "masp-2": '<p class="fine">Same 16 December inbounds. The 18 December LPA→OVD pair is expensive. Room not stored.</p>',
-            "masp-3": '<p class="fine">Ali’s inbound has a dearer Binter nonstop at <span data-bind="f:ovd-lpa-16-binter">€186</span>; the total uses Air Europa via Madrid at <span data-bind="f:ovd-lpa-16">€76</span>.</p>',
-            "masp-7": '<p class="fine">Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (city flights <span data-bind="b:gc-16-22">€210</span>). That is not the headline seven-night total.</p>',
+            "masp-3": '<p class="fine">Ali’s inbound has a dearer Binter nonstop at <span data-bind="f:ovd-lpa-16-binter">€186</span>; the total uses Air Europa via Madrid at <span data-bind="f:ovd-lpa-16">€66</span>.</p>',
+            "masp-7": '<p class="fine">Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (city flights <span data-bind="b:gc-16-22">€241</span>). That is not the headline seven-night total.</p>',
         },
     },
     {
@@ -1062,7 +1062,7 @@ def build_html(data: dict) -> str:
         <li><strong>Two days in Asturias</strong> — at home, no hotel.</li>
         <li><strong>You</strong> — after those days, Asturias (OVD) → Frankfurt (FRA). No December nonstop; the priced options are one-stop, typically via Madrid.</li>
       </ol>
-      <p class="aside">This page does not process payment. Snapshot <span data-bind="snapshot">24 November 2026</span>. Hotels last checked <span data-bind="hotels_checked">22 November 2026</span>. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
+      <p class="aside">This page does not process payment. Snapshot <span data-bind="snapshot">25 November 2026</span>. Hotels last checked <span data-bind="hotels_checked">22 November 2026</span>. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
     </div>
   </section>
 
@@ -1097,7 +1097,7 @@ def build_html(data: dict) -> str:
   <footer class="site-foot">
     <div class="container">
       <p>A private page for two people. Ella’s first name is on the buttons because Ali asked. No last names. Photographs are Wikimedia Commons files — credits in <a href="./photos/CREDITS.md">photos/CREDITS.md</a>.</p>
-      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">24 November 2026</span>.</p>
+      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">25 November 2026</span>.</p>
     </div>
   </footer>
   <script src="./app.js" defer></script>

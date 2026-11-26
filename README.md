@@ -23,21 +23,21 @@ A euro trip total is Ella inbound + Ali inbound + dest→OVD (already a two-adul
 
 Prices come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. Hotels stay as last checked.
 
-Flight snapshot is 25 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults. Hotel euro figures were last checked 22 November 2026 (Booking.com, before about 10% tax). Nicer 3–4★ rooms from that check came back in USD and are labelled USD, with 1 USD ≈ 0.86 EUR as an approximate conversion only.
+Flight snapshot is 26 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults. Hotel euro figures were last checked 22 November 2026 (Booking.com, before about 10% tax). Nicer 3–4★ rooms from that check came back in USD and are labelled USD, with 1 USD ≈ 0.86 EUR as an approximate conversion only.
 
-OVD→FRA verified 23 November 2026 (unchanged in the 25 November flight refresh): 17 Dec €123, 18 Dec €141, 19 Dec €141, 20 Dec €91, 22 Dec €169 (Air Europa, 1 stop). 21, 23, 24 and 27 December: check live (fetch returned no results).
+OVD→FRA: 17 Dec €91 and 19 Dec €116 rechecked 26 November 2026. 18 Dec €141, 20 Dec €91, 22 Dec €169 last fetched 23 November 2026 (not rechecked). 21, 23, 24 and 27 December: check live.
 
 Headline cheapest complete trip (Frankfurt included): 3 nights Barcelona €477. Best value per city is the cheapest full city stay (3n or 7n until 1n/2n rooms are priced).
 
-1-night and 2-night plans reuse the cheapest known inbounds. Legs not in the 25 November list stay as last fetched. Private-room prices for 1n/2n are **check live** — not stored, not invented — so those columns are flights only plus the room search.
+1-night and 2-night plans reuse the cheapest known inbounds. Legs not in the 26 November list stay as last fetched. Private-room prices for 1n/2n are **check live** — not stored, not invented — so those columns are flights only plus the room search.
 
 | City | 1 night | 2 nights | 3 nights | 7 nights |
 | --- | --- | --- | --- | --- |
-| Palma | 14–15 Dec, flights €213 + room check live (FRA €123) | 14–16 Dec, flights €213 + room check live (FRA €141) | €374 (14–17 Dec) + FRA €141 → €515 | €665 (14–21 Dec) + FRA check live |
-| Las Palmas | 16–17 Dec, flights €348 + room check live (FRA €141) | 16–18 Dec, flights €454 + room check live (FRA €91) | €359 (16–19 Dec) + FRA check live | €778 (15–22 Dec) + FRA check live |
-| Maspalomas | same LPA flights as Las Palmas 1n | same LPA flights as Las Palmas 2n | €434 (16–19 Dec) + FRA check live | €846 (15–22 Dec) + FRA check live |
-| Málaga | 18–19 Dec, flights €312 + room check live + FRA 21 Dec check live | 18–20 Dec, flights €312 + room check live (FRA €169) | €415 (15–18 Dec) + FRA €91 → €506 | €559 (18–25 Dec) + FRA check live |
-| Barcelona | 15–16 Dec, flights €269 + room check live (FRA €141) | 15–17 Dec, flights €485 + room check live (FRA €141) | €386 (15–18 Dec) + FRA €91 → €477 | €670 (15–22 Dec, Hostal House) + FRA check live |
+| Palma | 14–15 Dec, flights €213 + room check live (FRA €91) | 14–16 Dec, flights €213 + room check live (FRA €141) | €374 (14–17 Dec) + FRA €116 → €490 | €673 (14–21 Dec) + FRA check live |
+| Las Palmas | 16–17 Dec, flights €348 + room check live (FRA €116) | 16–18 Dec, flights €454 + room check live (FRA €91) | €370 (16–19 Dec) + FRA check live | €726 (15–22 Dec) + FRA check live |
+| Maspalomas | same LPA flights as Las Palmas 1n | same LPA flights as Las Palmas 2n | €445 (16–19 Dec) + FRA check live | €794 (15–22 Dec) + FRA check live |
+| Málaga | 18–19 Dec, flights €297 + room check live + FRA 21 Dec check live | 18–20 Dec, flights €276 + room check live (FRA €169) | €415 (15–18 Dec) + FRA €91 → €506 | €544 (18–25 Dec) + FRA check live |
+| Barcelona | 15–16 Dec, flights €269 + room check live (FRA €141) | 15–17 Dec, flights €485 + room check live (FRA €116) | €386 (15–18 Dec) + FRA €91 → €477 | €670 (15–22 Dec, Hostal House) + FRA check live |
 
 Still needs a live check (so we can fill the 1n/2n columns without inventing a figure):
 

@@ -291,31 +291,31 @@ def build_prices() -> dict:
         flight("haj-pmi-14", "HAJ", "PMI", "2026-12-14", "Eurowings", "07:55", "nonstop", 1, True, True, 84),
         flight("ovd-pmi-14", "OVD", "PMI", "2026-12-14", "Vueling", "08:50", "", 1, False, True, 23),
         flight("pmi-ovd-17", "PMI", "OVD", "2026-12-17", "Vueling", "08:00", "pair for 2 adults", 2, False, True, 68),
-        flight("pmi-ovd-21", "PMI", "OVD", "2026-12-21", "Vueling", "06:30", "pair for 2 adults", 2, False, True, 86),
+        flight("pmi-ovd-21", "PMI", "OVD", "2026-12-21", "Vueling", "06:30", "pair for 2 adults", 2, False, True, 94),
         flight("haj-lpa-16", "HAJ", "LPA", "2026-12-16", "Eurowings", "12:50", "nonstop", 1, True, True, 72),
         flight("ovd-lpa-16", "OVD", "LPA", "2026-12-16", "Air Europa", "", "via Madrid", 1, False, True, 66),
         flight("ovd-lpa-16-binter", "OVD", "LPA", "2026-12-16", "Binter", "", "nonstop alternative, not used in totals", 1, True, True, 186),
-        flight("lpa-ovd-19", "LPA", "OVD", "2026-12-19", "Volotea", "18:45", "pair for 2 adults", 2, False, True, 66),
-        flight("haj-lpa-15", "HAJ", "LPA", "2026-12-15", "Vueling", "", "via Barcelona", 1, False, True, 131),
-        flight("ovd-lpa-15", "OVD", "LPA", "2026-12-15", "", "", "his inbound in the 7-night Gran Canaria flight total", 1, False, True, 76),
+        flight("lpa-ovd-19", "LPA", "OVD", "2026-12-19", "Volotea", "18:45", "pair for 2 adults", 2, False, True, 77),
+        flight("haj-lpa-15", "HAJ", "LPA", "2026-12-15", "Vueling", "", "via Barcelona", 1, False, True, 89),
+        flight("ovd-lpa-15", "OVD", "LPA", "2026-12-15", "", "", "his inbound in the 7-night Gran Canaria flight total", 1, False, True, 66),
         flight("lpa-ovd-22", "LPA", "OVD", "2026-12-22", "", "", "pair for 2 adults", 2, False, True, 103),
         flight("haj-agp-15", "HAJ", "AGP", "2026-12-15", "Vueling", "", "1 stop", 1, False, True, 152),
         flight("ovd-agp-15", "OVD", "AGP", "2026-12-15", "Volotea", "", "", 1, False, True, 24),
         flight("agp-ovd-18", "AGP", "OVD", "2026-12-18", "", "", "pair for 2 adults", 2, False, True, 124),
-        flight("haj-agp-18", "HAJ", "AGP", "2026-12-18", "Eurowings", "07:10", "nonstop", 1, True, True, 130),
+        flight("haj-agp-18", "HAJ", "AGP", "2026-12-18", "Eurowings", "07:10", "nonstop", 1, True, True, 115),
         flight("ovd-agp-18", "OVD", "AGP", "2026-12-18", "Volotea", "", "", 1, False, True, 28),
         flight("agp-ovd-25", "AGP", "OVD", "2026-12-25", "Volotea", "", "pair for 2 adults", 2, False, True, 77),
         flight("haj-bcn-15", "HAJ", "BCN", "2026-12-15", "Vueling", "10:10", "nonstop", 1, True, True, 77),
         flight("ovd-bcn-15", "OVD", "BCN", "2026-12-15", "Vueling", "20:55", "", 1, False, True, 18),
         flight("bcn-ovd-18", "BCN", "OVD", "2026-12-18", "Vueling", "07:20", "pair for 2 adults", 2, False, True, 144),
         flight("bcn-ovd-22", "BCN", "OVD", "2026-12-22", "Air Europa", "", "pair for 2 adults", 2, False, True, 165),
-        flight("ovd-fra-19", "OVD", "FRA", "2026-12-19", "Air Europa", "", "1 stop; no December nonstop. Cheapest in this check.", 1, False, True, 141),
+        flight("ovd-fra-19", "OVD", "FRA", "2026-12-19", "Air Europa", "", "1 stop; no December nonstop. Cheapest in this check.", 1, False, True, 116),
         flight("ovd-fra-20", "OVD", "FRA", "2026-12-20", "Air Europa", "", "1 stop; no December nonstop. Cheapest in this check.", 1, False, True, 91),
         flight("ovd-fra-21", "OVD", "FRA", "2026-12-21", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
         flight("ovd-fra-23", "OVD", "FRA", "2026-12-23", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
         flight("ovd-fra-24", "OVD", "FRA", "2026-12-24", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
         flight("ovd-fra-27", "OVD", "FRA", "2026-12-27", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
-        flight("ovd-fra-17", "OVD", "FRA", "2026-12-17", "", "", "1 stop; no December nonstop.", 1, False, True, 123),
+        flight("ovd-fra-17", "OVD", "FRA", "2026-12-17", "", "", "1 stop; no December nonstop.", 1, False, True, 91),
         flight("ovd-fra-18", "OVD", "FRA", "2026-12-18", "", "", "1 stop; no December nonstop.", 1, False, True, 141),
         flight("ovd-fra-22", "OVD", "FRA", "2026-12-22", "", "", "1 stop; no December nonstop.", 1, False, True, 169),
         flight("pmi-ovd-15", "PMI", "OVD", "2026-12-15", "", "", "pair for 2 adults, 1 stop", 2, False, True, 106),
@@ -323,7 +323,7 @@ def build_prices() -> dict:
         flight("lpa-ovd-17", "LPA", "OVD", "2026-12-17", "", "", "pair for 2 adults, 1 stop", 2, False, True, 210),
         flight("lpa-ovd-18", "LPA", "OVD", "2026-12-18", "", "", "pair for 2 adults, 1 stop", 2, False, True, 316),
         flight("agp-ovd-19", "AGP", "OVD", "2026-12-19", "", "", "pair for 2 adults, 1 stop", 2, False, True, 154),
-        flight("agp-ovd-20", "AGP", "OVD", "2026-12-20", "", "", "pair for 2 adults, 1 stop", 2, False, True, 154),
+        flight("agp-ovd-20", "AGP", "OVD", "2026-12-20", "", "", "pair for 2 adults, 1 stop", 2, False, True, 133),
         flight("bcn-ovd-16", "BCN", "OVD", "2026-12-16", "", "", "pair for 2 adults, 2 stops — possible self-transfer", 2, False, True, 174),
         flight("bcn-ovd-17", "BCN", "OVD", "2026-12-17", "", "", "pair for 2 adults, 1 stop", 2, False, True, 390),
         {
@@ -526,7 +526,7 @@ def build_prices() -> dict:
         plan["flights"] = [plan["ella_in"], plan["ali_in"], plan["together"]]
 
     data = {
-        "snapshot": "2026-11-25",
+        "snapshot": "2026-11-26",
         "hotels_checked": "2026-11-22",
         "usd_to_eur": 0.86,
         "flights": flights,
@@ -540,7 +540,7 @@ def build_prices() -> dict:
         "usd_partials": {"alameda": 651, "malabar": 706},
         "notes": {
             "itinerary": "Ella HAJ→city; Ali OVD→city; private double for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); 2 nights in Asturias at home (no hotel); Ella OVD→FRA one way after those days. No return to Hannover. Totals use cheapest private room. Unverified 1n/2n rooms are check live, excluded from totals.",
-            "ovd_fra": "No nonstop OVD→FRA in December 2026 (Lufthansa nonstop starts March 2027). 17 Dec €123, 18 Dec €141, 19 Dec €141, 20 Dec €91, 22 Dec €169 Air Europa 1-stop, fetched 23 Nov 2026. 21, 23, 24, 27 Dec: check live.",
+            "ovd_fra": "No nonstop OVD→FRA in December 2026 (Lufthansa nonstop starts March 2027). 17 Dec €91 and 19 Dec €116 rechecked 26 Nov 2026. 18 Dec €141, 20 Dec €91, 22 Dec €169 Air Europa 1-stop, last fetched 23 Nov 2026 (not rechecked). 21, 23, 24, 27 Dec: check live.",
             "needs_check": [
                 "Palma 1n 14–15 Dec: private double room (palma-priv-1). Return PMI→OVD 15 Dec is verified €106/pair.",
                 "Palma 2n 14–16 Dec: private double room (palma-priv-2). Return PMI→OVD 16 Dec is verified €106/pair.",
@@ -549,7 +549,7 @@ def build_prices() -> dict:
                 "Maspalomas 1n 16–17 Dec: private double room (masp-priv-1). Same LPA flights as Las Palmas 1n.",
                 "Maspalomas 2n 16–18 Dec: private double room (masp-priv-2). Same LPA flights as Las Palmas 2n.",
                 "Málaga 1n 18–19 Dec: private double room (agp-priv-1). Return AGP→OVD 19 Dec is verified €154/pair. Also Ella OVD→FRA 21 Dec (check live).",
-                "Málaga 2n 18–20 Dec: private double room (agp-priv-2). Return AGP→OVD 20 Dec is verified €154/pair.",
+                "Málaga 2n 18–20 Dec: private double room (agp-priv-2). Return AGP→OVD 20 Dec is verified €133/pair.",
                 "Barcelona 1n 15–16 Dec: private double room (bcn-priv-1). Return BCN→OVD 16 Dec is verified €174/pair (2 stops, possible self-transfer).",
                 "Barcelona 2n 15–17 Dec: private double room (bcn-priv-2). Return BCN→OVD 17 Dec is verified €390/pair.",
             ],
@@ -1062,7 +1062,7 @@ def build_html(data: dict) -> str:
         <li><strong>Two days in Asturias</strong> — at home, no hotel.</li>
         <li><strong>You</strong> — after those days, Asturias (OVD) → Frankfurt (FRA). No December nonstop; the priced options are one-stop, typically via Madrid.</li>
       </ol>
-      <p class="aside">This page does not process payment. Snapshot <span data-bind="snapshot">25 November 2026</span>. Hotels last checked <span data-bind="hotels_checked">22 November 2026</span>. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
+      <p class="aside">This page does not process payment. Snapshot <span data-bind="snapshot">26 November 2026</span>. Hotels last checked <span data-bind="hotels_checked">22 November 2026</span>. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
     </div>
   </section>
 
@@ -1097,7 +1097,7 @@ def build_html(data: dict) -> str:
   <footer class="site-foot">
     <div class="container">
       <p>A private page for two people. Ella’s first name is on the buttons because Ali asked. No last names. Photographs are Wikimedia Commons files — credits in <a href="./photos/CREDITS.md">photos/CREDITS.md</a>.</p>
-      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">25 November 2026</span>.</p>
+      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">26 November 2026</span>.</p>
     </div>
   </footer>
   <script src="./app.js" defer></script>

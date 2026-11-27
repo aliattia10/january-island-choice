@@ -294,6 +294,18 @@ body {
   color: var(--color-wine);
   border: 2px solid var(--color-rose);
 }
+.book-link--airbnb {
+  background: var(--color-rose);
+  color: #fff7f2;
+  border: 2px solid transparent;
+}
+.hotel-card--airbnb {
+  border-color: color-mix(in srgb, var(--color-rose) 45%, var(--color-rule));
+}
+.hotel-card--airbnb .room-badge {
+  background: color-mix(in srgb, var(--color-rose) 22%, white);
+  color: var(--color-wine);
+}
 
 .room-badge {
   display: inline-block;

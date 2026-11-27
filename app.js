@@ -121,9 +121,10 @@
     const hotels = indexById(data.hotels);
     const plans = indexById(data.plans);
     const bundles = indexById(data.bundles);
-    const rate = Number(data.usd_to_eur) || 0.86;
+    const rate = Number(data.usd_to_eur) || 0.911;
     const snapshot = prettyDate(data.snapshot);
     const hotelsChecked = prettyDate(data.hotels_checked);
+    const roomsChecked = prettyDate(data.rooms_checked);
     const c1 = cheapestPlan(data.plans || [], 1);
     const c2 = cheapestPlan(data.plans || [], 2);
     const c3 = cheapestPlan(data.plans || [], 3);
@@ -134,6 +135,7 @@
     function resolve(key) {
       if (key === "snapshot") return snapshot;
       if (key === "hotels_checked") return hotelsChecked;
+      if (key === "rooms_checked") return roomsChecked;
       if (key === "cheapestHeadline") {
         const bits = [];
         if (tripWinner) {

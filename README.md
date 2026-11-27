@@ -10,39 +10,44 @@ Every destination uses the same itinerary, in **1, 2, 3 or 7 nights**. There is 
 
 1. Ella: Hannover (HAJ) → the city
 2. Ali: Oviedo / Asturias (OVD) → the city
-3. Hotel: N nights in a private double for two. Check-in on arrival day, check-out on the day you both fly to Asturias. Totals use the cheapest private room we priced — never a shared dorm.
+3. Stay: N nights in a private room or whole place for two. Check-in on arrival day, check-out on the day you both fly to Asturias. Totals use the cheapest verified private option — never a shared room.
 4. Both: the city → Asturias (OVD), two people
 5. Two days together in Asturias at home (no hotel)
 6. Ella: Asturias (OVD) → Frankfurt (FRA), one way, after those days, to go home to Germany
 
 If OVD→FRA has no verified fare, the page says **check live price** and the total is the city stay **plus her flight to Frankfurt**. There is no December nonstop; Lufthansa’s direct starts in March 2027. Priced options are one-stop. Santander and Bilbao are dated Google Flights links only — no stored prices.
 
-A euro trip total is Ella inbound + Ali inbound + dest→OVD (already a two-adult pair) + hotel + Ella OVD→FRA when known.
+A euro trip total is Ella inbound + Ali inbound + dest→OVD (already a two-adult pair) + cheapest verified private stay + Ella OVD→FRA when known.
 
 ## What the numbers are
 
-Prices come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. Hotels stay as last checked.
+Prices come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. Rebuild the page with [`scripts/_rebuild.py`](scripts/_rebuild.py).
 
-Flight snapshot is 27 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults. Hotel euro figures were last checked 22 November 2026 (Booking.com, before about 10% tax). Nicer 3–4★ rooms from that check came back in USD and are labelled USD, with 1 USD ≈ 0.86 EUR as an approximate conversion only.
+Flight snapshot is 27 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults.
+
+Rooms were checked 27 November 2026 on Airbnb (airbnb.es, EUR stay totals for 2 adults, fees included). Booking.com hotel euro prices were last checked 22 November 2026 and could not be re-verified on 27 November — the page labels them **recheck live**, but they still compete with Airbnb when choosing the cheapest stay. Nicer 3–4★ rooms from the Booking check came back in USD and stay out of euro totals. 1 USD ≈ 0.911 EUR (EUR/USD ~1.0975 on 27 November) is only for those USD cards.
+
+Google Hotels one-night lines are display only, not in the trip total.
 
 OVD→FRA rechecked 27 November 2026: 17 Dec €91, 18 Dec €116, 19 Dec €116, 20 Dec €116, 22 Dec €116 (Air Europa, 1 stop). 21, 23, 24 and 27 December: check live.
 
-Headline cheapest complete trip (Frankfurt included): 3 nights Palma €469. Best value per city is the cheapest full city stay (3n or 7n until 1n/2n rooms are priced).
-
-1-night and 2-night plans reuse the cheapest known inbounds. Legs not in the 27 November list stay as last fetched. Private-room prices for 1n/2n are **check live** — not stored, not invented — so those columns are flights only plus the room search.
+**Cheapest complete trip** (Frankfurt included): 1 night Palma €346. **Best value** per city is the cheapest full city stay (room + all three city flights).
 
 | City | 1 night | 2 nights | 3 nights | 7 nights |
 | --- | --- | --- | --- | --- |
-| Palma | 14–15 Dec, flights €192 + room check live (FRA €91) | 14–16 Dec, flights €192 + room check live (FRA €116) | €353 (14–17 Dec) + FRA €116 → €469 | €652 (14–21 Dec) + FRA check live |
-| Las Palmas | 16–17 Dec, flights €348 + room check live (FRA €116) | 16–18 Dec, flights €454 + room check live (FRA €116) | €370 (16–19 Dec) + FRA check live | €708 (15–22 Dec) + FRA check live |
-| Maspalomas | same LPA flights as Las Palmas 1n | same LPA flights as Las Palmas 2n | €445 (16–19 Dec) + FRA check live | €776 (15–22 Dec) + FRA check live |
-| Málaga | 18–19 Dec, flights €297 + room check live + FRA 21 Dec check live | 18–20 Dec, flights €276 + room check live (FRA €116) | €415 (15–18 Dec) + FRA €116 → €531 | €544 (18–25 Dec) + FRA check live |
-| Barcelona | 15–16 Dec, flights €269 + room check live (FRA €116) | 15–17 Dec, flights €485 + room check live (FRA €116) | €386 (15–18 Dec) + FRA €116 → €502 | €670 (15–22 Dec, Hostal House) + FRA check live |
+| Palma | €346 complete (Airbnb €63) | €433 complete (Airbnb €125) | €457 complete (Airbnb €187) | €615 before Frankfurt (Airbnb €435) |
+| Las Palmas | €512 complete (Airbnb €48) | €680 complete (Airbnb €110) | €370 before Frankfurt (Booking Isleta €155) | €686 before Frankfurt (Airbnb €446) |
+| Maspalomas | flights €348 + room check live | €718 complete (Airbnb €148) | €405 before Frankfurt (Airbnb €190) | €763 before Frankfurt (Airbnb €523) |
+| Málaga | €336 before Frankfurt (Airbnb €39; FRA 21 Dec check live) | €508 complete (Airbnb €116) | €531 complete (Booking NV €115) | €544 before Frankfurt (Booking NV €324) |
+| Barcelona | €430 complete (Airbnb €45) | €691 complete (Airbnb €90) | €490 complete (Airbnb €135) | €670 before Frankfurt (Booking House €410) |
 
-Still needs a live check (so we can fill the 1n/2n columns without inventing a figure):
+Maspalomas 1 night had no Airbnb in town within €35–85 — check live. All other 1n/2n stays now have a stored Airbnb price.
 
-- Every 1n/2n **private double room** (10 Booking searches; no named hotel stored)
-- Ella **OVD→FRA on 21 December** (Málaga 1-night, after two days in Asturias)
+Still needs a live check:
+
+- Maspalomas 1n 16–17 December private stay
+- Booking.com hotel euro prices (22 November snapshot)
+- Ella **OVD→FRA on 21, 23, 24 and 27 December**
 
 All 1n/2n **returns to Asturias are verified**. Do not fetch those again unless they look stale.
 
@@ -60,7 +65,7 @@ Then visit `http://localhost:8080/`.
 
 ## Photographs
 
-Real Wikimedia Commons files in `photos/`. Hotel cards use a city photograph labelled as the city, not a hotel façade. Credits: [`photos/CREDITS.md`](photos/CREDITS.md).
+Real Wikimedia Commons files in `photos/`. Booking hotel cards use a city photograph labelled as the city, not a hotel façade. Airbnb cards use the listing photo when we have one, otherwise a city photograph. Credits: [`photos/CREDITS.md`](photos/CREDITS.md).
 
 ## Licence
 

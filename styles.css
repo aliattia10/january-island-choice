@@ -152,6 +152,101 @@ body {
 }
 
 .intro, .compare, .dest-section, .site-foot { padding-block: var(--space-2xl); }
+
+.dest-home {
+  background:
+    radial-gradient(720px 420px at -10% 0%, #f08a82 0%, transparent 58%),
+    radial-gradient(640px 380px at 110% 8%, #e8b45a 0%, transparent 52%),
+    radial-gradient(520px 360px at 50% 100%, #5eb0aa 0%, transparent 55%);
+}
+.dest-home .dest-head p { max-width: 62ch; }
+.home-picks {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 20px;
+}
+.home-pick {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 18px 18px 20px;
+  border: 2px solid var(--color-rule);
+  box-shadow: var(--shadow-soft);
+}
+.home-pick h3 { margin: 4px 0 8px; font-size: var(--text-title); }
+.home-pick--gold { border-color: var(--color-gold); }
+.home-pick--sea { border-color: var(--color-sea); }
+.home-pick--wine { border-color: var(--color-wine); }
+.home-pick .book-link { width: 100%; margin-top: 10px; text-align: center; }
+.home-table {
+  width: 100%;
+  min-width: 64rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.home-table th, .home-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+.home-table thead th {
+  background: color-mix(in srgb, var(--color-blush) 45%, white);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.home-table tbody tr:last-child td { border-bottom: 0; }
+.home-table--airports { min-width: 40rem; }
+.home-book {
+  display: grid;
+  gap: 8px;
+  min-width: 9rem;
+}
+.home-book .book-link {
+  display: block;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+}
+.date-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 8px;
+}
+.date-pill {
+  display: grid;
+  gap: 2px;
+  min-width: 7.5rem;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--color-card);
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink);
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+}
+.date-pill:hover {
+  border-color: var(--color-wine);
+}
+.date-pill strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-wine);
+}
+.home-gaps {
+  max-width: 70ch;
+  margin: 12px 0 0;
+  padding-left: 1.2em;
+}
+.home-gaps li { margin-bottom: 8px; }
+.dest-home .step-n { background: var(--color-wine); color: #fff7f2; }
 .intro h2, .compare h2 { margin-bottom: 12px; }
 .intro p, .compare p { max-width: 62ch; }
 
@@ -375,11 +470,13 @@ body {
   .hero-plate { left: 28px; bottom: 28px; }
   .book-grid { grid-template-columns: 1fr 1fr; }
   .hotel-grid { grid-template-columns: 1fr 1fr; }
+  .home-picks { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 64rem) {
   .dest-head { grid-template-columns: 1.1fr 1fr; align-items: center; }
   .dest-hero img { height: 320px; }
   .hotel-grid { grid-template-columns: repeat(3, 1fr); }
+  .home-picks { grid-template-columns: 1fr 1fr 1fr; }
   .hero { margin-inline: max(var(--gutter), calc((100% - var(--container)) / 2)); }
 }

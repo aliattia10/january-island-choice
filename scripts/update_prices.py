@@ -5,10 +5,9 @@ Hotels are left as-is. A fetch that errors or looks insane keeps the stored valu
 Stops doing work after 2026-12-14 (UTC).
 
 Plan totals are:
-  Ella inbound + Ali inbound + dest→OVD (already a 2-adult pair) + hotel
-  + Ella OVD→FRA when that fare is known.
-Missing / check_live FRA fares leave total_complete false and do not invent a number.
-A missing dest→OVD or hotel (1n/2n rooms) is excluded from subtotal_eur and noted.
+  Ella inbound + Ali inbound + dest→OVD (already a 2-adult pair) + hotel.
+Ella’s flight home is stored under ella_home and is not added to trip totals.
+A missing dest→OVD or hotel is excluded from subtotal_eur and noted.
 """
 
 from __future__ import annotations
@@ -133,11 +132,9 @@ def recompute(data: dict) -> None:
         room = None
         if hotel.get("currency") != "USD" and hotel.get("price") is not None and hotel.get("price_status") != "check_live":
             room = int(hotel["price"])
-        home_id = plan.get("ella_home")
-        home = fare_eur(flights[home_id]) if home_id else None
         plan["together_missing"] = tog is None
         plan["hotel_missing"] = room is None
-        plan["fra_known"] = home is not None
+        plan["fra_known"] = False
         plan["inbound_eur"] = None if ella is None or ali is None else ella + ali
         pieces: list[int] = []
         if ella is not None:
@@ -156,12 +153,8 @@ def recompute(data: dict) -> None:
             continue
         subtotal = ella + ali + tog + room
         plan["subtotal_eur"] = subtotal
-        if home is None:
-            plan["total_eur"] = None
-            plan["total_complete"] = False
-        else:
-            plan["total_eur"] = subtotal + home
-            plan["total_complete"] = True
+        plan["total_eur"] = subtotal
+        plan["total_complete"] = True
         alt_id = plan.get("alt_hotel")
         if alt_id:
             alt = hotels[alt_id]
@@ -171,9 +164,7 @@ def recompute(data: dict) -> None:
                 and alt.get("price_status") != "check_live"
             ):
                 plan["alt_subtotal_eur"] = ella + ali + tog + int(alt["price"])
-                plan["alt_total_eur"] = (
-                    plan["alt_subtotal_eur"] + home if home is not None else None
-                )
+                plan["alt_total_eur"] = plan["alt_subtotal_eur"]
 
     for bundle in data.get("bundles") or []:
         total = 0
@@ -210,7 +201,14 @@ def main() -> int:
     changed = []
     skipped = []
 
+    home = data.get("ella_home") or {}
+    home_legs: list[dict] = list(home.get("options") or [])
+    for rows in (home.get("calendar") or {}).values():
+        home_legs.extend(rows)
     fetchable = [leg for leg in data["flights"] if leg.get("fetch")]
+    fetchable += [leg for leg in home_legs if leg.get("fetch")]
+    home_ids = {leg["id"] for leg in home_legs}
+    home_updated = False
     for index, leg in enumerate(fetchable):
         if index:
             time.sleep(SLEEP_S)
@@ -258,11 +256,17 @@ def main() -> int:
             leg["price_status"] = "known"
             changed.append(f"{label}: {old} → €{new}")
             print(f"UPDATE {label}: {old} → €{new}")
+            if leg.get("id") in home_ids:
+                home_updated = True
         else:
             print(f"OK {label}: still €{new}")
 
     if any_success:
         data["snapshot"] = utc_today().isoformat()
+        if home_updated:
+            data["home_flights_checked"] = utc_today().isoformat()
+            if "ella_home" in data:
+                data["ella_home"]["checked"] = data["home_flights_checked"]
         recompute(data)
 
     next_text = dump(data)

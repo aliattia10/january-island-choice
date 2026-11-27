@@ -5,9 +5,14 @@ from __future__ import annotations
 
 import base64
 import json
+import sys
+from datetime import date as date_cls
 from html import escape
 from pathlib import Path
 from urllib.parse import quote
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ella_home_data
 
 ROOT = Path(__file__).resolve().parents[1]
 HEADER = b"\x08\x1c\x10\x02"
@@ -363,10 +368,9 @@ def plan_totals(plan, flights, hotels):
     tog = fare_eur(flights[plan["together"]])
     hotel = hotels[plan["hotel"]]
     room = hotel_price_eur(hotel)
-    home = fare_eur(flights[plan["ella_home"]]) if plan.get("ella_home") else None
     plan["together_missing"] = tog is None
     plan["hotel_missing"] = room is None
-    plan["fra_known"] = home is not None
+    plan["fra_known"] = False
     plan["inbound_eur"] = None if ella is None or ali is None else ella + ali
     pieces = []
     if ella is not None:
@@ -385,20 +389,14 @@ def plan_totals(plan, flights, hotels):
         return
     sub = ella + ali + tog + room
     plan["subtotal_eur"] = sub
-    if home is None:
-        plan["total_eur"] = None
-        plan["total_complete"] = False
-    else:
-        plan["total_eur"] = sub + home
-        plan["total_complete"] = True
+    plan["total_eur"] = sub
+    plan["total_complete"] = True
     alt_id = plan.get("alt_hotel")
     if alt_id:
         alt_room = hotel_price_eur(hotels[alt_id])
         if alt_room is not None:
             plan["alt_subtotal_eur"] = ella + ali + tog + alt_room
-            plan["alt_total_eur"] = (
-                plan["alt_subtotal_eur"] + home if home is not None else None
-            )
+            plan["alt_total_eur"] = plan["alt_subtotal_eur"]
 
 
 def build_prices() -> dict:
@@ -424,15 +422,15 @@ def build_prices() -> dict:
         flight("ovd-bcn-15", "OVD", "BCN", "2026-12-15", "Vueling", "20:55", "", 1, False, True, 18),
         flight("bcn-ovd-18", "BCN", "OVD", "2026-12-18", "Vueling", "07:20", "pair for 2 adults", 2, False, True, 144),
         flight("bcn-ovd-22", "BCN", "OVD", "2026-12-22", "Air Europa", "", "pair for 2 adults", 2, False, True, 165),
-        flight("ovd-fra-19", "OVD", "FRA", "2026-12-19", "Air Europa", "", "1 stop; no December nonstop. Cheapest in this check.", 1, False, True, 116),
-        flight("ovd-fra-20", "OVD", "FRA", "2026-12-20", "Air Europa", "", "1 stop; no December nonstop. Cheapest in this check.", 1, False, True, 116),
-        flight("ovd-fra-21", "OVD", "FRA", "2026-12-21", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
-        flight("ovd-fra-23", "OVD", "FRA", "2026-12-23", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
-        flight("ovd-fra-24", "OVD", "FRA", "2026-12-24", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
-        flight("ovd-fra-27", "OVD", "FRA", "2026-12-27", "", "", "No verified fare in this check (FlightsNotFound).", 1, False, True, None, "check_live"),
-        flight("ovd-fra-17", "OVD", "FRA", "2026-12-17", "", "", "1 stop; no December nonstop.", 1, False, True, 91),
-        flight("ovd-fra-18", "OVD", "FRA", "2026-12-18", "Air Europa", "", "1 stop; no December nonstop.", 1, False, True, 116),
-        flight("ovd-fra-22", "OVD", "FRA", "2026-12-22", "", "", "1 stop; no December nonstop.", 1, False, True, 116),
+        flight("ovd-fra-19", "OVD", "FRA", "2026-12-19", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
+        flight("ovd-fra-20", "OVD", "FRA", "2026-12-20", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
+        flight("ovd-fra-21", "OVD", "FRA", "2026-12-21", "Iberia", "13:20", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 71),
+        flight("ovd-fra-23", "OVD", "FRA", "2026-12-23", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 62),
+        flight("ovd-fra-24", "OVD", "FRA", "2026-12-24", "Air Europa", "10:35", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 62),
+        flight("ovd-fra-27", "OVD", "FRA", "2026-12-27", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 62),
+        flight("ovd-fra-17", "OVD", "FRA", "2026-12-17", "Air Europa", "10:35", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 91),
+        flight("ovd-fra-18", "OVD", "FRA", "2026-12-18", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
+        flight("ovd-fra-22", "OVD", "FRA", "2026-12-22", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
         flight("pmi-ovd-15", "PMI", "OVD", "2026-12-15", "", "", "pair for 2 adults, 1 stop", 2, False, True, 106),
         flight("pmi-ovd-16", "PMI", "OVD", "2026-12-16", "", "", "pair for 2 adults, 1 stop", 2, False, True, 106),
         flight("lpa-ovd-17", "LPA", "OVD", "2026-12-17", "", "", "pair for 2 adults, 1 stop", 2, False, True, 210),
@@ -705,7 +703,9 @@ def build_prices() -> dict:
         "snapshot": "2026-11-27",
         "hotels_checked": "2026-11-22",
         "rooms_checked": "2026-11-27",
+        "home_flights_checked": "2026-11-27",
         "usd_to_eur": USD_TO_EUR,
+        "ella_home": ella_home_data.payload(gf),
         "flights": flights,
         "hotels": hotels,
         "plans": plans,
@@ -716,12 +716,12 @@ def build_prices() -> dict:
         ],
         "usd_partials": {"alameda": 651, "malabar": 706},
         "notes": {
-            "itinerary": "Ella HAJ→city; Ali OVD→city; private stay for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); 2 nights in Asturias at home (no hotel); Ella OVD→FRA one way after those days. No return to Hannover. Totals use the cheapest verified private option (Airbnb 27 Nov vs Booking 22 Nov). Never a shared room.",
-            "ovd_fra": "No nonstop OVD→FRA in December 2026 (Lufthansa nonstop starts March 2027). 17 Dec €91, 18 Dec €116, 19 Dec €116, 20 Dec €116, 22 Dec €116 Air Europa 1-stop, rechecked 27 Nov 2026 (17 and 19 Dec confirmed). 21, 23, 24, 27 Dec: check live.",
+            "itinerary": "Ella HAJ→city; Ali OVD→city; private stay for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); days in Asturias at home (no hotel); Ella flies home whenever she chooses. Trip totals do not include her flight home. Totals use the cheapest verified private option (Airbnb 27 Nov vs Booking 22 Nov). Never a shared room.",
+            "ovd_fra": "Home flights are listed separately under ella_home. No December nonstop from Oviedo. OVD→FRA 17 Dec €91, 18–20 Dec €116, 21 Dec €71 Iberia, 22 Dec €116, 23–31 Dec €62. Rechecked 27 Nov 2026.",
             "needs_check": [
                 "Maspalomas 1n 16–17 Dec: no Airbnb in town within €35–85. Booking search and Google Hotels Axel Beach ~€161. Same LPA flights as Las Palmas 1n.",
                 "Booking.com hotel euro prices: last checked 22 Nov 2026, could not re-verify 27 Nov — recheck live.",
-                "Ella OVD→FRA on 21, 23, 24 and 27 December (check live).",
+                "ALSA buses Gijón→BIO/SDR for Ella’s home flight: mid-December tickets not live-verified.",
             ],
         },
     }
@@ -748,11 +748,9 @@ def display_plan(plan) -> str:
         return euro(plan["total_eur"])
     notes = []
     if plan.get("together_missing"):
-        notes.append("plus the shared flight home (check live)")
+        notes.append("plus the shared flight to Asturias (check live)")
     if plan.get("hotel_missing"):
         notes.append("plus the private room (check live)")
-    if not plan.get("fra_known"):
-        notes.append("plus her flight to Frankfurt")
     if plan.get("subtotal_eur") is not None:
         return euro(plan["subtotal_eur"]) + (" " + " ".join(notes) if notes else "")
     if plan.get("partial_eur") is not None:
@@ -777,7 +775,6 @@ def buttons(plan, fmap, hmap, dest_id):
     ella = fmap[plan["ella_in"]]
     ali = fmap[plan["ali_in"]]
     tog = fmap[plan["together"]]
-    home = fmap[plan["ella_home"]]
     stay = hmap[plan["hotel"]]
     search_city = {
         "palma": "Palma",
@@ -808,34 +805,20 @@ def buttons(plan, fmap, hmap, dest_id):
           <a class="book-link book-link--ella" href="{escape(ella['gf_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Ella: Hannover → {escape(city)}</a>
           <a class="book-link book-link--ali" href="{escape(ali['gf_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Ali: Oviedo → {escape(city)}</a>
           <a class="book-link book-link--together" href="{escape(tog['gf_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Together: {escape(city)} → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="{escape(home['gf_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           {extra_html}
           <a class="book-link book-link--search" href="{escape(city_search, quote=True)}" target="_blank" rel="noopener noreferrer">Search private rooms for two, {escape(CITY_LABEL[dest_id])}</a>
         </div>"""
-
-
-def sdr_bio(date: str) -> str:
-    sdr = gf(date, "SDR", "FRA", 1)
-    bio = gf(date, "BIO", "FRA", 1)
-    return (
-        f'<p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, '
-        f'<a href="{escape(sdr, quote=True)}" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> '
-        f'and <a href="{escape(bio, quote=True)}" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> '
-        f"are easy dated Google Flights searches — check live, we did not store a price.</p>"
-    )
 
 
 def stay_block(plan, fmap, hmap, dest_id, extra_html=""):
     ella = fmap[plan["ella_in"]]
     ali = fmap[plan["ali_in"]]
     tog = fmap[plan["together"]]
-    home = fmap[plan["ella_home"]]
     hotel = hmap[plan["hotel"]]
     nights_word = NIGHTS_WORD.get(plan["nights"], f"{plan['nights']} nights")
-    home_bind = f'data-bind="f:{home["id"]}"'
     total_bind = f'data-bind="p:{plan["id"]}:display"'
     sub_bind = f'data-bind="p:{plan["id"]}:sub"'
-    fra_note = f'<span {home_bind}>{escape(money_flight(home))}</span>'
     alt = ""
     if plan.get("alt_hotel"):
         ah = hmap[plan["alt_hotel"]]
@@ -918,11 +901,6 @@ def stay_block(plan, fmap, hmap, dest_id, extra_html=""):
             f"check-out {pretty(hotel['checkout'])}"
         )
         kicker = f"Budget private room · {nights_word}"
-    fra_copy = (
-        f"Air Europa, 1 stop, {fra_note}. There is no nonstop this month — Lufthansa’s direct starts in March 2027."
-        if home.get("price_eur") is not None
-        else f"{fra_note}. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare."
-    )
     airbnb_cards = [
         hotel_card(
             hmap[hid],
@@ -976,23 +954,22 @@ def stay_block(plan, fmap, hmap, dest_id, extra_html=""):
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, {pretty(home['date'])}. {fra_copy}</p>
-              {sdr_bio(home['date'])}
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
         {airbnb_block}
         {alt}
         {extra_html}
-        <p class="stay-total">Trip total: <strong {total_bind}>{escape(display_plan(plan))}</strong>. Known flights (without an unverified home leg or an unpriced room): <span {sub_bind}>{euro(plan['subtotal_eur'] if plan.get('subtotal_eur') is not None else plan.get('partial_eur')) if (plan.get('subtotal_eur') is not None or plan.get('partial_eur') is not None) else '—'}</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong {total_bind}>{escape(display_plan(plan))}</strong>. City flights plus the room: <span {sub_bind}>{euro(plan['subtotal_eur'] if plan.get('subtotal_eur') is not None else plan.get('partial_eur')) if (plan.get('subtotal_eur') is not None or plan.get('partial_eur') is not None) else '—'}</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         {buttons(plan, fmap, hmap, dest_id)}
       </article>"""
 
@@ -1172,7 +1149,7 @@ DESTS = [
             "nv-agp-7": "Cheapest verified private stay for 18–25 December — used in the seven-night total. Booking.com, 22 November — recheck live.",
         },
         "extra": {
-            "malaga-1": '<p class="fine">Best inbound alignment is 18 December (Ella nonstop). Frankfurt on 21 December is still check live. Hotels for one night (Google Hotels): Futurotel Malagueta 3★ about €50; Sol Málaga Guadalmar 4★ about €80 (near the airport). Display only — not in the trip total.</p>',
+            "malaga-1": '<p class="fine">Best inbound alignment is 18 December (Ella nonstop). Hotels for one night (Google Hotels): Futurotel Malagueta 3★ about €50; Sol Málaga Guadalmar 4★ about €80 (near the airport). Display only — not in the trip total.</p>',
             "malaga-2": '<p class="fine">Same 18 December inbounds.</p>',
             "malaga-3": '<p class="fine">There is a second three-night window, 18–21 December, on Ella’s Eurowings 07:10 nonstop (about <span data-bind="usd:haj-agp-18-usd">$130</span>). Ali’s OVD–AGP round trip those dates was about <span data-bind="usd:ovd-agp-rt-18-21">$111</span>. Her flight home to Asturias on 21 December was not priced, so it is not a full plan. Partial with Alameda Centro: about <span data-bind="partial:alameda">$651</span>; with ICON Malabar about <span data-bind="partial:malabar">$706</span>.</p>',
         },
@@ -1214,6 +1191,213 @@ def compare_cell(plan) -> str:
         f'<span class="best-tag best-tag--value" data-if-best-value="{dest}:{badge_n}" hidden>Best value</span> '
         f'<span class="best-tag best-tag--trip" data-if-cheapest-trip="{dest}:{badge_n}" hidden>Cheapest trip</span></td>'
     )
+
+
+def pretty_date_list(dates: list[str]) -> str:
+    if not dates:
+        return ""
+    if len(dates) == 1:
+        return pretty(dates[0])
+    parsed = [date_cls.fromisoformat(d) for d in dates]
+    consecutive = all((parsed[i] - parsed[i - 1]).days == 1 for i in range(1, len(parsed)))
+    if consecutive and parsed[0].month == parsed[-1].month:
+        month = pretty(dates[0]).split(" ", 1)[1]
+        return f"{parsed[0].day}–{parsed[-1].day} {month}"
+    labels = [pretty(d) for d in dates]
+    if len(labels) == 2:
+        return f"{labels[0]} and {labels[1]}"
+    return ", ".join(labels[:-1]) + " and " + labels[-1]
+
+
+def home_route(opt: dict) -> str:
+    names = ella_home_data.HOME_IATA
+    return (
+        f"{names[opt['origin']]} ({opt['origin']}) → "
+        f"{names[opt['destination']]} ({opt['destination']})"
+    )
+
+
+def home_stops(opt: dict) -> str:
+    if opt.get("nonstop") or opt.get("stops") == 0:
+        return "Nonstop"
+    via = opt.get("via")
+    via_name = {"MAD": "Madrid", "BCN": "Barcelona"}.get(via or "", via or "")
+    if via_name:
+        return f"1 stop, {via_name}"
+    return "1 stop"
+
+
+def home_pick_card(opt: dict, kicker: str, title: str) -> str:
+    extra = ""
+    if opt.get("bus"):
+        extra = f'<p class="fine">{escape(opt["bus"])}</p>'
+    date_s = pretty_date_list(opt.get("dates") or [opt["date"]])
+    return f"""
+        <article class="home-pick home-pick--{escape(kicker)}">
+          <p class="kicker">{escape(title)}</p>
+          <h3>{escape(home_route(opt))}</h3>
+          <p class="hotel-price" data-bind="home:{opt['id']}">{euro(opt['price_eur'])}</p>
+          <p>{escape(date_s)}. {escape(opt['airline'])}. {escape(home_stops(opt))}. {escape(opt['duration'])}, {escape(opt['times'])}.</p>
+          <p class="fine">{escape(opt['train_to_haj'])}</p>
+          {extra}
+          <p class="fine">{escape(opt.get('note') or '')}</p>
+          <a class="book-link book-link--home" href="{escape(opt['gf_url'], quote=True)}" target="_blank" rel="noopener noreferrer">Book</a>
+        </article>"""
+
+
+def home_row(opt: dict) -> str:
+    date_s = pretty_date_list(opt.get("dates") or [opt["date"]])
+    badges = []
+    if "cheapest" in (opt.get("badges") or []):
+        badges.append('<span class="best-tag best-tag--trip">Cheapest overall</span>')
+    if "cheapest_ovd" in (opt.get("badges") or []):
+        badges.append('<span class="best-tag best-tag--value">Cheapest from Oviedo</span>')
+    if "haj_ovd" in (opt.get("badges") or []):
+        badges.append('<span class="best-tag">Lands at home, from Oviedo</span>')
+    if "cheapest_haj" in (opt.get("badges") or []):
+        badges.append('<span class="best-tag">Cheapest into Hannover</span>')
+    if "nonstop" in (opt.get("badges") or []):
+        badges.append('<span class="best-tag best-tag--value">Nonstop</span>')
+    badge_html = " ".join(badges)
+    extra_btns = []
+    shown_links = opt.get("links") or []
+    if len(shown_links) > 4:
+        shown_links = [shown_links[0]]
+    for link in shown_links:
+        label = "Book" if link["date"] == opt["date"] and len(shown_links) == 1 else pretty(link["date"])
+        extra_btns.append(
+            f'<a class="book-link book-link--home" href="{escape(link["gf_url"], quote=True)}" '
+            f'target="_blank" rel="noopener noreferrer">{escape(label)}</a>'
+        )
+    books = extra_btns or [
+        f'<a class="book-link book-link--home" href="{escape(opt["gf_url"], quote=True)}" '
+        f'target="_blank" rel="noopener noreferrer">Book</a>'
+    ]
+    bus = f'<p class="fine">{escape(opt["bus"])}</p>' if opt.get("bus") else ""
+    note = f'<p class="fine">{escape(opt["note"])}</p>' if opt.get("note") else ""
+    return f"""
+          <tr>
+            <td>{opt['rank']}</td>
+            <td>
+              <strong>{escape(home_route(opt))}</strong>
+              {badge_html}
+            </td>
+            <td>{escape(date_s)}</td>
+            <td><strong data-bind="home:{opt['id']}">{euro(opt['price_eur'])}</strong></td>
+            <td>{escape(opt['airline'])}</td>
+            <td>{escape(home_stops(opt))}</td>
+            <td>{escape(opt['duration'])}<br>{escape(opt['times'])}</td>
+            <td>{escape(opt['train_to_haj'])}{bus}{note}</td>
+            <td class="home-book">{''.join(books)}</td>
+          </tr>"""
+
+
+def date_pills(rows: list[dict], bind_kind: str) -> str:
+    bits = []
+    for row in rows:
+        bits.append(
+            f'<a class="date-pill" href="{escape(row["gf_url"], quote=True)}" '
+            f'target="_blank" rel="noopener noreferrer">'
+            f'<span>{escape(pretty(row["date"]))}</span>'
+            f'<strong data-bind="{bind_kind}:{row["id"]}">{euro(row["price_eur"])}</strong>'
+            f'<span class="fine">{escape(row["airline"])}</span>'
+            f"</a>"
+        )
+    return "".join(bits)
+
+
+def home_section(data: dict) -> str:
+    home = data["ella_home"]
+    by_id = {o["id"]: o for o in home["options"]}
+    cheapest = by_id["home-01"]
+    cheapest_ovd = by_id["home-02"]
+    haj_ovd = by_id["home-23"]
+    rows = "".join(home_row(o) for o in home["options"])
+    airport_rows = []
+    for item in home["cheapest_by_airport"]:
+        price = euro(item["price_eur"]) if item.get("price_eur") is not None else "calendar only"
+        tag = "" if item.get("verified") else ' <span class="best-tag">Unverified</span>'
+        origin = ella_home_data.HOME_IATA.get(item.get("from") or "", item.get("from") or "")
+        airport_rows.append(
+            f"<tr><th scope=\"row\">{escape(item['name'])} ({escape(item['airport'])})</th>"
+            f"<td>{escape(price)} from {escape(origin)}{tag}</td>"
+            f"<td>{escape(item['note'])}</td></tr>"
+        )
+    gaps = "".join(f"<li>{escape(g)}</li>" for g in home["gaps"])
+    return f"""
+  <section class="dest-section dest-home" id="ella-home">
+    <div class="container">
+      <header class="dest-head">
+        <div>
+          <p class="kicker">Whenever you like</p>
+          <h2>Ella’s flight home</h2>
+          <p>Stay in Asturias as long as you want — Ali is happy if you stay longer. This is separate from the city trip totals, so you can pick the day. Window 17 December 2026 – 4 January 2027. Home is near Hannover. Prices checked <span data-bind="home_flights_checked">27 November 2026</span>, one adult, economy, one way, euros including taxes as Google Flights showed them. Nothing is booked.</p>
+          <p>There is <strong>no December nonstop from Oviedo</strong> to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts in March 2027. The one confirmed nonstop is Eurowings Bilbao → Düsseldorf.</p>
+        </div>
+      </header>
+      <div class="home-picks">
+        {home_pick_card(cheapest, "gold", "Cheapest overall")}
+        {home_pick_card(cheapest_ovd, "sea", "Cheapest from Oviedo")}
+        {home_pick_card(haj_ovd, "wine", "Lands at home, from Oviedo")}
+      </div>
+      <p class="aside">Bilbao and Santander need a bus from Gijón. Bilbao about €31–50 and 4.5–6 hours; Santander about €20–23 and 3–4 hours. Those bus fares are recent published prices, <strong>not live-verified</strong> for the exact mid-December day — recheck before you book. The cheapest fare into Hannover itself is Bilbao → Hannover €88 on 23 December, but after the bus Oviedo → Hannover €104 is usually kinder.</p>
+      <h3 class="hotels-title">Ranked options we opened</h3>
+      <p class="fine">Flight only. Add the bus for Bilbao and Santander. Book opens Google Flights for that day.</p>
+      <div class="table-wrap">
+        <table class="home-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Route</th>
+              <th scope="col">Date</th>
+              <th scope="col">Price</th>
+              <th scope="col">Airline</th>
+              <th scope="col">Stops</th>
+              <th scope="col">Times</th>
+              <th scope="col">On to Hannover</th>
+              <th scope="col">Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
+      </div>
+      <h3 class="hotels-title">Pick a date: Oviedo → Frankfurt</h3>
+      <p class="fine">Confirmed opened fares, 27 November 2026. 21 December is Iberia; the rest are Air Europa, one stop via Madrid.</p>
+      <div class="date-pills">
+        {date_pills(home["calendar"]["ovd_fra"], "homecal")}
+      </div>
+      <h3 class="hotels-title">Pick a date: Oviedo → Hannover</h3>
+      <p class="fine">Confirmed opened fares that land at home. Other dates we opened were €196–300, or 34 hours on 24 December — skip those.</p>
+      <div class="date-pills">
+        {date_pills(home["calendar"]["ovd_haj"], "homecal")}
+      </div>
+      <h3 class="hotels-title">Cheapest confirmed fare per airport</h3>
+      <div class="table-wrap">
+        <table class="home-table home-table--airports">
+          <thead>
+            <tr>
+              <th scope="col">Airport</th>
+              <th scope="col">Cheapest</th>
+              <th scope="col">On to Hannover</th>
+            </tr>
+          </thead>
+          <tbody>
+            {''.join(airport_rows)}
+          </tbody>
+        </table>
+      </div>
+      <h3 class="hotels-title">Buses to Bilbao and Santander</h3>
+      <p>{escape(home["buses"]["bio"])}</p>
+      <p>{escape(home["buses"]["sdr"])}</p>
+      <h3 class="hotels-title">What we did not treat as a recommendation</h3>
+      <ul class="home-gaps">
+        {gaps}
+      </ul>
+    </div>
+  </section>
+"""
 
 
 def build_html(data: dict) -> str:
@@ -1322,6 +1506,7 @@ def build_html(data: dict) -> str:
       <a href="#hello">Hello</a>
       <a href="#compare">Compare</a>
       <a href="#palma">Cities</a>
+      <a href="#ella-home">Home</a>
     </nav>
   </header>
 
@@ -1332,7 +1517,7 @@ def build_html(data: dict) -> str:
     <div class="hero-plate">
       <p class="kicker">14 December 2026 – 1 January 2027</p>
       <h1>Our first vacation, together.</h1>
-      <p class="lead">Ella, this is the shape of the trip — five cities, one night to a week, one way home to Frankfurt.</p>
+      <p class="lead">Ella, this is the shape of the trip — five cities, one night to a week, then home whenever you choose.</p>
       <div class="hero-actions">
         <a class="btn" href="#compare">See the totals</a>
         <a class="btn btn--ghost" href="#hello">How it works</a>
@@ -1346,20 +1531,21 @@ def build_html(data: dict) -> str:
     <a href="#maspalomas">Maspalomas</a>
     <a href="#malaga">Málaga</a>
     <a href="#barcelona">Barcelona</a>
+    <a href="#ella-home">Flight home</a>
   </nav>
 
   <section class="intro" id="hello">
     <div class="container">
       <p class="kicker">For Ella</p>
       <h2>How this trip actually works</h2>
-      <p>You fly from Hannover to the city. Ali flies from Oviedo. Trip length is flexible: one night, two, three, or a week. You share a <strong>private stay for two</strong> for every night in the city — check-in on the day you arrive, check-out on the day you fly together to Asturias. Then two slow days in Asturias at home, no hotel. After that, you fly Asturias (OVD) to Frankfurt (FRA), one way, to go home to Germany. There is no flight back to Hannover. Totals use the cheapest verified private option: Airbnb checked <span data-bind="rooms_checked">27 November 2026</span> versus Booking hotels checked <span data-bind="hotels_checked">22 November 2026</span> (recheck Booking live — we could not re-verify those today). Never a shared room.</p>
+      <p>You fly from Hannover to the city. Ali flies from Oviedo. Trip length is flexible: one night, two, three, or a week. You share a <strong>private stay for two</strong> for every night in the city — check-in on the day you arrive, check-out on the day you fly together to Asturias. Then days in Asturias at home, no hotel — stay as long as you like. Your flight home is separate, so you can pick the day. Totals use the cheapest verified private option: Airbnb checked <span data-bind="rooms_checked">27 November 2026</span> versus Booking hotels checked <span data-bind="hotels_checked">22 November 2026</span> (recheck Booking live — we could not re-verify those today). Never a shared room.</p>
       <ol class="shape">
         <li><strong>You</strong> — Hannover (HAJ) → the city.</li>
         <li><strong>Ali</strong> — Oviedo / Asturias (OVD) → the city.</li>
         <li><strong>Stay</strong> — N nights in a private room or whole place for two. Check-in arrival day, check-out the morning you both fly to Asturias.</li>
         <li><strong>Both of you</strong> — the city → Asturias (OVD), two people.</li>
-        <li><strong>Two days in Asturias</strong> — at home, no hotel.</li>
-        <li><strong>You</strong> — after those days, Asturias (OVD) → Frankfurt (FRA). No December nonstop; the priced options are one-stop, typically via Madrid.</li>
+        <li><strong>Days in Asturias</strong> — at home, no hotel. Stay longer if you want.</li>
+        <li><strong>You</strong> — fly home whenever you choose. See <a href="#ella-home">Ella’s flight home</a>. Not in the trip totals.</li>
       </ol>
       <p class="aside">This page does not process payment. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>. Booking hotels last checked <span data-bind="hotels_checked">22 November 2026</span> — recheck live. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
     </div>
@@ -1369,7 +1555,7 @@ def build_html(data: dict) -> str:
     <div class="container">
       <p class="kicker">At a glance</p>
       <h2>Which city is kindest to the budget?</h2>
-      <p>A trip total is Ella’s inbound + Ali’s inbound + the shared flight to Asturias (already priced for two) + the cheapest verified private stay for all N city nights + Ella’s Asturias → Frankfurt when we have a verified fare. A missing return or an unpriced room is left out of the number and labelled check live. <strong>Best value</strong> is the cheapest full city stay in that row (room + all three city flights). <strong>Cheapest trip</strong> is the lowest complete total on the page, Frankfurt included when we have it.</p>
+      <p>A trip total is Ella’s inbound + Ali’s inbound + the shared flight to Asturias (already priced for two) + the cheapest verified private stay for all N city nights. Ella’s flight home is <strong>not</strong> in these numbers — pick that in <a href="#ella-home">Ella’s flight home</a>. An unpriced room is left out and labelled check live. <strong>Best value</strong> is the cheapest full city stay in that row (room + all three city flights). <strong>Cheapest trip</strong> is the lowest complete total on the page.</p>
       <div class="table-wrap">
         <table class="compare-table">
           <thead>
@@ -1386,17 +1572,19 @@ def build_html(data: dict) -> str:
           </tbody>
         </table>
       </div>
-      <p class="fine" data-bind="cheapestHeadline">Headline cheapest: 3 nights Barcelona with Frankfurt; 7 nights Málaga before Frankfurt.</p>
-      <p class="fine">One- and two-night columns now include Airbnb stay totals except Maspalomas one night, which is still check live. Booking hotel prices are from 22 November — recheck live. All 1n/2n returns to Asturias are verified. Prices jump after 22 December, so arriving 14–18 December is the kinder window. 1 USD ≈ 0.911 EUR is approximate, only for the USD hotel cards.</p>
+      <p class="fine" data-bind="cheapestHeadline">Headline cheapest: 1 night Palma.</p>
+      <p class="fine">One- and two-night columns now include Airbnb stay totals except Maspalomas one night, which is still check live. Booking hotel prices are from 22 November — recheck live. All 1n/2n returns to Asturias are verified. Totals do not include Ella’s flight home. Prices jump after 22 December, so arriving 14–18 December is the kinder window. 1 USD ≈ 0.911 EUR is approximate, only for the USD hotel cards.</p>
     </div>
   </section>
 
   {''.join(sections)}
 
+  {home_section(data)}
+
   <footer class="site-foot">
     <div class="container">
       <p>A private page for two people. Ella’s first name is on the buttons because Ali asked. No last names. Photographs are Wikimedia Commons files — credits in <a href="./photos/CREDITS.md">photos/CREDITS.md</a>.</p>
-      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>.</p>
+      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>. Home flights checked <span data-bind="home_flights_checked">27 November 2026</span>.</p>
     </div>
   </footer>
   <script src="./app.js" defer></script>

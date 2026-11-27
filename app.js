@@ -67,9 +67,8 @@
   function displayPlan(plan) {
     if (plan.total_complete && plan.total_eur != null) return euro(plan.total_eur);
     const notes = [];
-    if (plan.together_missing) notes.push("plus the shared flight home (check live)");
+    if (plan.together_missing) notes.push("plus the shared flight to Asturias (check live)");
     if (plan.hotel_missing) notes.push("plus the private room (check live)");
-    if (!plan.fra_known) notes.push("plus her flight to Frankfurt");
     const base = plan.subtotal_eur != null ? plan.subtotal_eur : plan.partial_eur;
     if (base != null) return euro(base) + (notes.length ? " " + notes.join(" ") : "");
     return "check live";
@@ -125,6 +124,15 @@
     const snapshot = prettyDate(data.snapshot);
     const hotelsChecked = prettyDate(data.hotels_checked);
     const roomsChecked = prettyDate(data.rooms_checked);
+    const homeChecked = prettyDate(data.home_flights_checked);
+    const homeOptions = indexById((data.ella_home && data.ella_home.options) || []);
+    const homeCal = {};
+    const cal = (data.ella_home && data.ella_home.calendar) || {};
+    Object.keys(cal).forEach(function (key) {
+      (cal[key] || []).forEach(function (row) {
+        homeCal[row.id] = row;
+      });
+    });
     const c1 = cheapestPlan(data.plans || [], 1);
     const c2 = cheapestPlan(data.plans || [], 2);
     const c3 = cheapestPlan(data.plans || [], 3);
@@ -136,13 +144,15 @@
       if (key === "snapshot") return snapshot;
       if (key === "hotels_checked") return hotelsChecked;
       if (key === "rooms_checked") return roomsChecked;
+      if (key === "home_flights_checked") return homeChecked;
       if (key === "cheapestHeadline") {
         const bits = [];
         if (tripWinner) {
           bits.push(
             "Cheapest trip: " + shortNames[tripWinner.dest] + " " + tripWinner.nights +
             " night" + (tripWinner.nights === 1 ? "" : "s") + " " +
-            (tripWinner.total_complete ? euro(tripWinner.total_eur) + " including Frankfurt" : euro(tripWinner.subtotal_eur) + " before Frankfurt")
+            euro(tripWinner.total_complete ? tripWinner.total_eur : tripWinner.subtotal_eur) +
+            " (city flights + room; her flight home is separate)"
           );
         }
         [c1, c2, c3, c7].forEach(function (winner, i) {
@@ -150,7 +160,7 @@
           const n = [1, 2, 3, 7][i];
           bits.push(
             n + "n " + shortNames[winner.plan.dest] + " " +
-            (winner.complete ? euro(winner.plan.total_eur) : euro(winner.plan.subtotal_eur) + " before Frankfurt")
+            euro(winner.complete ? winner.plan.total_eur : winner.plan.subtotal_eur)
           );
         });
         return bits.join(". ") + ".";
@@ -185,11 +195,23 @@
         if (extra === "display") return displayPlan(plan);
         if (extra === "alt") {
           if (plan.alt_total_eur != null) return euro(plan.alt_total_eur);
-          if (plan.alt_subtotal_eur != null) return euro(plan.alt_subtotal_eur) + " plus her flight to Frankfurt";
+          if (plan.alt_subtotal_eur != null) return euro(plan.alt_subtotal_eur);
           return null;
         }
         if (plan.total_complete && plan.total_eur != null) return euro(plan.total_eur);
         return displayPlan(plan);
+      }
+      if (kind === "home") {
+        const opt = homeOptions[id];
+        if (!opt) return null;
+        if (opt.price_status === "check_live" || opt.price_eur == null) return "check live price";
+        return euro(opt.price_eur);
+      }
+      if (kind === "homecal") {
+        const row = homeCal[id];
+        if (!row) return null;
+        if (row.price_status === "check_live" || row.price_eur == null) return "check live price";
+        return euro(row.price_eur);
       }
       if (kind === "b") {
         const bundle = bundles[id];

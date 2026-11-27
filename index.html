@@ -19,6 +19,7 @@
       <a href="#hello">Hello</a>
       <a href="#compare">Compare</a>
       <a href="#palma">Cities</a>
+      <a href="#ella-home">Home</a>
     </nav>
   </header>
 
@@ -29,7 +30,7 @@
     <div class="hero-plate">
       <p class="kicker">14 December 2026 – 1 January 2027</p>
       <h1>Our first vacation, together.</h1>
-      <p class="lead">Ella, this is the shape of the trip — five cities, one night to a week, one way home to Frankfurt.</p>
+      <p class="lead">Ella, this is the shape of the trip — five cities, one night to a week, then home whenever you choose.</p>
       <div class="hero-actions">
         <a class="btn" href="#compare">See the totals</a>
         <a class="btn btn--ghost" href="#hello">How it works</a>
@@ -43,20 +44,21 @@
     <a href="#maspalomas">Maspalomas</a>
     <a href="#malaga">Málaga</a>
     <a href="#barcelona">Barcelona</a>
+    <a href="#ella-home">Flight home</a>
   </nav>
 
   <section class="intro" id="hello">
     <div class="container">
       <p class="kicker">For Ella</p>
       <h2>How this trip actually works</h2>
-      <p>You fly from Hannover to the city. Ali flies from Oviedo. Trip length is flexible: one night, two, three, or a week. You share a <strong>private stay for two</strong> for every night in the city — check-in on the day you arrive, check-out on the day you fly together to Asturias. Then two slow days in Asturias at home, no hotel. After that, you fly Asturias (OVD) to Frankfurt (FRA), one way, to go home to Germany. There is no flight back to Hannover. Totals use the cheapest verified private option: Airbnb checked <span data-bind="rooms_checked">27 November 2026</span> versus Booking hotels checked <span data-bind="hotels_checked">22 November 2026</span> (recheck Booking live — we could not re-verify those today). Never a shared room.</p>
+      <p>You fly from Hannover to the city. Ali flies from Oviedo. Trip length is flexible: one night, two, three, or a week. You share a <strong>private stay for two</strong> for every night in the city — check-in on the day you arrive, check-out on the day you fly together to Asturias. Then days in Asturias at home, no hotel — stay as long as you like. Your flight home is separate, so you can pick the day. Totals use the cheapest verified private option: Airbnb checked <span data-bind="rooms_checked">27 November 2026</span> versus Booking hotels checked <span data-bind="hotels_checked">22 November 2026</span> (recheck Booking live — we could not re-verify those today). Never a shared room.</p>
       <ol class="shape">
         <li><strong>You</strong> — Hannover (HAJ) → the city.</li>
         <li><strong>Ali</strong> — Oviedo / Asturias (OVD) → the city.</li>
         <li><strong>Stay</strong> — N nights in a private room or whole place for two. Check-in arrival day, check-out the morning you both fly to Asturias.</li>
         <li><strong>Both of you</strong> — the city → Asturias (OVD), two people.</li>
-        <li><strong>Two days in Asturias</strong> — at home, no hotel.</li>
-        <li><strong>You</strong> — after those days, Asturias (OVD) → Frankfurt (FRA). No December nonstop; the priced options are one-stop, typically via Madrid.</li>
+        <li><strong>Days in Asturias</strong> — at home, no hotel. Stay longer if you want.</li>
+        <li><strong>You</strong> — fly home whenever you choose. See <a href="#ella-home">Ella’s flight home</a>. Not in the trip totals.</li>
       </ol>
       <p class="aside">This page does not process payment. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>. Booking hotels last checked <span data-bind="hotels_checked">22 November 2026</span> — recheck live. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
     </div>
@@ -66,7 +68,7 @@
     <div class="container">
       <p class="kicker">At a glance</p>
       <h2>Which city is kindest to the budget?</h2>
-      <p>A trip total is Ella’s inbound + Ali’s inbound + the shared flight to Asturias (already priced for two) + the cheapest verified private stay for all N city nights + Ella’s Asturias → Frankfurt when we have a verified fare. A missing return or an unpriced room is left out of the number and labelled check live. <strong>Best value</strong> is the cheapest full city stay in that row (room + all three city flights). <strong>Cheapest trip</strong> is the lowest complete total on the page, Frankfurt included when we have it.</p>
+      <p>A trip total is Ella’s inbound + Ali’s inbound + the shared flight to Asturias (already priced for two) + the cheapest verified private stay for all N city nights. Ella’s flight home is <strong>not</strong> in these numbers — pick that in <a href="#ella-home">Ella’s flight home</a>. An unpriced room is left out and labelled check live. <strong>Best value</strong> is the cheapest full city stay in that row (room + all three city flights). <strong>Cheapest trip</strong> is the lowest complete total on the page.</p>
       <div class="table-wrap">
         <table class="compare-table">
           <thead>
@@ -79,12 +81,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr data-highlight="palma"><th scope="row"><a href="#palma">Palma</a></th><td><span data-bind="p:palma-1:display">€346</span> <span class="best-tag" data-if-cheapest="palma:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:1" hidden>Cheapest trip</span></td><td><span data-bind="p:palma-2:display">€433</span> <span class="best-tag" data-if-cheapest="palma:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:2" hidden>Cheapest trip</span></td><td><span data-bind="p:palma-3:display">€457</span> <span class="best-tag" data-if-cheapest="palma:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:3" hidden>Cheapest trip</span></td><td><span data-bind="p:palma-7:display">€615 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="palma:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="laspalmas"><th scope="row"><a href="#laspalmas">Las Palmas</a></th><td><span data-bind="p:lp-1:display">€512</span> <span class="best-tag" data-if-cheapest="laspalmas:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:1" hidden>Cheapest trip</span></td><td><span data-bind="p:lp-2:display">€680</span> <span class="best-tag" data-if-cheapest="laspalmas:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:2" hidden>Cheapest trip</span></td><td><span data-bind="p:lp-3:display">€370 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="laspalmas:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:3" hidden>Cheapest trip</span></td><td><span data-bind="p:lp-7:display">€686 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="laspalmas:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="maspalomas"><th scope="row"><a href="#maspalomas">Maspalomas</a></th><td><span data-bind="p:masp-1:display">€348 plus the private room (check live)</span> <span class="best-tag" data-if-cheapest="maspalomas:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:1" hidden>Cheapest trip</span></td><td><span data-bind="p:masp-2:display">€718</span> <span class="best-tag" data-if-cheapest="maspalomas:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:2" hidden>Cheapest trip</span></td><td><span data-bind="p:masp-3:display">€405 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="maspalomas:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:3" hidden>Cheapest trip</span></td><td><span data-bind="p:masp-7:display">€763 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="maspalomas:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="malaga"><th scope="row"><a href="#malaga">Málaga</a></th><td><span data-bind="p:malaga-1:display">€336 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="malaga:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:1" hidden>Cheapest trip</span></td><td><span data-bind="p:malaga-2:display">€508</span> <span class="best-tag" data-if-cheapest="malaga:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:2" hidden>Cheapest trip</span></td><td><span data-bind="p:malaga-3:display">€531</span> <span class="best-tag" data-if-cheapest="malaga:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:3" hidden>Cheapest trip</span></td><td><span data-bind="p:malaga-7:display">€544 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="malaga:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="barcelona"><th scope="row"><a href="#barcelona">Barcelona</a></th><td><span data-bind="p:bcn-1:display">€430</span> <span class="best-tag" data-if-cheapest="barcelona:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:1" hidden>Cheapest trip</span></td><td><span data-bind="p:bcn-2:display">€691</span> <span class="best-tag" data-if-cheapest="barcelona:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:2" hidden>Cheapest trip</span></td><td><span data-bind="p:bcn-3:display">€490</span> <span class="best-tag" data-if-cheapest="barcelona:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:3" hidden>Cheapest trip</span></td><td><span data-bind="p:bcn-7:display">€670 plus her flight to Frankfurt</span> <span class="best-tag" data-if-cheapest="barcelona:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:7" hidden>Cheapest trip</span></td></tr>
+            <tr data-highlight="palma"><th scope="row"><a href="#palma">Palma</a></th><td><span data-bind="p:palma-1:display">€255</span> <span class="best-tag" data-if-cheapest="palma:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:1" hidden>Cheapest trip</span></td><td><span data-bind="p:palma-2:display">€317</span> <span class="best-tag" data-if-cheapest="palma:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:2" hidden>Cheapest trip</span></td><td><span data-bind="p:palma-3:display">€341</span> <span class="best-tag" data-if-cheapest="palma:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:3" hidden>Cheapest trip</span></td><td><span data-bind="p:palma-7:display">€615</span> <span class="best-tag" data-if-cheapest="palma:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="palma:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="palma:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="laspalmas"><th scope="row"><a href="#laspalmas">Las Palmas</a></th><td><span data-bind="p:lp-1:display">€396</span> <span class="best-tag" data-if-cheapest="laspalmas:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:1" hidden>Cheapest trip</span></td><td><span data-bind="p:lp-2:display">€564</span> <span class="best-tag" data-if-cheapest="laspalmas:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:2" hidden>Cheapest trip</span></td><td><span data-bind="p:lp-3:display">€370</span> <span class="best-tag" data-if-cheapest="laspalmas:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:3" hidden>Cheapest trip</span></td><td><span data-bind="p:lp-7:display">€686</span> <span class="best-tag" data-if-cheapest="laspalmas:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="laspalmas:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="laspalmas:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="maspalomas"><th scope="row"><a href="#maspalomas">Maspalomas</a></th><td><span data-bind="p:masp-1:display">€348 plus the private room (check live)</span> <span class="best-tag" data-if-cheapest="maspalomas:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:1" hidden>Cheapest trip</span></td><td><span data-bind="p:masp-2:display">€602</span> <span class="best-tag" data-if-cheapest="maspalomas:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:2" hidden>Cheapest trip</span></td><td><span data-bind="p:masp-3:display">€405</span> <span class="best-tag" data-if-cheapest="maspalomas:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:3" hidden>Cheapest trip</span></td><td><span data-bind="p:masp-7:display">€763</span> <span class="best-tag" data-if-cheapest="maspalomas:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="maspalomas:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="maspalomas:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="malaga"><th scope="row"><a href="#malaga">Málaga</a></th><td><span data-bind="p:malaga-1:display">€336</span> <span class="best-tag" data-if-cheapest="malaga:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:1" hidden>Cheapest trip</span></td><td><span data-bind="p:malaga-2:display">€392</span> <span class="best-tag" data-if-cheapest="malaga:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:2" hidden>Cheapest trip</span></td><td><span data-bind="p:malaga-3:display">€415</span> <span class="best-tag" data-if-cheapest="malaga:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:3" hidden>Cheapest trip</span></td><td><span data-bind="p:malaga-7:display">€544</span> <span class="best-tag" data-if-cheapest="malaga:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="malaga:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="malaga:7" hidden>Cheapest trip</span></td></tr><tr data-highlight="barcelona"><th scope="row"><a href="#barcelona">Barcelona</a></th><td><span data-bind="p:bcn-1:display">€314</span> <span class="best-tag" data-if-cheapest="barcelona:1" hidden>Cheapest 1n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:1" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:1" hidden>Cheapest trip</span></td><td><span data-bind="p:bcn-2:display">€575</span> <span class="best-tag" data-if-cheapest="barcelona:2" hidden>Cheapest 2n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:2" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:2" hidden>Cheapest trip</span></td><td><span data-bind="p:bcn-3:display">€374</span> <span class="best-tag" data-if-cheapest="barcelona:3" hidden>Cheapest 3n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:3" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:3" hidden>Cheapest trip</span></td><td><span data-bind="p:bcn-7:display">€670</span> <span class="best-tag" data-if-cheapest="barcelona:7" hidden>Cheapest 7n</span> <span class="best-tag best-tag--value" data-if-best-value="barcelona:7" hidden>Best value</span> <span class="best-tag best-tag--trip" data-if-cheapest-trip="barcelona:7" hidden>Cheapest trip</span></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fine" data-bind="cheapestHeadline">Headline cheapest: 3 nights Barcelona with Frankfurt; 7 nights Málaga before Frankfurt.</p>
-      <p class="fine">One- and two-night columns now include Airbnb stay totals except Maspalomas one night, which is still check live. Booking hotel prices are from 22 November — recheck live. All 1n/2n returns to Asturias are verified. Prices jump after 22 December, so arriving 14–18 December is the kinder window. 1 USD ≈ 0.911 EUR is approximate, only for the USD hotel cards.</p>
+      <p class="fine" data-bind="cheapestHeadline">Headline cheapest: 1 night Palma.</p>
+      <p class="fine">One- and two-night columns now include Airbnb stay totals except Maspalomas one night, which is still check live. Booking hotel prices are from 22 November — recheck live. All 1n/2n returns to Asturias are verified. Totals do not include Ella’s flight home. Prices jump after 22 December, so arriving 14–18 December is the kinder window. 1 USD ≈ 0.911 EUR is approximate, only for the USD hotel cards.</p>
     </div>
   </section>
 
@@ -139,16 +141,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 17 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-17">€91</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -190,15 +191,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Hostal Bonany, double A/C + pool at <span data-bind="h:ab-palma-bonany-1">€76</span> for the same 1 night (14 December – 15 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:palma-1:alt">€359</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Hostal Bonany, double A/C + pool at <span data-bind="h:ab-palma-bonany-1">€76</span> for the same 1 night (14 December – 15 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:palma-1:alt">€268</span>.</p>
         <p class="fine">Best inbound alignment: both arrive 14 December (Ella’s Eurowings nonstop). Hotels for one night (Google Hotels, taxes included, 1 USD ≈ 0.911 EUR): <a href="https://www.google.com/travel/hotels/entity/ChgIs8fDpOumy_DmARoLL2cvMXRqMmYwamIQAQ?checkin=2026-12-14&amp;checkout=2026-12-15&amp;adults=2&amp;curr=EUR" target="_blank" rel="noopener noreferrer">Hotel Joan Miro Museum</a> about €68; <a href="https://www.google.com/travel/hotels/entity/ChkI1Or1xO_I6N42Gg0vZy8xMXN2NTc3NXltEAE?checkin=2026-12-14&amp;checkout=2026-12-15&amp;adults=2&amp;curr=EUR" target="_blank" rel="noopener noreferrer">Belle Marivent Boutique Hotel</a> about €75. Display only — not in the trip total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:palma-1:display">€346</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:palma-1:sub">€255</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:palma-1:display">€255</strong>. City flights plus the room: <span data-bind="p:palma-1:sub">€255</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Palma</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Palma</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Palma → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&amp;check_out=2026-12-15&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-15&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Palma</a>
         </div>
@@ -240,16 +241,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 18 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-18">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -291,15 +291,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Hostal Bonany at <span data-bind="h:ab-palma-bonany-2">€151</span> for the same 2 nights (14 December – 16 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:palma-2:alt">€459</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Hostal Bonany at <span data-bind="h:ab-palma-bonany-2">€151</span> for the same 2 nights (14 December – 16 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:palma-2:alt">€343</span>.</p>
         <p class="fine">Same 14 December inbounds as the one-night plan.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:palma-2:display">€433</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:palma-2:sub">€317</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:palma-2:display">€317</strong>. City flights plus the room: <span data-bind="p:palma-2:sub">€317</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Palma</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Palma</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Palma → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&amp;check_out=2026-12-16&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-16&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Palma</a>
         </div>
@@ -341,16 +341,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 19 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-19">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -392,15 +391,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Brick Palma at <span data-bind="h:brick-palma-3">€199</span> for the same 3 nights (14 December – 17 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:palma-3:alt">€469</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Brick Palma at <span data-bind="h:brick-palma-3">€199</span> for the same 3 nights (14 December – 17 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:palma-3:alt">€353</span>.</p>
         
-        <p class="stay-total">Trip total: <strong data-bind="p:palma-3:display">€457</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:palma-3:sub">€341</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:palma-3:display">€341</strong>. City flights plus the room: <span data-bind="p:palma-3:sub">€341</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Palma</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Palma</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Palma → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&amp;check_out=2026-12-17&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Brick%20Palma%20Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Palma</a>
@@ -443,16 +442,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 23 December. <span data-bind="f:ovd-fra-23">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -494,15 +492,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Hesperia Mallorca at <span data-bind="h:hesperia-palma-7">€472</span> for the same 7 nights (14 December – 21 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:palma-7:alt">€652 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Hesperia Mallorca at <span data-bind="h:hesperia-palma-7">€472</span> for the same 7 nights (14 December – 21 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:palma-7:alt">€652</span>.</p>
         <p class="fine">Home to Asturias on 21 December is Vueling 06:30 — an early start.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:palma-7:display">€615 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:palma-7:sub">€615</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:palma-7:display">€615</strong>. City flights plus the room: <span data-bind="p:palma-7:sub">€615</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Palma</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Palma</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Palma → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&amp;check_out=2026-12-21&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--hotel" href="https://www.hesperia.com/en/hotel-hesperia-mallorca/" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Palma&amp;checkin=2026-12-14&amp;checkout=2026-12-21&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Palma</a>
@@ -683,16 +681,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 19 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-19">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -734,15 +731,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Vacacional Vegueta II at <span data-bind="h:ab-lp-vegueta-1">€75</span> for the same 1 night (16 December – 17 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:lp-1:alt">€539</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Vacacional Vegueta II at <span data-bind="h:ab-lp-vegueta-1">€75</span> for the same 1 night (16 December – 17 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:lp-1:alt">€423</span>.</p>
         <p class="fine">Uses Ella’s <span data-bind="f:haj-lpa-16">€72</span> nonstop on 16 December. The 17 December flight home for two is dearer than the 19 December three-night return. Hotels for one night (Google Hotels): <a href="https://www.google.com/travel/hotels/entity/ChkI55fevZql9bNDGg0vZy8xMXA5bnowM2M1EAE?checkin=2026-12-16&amp;checkout=2026-12-17&amp;adults=2&amp;curr=EUR" target="_blank" rel="noopener noreferrer">Alma Canaria Apartments &amp; Rooms</a> about €45. Display only — not in the trip total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:lp-1:display">€512</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:lp-1:sub">€396</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:lp-1:display">€396</strong>. City flights plus the room: <span data-bind="p:lp-1:sub">€396</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Las Palmas</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Las Palmas</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Las Palmas → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/49125025?check_in=2026-12-16&amp;check_out=2026-12-17&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Las%20Palmas&amp;checkin=2026-12-16&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Las Palmas</a>
         </div>
@@ -784,16 +781,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 20 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-20">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -835,15 +831,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Apartamento de Brocante 209 at <span data-bind="h:ab-lp-brocante-2">€140</span> for the same 2 nights (16 December – 18 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:lp-2:alt">€710</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Apartamento de Brocante 209 at <span data-bind="h:ab-lp-brocante-2">€140</span> for the same 2 nights (16 December – 18 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:lp-2:alt">€594</span>.</p>
         <p class="fine">Same cheap 16 December inbounds. The 18 December flight home for two is expensive.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:lp-2:display">€680</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:lp-2:sub">€564</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:lp-2:display">€564</strong>. City flights plus the room: <span data-bind="p:lp-2:sub">€564</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Las Palmas</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Las Palmas</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Las Palmas → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/649728177997271973?check_in=2026-12-16&amp;check_out=2026-12-18&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Las%20Palmas&amp;checkin=2026-12-16&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Las Palmas</a>
         </div>
@@ -885,16 +881,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 21 December. <span data-bind="f:ovd-fra-21">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -936,15 +931,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Las Canteras, Estudio 07 at <span data-bind="h:ab-lp-canteras-3">€183</span> for the same 3 nights (16 December – 19 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:lp-3:alt">€398 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Las Canteras, Estudio 07 at <span data-bind="h:ab-lp-canteras-3">€183</span> for the same 3 nights (16 December – 19 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:lp-3:alt">€398</span>.</p>
         
-        <p class="stay-total">Trip total: <strong data-bind="p:lp-3:display">€370 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:lp-3:sub">€370</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:lp-3:display">€370</strong>. City flights plus the room: <span data-bind="p:lp-3:sub">€370</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Las Palmas</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Las Palmas</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Las Palmas → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=La%20Isleta%20Linda%20Las%20Palmas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Las%20Palmas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Las Palmas</a>
         </div>
@@ -986,16 +981,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 24 December. <span data-bind="f:ovd-fra-24">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1037,15 +1031,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Apartamentos Vegueta at <span data-bind="h:vegueta-lp-7">€468</span> for the same 7 nights (15 December – 22 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:lp-7:alt">€708 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Apartamentos Vegueta at <span data-bind="h:vegueta-lp-7">€468</span> for the same 7 nights (15 December – 22 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:lp-7:alt">€708</span>.</p>
         <p class="fine">Arriving a day later, 16–22 December, keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (city flights <span data-bind="b:gc-16-22">€241</span>). That is not the headline seven-night total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:lp-7:display">€686 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:lp-7:sub">€686</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:lp-7:display">€686</strong>. City flights plus the room: <span data-bind="p:lp-7:sub">€686</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Las Palmas</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Las Palmas</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Las Palmas → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/18480977?check_in=2026-12-15&amp;check_out=2026-12-22&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Apartamentos%20Vegueta%20Las%20Palmas&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Las%20Palmas&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Las Palmas</a>
@@ -1258,29 +1252,28 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 19 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-19">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
         
         
         <p class="fine">Same Gran Canaria flights as Las Palmas — airport LPA, Ella’s 16 December nonstop. No Airbnb in town within €35–85 — <a href="https://www.airbnb.es/s/Maspalomas--Spain/homes?checkin=2026-12-16&amp;checkout=2026-12-17&amp;adults=2&amp;price_min=35&amp;price_max=85&amp;currency=EUR" target="_blank" rel="noopener noreferrer">check live on Airbnb</a>. Cheapest hotel that night on Google: Axel Beach Maspalomas about €161. Display only — not in the trip total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:masp-1:display">€348 plus the private room (check live)</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:masp-1:sub">€348</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:masp-1:display">€348 plus the private room (check live)</strong>. City flights plus the room: <span data-bind="p:masp-1:sub">€348</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Gran Canaria</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Gran Canaria</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Gran Canaria → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Maspalomas&amp;checkin=2026-12-16&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Maspalomas</a>
         </div>
@@ -1322,16 +1315,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 20 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-20">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1373,15 +1365,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Relax Playa Ingles at <span data-bind="h:ab-masp-relax-2">€168</span> for the same 2 nights (16 December – 18 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:masp-2:alt">€738</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Relax Playa Ingles at <span data-bind="h:ab-masp-relax-2">€168</span> for the same 2 nights (16 December – 18 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:masp-2:alt">€622</span>.</p>
         <p class="fine">Same 16 December inbounds. The 18 December LPA→OVD pair is expensive.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:masp-2:display">€718</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:masp-2:sub">€602</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:masp-2:display">€602</strong>. City flights plus the room: <span data-bind="p:masp-2:sub">€602</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Gran Canaria</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Gran Canaria</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Gran Canaria → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/807751336662960005?check_in=2026-12-16&amp;check_out=2026-12-18&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Maspalomas&amp;checkin=2026-12-16&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Maspalomas</a>
         </div>
@@ -1423,16 +1415,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 21 December. <span data-bind="f:ovd-fra-21">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1474,15 +1465,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Casa Ohana at <span data-bind="h:ohana-masp-3">€230</span> for the same 3 nights (16 December – 19 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:masp-3:alt">€445 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Casa Ohana at <span data-bind="h:ohana-masp-3">€230</span> for the same 3 nights (16 December – 19 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:masp-3:alt">€445</span>.</p>
         <p class="fine">Ali’s inbound has a dearer Binter nonstop at <span data-bind="f:ovd-lpa-16-binter">€186</span>; the total uses Air Europa via Madrid at <span data-bind="f:ovd-lpa-16">€66</span>.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:masp-3:display">€405 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:masp-3:sub">€405</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:masp-3:display">€405</strong>. City flights plus the room: <span data-bind="p:masp-3:sub">€405</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Gran Canaria</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Gran Canaria</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Gran Canaria → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1434866096222916233?check_in=2026-12-16&amp;check_out=2026-12-19&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Casa%20Ohana%20Maspalomas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Maspalomas&amp;checkin=2026-12-16&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Maspalomas</a>
@@ -1525,16 +1516,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 24 December. <span data-bind="f:ovd-fra-24">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1576,15 +1566,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: South-coast search at <span data-bind="h:masp-south-7">€536</span> for the same 7 nights (15 December – 22 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:masp-7:alt">€776 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: South-coast search at <span data-bind="h:masp-south-7">€536</span> for the same 7 nights (15 December – 22 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:masp-7:alt">€776</span>.</p>
         <p class="fine">Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (city flights <span data-bind="b:gc-16-22">€241</span>). That is not the headline seven-night total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:masp-7:display">€763 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:masp-7:sub">€763</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:masp-7:display">€763</strong>. City flights plus the room: <span data-bind="p:masp-7:sub">€763</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Gran Canaria</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Gran Canaria</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Gran Canaria → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1790031823493057261?check_in=2026-12-15&amp;check_out=2026-12-22&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Maspalomas&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Maspalomas</a>
         </div>
@@ -1729,16 +1719,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 21 December. <span data-bind="f:ovd-fra-21">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1780,15 +1769,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Apartamentos de Rosa Mari at <span data-bind="h:ab-agp-rosa-1">€68</span> for the same 1 night (18 December – 19 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-1:alt">€365 plus her flight to Frankfurt</span>.</p>
-        <p class="fine">Best inbound alignment is 18 December (Ella nonstop). Frankfurt on 21 December is still check live. Hotels for one night (Google Hotels): Futurotel Malagueta 3★ about €50; Sol Málaga Guadalmar 4★ about €80 (near the airport). Display only — not in the trip total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:malaga-1:display">€336 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:malaga-1:sub">€336</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="alt-stay">Other private stay we priced: Apartamentos de Rosa Mari at <span data-bind="h:ab-agp-rosa-1">€68</span> for the same 1 night (18 December – 19 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-1:alt">€365</span>.</p>
+        <p class="fine">Best inbound alignment is 18 December (Ella nonstop). Hotels for one night (Google Hotels): Futurotel Malagueta 3★ about €50; Sol Málaga Guadalmar 4★ about €80 (near the airport). Display only — not in the trip total.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:malaga-1:display">€336</strong>. City flights plus the room: <span data-bind="p:malaga-1:sub">€336</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Málaga</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Málaga</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Málaga → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/7599041?check_in=2026-12-18&amp;check_out=2026-12-19&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-18&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Málaga</a>
         </div>
@@ -1830,16 +1819,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 22 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-22">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1881,15 +1869,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: La Casa del Druida, Apt hierbabuena at <span data-bind="h:ab-agp-druida-2">€132</span> for the same 2 nights (18 December – 20 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-2:alt">€524</span>.</p>
+        <p class="alt-stay">Other private stay we priced: La Casa del Druida, Apt hierbabuena at <span data-bind="h:ab-agp-druida-2">€132</span> for the same 2 nights (18 December – 20 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-2:alt">€408</span>.</p>
         <p class="fine">Same 18 December inbounds.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:malaga-2:display">€508</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:malaga-2:sub">€392</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:malaga-2:display">€392</strong>. City flights plus the room: <span data-bind="p:malaga-2:sub">€392</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Málaga</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Málaga</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Málaga → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/29984735?check_in=2026-12-18&amp;check_out=2026-12-20&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-18&amp;checkout=2026-12-20&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Málaga</a>
         </div>
@@ -1931,16 +1919,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 20 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-20">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -1966,15 +1953,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Apartamentos de Rosa Mari at <span data-bind="h:ab-agp-rosa-3">€149</span> for the same 3 nights (15 December – 18 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-3:alt">€565</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Apartamentos de Rosa Mari at <span data-bind="h:ab-agp-rosa-3">€149</span> for the same 3 nights (15 December – 18 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-3:alt">€449</span>.</p>
         <p class="fine">There is a second three-night window, 18–21 December, on Ella’s Eurowings 07:10 nonstop (about <span data-bind="usd:haj-agp-18-usd">$130</span>). Ali’s OVD–AGP round trip those dates was about <span data-bind="usd:ovd-agp-rt-18-21">$111</span>. Her flight home to Asturias on 21 December was not priced, so it is not a full plan. Partial with Alameda Centro: about <span data-bind="partial:alameda">$651</span>; with ICON Malabar about <span data-bind="partial:malabar">$706</span>.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:malaga-3:display">€531</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:malaga-3:sub">€415</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:malaga-3:display">€415</strong>. City flights plus the room: <span data-bind="p:malaga-3:sub">€415</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Málaga</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Málaga</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Málaga → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Hostal%20NV%20Palacio%20Congresos%20Malaga&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Málaga</a>
         </div>
@@ -2016,16 +2003,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 27 December. <span data-bind="f:ovd-fra-27">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -2051,15 +2037,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Apartamentos de Rosa Mari at <span data-bind="h:ab-agp-rosa-7">€431</span> for the same 7 nights (18 December – 25 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-7:alt">€651 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Apartamentos de Rosa Mari at <span data-bind="h:ab-agp-rosa-7">€431</span> for the same 7 nights (18 December – 25 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:malaga-7:alt">€651</span>.</p>
         
-        <p class="stay-total">Trip total: <strong data-bind="p:malaga-7:display">€544 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:malaga-7:sub">€544</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:malaga-7:display">€544</strong>. City flights plus the room: <span data-bind="p:malaga-7:sub">€544</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Málaga</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Málaga</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI1agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Málaga → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Hostal%20NV%20Palacio%20Congresos%20Malaga&amp;checkin=2026-12-18&amp;checkout=2026-12-25&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=M%C3%A1laga&amp;checkin=2026-12-18&amp;checkout=2026-12-25&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Málaga</a>
         </div>
@@ -2223,16 +2209,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 18 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-18">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -2274,15 +2259,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Estudios de Silvia (Barcelona Fifteen) at <span data-bind="h:ab-bcn-silvia-1">€71</span> for the same 1 night (15 December – 16 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:bcn-1:alt">€456</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Estudios de Silvia (Barcelona Fifteen) at <span data-bind="h:ab-bcn-silvia-1">€71</span> for the same 1 night (15 December – 16 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:bcn-1:alt">€340</span>.</p>
         <p class="fine">Both arrive 15 December on cheap Vueling. The 16 December flight home has two stops — possible self-transfer, separate tickets. Hotels for one night (Google Hotels): cheapest about €92 (Negresco Princess / Acta Voraport). Display only — not in the trip total.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:bcn-1:display">€430</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:bcn-1:sub">€314</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:bcn-1:display">€314</strong>. City flights plus the room: <span data-bind="p:bcn-1:sub">€314</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Barcelona</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Barcelona</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Barcelona → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1770350867264593321?check_in=2026-12-15&amp;check_out=2026-12-16&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-16&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Barcelona</a>
         </div>
@@ -2324,16 +2309,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 19 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-19">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -2375,15 +2359,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Barcelona Fifteen studios at <span data-bind="h:ab-bcn-fifteen-2">€151</span> for the same 2 nights (15 December – 17 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:bcn-2:alt">€752</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Barcelona Fifteen studios at <span data-bind="h:ab-bcn-fifteen-2">€151</span> for the same 2 nights (15 December – 17 December; Airbnb, fees included, 27 November). That trip is about <span data-bind="p:bcn-2:alt">€636</span>.</p>
         <p class="fine">Same 15 December inbounds. The 17 December flight home for two is expensive.</p>
-        <p class="stay-total">Trip total: <strong data-bind="p:bcn-2:display">€691</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:bcn-2:sub">€575</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:bcn-2:display">€575</strong>. City flights plus the room: <span data-bind="p:bcn-2:sub">€575</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Barcelona</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Barcelona</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Barcelona → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1770350867264593321?check_in=2026-12-15&amp;check_out=2026-12-17&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Barcelona</a>
         </div>
@@ -2425,16 +2409,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 20 December. Air Europa, 1 stop, <span data-bind="f:ovd-fra-20">€116</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -2476,15 +2459,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Hotel BestPrice Maragall at <span data-bind="h:maragall-bcn-3">€147</span> for the same 3 nights (15 December – 18 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:bcn-3:alt">€502</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Hotel BestPrice Maragall at <span data-bind="h:maragall-bcn-3">€147</span> for the same 3 nights (15 December – 18 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:bcn-3:alt">€386</span>.</p>
         
-        <p class="stay-total">Trip total: <strong data-bind="p:bcn-3:display">€490</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:bcn-3:sub">€374</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:bcn-3:display">€374</strong>. City flights plus the room: <span data-bind="p:bcn-3:sub">€374</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Barcelona</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Barcelona</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Barcelona → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--airbnb" href="https://www.airbnb.com/rooms/1787632500437078315?check_in=2026-12-15&amp;check_out=2026-12-18&amp;adults=2&amp;currency=EUR" target="_blank" rel="noopener noreferrer">Book on Airbnb</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Hotel%20BestPrice%20Maragall%20Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-18&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Barcelona</a>
@@ -2527,16 +2510,15 @@
           <li>
             <span class="step-n">5</span>
             <div>
-              <h4>A couple of days in Asturias, at home</h4>
-              <p>Two slow days together after the city. No hotel — you stay at home. Then Ella’s last flight is Asturias to Frankfurt.</p>
+              <h4>Days in Asturias, at home</h4>
+              <p>Slow days together after the city. No hotel — you stay at home. Stay as long as you like; Ali is happy if you stay longer.</p>
             </div>
           </li>
           <li>
             <span class="step-n">6</span>
             <div>
-              <h4>Ella: Asturias (OVD) → Frankfurt (FRA)</h4>
-              <p>After the days in Asturias, 24 December. <span data-bind="f:ovd-fra-24">check live price</span>. There is no nonstop this month — Lufthansa’s direct starts in March 2027. Totals below do not invent a Frankfurt fare.</p>
-              <p class="alt-airports">No direct OVD→FRA in December. If the Madrid connection is awkward, <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Santander → Frankfurt</a> and <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDQklPcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Bilbao → Frankfurt</a> are easy dated Google Flights searches — check live, we did not store a price.</p>
+              <h4>Ella flies home whenever she chooses</h4>
+              <p>This trip total does not include your flight home, so you can pick the day. Window 17 December 2026 – 4 January 2027. See <a href="#ella-home">Ella’s flight home</a> for the options we opened.</p>
             </div>
           </li>
         </ol>
@@ -2578,15 +2560,15 @@
           </div>
         </article>
         </div>
-        <p class="alt-stay">Other private stay we priced: Hostal Argo at <span data-bind="h:argo-bcn-7">€427</span> for the same 7 nights (15 December – 22 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:bcn-7:alt">€687 plus her flight to Frankfurt</span>.</p>
+        <p class="alt-stay">Other private stay we priced: Hostal Argo at <span data-bind="h:argo-bcn-7">€427</span> for the same 7 nights (15 December – 22 December; Booking.com, 22 November — recheck live). That trip is about <span data-bind="p:bcn-7:alt">€687</span>.</p>
         
-        <p class="stay-total">Trip total: <strong data-bind="p:bcn-7:display">€670 plus her flight to Frankfurt</strong>. Known flights (without an unverified home leg or an unpriced room): <span data-bind="p:bcn-7:sub">€670</span>. Totals never invent a missing return or hotel figure.</p>
+        <p class="stay-total">Trip total: <strong data-bind="p:bcn-7:display">€670</strong>. City flights plus the room: <span data-bind="p:bcn-7:sub">€670</span>. Does not include Ella’s flight home — she picks that separately. Totals never invent a missing city flight or hotel figure.</p>
         
         <div class="book-grid">
           <a class="book-link book-link--ella" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Hannover → Barcelona</a>
           <a class="book-link book-link--ali" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ali: Oviedo → Barcelona</a>
           <a class="book-link book-link--together" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Together: Barcelona → Asturias (2 people)</a>
-          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Ella: Asturias → Frankfurt</a>
+          <a class="book-link book-link--home" href="#ella-home">Ella: pick your flight home</a>
           <a class="book-link book-link--hotel" href="https://www.booking.com/searchresults.html?ss=Hostal%20House%20Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price" target="_blank" rel="noopener noreferrer">See hotel</a>
           <a class="book-link book-link--search" href="https://www.booking.com/searchresults.html?ss=Barcelona&amp;checkin=2026-12-15&amp;checkout=2026-12-22&amp;group_adults=2&amp;no_rooms=1&amp;selected_currency=EUR&amp;order=price&amp;nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216" target="_blank" rel="noopener noreferrer">Search private rooms for two, Barcelona</a>
         </div>
@@ -2733,10 +2715,479 @@
       </div>
     </section>
 
+  
+  <section class="dest-section dest-home" id="ella-home">
+    <div class="container">
+      <header class="dest-head">
+        <div>
+          <p class="kicker">Whenever you like</p>
+          <h2>Ella’s flight home</h2>
+          <p>Stay in Asturias as long as you want — Ali is happy if you stay longer. This is separate from the city trip totals, so you can pick the day. Window 17 December 2026 – 4 January 2027. Home is near Hannover. Prices checked <span data-bind="home_flights_checked">27 November 2026</span>, one adult, economy, one way, euros including taxes as Google Flights showed them. Nothing is booked.</p>
+          <p>There is <strong>no December nonstop from Oviedo</strong> to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts in March 2027. The one confirmed nonstop is Eurowings Bilbao → Düsseldorf.</p>
+        </div>
+      </header>
+      <div class="home-picks">
+        
+        <article class="home-pick home-pick--gold">
+          <p class="kicker">Cheapest overall</p>
+          <h3>Bilbao (BIO) → Düsseldorf (DUS)</h3>
+          <p class="hotel-price" data-bind="home:home-01">€50</p>
+          <p>21 December. Eurowings. Nonstop. 1h55, 15:40–17:35.</p>
+          <p class="fine">ICE about 2h25 to Hannover Hbf.</p>
+          <p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p>
+          <p class="fine">The only confirmed nonstop. Flight-only beats Oviedo; after the bus the door-to-airport total is usually higher than flying from Oviedo, but the hop itself is a short afternoon.</p>
+          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDQklPcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a>
+        </article>
+        
+        <article class="home-pick home-pick--sea">
+          <p class="kicker">Cheapest from Oviedo</p>
+          <h3>Oviedo (OVD) → Amsterdam (AMS)</h3>
+          <p class="hotel-price" data-bind="home:home-02">€55</p>
+          <p>19 December. Air Europa. 1 stop, Madrid. 12h35, 21:05–09:40+1.</p>
+          <p class="fine">ICE International typically about 4–4.5 hours.</p>
+          
+          <p class="fine">Cheapest confirmed fare from Oviedo. Long layover, then a long train.</p>
+          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a>
+        </article>
+        
+        <article class="home-pick home-pick--wine">
+          <p class="kicker">Lands at home, from Oviedo</p>
+          <h3>Oviedo (OVD) → Hannover (HAJ)</h3>
+          <p class="hotel-price" data-bind="home:home-23">€104</p>
+          <p>23 December. Vueling. 1 stop, Barcelona. 10h25, 23:00–09:25+1.</p>
+          <p class="fine">S5 about 15–18 min to Hannover Hbf — you land at home.</p>
+          
+          <p class="fine">Best Oviedo fare that lands at Hannover. No bus.</p>
+          <a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a>
+        </article>
+      </div>
+      <p class="aside">Bilbao and Santander need a bus from Gijón. Bilbao about €31–50 and 4.5–6 hours; Santander about €20–23 and 3–4 hours. Those bus fares are recent published prices, <strong>not live-verified</strong> for the exact mid-December day — recheck before you book. The cheapest fare into Hannover itself is Bilbao → Hannover €88 on 23 December, but after the bus Oviedo → Hannover €104 is usually kinder.</p>
+      <h3 class="hotels-title">Ranked options we opened</h3>
+      <p class="fine">Flight only. Add the bus for Bilbao and Santander. Book opens Google Flights for that day.</p>
+      <div class="table-wrap">
+        <table class="home-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Route</th>
+              <th scope="col">Date</th>
+              <th scope="col">Price</th>
+              <th scope="col">Airline</th>
+              <th scope="col">Stops</th>
+              <th scope="col">Times</th>
+              <th scope="col">On to Hannover</th>
+              <th scope="col">Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          <tr>
+            <td>1</td>
+            <td>
+              <strong>Bilbao (BIO) → Düsseldorf (DUS)</strong>
+              <span class="best-tag best-tag--trip">Cheapest overall</span> <span class="best-tag best-tag--value">Nonstop</span>
+            </td>
+            <td>21 December</td>
+            <td><strong data-bind="home:home-01">€50</strong></td>
+            <td>Eurowings</td>
+            <td>Nonstop</td>
+            <td>1h55<br>15:40–17:35</td>
+            <td>ICE about 2h25 to Hannover Hbf.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">The only confirmed nonstop. Flight-only beats Oviedo; after the bus the door-to-airport total is usually higher than flying from Oviedo, but the hop itself is a short afternoon.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDQklPcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <strong>Oviedo (OVD) → Amsterdam (AMS)</strong>
+              <span class="best-tag best-tag--value">Cheapest from Oviedo</span>
+            </td>
+            <td>19 December</td>
+            <td><strong data-bind="home:home-02">€55</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>12h35<br>21:05–09:40+1</td>
+            <td>ICE International typically about 4–4.5 hours.<p class="fine">Cheapest confirmed fare from Oviedo. Long layover, then a long train.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <strong>Bilbao (BIO) → Amsterdam (AMS)</strong>
+              
+            </td>
+            <td>19 December</td>
+            <td><strong data-bind="home:home-03">€58</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>12h35<br>21:05–09:40+1</td>
+            <td>ICE International typically about 4–4.5 hours.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">Same itinerary as Oviedo–Amsterdam that day; add the bus, so Oviedo is usually better.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <strong>Oviedo (OVD) → Düsseldorf (DUS)</strong>
+              
+            </td>
+            <td>24 December</td>
+            <td><strong data-bind="home:home-04">€59</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>7h10<br>10:35–17:45</td>
+            <td>ICE about 2h25 to Hannover Hbf.<p class="fine">Best timing of the €59 Düsseldorf fares — daytime, and it beats same-day Frankfurt €62.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <strong>Oviedo (OVD) → Düsseldorf (DUS)</strong>
+              
+            </td>
+            <td>17 December, 21 December, 27 December and 29 December</td>
+            <td><strong data-bind="home:home-05">€59</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>12h30<br>21:05–09:35+1</td>
+            <td>ICE about 2h25 to Hannover Hbf.<p class="fine">Overnight €59 on 17, 21, 27 and 29 December. Beats 17 Dec Frankfurt €91 and 21 Dec Frankfurt €71.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">17 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">21 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">27 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">29 December</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>
+              <strong>Oviedo (OVD) → Hamburg (HAM)</strong>
+              
+            </td>
+            <td>24 December</td>
+            <td><strong data-bind="home:home-06">€60</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>11h35<br>23:00–10:35+1</td>
+            <td>ICE about 1h15 after the airport S-Bahn.<p class="fine">Beats same-day Frankfurt €62, and Hamburg is the closest cheap airport to home after Hannover itself.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>
+              <strong>Bilbao (BIO) → Düsseldorf (DUS)</strong>
+              
+            </td>
+            <td>17 December, 24 December and 28 December</td>
+            <td><strong data-bind="home:home-07">€60</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>9h15–12h30<br>08:30–17:45 (24 Dec) or 21:05–09:35+1</td>
+            <td>ICE about 2h25 to Hannover Hbf.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">Add the bus; usually worse than Oviedo–Düsseldorf €59.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDQklPcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">24 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQklPcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">17 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDQklPcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">28 December</a></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>
+              <strong>Oviedo (OVD) → Frankfurt (FRA)</strong>
+              
+            </td>
+            <td>23–31 December</td>
+            <td><strong data-bind="home:home-08">€62</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>7h20 or 12h40<br>10:35–17:55 or 21:05–09:45+1</td>
+            <td>ICE about 2h20 from Flughafen Fernbahnhof.<p class="fine">Cheapest confirmed Oviedo–Frankfurt in this window. Morning 7h20 on several dates (24–26, 28, 29, 31 December).</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>
+              <strong>Oviedo (OVD) → Amsterdam (AMS)</strong>
+              
+            </td>
+            <td>20 December and 24 December</td>
+            <td><strong data-bind="home:home-09">€63</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>12h35<br>21:05–09:40+1</td>
+            <td>ICE International typically about 4–4.5 hours.<p class="fine">Near Frankfurt €62, then a long train.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">20 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">24 December</a></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>
+              <strong>Oviedo (OVD) → Berlin (BER)</strong>
+              
+            </td>
+            <td>24 December</td>
+            <td><strong data-bind="home:home-10">€67</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h45<br>23:00–09:45+1</td>
+            <td>ICE about 2h50 plus the airport transfer.<p class="fine">Slightly above Frankfurt; longer onward train (~2h50).</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>
+              <strong>Oviedo (OVD) → Berlin (BER)</strong>
+              
+            </td>
+            <td>21 December</td>
+            <td><strong data-bind="home:home-11">€68</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h45<br>23:00–09:45+1</td>
+            <td>ICE about 2h50 plus the airport transfer.<p class="fine">Beats same-day Frankfurt €71.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>
+              <strong>Bilbao (BIO) → Berlin (BER)</strong>
+              
+            </td>
+            <td>17 December</td>
+            <td><strong data-bind="home:home-12">€70</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>11h55<br>21:50–09:45+1</td>
+            <td>ICE about 2h50 plus the airport transfer.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">Add the bus.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQklPcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>
+              <strong>Oviedo (OVD) → Frankfurt (FRA)</strong>
+              
+            </td>
+            <td>21 December</td>
+            <td><strong data-bind="home:home-13">€71</strong></td>
+            <td>Iberia</td>
+            <td>1 stop, Madrid</td>
+            <td>9h15<br>13:20–22:35</td>
+            <td>ICE about 2h20 from Flughafen Fernbahnhof.<p class="fine">Mid-window Frankfurt alternative.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>
+              <strong>Santander (SDR) → Frankfurt (FRA)</strong>
+              
+            </td>
+            <td>28 December</td>
+            <td><strong data-bind="home:home-14">€71</strong></td>
+            <td>Iberia</td>
+            <td>1 stop, Madrid</td>
+            <td>12h30<br>10:05–22:35</td>
+            <td>ICE about 2h20 from Flughafen Fernbahnhof.<p class="fine">Add a bus from Gijón: about €20–23 and 3–4 hours. Mid-December tickets not live-verified.</p><p class="fine">Plus the bus ~€20–23; worse than Oviedo–Frankfurt €62 that day.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>
+              <strong>Oviedo (OVD) → Berlin (BER)</strong>
+              
+            </td>
+            <td>17 December</td>
+            <td><strong data-bind="home:home-15">€72</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>5h45<br>14:55–20:40</td>
+            <td>ICE about 2h50 plus the airport transfer.<p class="fine">Short connection; beats same-day Frankfurt €91.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>
+              <strong>Santander (SDR) → Hamburg (HAM)</strong>
+              
+            </td>
+            <td>19 December</td>
+            <td><strong data-bind="home:home-16">€78</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>16h00<br>18:00–10:00+1</td>
+            <td>ICE about 1h15 after the airport S-Bahn.<p class="fine">Add a bus from Gijón: about €20–23 and 3–4 hours. Mid-December tickets not live-verified.</p><p class="fine">Plus the bus; long layover. Oviedo options are usually better.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>
+              <strong>Bilbao (BIO) → Hamburg (HAM)</strong>
+              
+            </td>
+            <td>19 December</td>
+            <td><strong data-bind="home:home-17">€78</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>14h20<br>19:40–10:00+1</td>
+            <td>ICE about 1h15 after the airport S-Bahn.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">Plus the bus; long layover.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>
+              <strong>Oviedo (OVD) → Hamburg (HAM)</strong>
+              
+            </td>
+            <td>20 December</td>
+            <td><strong data-bind="home:home-18">€80</strong></td>
+            <td>Vueling</td>
+            <td>1 stop, Barcelona</td>
+            <td>11h35<br>23:00–10:35+1</td>
+            <td>ICE about 1h15 after the airport S-Bahn.<p class="fine">Beats same-day Frankfurt €116.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>
+              <strong>Bilbao (BIO) → Hannover (HAJ)</strong>
+              <span class="best-tag">Cheapest into Hannover</span>
+            </td>
+            <td>23 December</td>
+            <td><strong data-bind="home:home-19">€88</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h25<br>23:00–09:25+1</td>
+            <td>S5 about 15–18 min to Hannover Hbf — you land at home.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">Lands at home. The flight looks cheaper than Oviedo–Hannover €104 until you add the bus (~€31–50), which usually makes Oviedo cheaper.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>
+              <strong>Oviedo (OVD) → Frankfurt (FRA)</strong>
+              
+            </td>
+            <td>17 December</td>
+            <td><strong data-bind="home:home-20">€91</strong></td>
+            <td>Air Europa</td>
+            <td>1 stop, Madrid</td>
+            <td>7h20<br>10:35–17:55</td>
+            <td>ICE about 2h20 from Flughafen Fernbahnhof.<p class="fine">Older site baseline day — Düsseldorf €59 is kinder on this date.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>
+              <strong>Oviedo (OVD) → Hamburg (HAM)</strong>
+              
+            </td>
+            <td>17 December</td>
+            <td><strong data-bind="home:home-21">€93</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>5h20<br>14:55–20:15</td>
+            <td>ICE about 1h15 after the airport S-Bahn.<p class="fine">Short connection, close to home; almost matches 17 December Frankfurt €91.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>
+              <strong>Bilbao (BIO) → Hannover (HAJ)</strong>
+              
+            </td>
+            <td>30 December</td>
+            <td><strong data-bind="home:home-22">€98</strong></td>
+            <td>Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h25<br>23:00–09:25+1</td>
+            <td>S5 about 15–18 min to Hannover Hbf — you land at home.<p class="fine">Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.</p><p class="fine">Lands at home. Plus the bus versus Oviedo–Hannover €124 that day may be close.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>
+              <strong>Oviedo (OVD) → Hannover (HAJ)</strong>
+              <span class="best-tag">Lands at home, from Oviedo</span>
+            </td>
+            <td>23 December</td>
+            <td><strong data-bind="home:home-23">€104</strong></td>
+            <td>Vueling</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h25<br>23:00–09:25+1</td>
+            <td>S5 about 15–18 min to Hannover Hbf — you land at home.<p class="fine">Best Oviedo fare that lands at Hannover. No bus.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>
+              <strong>Oviedo (OVD) → Hannover (HAJ)</strong>
+              
+            </td>
+            <td>18 December and 21 December</td>
+            <td><strong data-bind="home:home-24">€114</strong></td>
+            <td>Vueling / Vueling, Iberia</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h25<br>23:00–09:25+1</td>
+            <td>S5 about 15–18 min to Hannover Hbf — you land at home.<p class="fine">18 December slightly beats same-day Frankfurt €116 and lands at home.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">18 December</a><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">21 December</a></td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>
+              <strong>Oviedo (OVD) → Hannover (HAJ)</strong>
+              
+            </td>
+            <td>30 December</td>
+            <td><strong data-bind="home:home-25">€124</strong></td>
+            <td>Vueling</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h25<br>23:00–09:25+1</td>
+            <td>S5 about 15–18 min to Hannover Hbf — you land at home.<p class="fine">Above Frankfurt €62 that day; lands at home.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>
+              <strong>Oviedo (OVD) → Hannover (HAJ)</strong>
+              
+            </td>
+            <td>28 December</td>
+            <td><strong data-bind="home:home-26">€145</strong></td>
+            <td>Vueling</td>
+            <td>1 stop, Barcelona</td>
+            <td>10h25<br>23:00–09:25+1</td>
+            <td>S5 about 15–18 min to Hannover Hbf — you land at home.<p class="fine">Above Frankfurt €62; lands at home.</p></td>
+            <td class="home-book"><a class="book-link book-link--home" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer">Book</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="hotels-title">Pick a date: Oviedo → Frankfurt</h3>
+      <p class="fine">Confirmed opened fares, 27 November 2026. 21 December is Iberia; the rest are Air Europa, one stop via Madrid.</p>
+      <div class="date-pills">
+        <a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>17 December</span><strong data-bind="homecal:cal-ovd-fra-1217">€91</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>18 December</span><strong data-bind="homecal:cal-ovd-fra-1218">€116</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>19 December</span><strong data-bind="homecal:cal-ovd-fra-1219">€116</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>20 December</span><strong data-bind="homecal:cal-ovd-fra-1220">€116</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>21 December</span><strong data-bind="homecal:cal-ovd-fra-1221">€71</strong><span class="fine">Iberia</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>22 December</span><strong data-bind="homecal:cal-ovd-fra-1222">€116</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>23 December</span><strong data-bind="homecal:cal-ovd-fra-1223">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>24 December</span><strong data-bind="homecal:cal-ovd-fra-1224">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI1agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>25 December</span><strong data-bind="homecal:cal-ovd-fra-1225">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI2agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>26 December</span><strong data-bind="homecal:cal-ovd-fra-1226">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>27 December</span><strong data-bind="homecal:cal-ovd-fra-1227">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>28 December</span><strong data-bind="homecal:cal-ovd-fra-1228">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>29 December</span><strong data-bind="homecal:cal-ovd-fra-1229">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>30 December</span><strong data-bind="homecal:cal-ovd-fra-1230">€62</strong><span class="fine">Air Europa</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMxagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>31 December</span><strong data-bind="homecal:cal-ovd-fra-1231">€62</strong><span class="fine">Air Europa</span></a>
+      </div>
+      <h3 class="hotels-title">Pick a date: Oviedo → Hannover</h3>
+      <p class="fine">Confirmed opened fares that land at home. Other dates we opened were €196–300, or 34 hours on 24 December — skip those.</p>
+      <div class="date-pills">
+        <a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>18 December</span><strong data-bind="homecal:cal-ovd-haj-1218">€114</strong><span class="fine">Vueling / Vueling, Iberia</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>21 December</span><strong data-bind="homecal:cal-ovd-haj-1221">€114</strong><span class="fine">Vueling / Vueling, Iberia</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>23 December</span><strong data-bind="homecal:cal-ovd-haj-1223">€104</strong><span class="fine">Vueling</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>28 December</span><strong data-bind="homecal:cal-ovd-haj-1228">€145</strong><span class="fine">Vueling</span></a><a class="date-pill" href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&amp;curr=EUR&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>30 December</span><strong data-bind="homecal:cal-ovd-haj-1230">€124</strong><span class="fine">Vueling</span></a>
+      </div>
+      <h3 class="hotels-title">Cheapest confirmed fare per airport</h3>
+      <div class="table-wrap">
+        <table class="home-table home-table--airports">
+          <thead>
+            <tr>
+              <th scope="col">Airport</th>
+              <th scope="col">Cheapest</th>
+              <th scope="col">On to Hannover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Düsseldorf (DUS)</th><td>€50 from Bilbao</td><td>Eurowings nonstop, 21 Dec 15:40–17:35. From Oviedo: €59 several dates (best 24 Dec 10:35–17:45). ICE about 2h25.</td></tr><tr><th scope="row">Amsterdam (AMS)</th><td>€55 from Oviedo</td><td>Air Europa via Madrid, 19 Dec 21:05–09:40+1. ICE International typically 4–4.5h. Cheap flight, long day after.</td></tr><tr><th scope="row">Hamburg (HAM)</th><td>€60 from Oviedo</td><td>Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €80 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn.</td></tr><tr><th scope="row">Frankfurt (FRA)</th><td>€62 from Oviedo</td><td>Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof.</td></tr><tr><th scope="row">Berlin (BER)</th><td>€67 from Oviedo</td><td>Vueling/Iberia via Barcelona, 24 Dec. Also €68 on 21 Dec, €72 on 17 Dec in 5h45. ICE about 2h50 plus airport transfer.</td></tr><tr><th scope="row">Hannover (HAJ)</th><td>€88 from Bilbao</td><td>Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo.</td></tr><tr><th scope="row">Bremen (BRE)</th><td>€231 from Oviedo</td><td>Opened 20 Dec, Air Europa+KLM, 2 stops Madrid+Amsterdam — not useful next to Hamburg/Düsseldorf. Bilbao calendar from €141, itinerary not opened.</td></tr><tr><th scope="row">Cologne (CGN)</th><td>calendar only from Bilbao <span class="best-tag">Unverified</span></td><td>Calendar only, from €195 Bilbao / €355 Oviedo — not competitive. ICE about 2h33.</td></tr><tr><th scope="row">Eindhoven (EIN)</th><td>calendar only from Bilbao <span class="best-tag">Unverified</span></td><td>Bilbao calendar from €70 on 22/24/25 Dec — itinerary not opened (Google Oops). Unverified as a bookable itinerary. Long overland, often 4.5–6h.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="hotels-title">Buses to Bilbao and Santander</h3>
+      <p>Bilbao Airport about €31–50 and 4.5–6 hours from Gijón (coach to Bilbao Intermodal plus Bizkaibus A3247, about 15–20 min). Not live-verified for the exact mid-December day.</p>
+      <p>Santander Airport about €20–23 and 3–4 hours from Gijón. Not live-verified for the exact mid-December day.</p>
+      <h3 class="hotels-title">What we did not treat as a recommendation</h3>
+      <ul class="home-gaps">
+        <li>No December nonstop from Oviedo to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts March 2027. The one confirmed nonstop is Eurowings Bilbao–Düsseldorf.</li><li>Oviedo–Hannover itineraries failed to load for 17 and 26 December (timeout) and 2–3 January (Google Oops). Calendar 17 Dec €346 — unattractive. 26 Dec had no stored calendar price.</li><li>Bilbao–Eindhoven calendar from €70 was not opened. Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.</li><li>Santander–Bremen calendar failed; Santander–Düsseldorf and Santander–Amsterdam calendars were incomplete and looked expensive where priced. Santander–Hannover calendar from €203, incomplete.</li><li>Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German/Dutch airports.</li><li>Secondary airports Dortmund, Paderborn, Hahn, Weeze: no useful priced calendar days from Oviedo or Bilbao in this scrape.</li><li>Other opened Hannover/Hamburg dates cost more (Oviedo–Hannover 20/22/24/25/27/31 Dec €196–300; 24 Dec Hannover is 34h25 — skip). Oviedo–Bremen 20 Dec €231 is not useful next to Hamburg/Düsseldorf.</li><li>Fares move; this is a 27 November 2026 snapshot. Recheck before you pay.</li>
+      </ul>
+    </div>
+  </section>
+
+
   <footer class="site-foot">
     <div class="container">
       <p>A private page for two people. Ella’s first name is on the buttons because Ali asked. No last names. Photographs are Wikimedia Commons files — credits in <a href="./photos/CREDITS.md">photos/CREDITS.md</a>.</p>
-      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>.</p>
+      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>. Home flights checked <span data-bind="home_flights_checked">27 November 2026</span>.</p>
     </div>
   </footer>
   <script src="./app.js" defer></script>

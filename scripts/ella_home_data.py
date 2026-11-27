@@ -12,16 +12,16 @@ HOME_IATA = {
     "OVD": "Oviedo",
     "BIO": "Bilbao",
     "SDR": "Santander",
-    "DUS": "Düsseldorf",
-    "AMS": "Amsterdam",
-    "HAM": "Hamburg",
-    "FRA": "Frankfurt",
-    "BER": "Berlin",
     "HAJ": "Hannover",
+    "HAM": "Hamburg",
     "BRE": "Bremen",
+    "DUS": "Düsseldorf",
     "CGN": "Cologne",
-    "EIN": "Eindhoven",
+    "FRA": "Frankfurt",
 }
+
+# Near Hannover first. Frankfurt is the backup even though the train is similar to Düsseldorf.
+NEAR_ORDER = ["HAJ", "HAM", "BRE", "DUS", "CGN", "FRA"]
 
 TRAIN_TO_HAJ = {
     "HAJ": "S5 about 15–18 min to Hannover Hbf — you land at home.",
@@ -30,9 +30,6 @@ TRAIN_TO_HAJ = {
     "DUS": "ICE about 2h25 to Hannover Hbf.",
     "FRA": "ICE about 2h20 from Flughafen Fernbahnhof.",
     "CGN": "ICE about 2h33.",
-    "BER": "ICE about 2h50 plus the airport transfer.",
-    "AMS": "ICE International typically about 4–4.5 hours.",
-    "EIN": "Often 4.5–6 hours overland.",
 }
 
 BUS = {
@@ -118,23 +115,11 @@ def payload(gf) -> dict:
             note="The only confirmed nonstop. Flight-only beats Oviedo; after the bus the door-to-airport total is usually higher than flying from Oviedo, but the hop itself is a short afternoon.",
         ),
         opt(
-            2, "OVD", "AMS", ["2026-12-19"], 55, "Air Europa", 1, "MAD",
-            "12h35", "21:05–09:40+1",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            badges=["cheapest_ovd"],
-            note="Cheapest confirmed fare from Oviedo. Long layover, then a long train.",
-        ),
-        opt(
-            3, "BIO", "AMS", ["2026-12-19"], 58, "Air Europa", 1, "MAD",
-            "12h35", "21:05–09:40+1",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Same itinerary as Oviedo–Amsterdam that day; add the bus, so Oviedo is usually better.",
-        ),
-        opt(
             4, "OVD", "DUS", ["2026-12-24"], 59, "Air Europa", 1, "MAD",
             "7h10", "10:35–17:45",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Best timing of the €59 Düsseldorf fares — daytime, and it beats same-day Frankfurt €62.",
+            badges=["cheapest_ovd"],
+            note="Cheapest from Oviedo that still lands near Hannover. Daytime 24 Dec 10:35–17:45. Same €59 overnight on 17, 21, 27 and 29 Dec. Hamburg €60 on 24 Dec (overnight, lands 10:35, about 1h15 by train) is almost as cheap and closer.",
         ),
         opt(
             5, "OVD", "DUS", ["2026-12-17", "2026-12-21", "2026-12-27", "2026-12-29"], 59, "Air Europa", 1, "MAD",
@@ -151,7 +136,8 @@ def payload(gf) -> dict:
             6, "OVD", "HAM", ["2026-12-24"], 60, "Vueling, Iberia", 1, "BCN",
             "11h35", "23:00–10:35+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Beats same-day Frankfurt €62, and Hamburg is the closest cheap airport to home after Hannover itself.",
+            badges=["ham_ovd"],
+            note="Almost as cheap as Oviedo–Düsseldorf €59, and closer to home. Overnight 24 Dec, lands 10:35, then ICE about 1h15.",
         ),
         opt(
             7, "BIO", "DUS", ["2026-12-17", "2026-12-24", "2026-12-28"], 60, "Air Europa", 1, "MAD",
@@ -178,33 +164,8 @@ def payload(gf) -> dict:
                     "2026-12-28", "2026-12-29", "2026-12-30", "2026-12-31",
                 ]
             ],
-            note="Cheapest confirmed Oviedo–Frankfurt in this window. Morning 7h20 on several dates (24–26, 28, 29, 31 December).",
+            note="Backup option. Cheapest confirmed Oviedo–Frankfurt in this window. Morning 7h20 on several dates (24–26, 28, 29, 31 December).",
             primary="2026-12-24",
-        ),
-        opt(
-            9, "OVD", "AMS", ["2026-12-20", "2026-12-24"], 63, "Air Europa", 1, "MAD",
-            "12h35", "21:05–09:40+1",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            extra_links=[{"date": "2026-12-24", "gf_url": gf("2026-12-24", "OVD", "AMS", 1)}],
-            note="Near Frankfurt €62, then a long train.",
-        ),
-        opt(
-            10, "OVD", "BER", ["2026-12-24"], 67, "Vueling, Iberia", 1, "BCN",
-            "10h45", "23:00–09:45+1",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Slightly above Frankfurt; longer onward train (~2h50).",
-        ),
-        opt(
-            11, "OVD", "BER", ["2026-12-21"], 68, "Vueling, Iberia", 1, "BCN",
-            "10h45", "23:00–09:45+1",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Beats same-day Frankfurt €71.",
-        ),
-        opt(
-            12, "BIO", "BER", ["2026-12-17"], 70, "Vueling, Iberia", 1, "BCN",
-            "11h55", "21:50–09:45+1",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQklPcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Add the bus.",
         ),
         opt(
             13, "OVD", "FRA", ["2026-12-21"], 71, "Iberia", 1, "MAD",
@@ -217,12 +178,6 @@ def payload(gf) -> dict:
             "12h30", "10:05–22:35",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
             note="Plus the bus ~€20–23; worse than Oviedo–Frankfurt €62 that day.",
-        ),
-        opt(
-            15, "OVD", "BER", ["2026-12-17"], 72, "Vueling, Iberia", 1, "BCN",
-            "5h45", "14:55–20:40",
-            "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Short connection; beats same-day Frankfurt €91.",
         ),
         opt(
             16, "SDR", "HAM", ["2026-12-19"], 78, "Vueling, Iberia", 1, "BCN",
@@ -272,7 +227,7 @@ def payload(gf) -> dict:
             "10h25", "23:00–09:25+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
             badges=["haj_ovd"],
-            note="Best Oviedo fare that lands at Hannover. No bus.",
+            note="Closest landing — you arrive at Hannover. Best Oviedo fare that lands at home. No bus.",
         ),
         opt(
             24, "OVD", "HAJ", ["2026-12-18", "2026-12-21"], 114, "Vueling / Vueling, Iberia", 1, "BCN",
@@ -330,28 +285,34 @@ def payload(gf) -> dict:
     ]:
         ovd_haj.append(cal_row("OVD", "HAJ", date, price, airline, gf, haj_given.get(date)))
 
+    keep = set(NEAR_ORDER)
+    options = [o for o in options if o["destination"] in keep]
+    options.sort(
+        key=lambda o: (
+            NEAR_ORDER.index(o["destination"]),
+            o["price_eur"],
+            0 if o["origin"] == "OVD" else 1,
+            o["date"],
+        )
+    )
+    for i, row in enumerate(options, 1):
+        row["rank"] = i
+
     return {
         "checked": "2026-11-27",
         "window_start": "2026-12-17",
         "window_end": "2027-01-04",
         "options": options,
         "calendar": {"ovd_fra": ovd_fra, "ovd_haj": ovd_haj},
+        "near_order": NEAR_ORDER,
         "cheapest_by_airport": [
             {
-                "airport": "DUS",
-                "name": "Düsseldorf",
-                "price_eur": 50,
+                "airport": "HAJ",
+                "name": "Hannover",
+                "price_eur": 88,
                 "from": "BIO",
                 "verified": True,
-                "note": "Eurowings nonstop, 21 Dec 15:40–17:35. From Oviedo: €59 several dates (best 24 Dec 10:35–17:45). ICE about 2h25.",
-            },
-            {
-                "airport": "AMS",
-                "name": "Amsterdam",
-                "price_eur": 55,
-                "from": "OVD",
-                "verified": True,
-                "note": "Air Europa via Madrid, 19 Dec 21:05–09:40+1. ICE International typically 4–4.5h. Cheap flight, long day after.",
+                "note": "Closest. Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo.",
             },
             {
                 "airport": "HAM",
@@ -362,36 +323,20 @@ def payload(gf) -> dict:
                 "note": "Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €80 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn.",
             },
             {
-                "airport": "FRA",
-                "name": "Frankfurt",
-                "price_eur": 62,
-                "from": "OVD",
-                "verified": True,
-                "note": "Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof.",
-            },
-            {
-                "airport": "BER",
-                "name": "Berlin",
-                "price_eur": 67,
-                "from": "OVD",
-                "verified": True,
-                "note": "Vueling/Iberia via Barcelona, 24 Dec. Also €68 on 21 Dec, €72 on 17 Dec in 5h45. ICE about 2h50 plus airport transfer.",
-            },
-            {
-                "airport": "HAJ",
-                "name": "Hannover",
-                "price_eur": 88,
-                "from": "BIO",
-                "verified": True,
-                "note": "Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo.",
-            },
-            {
                 "airport": "BRE",
                 "name": "Bremen",
                 "price_eur": 231,
                 "from": "OVD",
                 "verified": True,
                 "note": "Opened 20 Dec, Air Europa+KLM, 2 stops Madrid+Amsterdam — not useful next to Hamburg/Düsseldorf. Bilbao calendar from €141, itinerary not opened.",
+            },
+            {
+                "airport": "DUS",
+                "name": "Düsseldorf",
+                "price_eur": 50,
+                "from": "BIO",
+                "verified": True,
+                "note": "Eurowings nonstop, 21 Dec 15:40–17:35. From Oviedo: €59 several dates (best 24 Dec 10:35–17:45). ICE about 2h25.",
             },
             {
                 "airport": "CGN",
@@ -402,12 +347,12 @@ def payload(gf) -> dict:
                 "note": "Calendar only, from €195 Bilbao / €355 Oviedo — not competitive. ICE about 2h33.",
             },
             {
-                "airport": "EIN",
-                "name": "Eindhoven",
-                "price_eur": None,
-                "from": "BIO",
-                "verified": False,
-                "note": "Bilbao calendar from €70 on 22/24/25 Dec — itinerary not opened (Google Oops). Unverified as a bookable itinerary. Long overland, often 4.5–6h.",
+                "airport": "FRA",
+                "name": "Frankfurt",
+                "price_eur": 62,
+                "from": "OVD",
+                "verified": True,
+                "note": "Backup. Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof.",
             },
         ],
         "buses": {
@@ -415,11 +360,12 @@ def payload(gf) -> dict:
             "bio": "Bilbao Airport about €31–50 and 4.5–6 hours from Gijón (coach to Bilbao Intermodal plus Bizkaibus A3247, about 15–20 min). Not live-verified for the exact mid-December day.",
         },
         "gaps": [
+            "Only airports about 2.5 hours or less from Hannover are listed, plus Frankfurt as a backup. Amsterdam, Berlin and Eindhoven are too far, so they are not options here.",
             "No December nonstop from Oviedo to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts March 2027. The one confirmed nonstop is Eurowings Bilbao–Düsseldorf.",
             "Oviedo–Hannover itineraries failed to load for 17 and 26 December (timeout) and 2–3 January (Google Oops). Calendar 17 Dec €346 — unattractive. 26 Dec had no stored calendar price.",
-            "Bilbao–Eindhoven calendar from €70 was not opened. Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.",
-            "Santander–Bremen calendar failed; Santander–Düsseldorf and Santander–Amsterdam calendars were incomplete and looked expensive where priced. Santander–Hannover calendar from €203, incomplete.",
-            "Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German/Dutch airports.",
+            "Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.",
+            "Santander–Bremen calendar failed; Santander–Düsseldorf looked expensive where priced. Santander–Hannover calendar from €203, incomplete.",
+            "Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German airports.",
             "Secondary airports Dortmund, Paderborn, Hahn, Weeze: no useful priced calendar days from Oviedo or Bilbao in this scrape.",
             "Other opened Hannover/Hamburg dates cost more (Oviedo–Hannover 20/22/24/25/27/31 Dec €196–300; 24 Dec Hannover is 34h25 — skip). Oviedo–Bremen 20 Dec €231 is not useful next to Hamburg/Düsseldorf.",
             "Fares move; this is a 27 November 2026 snapshot. Recheck before you pay.",

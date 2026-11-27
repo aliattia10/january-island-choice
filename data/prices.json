@@ -10,8 +10,371 @@
     "window_end": "2027-01-04",
     "options": [
       {
-        "id": "home-01",
+        "id": "home-19",
         "rank": 1,
+        "origin": "BIO",
+        "destination": "HAJ",
+        "date": "2026-12-23",
+        "dates": [
+          "2026-12-23"
+        ],
+        "price_eur": 88,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-23",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
+        "badges": [
+          "cheapest_haj"
+        ],
+        "note": "Lands at home. The flight looks cheaper than Oviedo–Hannover €104 until you add the bus (~€31–50), which usually makes Oviedo cheaper.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-22",
+        "rank": 2,
+        "origin": "BIO",
+        "destination": "HAJ",
+        "date": "2026-12-30",
+        "dates": [
+          "2026-12-30"
+        ],
+        "price_eur": 98,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-30",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
+        "badges": [],
+        "note": "Lands at home. Plus the bus versus Oviedo–Hannover €124 that day may be close.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-23",
+        "rank": 3,
+        "origin": "OVD",
+        "destination": "HAJ",
+        "date": "2026-12-23",
+        "dates": [
+          "2026-12-23"
+        ],
+        "price_eur": 104,
+        "price_status": "known",
+        "airline": "Vueling",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-23",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": null,
+        "badges": [
+          "haj_ovd"
+        ],
+        "note": "Closest landing — you arrive at Hannover. Best Oviedo fare that lands at home. No bus.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-24",
+        "rank": 4,
+        "origin": "OVD",
+        "destination": "HAJ",
+        "date": "2026-12-18",
+        "dates": [
+          "2026-12-18",
+          "2026-12-21"
+        ],
+        "price_eur": 114,
+        "price_status": "known",
+        "airline": "Vueling / Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-18",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          },
+          {
+            "date": "2026-12-21",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": null,
+        "badges": [],
+        "note": "18 December slightly beats same-day Frankfurt €116 and lands at home.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-25",
+        "rank": 5,
+        "origin": "OVD",
+        "destination": "HAJ",
+        "date": "2026-12-30",
+        "dates": [
+          "2026-12-30"
+        ],
+        "price_eur": 124,
+        "price_status": "known",
+        "airline": "Vueling",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-30",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": null,
+        "badges": [],
+        "note": "Above Frankfurt €62 that day; lands at home.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-26",
+        "rank": 6,
+        "origin": "OVD",
+        "destination": "HAJ",
+        "date": "2026-12-28",
+        "dates": [
+          "2026-12-28"
+        ],
+        "price_eur": 145,
+        "price_status": "known",
+        "airline": "Vueling",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-28",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": null,
+        "badges": [],
+        "note": "Above Frankfurt €62; lands at home.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-06",
+        "rank": 7,
+        "origin": "OVD",
+        "destination": "HAM",
+        "date": "2026-12-24",
+        "dates": [
+          "2026-12-24"
+        ],
+        "price_eur": 60,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "11h35",
+        "times": "23:00–10:35+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-24",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "bus": null,
+        "badges": [
+          "ham_ovd"
+        ],
+        "note": "Almost as cheap as Oviedo–Düsseldorf €59, and closer to home. Overnight 24 Dec, lands 10:35, then ICE about 1h15.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-16",
+        "rank": 8,
+        "origin": "SDR",
+        "destination": "HAM",
+        "date": "2026-12-19",
+        "dates": [
+          "2026-12-19"
+        ],
+        "price_eur": 78,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "16h00",
+        "times": "18:00–10:00+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-19",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "bus": "Add a bus from Gijón: about €20–23 and 3–4 hours. Mid-December tickets not live-verified.",
+        "badges": [],
+        "note": "Plus the bus; long layover. Oviedo options are usually better.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-17",
+        "rank": 9,
+        "origin": "BIO",
+        "destination": "HAM",
+        "date": "2026-12-19",
+        "dates": [
+          "2026-12-19"
+        ],
+        "price_eur": 78,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "14h20",
+        "times": "19:40–10:00+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-19",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
+        "badges": [],
+        "note": "Plus the bus; long layover.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-18",
+        "rank": 10,
+        "origin": "OVD",
+        "destination": "HAM",
+        "date": "2026-12-20",
+        "dates": [
+          "2026-12-20"
+        ],
+        "price_eur": 80,
+        "price_status": "known",
+        "airline": "Vueling",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "11h35",
+        "times": "23:00–10:35+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-20",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "bus": null,
+        "badges": [],
+        "note": "Beats same-day Frankfurt €116.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-21",
+        "rank": 11,
+        "origin": "OVD",
+        "destination": "HAM",
+        "date": "2026-12-17",
+        "dates": [
+          "2026-12-17"
+        ],
+        "price_eur": 93,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "5h20",
+        "times": "14:55–20:15",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-17",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "bus": null,
+        "badges": [],
+        "note": "Short connection, close to home; almost matches 17 December Frankfurt €91.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-01",
+        "rank": 12,
         "origin": "BIO",
         "destination": "DUS",
         "date": "2026-12-21",
@@ -45,106 +408,8 @@
         "adults": 1
       },
       {
-        "id": "home-02",
-        "rank": 2,
-        "origin": "OVD",
-        "destination": "AMS",
-        "date": "2026-12-19",
-        "dates": [
-          "2026-12-19"
-        ],
-        "price_eur": 55,
-        "price_status": "known",
-        "airline": "Air Europa",
-        "stops": 1,
-        "via": "MAD",
-        "nonstop": false,
-        "duration": "12h35",
-        "times": "21:05–09:40+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-19",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE International typically about 4–4.5 hours.",
-        "bus": null,
-        "badges": [
-          "cheapest_ovd"
-        ],
-        "note": "Cheapest confirmed fare from Oviedo. Long layover, then a long train.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-03",
-        "rank": 3,
-        "origin": "BIO",
-        "destination": "AMS",
-        "date": "2026-12-19",
-        "dates": [
-          "2026-12-19"
-        ],
-        "price_eur": 58,
-        "price_status": "known",
-        "airline": "Air Europa",
-        "stops": 1,
-        "via": "MAD",
-        "nonstop": false,
-        "duration": "12h35",
-        "times": "21:05–09:40+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-19",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE International typically about 4–4.5 hours.",
-        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
-        "badges": [],
-        "note": "Same itinerary as Oviedo–Amsterdam that day; add the bus, so Oviedo is usually better.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-04",
-        "rank": 4,
-        "origin": "OVD",
-        "destination": "DUS",
-        "date": "2026-12-24",
-        "dates": [
-          "2026-12-24"
-        ],
-        "price_eur": 59,
-        "price_status": "known",
-        "airline": "Air Europa",
-        "stops": 1,
-        "via": "MAD",
-        "nonstop": false,
-        "duration": "7h10",
-        "times": "10:35–17:45",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-24",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 2h25 to Hannover Hbf.",
-        "bus": null,
-        "badges": [],
-        "note": "Best timing of the €59 Düsseldorf fares — daytime, and it beats same-day Frankfurt €62.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
         "id": "home-05",
-        "rank": 5,
+        "rank": 13,
         "origin": "OVD",
         "destination": "DUS",
         "date": "2026-12-17",
@@ -190,40 +455,42 @@
         "adults": 1
       },
       {
-        "id": "home-06",
-        "rank": 6,
+        "id": "home-04",
+        "rank": 14,
         "origin": "OVD",
-        "destination": "HAM",
+        "destination": "DUS",
         "date": "2026-12-24",
         "dates": [
           "2026-12-24"
         ],
-        "price_eur": 60,
+        "price_eur": 59,
         "price_status": "known",
-        "airline": "Vueling, Iberia",
+        "airline": "Air Europa",
         "stops": 1,
-        "via": "BCN",
+        "via": "MAD",
         "nonstop": false,
-        "duration": "11h35",
-        "times": "23:00–10:35+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "duration": "7h10",
+        "times": "10:35–17:45",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
         "links": [
           {
             "date": "2026-12-24",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDRFVTQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
           }
         ],
-        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "train_to_haj": "ICE about 2h25 to Hannover Hbf.",
         "bus": null,
-        "badges": [],
-        "note": "Beats same-day Frankfurt €62, and Hamburg is the closest cheap airport to home after Hannover itself.",
+        "badges": [
+          "cheapest_ovd"
+        ],
+        "note": "Cheapest from Oviedo that still lands near Hannover. Daytime 24 Dec 10:35–17:45. Same €59 overnight on 17, 21, 27 and 29 Dec. Hamburg €60 on 24 Dec (overnight, lands 10:35, about 1h15 by train) is almost as cheap and closer.",
         "verified": true,
         "fetch": true,
         "adults": 1
       },
       {
         "id": "home-07",
-        "rank": 7,
+        "rank": 15,
         "origin": "BIO",
         "destination": "DUS",
         "date": "2026-12-24",
@@ -265,7 +532,7 @@
       },
       {
         "id": "home-08",
-        "rank": 8,
+        "rank": 16,
         "origin": "OVD",
         "destination": "FRA",
         "date": "2026-12-24",
@@ -330,147 +597,14 @@
         "train_to_haj": "ICE about 2h20 from Flughafen Fernbahnhof.",
         "bus": null,
         "badges": [],
-        "note": "Cheapest confirmed Oviedo–Frankfurt in this window. Morning 7h20 on several dates (24–26, 28, 29, 31 December).",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-09",
-        "rank": 9,
-        "origin": "OVD",
-        "destination": "AMS",
-        "date": "2026-12-20",
-        "dates": [
-          "2026-12-20",
-          "2026-12-24"
-        ],
-        "price_eur": 63,
-        "price_status": "known",
-        "airline": "Air Europa",
-        "stops": 1,
-        "via": "MAD",
-        "nonstop": false,
-        "duration": "12h35",
-        "times": "21:05–09:40+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-20",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          },
-          {
-            "date": "2026-12-24",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDQU1TQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE International typically about 4–4.5 hours.",
-        "bus": null,
-        "badges": [],
-        "note": "Near Frankfurt €62, then a long train.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-10",
-        "rank": 10,
-        "origin": "OVD",
-        "destination": "BER",
-        "date": "2026-12-24",
-        "dates": [
-          "2026-12-24"
-        ],
-        "price_eur": 67,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h45",
-        "times": "23:00–09:45+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-24",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI0agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 2h50 plus the airport transfer.",
-        "bus": null,
-        "badges": [],
-        "note": "Slightly above Frankfurt; longer onward train (~2h50).",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-11",
-        "rank": 11,
-        "origin": "OVD",
-        "destination": "BER",
-        "date": "2026-12-21",
-        "dates": [
-          "2026-12-21"
-        ],
-        "price_eur": 68,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h45",
-        "times": "23:00–09:45+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-21",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 2h50 plus the airport transfer.",
-        "bus": null,
-        "badges": [],
-        "note": "Beats same-day Frankfurt €71.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-12",
-        "rank": 12,
-        "origin": "BIO",
-        "destination": "BER",
-        "date": "2026-12-17",
-        "dates": [
-          "2026-12-17"
-        ],
-        "price_eur": 70,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "11h55",
-        "times": "21:50–09:45+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQklPcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-17",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQklPcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 2h50 plus the airport transfer.",
-        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
-        "badges": [],
-        "note": "Add the bus.",
+        "note": "Backup option. Cheapest confirmed Oviedo–Frankfurt in this window. Morning 7h20 on several dates (24–26, 28, 29, 31 December).",
         "verified": true,
         "fetch": true,
         "adults": 1
       },
       {
         "id": "home-13",
-        "rank": 13,
+        "rank": 17,
         "origin": "OVD",
         "destination": "FRA",
         "date": "2026-12-21",
@@ -502,7 +636,7 @@
       },
       {
         "id": "home-14",
-        "rank": 14,
+        "rank": 18,
         "origin": "SDR",
         "destination": "FRA",
         "date": "2026-12-28",
@@ -533,170 +667,8 @@
         "adults": 1
       },
       {
-        "id": "home-15",
-        "rank": 15,
-        "origin": "OVD",
-        "destination": "BER",
-        "date": "2026-12-17",
-        "dates": [
-          "2026-12-17"
-        ],
-        "price_eur": 72,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "5h45",
-        "times": "14:55–20:40",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-17",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDQkVSQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 2h50 plus the airport transfer.",
-        "bus": null,
-        "badges": [],
-        "note": "Short connection; beats same-day Frankfurt €91.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-16",
-        "rank": 16,
-        "origin": "SDR",
-        "destination": "HAM",
-        "date": "2026-12-19",
-        "dates": [
-          "2026-12-19"
-        ],
-        "price_eur": 78,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "16h00",
-        "times": "18:00–10:00+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-19",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDU0RScgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
-        "bus": "Add a bus from Gijón: about €20–23 and 3–4 hours. Mid-December tickets not live-verified.",
-        "badges": [],
-        "note": "Plus the bus; long layover. Oviedo options are usually better.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-17",
-        "rank": 17,
-        "origin": "BIO",
-        "destination": "HAM",
-        "date": "2026-12-19",
-        "dates": [
-          "2026-12-19"
-        ],
-        "price_eur": 78,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "14h20",
-        "times": "19:40–10:00+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-19",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQklPcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
-        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
-        "badges": [],
-        "note": "Plus the bus; long layover.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-18",
-        "rank": 18,
-        "origin": "OVD",
-        "destination": "HAM",
-        "date": "2026-12-20",
-        "dates": [
-          "2026-12-20"
-        ],
-        "price_eur": 80,
-        "price_status": "known",
-        "airline": "Vueling",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "11h35",
-        "times": "23:00–10:35+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-20",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
-        "bus": null,
-        "badges": [],
-        "note": "Beats same-day Frankfurt €116.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-19",
-        "rank": 19,
-        "origin": "BIO",
-        "destination": "HAJ",
-        "date": "2026-12-23",
-        "dates": [
-          "2026-12-23"
-        ],
-        "price_eur": 88,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-23",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
-        "badges": [
-          "cheapest_haj"
-        ],
-        "note": "Lands at home. The flight looks cheaper than Oviedo–Hannover €104 until you add the bus (~€31–50), which usually makes Oviedo cheaper.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
         "id": "home-20",
-        "rank": 20,
+        "rank": 19,
         "origin": "OVD",
         "destination": "FRA",
         "date": "2026-12-17",
@@ -722,205 +694,6 @@
         "bus": null,
         "badges": [],
         "note": "Older site baseline day — Düsseldorf €59 is kinder on this date.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-21",
-        "rank": 21,
-        "origin": "OVD",
-        "destination": "HAM",
-        "date": "2026-12-17",
-        "dates": [
-          "2026-12-17"
-        ],
-        "price_eur": 93,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "5h20",
-        "times": "14:55–20:15",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-17",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
-        "bus": null,
-        "badges": [],
-        "note": "Short connection, close to home; almost matches 17 December Frankfurt €91.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-22",
-        "rank": 22,
-        "origin": "BIO",
-        "destination": "HAJ",
-        "date": "2026-12-30",
-        "dates": [
-          "2026-12-30"
-        ],
-        "price_eur": 98,
-        "price_status": "known",
-        "airline": "Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-30",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
-        "badges": [],
-        "note": "Lands at home. Plus the bus versus Oviedo–Hannover €124 that day may be close.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-23",
-        "rank": 23,
-        "origin": "OVD",
-        "destination": "HAJ",
-        "date": "2026-12-23",
-        "dates": [
-          "2026-12-23"
-        ],
-        "price_eur": 104,
-        "price_status": "known",
-        "airline": "Vueling",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-23",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIzagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": null,
-        "badges": [
-          "haj_ovd"
-        ],
-        "note": "Best Oviedo fare that lands at Hannover. No bus.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-24",
-        "rank": 24,
-        "origin": "OVD",
-        "destination": "HAJ",
-        "date": "2026-12-18",
-        "dates": [
-          "2026-12-18",
-          "2026-12-21"
-        ],
-        "price_eur": 114,
-        "price_status": "known",
-        "airline": "Vueling / Vueling, Iberia",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-18",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          },
-          {
-            "date": "2026-12-21",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": null,
-        "badges": [],
-        "note": "18 December slightly beats same-day Frankfurt €116 and lands at home.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-25",
-        "rank": 25,
-        "origin": "OVD",
-        "destination": "HAJ",
-        "date": "2026-12-30",
-        "dates": [
-          "2026-12-30"
-        ],
-        "price_eur": 124,
-        "price_status": "known",
-        "airline": "Vueling",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-30",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": null,
-        "badges": [],
-        "note": "Above Frankfurt €62 that day; lands at home.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-26",
-        "rank": 26,
-        "origin": "OVD",
-        "destination": "HAJ",
-        "date": "2026-12-28",
-        "dates": [
-          "2026-12-28"
-        ],
-        "price_eur": 145,
-        "price_status": "known",
-        "airline": "Vueling",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-28",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": null,
-        "badges": [],
-        "note": "Above Frankfurt €62; lands at home.",
         "verified": true,
         "fetch": true,
         "adults": 1
@@ -1212,22 +985,22 @@
         }
       ]
     },
+    "near_order": [
+      "HAJ",
+      "HAM",
+      "BRE",
+      "DUS",
+      "CGN",
+      "FRA"
+    ],
     "cheapest_by_airport": [
       {
-        "airport": "DUS",
-        "name": "Düsseldorf",
-        "price_eur": 50,
+        "airport": "HAJ",
+        "name": "Hannover",
+        "price_eur": 88,
         "from": "BIO",
         "verified": true,
-        "note": "Eurowings nonstop, 21 Dec 15:40–17:35. From Oviedo: €59 several dates (best 24 Dec 10:35–17:45). ICE about 2h25."
-      },
-      {
-        "airport": "AMS",
-        "name": "Amsterdam",
-        "price_eur": 55,
-        "from": "OVD",
-        "verified": true,
-        "note": "Air Europa via Madrid, 19 Dec 21:05–09:40+1. ICE International typically 4–4.5h. Cheap flight, long day after."
+        "note": "Closest. Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo."
       },
       {
         "airport": "HAM",
@@ -1238,36 +1011,20 @@
         "note": "Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €80 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn."
       },
       {
-        "airport": "FRA",
-        "name": "Frankfurt",
-        "price_eur": 62,
-        "from": "OVD",
-        "verified": true,
-        "note": "Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof."
-      },
-      {
-        "airport": "BER",
-        "name": "Berlin",
-        "price_eur": 67,
-        "from": "OVD",
-        "verified": true,
-        "note": "Vueling/Iberia via Barcelona, 24 Dec. Also €68 on 21 Dec, €72 on 17 Dec in 5h45. ICE about 2h50 plus airport transfer."
-      },
-      {
-        "airport": "HAJ",
-        "name": "Hannover",
-        "price_eur": 88,
-        "from": "BIO",
-        "verified": true,
-        "note": "Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo."
-      },
-      {
         "airport": "BRE",
         "name": "Bremen",
         "price_eur": 231,
         "from": "OVD",
         "verified": true,
         "note": "Opened 20 Dec, Air Europa+KLM, 2 stops Madrid+Amsterdam — not useful next to Hamburg/Düsseldorf. Bilbao calendar from €141, itinerary not opened."
+      },
+      {
+        "airport": "DUS",
+        "name": "Düsseldorf",
+        "price_eur": 50,
+        "from": "BIO",
+        "verified": true,
+        "note": "Eurowings nonstop, 21 Dec 15:40–17:35. From Oviedo: €59 several dates (best 24 Dec 10:35–17:45). ICE about 2h25."
       },
       {
         "airport": "CGN",
@@ -1278,12 +1035,12 @@
         "note": "Calendar only, from €195 Bilbao / €355 Oviedo — not competitive. ICE about 2h33."
       },
       {
-        "airport": "EIN",
-        "name": "Eindhoven",
-        "price_eur": null,
-        "from": "BIO",
-        "verified": false,
-        "note": "Bilbao calendar from €70 on 22/24/25 Dec — itinerary not opened (Google Oops). Unverified as a bookable itinerary. Long overland, often 4.5–6h."
+        "airport": "FRA",
+        "name": "Frankfurt",
+        "price_eur": 62,
+        "from": "OVD",
+        "verified": true,
+        "note": "Backup. Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof."
       }
     ],
     "buses": {
@@ -1291,11 +1048,12 @@
       "bio": "Bilbao Airport about €31–50 and 4.5–6 hours from Gijón (coach to Bilbao Intermodal plus Bizkaibus A3247, about 15–20 min). Not live-verified for the exact mid-December day."
     },
     "gaps": [
+      "Only airports about 2.5 hours or less from Hannover are listed, plus Frankfurt as a backup. Amsterdam, Berlin and Eindhoven are too far, so they are not options here.",
       "No December nonstop from Oviedo to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts March 2027. The one confirmed nonstop is Eurowings Bilbao–Düsseldorf.",
       "Oviedo–Hannover itineraries failed to load for 17 and 26 December (timeout) and 2–3 January (Google Oops). Calendar 17 Dec €346 — unattractive. 26 Dec had no stored calendar price.",
-      "Bilbao–Eindhoven calendar from €70 was not opened. Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.",
-      "Santander–Bremen calendar failed; Santander–Düsseldorf and Santander–Amsterdam calendars were incomplete and looked expensive where priced. Santander–Hannover calendar from €203, incomplete.",
-      "Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German/Dutch airports.",
+      "Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.",
+      "Santander–Bremen calendar failed; Santander–Düsseldorf looked expensive where priced. Santander–Hannover calendar from €203, incomplete.",
+      "Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German airports.",
       "Secondary airports Dortmund, Paderborn, Hahn, Weeze: no useful priced calendar days from Oviedo or Bilbao in this scrape.",
       "Other opened Hannover/Hamburg dates cost more (Oviedo–Hannover 20/22/24/25/27/31 Dec €196–300; 24 Dec Hannover is 34h25 — skip). Oviedo–Bremen 20 Dec €231 is not useful next to Hamburg/Düsseldorf.",
       "Fares move; this is a 27 November 2026 snapshot. Recheck before you pay."

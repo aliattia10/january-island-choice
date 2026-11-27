@@ -1253,7 +1253,9 @@ def home_row(opt: dict) -> str:
     if "cheapest_ovd" in (opt.get("badges") or []):
         badges.append('<span class="best-tag best-tag--value">Cheapest from Oviedo</span>')
     if "haj_ovd" in (opt.get("badges") or []):
-        badges.append('<span class="best-tag">Lands at home, from Oviedo</span>')
+        badges.append('<span class="best-tag">Closest — lands at home</span>')
+    if "ham_ovd" in (opt.get("badges") or []):
+        badges.append('<span class="best-tag">Hamburg, from Oviedo</span>')
     if "cheapest_haj" in (opt.get("badges") or []):
         badges.append('<span class="best-tag">Cheapest into Hannover</span>')
     if "nonstop" in (opt.get("badges") or []):
@@ -1306,13 +1308,18 @@ def date_pills(rows: list[dict], bind_kind: str) -> str:
     return "".join(bits)
 
 
+def home_badge(options, badge: str):
+    return next(o for o in options if badge in (o.get("badges") or []))
+
+
 def home_section(data: dict) -> str:
     home = data["ella_home"]
-    by_id = {o["id"]: o for o in home["options"]}
-    cheapest = by_id["home-01"]
-    cheapest_ovd = by_id["home-02"]
-    haj_ovd = by_id["home-23"]
-    rows = "".join(home_row(o) for o in home["options"])
+    options = home["options"]
+    cheapest = home_badge(options, "cheapest")
+    cheapest_ovd = home_badge(options, "cheapest_ovd")
+    ham_ovd = home_badge(options, "ham_ovd")
+    haj_ovd = home_badge(options, "haj_ovd")
+    rows = "".join(home_row(o) for o in options)
     airport_rows = []
     for item in home["cheapest_by_airport"]:
         price = euro(item["price_eur"]) if item.get("price_eur") is not None else "calendar only"
@@ -1331,18 +1338,19 @@ def home_section(data: dict) -> str:
         <div>
           <p class="kicker">Whenever you like</p>
           <h2>Ella’s flight home</h2>
-          <p>Stay in Asturias as long as you want — Ali is happy if you stay longer. This is separate from the city trip totals, so you can pick the day. Window 17 December 2026 – 4 January 2027. Home is near Hannover. Prices checked <span data-bind="home_flights_checked">27 November 2026</span>, one adult, economy, one way, euros including taxes as Google Flights showed them. Nothing is booked.</p>
+          <p>Stay in Asturias as long as you want — Ali is happy if you stay longer. This is separate from the city trip totals, so you can pick the day. Window 17 December 2026 – 4 January 2027. Home is near Hannover, so these options land at Hannover, Hamburg, Bremen, Düsseldorf or Cologne — Frankfurt is the backup. Amsterdam is too far. Prices checked <span data-bind="home_flights_checked">27 November 2026</span>, one adult, economy, one way, euros including taxes as Google Flights showed them. Nothing is booked.</p>
           <p>There is <strong>no December nonstop from Oviedo</strong> to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts in March 2027. The one confirmed nonstop is Eurowings Bilbao → Düsseldorf.</p>
         </div>
       </header>
       <div class="home-picks">
+        {home_pick_card(haj_ovd, "wine", "Closest — lands at home")}
+        {home_pick_card(ham_ovd, "sea", "Hamburg, from Oviedo")}
+        {home_pick_card(cheapest_ovd, "gold", "Cheapest from Oviedo")}
         {home_pick_card(cheapest, "gold", "Cheapest overall")}
-        {home_pick_card(cheapest_ovd, "sea", "Cheapest from Oviedo")}
-        {home_pick_card(haj_ovd, "wine", "Lands at home, from Oviedo")}
       </div>
       <p class="aside">Bilbao and Santander need a bus from Gijón. Bilbao about €31–50 and 4.5–6 hours; Santander about €20–23 and 3–4 hours. Those bus fares are recent published prices, <strong>not live-verified</strong> for the exact mid-December day — recheck before you book. The cheapest fare into Hannover itself is Bilbao → Hannover €88 on 23 December, but after the bus Oviedo → Hannover €104 is usually kinder.</p>
-      <h3 class="hotels-title">Ranked options we opened</h3>
-      <p class="fine">Flight only. Add the bus for Bilbao and Santander. Book opens Google Flights for that day.</p>
+      <h3 class="hotels-title">Options near Hannover</h3>
+      <p class="fine">Sorted closest first: Hannover, Hamburg, Bremen, Düsseldorf, Cologne, then Frankfurt as a backup. Flight only. Add the bus for Bilbao and Santander. Book opens Google Flights for that day.</p>
       <div class="table-wrap">
         <table class="home-table">
           <thead>
@@ -1374,6 +1382,7 @@ def home_section(data: dict) -> str:
         {date_pills(home["calendar"]["ovd_haj"], "homecal")}
       </div>
       <h3 class="hotels-title">Cheapest confirmed fare per airport</h3>
+      <p class="fine">Closest to Hannover first. Frankfurt is the backup.</p>
       <div class="table-wrap">
         <table class="home-table home-table--airports">
           <thead>

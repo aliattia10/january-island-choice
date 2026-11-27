@@ -477,6 +477,6 @@ body {
   .dest-head { grid-template-columns: 1.1fr 1fr; align-items: center; }
   .dest-hero img { height: 320px; }
   .hotel-grid { grid-template-columns: repeat(3, 1fr); }
-  .home-picks { grid-template-columns: 1fr 1fr 1fr; }
+  .home-picks { grid-template-columns: 1fr 1fr; }
   .hero { margin-inline: max(var(--gutter), calc((100% - var(--container)) / 2)); }
 }

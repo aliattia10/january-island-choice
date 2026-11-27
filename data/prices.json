@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-26",
+  "snapshot": "2026-11-27",
   "hotels_checked": "2026-11-22",
   "usd_to_eur": 0.86,
   "flights": [
@@ -16,7 +16,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 84
+      "price_eur": 63
     },
     {
       "id": "ovd-pmi-14",
@@ -128,15 +128,15 @@
       "origin": "HAJ",
       "destination": "LPA",
       "date": "2026-12-15",
-      "airline": "Vueling",
+      "airline": "TUI fly",
       "depart": "",
-      "notes": "via Barcelona",
+      "notes": "nonstop",
       "adults": 1,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 89
+      "price_eur": 71
     },
     {
       "id": "ovd-lpa-15",
@@ -346,7 +346,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 91
+      "price_eur": 116
     },
     {
       "id": "ovd-fra-21",
@@ -428,7 +428,7 @@
       "origin": "OVD",
       "destination": "FRA",
       "date": "2026-12-18",
-      "airline": "",
+      "airline": "Air Europa",
       "depart": "",
       "notes": "1 stop; no December nonstop.",
       "adults": 1,
@@ -436,7 +436,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 141
+      "price_eur": 116
     },
     {
       "id": "ovd-fra-22",
@@ -451,7 +451,7 @@
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 169
+      "price_eur": 116
     },
     {
       "id": "pmi-ovd-15",
@@ -1292,8 +1292,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 107,
-      "partial_eur": 213,
+      "inbound_eur": 86,
+      "partial_eur": 192,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1319,8 +1319,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": true,
-      "inbound_eur": 107,
-      "partial_eur": 213,
+      "inbound_eur": 86,
+      "partial_eur": 192,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -1347,13 +1347,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": true,
-      "inbound_eur": 107,
-      "partial_eur": 374,
-      "subtotal_eur": 374,
-      "total_eur": 490,
+      "inbound_eur": 86,
+      "partial_eur": 353,
+      "subtotal_eur": 353,
+      "total_eur": 469,
       "total_complete": true,
-      "alt_subtotal_eur": 389,
-      "alt_total_eur": 505
+      "alt_subtotal_eur": 368,
+      "alt_total_eur": 484
     },
     {
       "id": "palma-7",
@@ -1377,12 +1377,12 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 107,
-      "partial_eur": 673,
-      "subtotal_eur": 673,
+      "inbound_eur": 86,
+      "partial_eur": 652,
+      "subtotal_eur": 652,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 690,
+      "alt_subtotal_eur": 669,
       "alt_total_eur": null
     },
     {
@@ -1490,9 +1490,9 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 155,
-      "partial_eur": 794,
-      "subtotal_eur": 794,
+      "inbound_eur": 137,
+      "partial_eur": 776,
+      "subtotal_eur": 776,
       "total_eur": null,
       "total_complete": false
     },
@@ -1602,12 +1602,12 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 155,
-      "partial_eur": 726,
-      "subtotal_eur": 726,
+      "inbound_eur": 137,
+      "partial_eur": 708,
+      "subtotal_eur": 708,
       "total_eur": null,
       "total_complete": false,
-      "alt_subtotal_eur": 771,
+      "alt_subtotal_eur": 753,
       "alt_total_eur": null
     },
     {
@@ -1688,7 +1688,7 @@
       "inbound_eur": 176,
       "partial_eur": 415,
       "subtotal_eur": 415,
-      "total_eur": 506,
+      "total_eur": 531,
       "total_complete": true
     },
     {
@@ -1796,7 +1796,7 @@
       "inbound_eur": 95,
       "partial_eur": 386,
       "subtotal_eur": 386,
-      "total_eur": 477,
+      "total_eur": 502,
       "total_complete": true
     },
     {
@@ -1847,7 +1847,7 @@
         "ovd-lpa-15",
         "lpa-ovd-22"
       ],
-      "total_eur": 258
+      "total_eur": 240
     },
     {
       "id": "gc-16-22",
@@ -1865,7 +1865,7 @@
   },
   "notes": {
     "itinerary": "Ella HAJ→city; Ali OVD→city; private double for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); 2 nights in Asturias at home (no hotel); Ella OVD→FRA one way after those days. No return to Hannover. Totals use cheapest private room. Unverified 1n/2n rooms are check live, excluded from totals.",
-    "ovd_fra": "No nonstop OVD→FRA in December 2026 (Lufthansa nonstop starts March 2027). 17 Dec €91 and 19 Dec €116 rechecked 26 Nov 2026. 18 Dec €141, 20 Dec €91, 22 Dec €169 Air Europa 1-stop, last fetched 23 Nov 2026 (not rechecked). 21, 23, 24, 27 Dec: check live.",
+    "ovd_fra": "No nonstop OVD→FRA in December 2026 (Lufthansa nonstop starts March 2027). 17 Dec €91, 18 Dec €116, 19 Dec €116, 20 Dec €116, 22 Dec €116 Air Europa 1-stop, rechecked 27 Nov 2026 (17 and 19 Dec confirmed). 21, 23, 24, 27 Dec: check live.",
     "needs_check": [
       "Palma 1n 14–15 Dec: private double room (palma-priv-1). Return PMI→OVD 15 Dec is verified €106/pair.",
       "Palma 2n 14–16 Dec: private double room (palma-priv-2). Return PMI→OVD 16 Dec is verified €106/pair.",

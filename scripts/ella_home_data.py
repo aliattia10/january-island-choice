@@ -174,10 +174,10 @@ def payload(gf) -> dict:
             note="Mid-window Frankfurt alternative.",
         ),
         opt(
-            14, "SDR", "FRA", ["2026-12-28"], 71, "Iberia", 1, "MAD",
-            "12h30", "10:05–22:35",
+            14, "SDR", "FRA", ["2026-12-28"], 126, "Iberia", 1, "",
+            "4h55", "06:30–11:25",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Plus the bus ~€20–23; worse than Oviedo–Frankfurt €62 that day.",
+            note="The €71 fare is gone; the cheaper 10:05 itinerary was not seen. Plus the bus ~€20–23; worse than Oviedo–Frankfurt €62 that day.",
         ),
         opt(
             16, "SDR", "HAM", ["2026-12-19"], 78, "Vueling, Iberia", 1, "BCN",
@@ -192,7 +192,7 @@ def payload(gf) -> dict:
             note="Plus the bus; long layover.",
         ),
         opt(
-            18, "OVD", "HAM", ["2026-12-20"], 80, "Vueling", 1, "BCN",
+            18, "OVD", "HAM", ["2026-12-20"], 64, "Vueling, Iberia", 1, "BCN",
             "11h35", "23:00–10:35+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
             note="Beats same-day Frankfurt €116.",
@@ -220,7 +220,7 @@ def payload(gf) -> dict:
             22, "BIO", "HAJ", ["2026-12-30"], 98, "Vueling, Iberia", 1, "BCN",
             "10h25", "23:00–09:25+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDQklPcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            note="Lands at home. Plus the bus versus Oviedo–Hannover €124 that day may be close.",
+            note="Lands at home. Plus the bus versus Oviedo–Hannover €137 that day may be close.",
         ),
         opt(
             23, "OVD", "HAJ", ["2026-12-23"], 104, "Vueling", 1, "BCN",
@@ -230,23 +230,40 @@ def payload(gf) -> dict:
             note="Closest landing — you arrive at Hannover. Best Oviedo fare that lands at home. No bus.",
         ),
         opt(
-            24, "OVD", "HAJ", ["2026-12-18", "2026-12-21"], 114, "Vueling / Vueling, Iberia", 1, "BCN",
+            24, "OVD", "HAJ", ["2026-12-18"], 126, "Vueling, Iberia", 1, "BCN",
             "10h25", "23:00–09:25+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-            extra_links=[{"date": "2026-12-21", "gf_url": gf("2026-12-21", "OVD", "HAJ", 1)}],
-            note="18 December slightly beats same-day Frankfurt €116 and lands at home.",
+            note="18 December lands at home. Same-day Frankfurt is €141.",
         ),
         opt(
-            25, "OVD", "HAJ", ["2026-12-30"], 124, "Vueling", 1, "BCN",
+            27, "OVD", "HAJ", ["2026-12-21"], 108, "Vueling", 1, "BCN",
+            "10h25", "23:00–09:25+1",
+            gf("2026-12-21", "OVD", "HAJ", 1),
+            note="21 December lands at home. Cheaper than 18 December €126.",
+        ),
+        opt(
+            25, "OVD", "HAJ", ["2026-12-30"], 137, "Vueling", 1, "BCN",
             "10h25", "23:00–09:25+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
             note="Above Frankfurt €62 that day; lands at home.",
         ),
         opt(
-            26, "OVD", "HAJ", ["2026-12-28"], 145, "Vueling", 1, "BCN",
+            26, "OVD", "HAJ", ["2026-12-28"], 134, "Vueling", 1, "BCN",
             "10h25", "23:00–09:25+1",
             "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
             note="Above Frankfurt €62; lands at home.",
+        ),
+        opt(
+            2, "BIO", "BRE", ["2026-12-22"], 164, "KLM", 1, "",
+            "5h55", "11:55–17:50",
+            gf("2026-12-22", "BIO", "BRE", 1),
+            note="Cheapest verified Bremen fare. Plus the bus. Still much worse than Hamburg or Düsseldorf.",
+        ),
+        opt(
+            3, "BIO", "CGN", ["2026-12-18"], 175, "Eurowings", 1, "",
+            "4h30", "10:05–14:35",
+            gf("2026-12-18", "BIO", "CGN", 1),
+            note="Cheapest verified Cologne fare. Plus the bus. Still much worse than Hamburg or Düsseldorf.",
         ),
     ]
 
@@ -258,8 +275,8 @@ def payload(gf) -> dict:
     ovd_fra = []
     fra_days = [
         ("2026-12-17", 91, "Air Europa"),
-        ("2026-12-18", 116, "Air Europa"),
-        ("2026-12-19", 116, "Air Europa"),
+        ("2026-12-18", 141, "Air Europa"),
+        ("2026-12-19", 141, "Air Europa"),
         ("2026-12-20", 116, "Air Europa"),
         ("2026-12-21", 71, "Iberia"),
         ("2026-12-22", 116, "Air Europa"),
@@ -277,11 +294,11 @@ def payload(gf) -> dict:
     }
     ovd_haj = []
     for date, price, airline in [
-        ("2026-12-18", 114, "Vueling / Vueling, Iberia"),
-        ("2026-12-21", 114, "Vueling / Vueling, Iberia"),
+        ("2026-12-18", 126, "Vueling, Iberia"),
+        ("2026-12-21", 108, "Vueling"),
         ("2026-12-23", 104, "Vueling"),
-        ("2026-12-28", 145, "Vueling"),
-        ("2026-12-30", 124, "Vueling"),
+        ("2026-12-28", 134, "Vueling"),
+        ("2026-12-30", 137, "Vueling"),
     ]:
         ovd_haj.append(cal_row("OVD", "HAJ", date, price, airline, gf, haj_given.get(date)))
 
@@ -299,7 +316,7 @@ def payload(gf) -> dict:
         row["rank"] = i
 
     return {
-        "checked": "2026-11-27",
+        "checked": "2026-11-28",
         "window_start": "2026-12-17",
         "window_end": "2027-01-04",
         "options": options,
@@ -312,7 +329,7 @@ def payload(gf) -> dict:
                 "price_eur": 88,
                 "from": "BIO",
                 "verified": True,
-                "note": "Closest. Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo.",
+                "note": "Closest. Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €108 on 21 Dec, €126 on 18 Dec, €134 on 28 Dec, €137 on 30 Dec. Also opened: 17 Dec €467 and 26 Dec €363 (Air Europa+KLM, 2 stops); 19 Dec €300; 24 Dec €180 (skip the 34h25 itinerary). S5 about 15–18 min. No bus if she flies Oviedo.",
             },
             {
                 "airport": "HAM",
@@ -320,15 +337,15 @@ def payload(gf) -> dict:
                 "price_eur": 60,
                 "from": "OVD",
                 "verified": True,
-                "note": "Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €80 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn.",
+                "note": "Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €64 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn.",
             },
             {
                 "airport": "BRE",
                 "name": "Bremen",
-                "price_eur": 231,
-                "from": "OVD",
+                "price_eur": 164,
+                "from": "BIO",
                 "verified": True,
-                "note": "Opened 20 Dec, Air Europa+KLM, 2 stops Madrid+Amsterdam — not useful next to Hamburg/Düsseldorf. Bilbao calendar from €141, itinerary not opened.",
+                "note": "KLM, 1 stop, 22 Dec 11:55–17:50, 5h55 (add bus). From Oviedo: €210 on 24 Dec (Air Europa+KLM, 2 stops Madrid+Amsterdam), €287 on 21 Dec. Still much worse than Hamburg or Düsseldorf.",
             },
             {
                 "airport": "DUS",
@@ -341,10 +358,10 @@ def payload(gf) -> dict:
             {
                 "airport": "CGN",
                 "name": "Cologne",
-                "price_eur": None,
+                "price_eur": 175,
                 "from": "BIO",
-                "verified": False,
-                "note": "Calendar only, from €195 Bilbao / €355 Oviedo — not competitive. ICE about 2h33.",
+                "verified": True,
+                "note": "Eurowings, 1 stop, 18 Dec 10:05–14:35, 4h30 (add bus). From Oviedo: €361 on 24 Dec, €676 on 21 Dec. Still much worse than Hamburg or Düsseldorf. ICE about 2h33.",
             },
             {
                 "airport": "FRA",
@@ -352,7 +369,7 @@ def payload(gf) -> dict:
                 "price_eur": 62,
                 "from": "OVD",
                 "verified": True,
-                "note": "Backup. Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof.",
+                "note": "Backup. Air Europa via Madrid, 23–31 Dec €62 (7h20 morning on several dates). 17 Dec €91, 18–19 Dec €141, 20 Dec €116, 21 Dec €71 Iberia, 22 Dec €116. ICE about 2h20 from Flughafen Fernbahnhof.",
             },
         ],
         "buses": {
@@ -362,12 +379,12 @@ def payload(gf) -> dict:
         "gaps": [
             "Only airports about 2.5 hours or less from Hannover are listed, plus Frankfurt as a backup. Amsterdam, Berlin and Eindhoven are too far, so they are not options here.",
             "No December nonstop from Oviedo to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts March 2027. The one confirmed nonstop is Eurowings Bilbao–Düsseldorf.",
-            "Oviedo–Hannover itineraries failed to load for 17 and 26 December (timeout) and 2–3 January (Google Oops). Calendar 17 Dec €346 — unattractive. 26 Dec had no stored calendar price.",
+            "Oviedo–Hannover 17 Dec €467 and 26 Dec €363 (Air Europa+KLM, 2 stops) now loaded — not useful next to €104 on 23 Dec. 19 Dec €300; 24 Dec €180 (skip the 34h25 itinerary). 2–3 January still Google Oops.",
             "Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.",
             "Santander–Bremen calendar failed; Santander–Düsseldorf looked expensive where priced. Santander–Hannover calendar from €203, incomplete.",
             "Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German airports.",
             "Secondary airports Dortmund, Paderborn, Hahn, Weeze: no useful priced calendar days from Oviedo or Bilbao in this scrape.",
-            "Other opened Hannover/Hamburg dates cost more (Oviedo–Hannover 20/22/24/25/27/31 Dec €196–300; 24 Dec Hannover is 34h25 — skip). Oviedo–Bremen 20 Dec €231 is not useful next to Hamburg/Düsseldorf.",
-            "Fares move; this is a 27 November 2026 snapshot. Recheck before you pay.",
+            "Bremen and Cologne are listed because they are near Hannover, but the cheapest verified fares (€164 Bilbao–Bremen, €175 Bilbao–Cologne) are still much worse than Hamburg or Düsseldorf.",
+            "Fares move; this is a 28 November 2026 snapshot. Recheck before you pay.",
         ],
     }

@@ -1,11 +1,11 @@
 {
-  "snapshot": "2026-11-27",
+  "snapshot": "2026-11-28",
   "hotels_checked": "2026-11-22",
-  "rooms_checked": "2026-11-27",
-  "home_flights_checked": "2026-11-27",
+  "rooms_checked": "2026-11-28",
+  "home_flights_checked": "2026-11-28",
   "usd_to_eur": 0.911,
   "ella_home": {
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "window_start": "2026-12-17",
     "window_end": "2027-01-04",
     "options": [
@@ -70,7 +70,7 @@
         "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
         "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
         "badges": [],
-        "note": "Lands at home. Plus the bus versus Oviedo–Hannover €124 that day may be close.",
+        "note": "Lands at home. Plus the bus versus Oviedo–Hannover €137 that day may be close.",
         "verified": true,
         "fetch": true,
         "adults": 1
@@ -110,18 +110,49 @@
         "adults": 1
       },
       {
-        "id": "home-24",
+        "id": "home-27",
         "rank": 4,
+        "origin": "OVD",
+        "destination": "HAJ",
+        "date": "2026-12-21",
+        "dates": [
+          "2026-12-21"
+        ],
+        "price_eur": 108,
+        "price_status": "known",
+        "airline": "Vueling",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-21",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": null,
+        "badges": [],
+        "note": "21 December lands at home. Cheaper than 18 December €126.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-24",
+        "rank": 5,
         "origin": "OVD",
         "destination": "HAJ",
         "date": "2026-12-18",
         "dates": [
-          "2026-12-18",
-          "2026-12-21"
+          "2026-12-18"
         ],
-        "price_eur": 114,
+        "price_eur": 126,
         "price_status": "known",
-        "airline": "Vueling / Vueling, Iberia",
+        "airline": "Vueling, Iberia",
         "stops": 1,
         "via": "BCN",
         "nonstop": false,
@@ -132,48 +163,12 @@
           {
             "date": "2026-12-18",
             "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          },
-          {
-            "date": "2026-12-21",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
           }
         ],
         "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
         "bus": null,
         "badges": [],
-        "note": "18 December slightly beats same-day Frankfurt €116 and lands at home.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
-        "id": "home-25",
-        "rank": 5,
-        "origin": "OVD",
-        "destination": "HAJ",
-        "date": "2026-12-30",
-        "dates": [
-          "2026-12-30"
-        ],
-        "price_eur": 124,
-        "price_status": "known",
-        "airline": "Vueling",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "10h25",
-        "times": "23:00–09:25+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-30",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
-        "bus": null,
-        "badges": [],
-        "note": "Above Frankfurt €62 that day; lands at home.",
+        "note": "18 December lands at home. Same-day Frankfurt is €141.",
         "verified": true,
         "fetch": true,
         "adults": 1
@@ -187,7 +182,7 @@
         "dates": [
           "2026-12-28"
         ],
-        "price_eur": 145,
+        "price_eur": 134,
         "price_status": "known",
         "airline": "Vueling",
         "stops": 1,
@@ -211,8 +206,40 @@
         "adults": 1
       },
       {
-        "id": "home-06",
+        "id": "home-25",
         "rank": 7,
+        "origin": "OVD",
+        "destination": "HAJ",
+        "date": "2026-12-30",
+        "dates": [
+          "2026-12-30"
+        ],
+        "price_eur": 137,
+        "price_status": "known",
+        "airline": "Vueling",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "10h25",
+        "times": "23:00–09:25+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-30",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "S5 about 15–18 min to Hannover Hbf — you land at home.",
+        "bus": null,
+        "badges": [],
+        "note": "Above Frankfurt €62 that day; lands at home.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
+        "id": "home-06",
+        "rank": 8,
         "origin": "OVD",
         "destination": "HAM",
         "date": "2026-12-24",
@@ -245,8 +272,40 @@
         "adults": 1
       },
       {
+        "id": "home-18",
+        "rank": 9,
+        "origin": "OVD",
+        "destination": "HAM",
+        "date": "2026-12-20",
+        "dates": [
+          "2026-12-20"
+        ],
+        "price_eur": 64,
+        "price_status": "known",
+        "airline": "Vueling, Iberia",
+        "stops": 1,
+        "via": "BCN",
+        "nonstop": false,
+        "duration": "11h35",
+        "times": "23:00–10:35+1",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-20",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
+        "bus": null,
+        "badges": [],
+        "note": "Beats same-day Frankfurt €116.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
         "id": "home-16",
-        "rank": 8,
+        "rank": 10,
         "origin": "SDR",
         "destination": "HAM",
         "date": "2026-12-19",
@@ -278,7 +337,7 @@
       },
       {
         "id": "home-17",
-        "rank": 9,
+        "rank": 11,
         "origin": "BIO",
         "destination": "HAM",
         "date": "2026-12-19",
@@ -309,40 +368,8 @@
         "adults": 1
       },
       {
-        "id": "home-18",
-        "rank": 10,
-        "origin": "OVD",
-        "destination": "HAM",
-        "date": "2026-12-20",
-        "dates": [
-          "2026-12-20"
-        ],
-        "price_eur": 80,
-        "price_status": "known",
-        "airline": "Vueling",
-        "stops": 1,
-        "via": "BCN",
-        "nonstop": false,
-        "duration": "11h35",
-        "times": "23:00–10:35+1",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-20",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIwagcIARIDT1ZEcgcIARIDSEFNQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 1h15 after the airport S-Bahn.",
-        "bus": null,
-        "badges": [],
-        "note": "Beats same-day Frankfurt €116.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
         "id": "home-21",
-        "rank": 11,
+        "rank": 12,
         "origin": "OVD",
         "destination": "HAM",
         "date": "2026-12-17",
@@ -373,8 +400,40 @@
         "adults": 1
       },
       {
+        "id": "home-02",
+        "rank": 13,
+        "origin": "BIO",
+        "destination": "BRE",
+        "date": "2026-12-22",
+        "dates": [
+          "2026-12-22"
+        ],
+        "price_eur": 164,
+        "price_status": "known",
+        "airline": "KLM",
+        "stops": 1,
+        "via": null,
+        "nonstop": false,
+        "duration": "5h55",
+        "times": "11:55–17:50",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQklPcgcIARIDQlJFQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-22",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQklPcgcIARIDQlJFQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "About 1 hour plus the airport tram.",
+        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
+        "badges": [],
+        "note": "Cheapest verified Bremen fare. Plus the bus. Still much worse than Hamburg or Düsseldorf.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
         "id": "home-01",
-        "rank": 12,
+        "rank": 14,
         "origin": "BIO",
         "destination": "DUS",
         "date": "2026-12-21",
@@ -409,7 +468,7 @@
       },
       {
         "id": "home-05",
-        "rank": 13,
+        "rank": 15,
         "origin": "OVD",
         "destination": "DUS",
         "date": "2026-12-17",
@@ -456,7 +515,7 @@
       },
       {
         "id": "home-04",
-        "rank": 14,
+        "rank": 16,
         "origin": "OVD",
         "destination": "DUS",
         "date": "2026-12-24",
@@ -490,7 +549,7 @@
       },
       {
         "id": "home-07",
-        "rank": 15,
+        "rank": 17,
         "origin": "BIO",
         "destination": "DUS",
         "date": "2026-12-24",
@@ -531,8 +590,40 @@
         "adults": 1
       },
       {
+        "id": "home-03",
+        "rank": 18,
+        "origin": "BIO",
+        "destination": "CGN",
+        "date": "2026-12-18",
+        "dates": [
+          "2026-12-18"
+        ],
+        "price_eur": 175,
+        "price_status": "known",
+        "airline": "Eurowings",
+        "stops": 1,
+        "via": null,
+        "nonstop": false,
+        "duration": "4h30",
+        "times": "10:05–14:35",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQklPcgcIARIDQ0dOQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-18",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQklPcgcIARIDQ0dOQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 2h33.",
+        "bus": "Add a bus from Gijón: about €31–50 and 4.5–6 hours (ALSA + airport bus). Mid-December tickets not live-verified.",
+        "badges": [],
+        "note": "Cheapest verified Cologne fare. Plus the bus. Still much worse than Hamburg or Düsseldorf.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
+      },
+      {
         "id": "home-08",
-        "rank": 16,
+        "rank": 19,
         "origin": "OVD",
         "destination": "FRA",
         "date": "2026-12-24",
@@ -604,7 +695,7 @@
       },
       {
         "id": "home-13",
-        "rank": 17,
+        "rank": 20,
         "origin": "OVD",
         "destination": "FRA",
         "date": "2026-12-21",
@@ -635,40 +726,8 @@
         "adults": 1
       },
       {
-        "id": "home-14",
-        "rank": 18,
-        "origin": "SDR",
-        "destination": "FRA",
-        "date": "2026-12-28",
-        "dates": [
-          "2026-12-28"
-        ],
-        "price_eur": 71,
-        "price_status": "known",
-        "airline": "Iberia",
-        "stops": 1,
-        "via": "MAD",
-        "nonstop": false,
-        "duration": "12h30",
-        "times": "10:05–22:35",
-        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-        "links": [
-          {
-            "date": "2026-12-28",
-            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
-          }
-        ],
-        "train_to_haj": "ICE about 2h20 from Flughafen Fernbahnhof.",
-        "bus": "Add a bus from Gijón: about €20–23 and 3–4 hours. Mid-December tickets not live-verified.",
-        "badges": [],
-        "note": "Plus the bus ~€20–23; worse than Oviedo–Frankfurt €62 that day.",
-        "verified": true,
-        "fetch": true,
-        "adults": 1
-      },
-      {
         "id": "home-20",
-        "rank": 19,
+        "rank": 21,
         "origin": "OVD",
         "destination": "FRA",
         "date": "2026-12-17",
@@ -697,6 +756,38 @@
         "verified": true,
         "fetch": true,
         "adults": 1
+      },
+      {
+        "id": "home-14",
+        "rank": 22,
+        "origin": "SDR",
+        "destination": "FRA",
+        "date": "2026-12-28",
+        "dates": [
+          "2026-12-28"
+        ],
+        "price_eur": 126,
+        "price_status": "known",
+        "airline": "Iberia",
+        "stops": 1,
+        "via": null,
+        "nonstop": false,
+        "duration": "4h55",
+        "times": "06:30–11:25",
+        "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
+        "links": [
+          {
+            "date": "2026-12-28",
+            "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDU0RScgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en"
+          }
+        ],
+        "train_to_haj": "ICE about 2h20 from Flughafen Fernbahnhof.",
+        "bus": "Add a bus from Gijón: about €20–23 and 3–4 hours. Mid-December tickets not live-verified.",
+        "badges": [],
+        "note": "The €71 fare is gone; the cheaper 10:05 itinerary was not seen. Plus the bus ~€20–23; worse than Oviedo–Frankfurt €62 that day.",
+        "verified": true,
+        "fetch": true,
+        "adults": 1
       }
     ],
     "calendar": {
@@ -720,7 +811,7 @@
           "origin": "OVD",
           "destination": "FRA",
           "date": "2026-12-18",
-          "price_eur": 116,
+          "price_eur": 141,
           "price_status": "known",
           "airline": "Air Europa",
           "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
@@ -734,7 +825,7 @@
           "origin": "OVD",
           "destination": "FRA",
           "date": "2026-12-19",
-          "price_eur": 116,
+          "price_eur": 141,
           "price_status": "known",
           "airline": "Air Europa",
           "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
@@ -918,9 +1009,9 @@
           "origin": "OVD",
           "destination": "HAJ",
           "date": "2026-12-18",
-          "price_eur": 114,
+          "price_eur": 126,
           "price_status": "known",
-          "airline": "Vueling / Vueling, Iberia",
+          "airline": "Vueling, Iberia",
           "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
           "verified": true,
           "fetch": true,
@@ -932,9 +1023,9 @@
           "origin": "OVD",
           "destination": "HAJ",
           "date": "2026-12-21",
-          "price_eur": 114,
+          "price_eur": 108,
           "price_status": "known",
-          "airline": "Vueling / Vueling, Iberia",
+          "airline": "Vueling",
           "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIxagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
           "verified": true,
           "fetch": true,
@@ -960,7 +1051,7 @@
           "origin": "OVD",
           "destination": "HAJ",
           "date": "2026-12-28",
-          "price_eur": 145,
+          "price_eur": 134,
           "price_status": "known",
           "airline": "Vueling",
           "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTI4agcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
@@ -974,7 +1065,7 @@
           "origin": "OVD",
           "destination": "HAJ",
           "date": "2026-12-30",
-          "price_eur": 124,
+          "price_eur": 137,
           "price_status": "known",
           "airline": "Vueling",
           "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTMwagcIARIDT1ZEcgcIARIDSEFKQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
@@ -1000,7 +1091,7 @@
         "price_eur": 88,
         "from": "BIO",
         "verified": true,
-        "note": "Closest. Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €114 on 18 and 21 Dec. S5 about 15–18 min. No bus if she flies Oviedo."
+        "note": "Closest. Vueling/Iberia via Barcelona, 23 Dec (add bus). From Oviedo: €104 on 23 Dec, €108 on 21 Dec, €126 on 18 Dec, €134 on 28 Dec, €137 on 30 Dec. Also opened: 17 Dec €467 and 26 Dec €363 (Air Europa+KLM, 2 stops); 19 Dec €300; 24 Dec €180 (skip the 34h25 itinerary). S5 about 15–18 min. No bus if she flies Oviedo."
       },
       {
         "airport": "HAM",
@@ -1008,15 +1099,15 @@
         "price_eur": 60,
         "from": "OVD",
         "verified": true,
-        "note": "Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €80 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn."
+        "note": "Vueling/Iberia via Barcelona, 24 Dec 23:00–10:35+1. Also €64 on 20 Dec, €93 on 17 Dec (short 5h20). ICE about 1h15 after S-Bahn."
       },
       {
         "airport": "BRE",
         "name": "Bremen",
-        "price_eur": 231,
-        "from": "OVD",
+        "price_eur": 164,
+        "from": "BIO",
         "verified": true,
-        "note": "Opened 20 Dec, Air Europa+KLM, 2 stops Madrid+Amsterdam — not useful next to Hamburg/Düsseldorf. Bilbao calendar from €141, itinerary not opened."
+        "note": "KLM, 1 stop, 22 Dec 11:55–17:50, 5h55 (add bus). From Oviedo: €210 on 24 Dec (Air Europa+KLM, 2 stops Madrid+Amsterdam), €287 on 21 Dec. Still much worse than Hamburg or Düsseldorf."
       },
       {
         "airport": "DUS",
@@ -1029,10 +1120,10 @@
       {
         "airport": "CGN",
         "name": "Cologne",
-        "price_eur": null,
+        "price_eur": 175,
         "from": "BIO",
-        "verified": false,
-        "note": "Calendar only, from €195 Bilbao / €355 Oviedo — not competitive. ICE about 2h33."
+        "verified": true,
+        "note": "Eurowings, 1 stop, 18 Dec 10:05–14:35, 4h30 (add bus). From Oviedo: €361 on 24 Dec, €676 on 21 Dec. Still much worse than Hamburg or Düsseldorf. ICE about 2h33."
       },
       {
         "airport": "FRA",
@@ -1040,7 +1131,7 @@
         "price_eur": 62,
         "from": "OVD",
         "verified": true,
-        "note": "Backup. Air Europa via Madrid, 23–31 Dec (7h20 morning on several dates). ICE about 2h20 from Flughafen Fernbahnhof."
+        "note": "Backup. Air Europa via Madrid, 23–31 Dec €62 (7h20 morning on several dates). 17 Dec €91, 18–19 Dec €141, 20 Dec €116, 21 Dec €71 Iberia, 22 Dec €116. ICE about 2h20 from Flughafen Fernbahnhof."
       }
     ],
     "buses": {
@@ -1050,13 +1141,13 @@
     "gaps": [
       "Only airports about 2.5 hours or less from Hannover are listed, plus Frankfurt as a backup. Amsterdam, Berlin and Eindhoven are too far, so they are not options here.",
       "No December nonstop from Oviedo to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts March 2027. The one confirmed nonstop is Eurowings Bilbao–Düsseldorf.",
-      "Oviedo–Hannover itineraries failed to load for 17 and 26 December (timeout) and 2–3 January (Google Oops). Calendar 17 Dec €346 — unattractive. 26 Dec had no stored calendar price.",
+      "Oviedo–Hannover 17 Dec €467 and 26 Dec €363 (Air Europa+KLM, 2 stops) now loaded — not useful next to €104 on 23 Dec. 19 Dec €300; 24 Dec €180 (skip the 34h25 itinerary). 2–3 January still Google Oops.",
       "Bilbao–Frankfurt December calendar was incomplete (only 1–4 January priced, from €127) and is not a recommendation.",
       "Santander–Bremen calendar failed; Santander–Düsseldorf looked expensive where priced. Santander–Hannover calendar from €203, incomplete.",
       "Santiago (SCQ) was not fully scanned; Ryanair from Santander/Santiago does not fly these German airports.",
       "Secondary airports Dortmund, Paderborn, Hahn, Weeze: no useful priced calendar days from Oviedo or Bilbao in this scrape.",
-      "Other opened Hannover/Hamburg dates cost more (Oviedo–Hannover 20/22/24/25/27/31 Dec €196–300; 24 Dec Hannover is 34h25 — skip). Oviedo–Bremen 20 Dec €231 is not useful next to Hamburg/Düsseldorf.",
-      "Fares move; this is a 27 November 2026 snapshot. Recheck before you pay."
+      "Bremen and Cologne are listed because they are near Hannover, but the cheapest verified fares (€164 Bilbao–Bremen, €175 Bilbao–Cologne) are still much worse than Hamburg or Düsseldorf.",
+      "Fares move; this is a 28 November 2026 snapshot. Recheck before you pay."
     ]
   },
   "flights": [
@@ -1067,28 +1158,32 @@
       "date": "2026-12-14",
       "airline": "Eurowings",
       "depart": "07:55",
-      "notes": "nonstop",
+      "notes": "nonstop, 07:55–10:25, 2h 30m",
       "adults": 1,
       "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDSEFKcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 63
+      "arrive": "10:25",
+      "duration": "2h 30m",
+      "price_eur": 73
     },
     {
       "id": "ovd-pmi-14",
       "origin": "OVD",
       "destination": "PMI",
       "date": "2026-12-14",
-      "airline": "Vueling",
+      "airline": "Vueling, Iberia",
       "depart": "08:50",
-      "notes": "",
+      "notes": "nonstop, 08:50–10:25, 1h 35m",
       "adults": 1,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE0agcIARIDT1ZEcgcIARIDUE1JQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 23
+      "arrive": "10:25",
+      "duration": "1h 35m",
+      "price_eur": 26
     },
     {
       "id": "pmi-ovd-17",
@@ -1141,14 +1236,16 @@
       "destination": "LPA",
       "date": "2026-12-16",
       "airline": "Air Europa",
-      "depart": "",
-      "notes": "via Madrid",
+      "depart": "10:35",
+      "notes": "1 stop via Madrid, 10:35–17:05, 7h 30m",
       "adults": 1,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 66
+      "arrive": "17:05",
+      "duration": "7h 30m",
+      "price_eur": 62
     },
     {
       "id": "ovd-lpa-16-binter",
@@ -1185,60 +1282,68 @@
       "origin": "HAJ",
       "destination": "LPA",
       "date": "2026-12-15",
-      "airline": "TUI fly",
-      "depart": "",
-      "notes": "nonstop",
+      "airline": "Vueling, Iberia",
+      "depart": "10:10",
+      "notes": "1 stop via Barcelona, 10:10–22:35, 13h 25m. TUI fly nonstop no longer shown.",
       "adults": 1,
-      "nonstop": true,
+      "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 71
+      "arrive": "22:35",
+      "duration": "13h 25m",
+      "price_eur": 130
     },
     {
       "id": "ovd-lpa-15",
       "origin": "OVD",
       "destination": "LPA",
       "date": "2026-12-15",
-      "airline": "",
-      "depart": "",
-      "notes": "his inbound in the 7-night Gran Canaria flight total",
+      "airline": "Air Europa",
+      "depart": "10:35",
+      "notes": "1 stop via Madrid, 10:35–17:05, 7h 30m",
       "adults": 1,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDTFBBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 66
+      "arrive": "17:05",
+      "duration": "7h 30m",
+      "price_eur": 62
     },
     {
       "id": "lpa-ovd-22",
       "origin": "LPA",
       "destination": "OVD",
       "date": "2026-12-22",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults",
+      "airline": "Volotea",
+      "depart": "09:25",
+      "notes": "pair for 2 adults, nonstop, 09:25–13:20, 2h 55m",
       "adults": 2,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 103
+      "arrive": "13:20",
+      "duration": "2h 55m",
+      "price_eur": 91
     },
     {
       "id": "haj-agp-15",
       "origin": "HAJ",
       "destination": "AGP",
       "date": "2026-12-15",
-      "airline": "Vueling",
-      "depart": "",
-      "notes": "1 stop",
+      "airline": "Air France",
+      "depart": "07:20",
+      "notes": "1 stop via CDG, 07:20–23:30, 16h 10m",
       "adults": 1,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 152
+      "arrive": "23:30",
+      "duration": "16h 10m",
+      "price_eur": 129
     },
     {
       "id": "ovd-agp-15",
@@ -1246,29 +1351,33 @@
       "destination": "AGP",
       "date": "2026-12-15",
       "airline": "Volotea",
-      "depart": "",
-      "notes": "",
+      "depart": "15:35",
+      "notes": "nonstop, 15:35–17:10, 1h 35m",
       "adults": 1,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 24
+      "arrive": "17:10",
+      "duration": "1h 35m",
+      "price_eur": 52
     },
     {
       "id": "agp-ovd-18",
       "origin": "AGP",
       "destination": "OVD",
       "date": "2026-12-18",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults",
+      "airline": "Air Europa",
+      "depart": "06:20",
+      "notes": "pair for 2 adults, 1 stop via Madrid, 06:20–09:45, 3h 25m",
       "adults": 2,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 124
+      "arrive": "09:45",
+      "duration": "3h 25m",
+      "price_eur": 133
     },
     {
       "id": "haj-agp-18",
@@ -1277,13 +1386,15 @@
       "date": "2026-12-18",
       "airline": "Eurowings",
       "depart": "07:10",
-      "notes": "nonstop",
+      "notes": "nonstop, 07:10–10:40, 3h 30m",
       "adults": 1,
       "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDSEFKcgcIARIDQUdQQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 115
+      "arrive": "10:40",
+      "duration": "3h 30m",
+      "price_eur": 130
     },
     {
       "id": "ovd-agp-18",
@@ -1320,45 +1431,51 @@
       "origin": "HAJ",
       "destination": "BCN",
       "date": "2026-12-15",
-      "airline": "Vueling",
+      "airline": "Vueling, Iberia",
       "depart": "10:10",
-      "notes": "nonstop",
+      "notes": "nonstop, 10:10–12:40, 2h 30m",
       "adults": 1,
       "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDSEFKcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 77
+      "arrive": "12:40",
+      "duration": "2h 30m",
+      "price_eur": 71
     },
     {
       "id": "ovd-bcn-15",
       "origin": "OVD",
       "destination": "BCN",
       "date": "2026-12-15",
-      "airline": "Vueling",
+      "airline": "Vueling, Iberia",
       "depart": "20:55",
-      "notes": "",
+      "notes": "nonstop, 20:55–22:30, 1h 35m",
       "adults": 1,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDT1ZEcgcIARIDQkNOQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 18
+      "arrive": "22:30",
+      "duration": "1h 35m",
+      "price_eur": 35
     },
     {
       "id": "bcn-ovd-18",
       "origin": "BCN",
       "destination": "OVD",
       "date": "2026-12-18",
-      "airline": "Vueling",
-      "depart": "07:20",
-      "notes": "pair for 2 adults",
+      "airline": "Air Europa",
+      "depart": "05:45",
+      "notes": "pair for 2 adults, 1 stop via Madrid, 05:45–09:45, 4h 00m",
       "adults": 2,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 144
+      "arrive": "09:45",
+      "duration": "4h 00m",
+      "price_eur": 147
     },
     {
       "id": "bcn-ovd-22",
@@ -1366,14 +1483,16 @@
       "destination": "OVD",
       "date": "2026-12-22",
       "airline": "Air Europa",
-      "depart": "",
-      "notes": "pair for 2 adults",
+      "depart": "05:45",
+      "notes": "pair for 2 adults, 1 stop via Madrid, 05:45–09:45, 4h 00m",
       "adults": 2,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTIyagcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 165
+      "arrive": "09:45",
+      "duration": "4h 00m",
+      "price_eur": 147
     },
     {
       "id": "ovd-fra-19",
@@ -1381,14 +1500,16 @@
       "destination": "FRA",
       "date": "2026-12-19",
       "airline": "Air Europa",
-      "depart": "",
-      "notes": "1 stop via Madrid. Not in trip totals — see Ella’s flight home.",
+      "depart": "21:05",
+      "notes": "1 stop via Madrid, 21:05–09:45+1, 12h 40m. Not in trip totals — see Ella’s flight home.",
       "adults": 1,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 116
+      "arrive": "09:45+1",
+      "duration": "12h 40m",
+      "price_eur": 141
     },
     {
       "id": "ovd-fra-20",
@@ -1486,14 +1607,16 @@
       "destination": "FRA",
       "date": "2026-12-18",
       "airline": "Air Europa",
-      "depart": "",
-      "notes": "1 stop via Madrid. Not in trip totals — see Ella’s flight home.",
+      "depart": "10:35",
+      "notes": "1 stop via Madrid, 10:35–17:55, 7h 20m. Not in trip totals — see Ella’s flight home.",
       "adults": 1,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDT1ZEcgcIARIDRlJBQAFIAXABggELCP___________wGYAQI&curr=EUR&hl=en",
-      "price_eur": 116
+      "arrive": "17:55",
+      "duration": "7h 20m",
+      "price_eur": 141
     },
     {
       "id": "ovd-fra-22",
@@ -1515,75 +1638,85 @@
       "origin": "PMI",
       "destination": "OVD",
       "date": "2026-12-15",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 1 stop",
+      "airline": "Vueling, Iberia",
+      "depart": "06:30",
+      "notes": "pair for 2 adults, nonstop, 06:30–08:15, 1h 45m",
       "adults": 2,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 106
+      "arrive": "08:15",
+      "duration": "1h 45m",
+      "price_eur": 36
     },
     {
       "id": "pmi-ovd-16",
       "origin": "PMI",
       "destination": "OVD",
       "date": "2026-12-16",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 1 stop",
+      "airline": "Vueling, Iberia",
+      "depart": "06:30",
+      "notes": "pair for 2 adults, nonstop, 06:30–08:15, 1h 45m",
       "adults": 2,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDUE1JcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 106
+      "arrive": "08:15",
+      "duration": "1h 45m",
+      "price_eur": 36
     },
     {
       "id": "lpa-ovd-17",
       "origin": "LPA",
       "destination": "OVD",
       "date": "2026-12-17",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 1 stop",
+      "airline": "Air Europa",
+      "depart": "06:05",
+      "notes": "pair for 2 adults, 1 stop via Madrid, 06:05–20:15, 13h 10m",
       "adults": 2,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 210
+      "arrive": "20:15",
+      "duration": "13h 10m",
+      "price_eur": 115
     },
     {
       "id": "lpa-ovd-18",
       "origin": "LPA",
       "destination": "OVD",
       "date": "2026-12-18",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 1 stop",
+      "airline": "Air Europa",
+      "depart": "06:05",
+      "notes": "pair for 2 adults, 1 stop via Madrid, 06:05–20:15, 13h 10m",
       "adults": 2,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTFBBcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 316
+      "arrive": "20:15",
+      "duration": "13h 10m",
+      "price_eur": 191
     },
     {
       "id": "agp-ovd-19",
       "origin": "AGP",
       "destination": "OVD",
       "date": "2026-12-19",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 1 stop",
+      "airline": "Air Europa",
+      "depart": "06:20",
+      "notes": "pair for 2 adults, 1 stop via Madrid, 06:20–09:45, 3h 25m",
       "adults": 2,
       "nonstop": false,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDQUdQcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 154
+      "arrive": "09:45",
+      "duration": "3h 25m",
+      "price_eur": 133
     },
     {
       "id": "agp-ovd-20",
@@ -1605,30 +1738,34 @@
       "origin": "BCN",
       "destination": "OVD",
       "date": "2026-12-16",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 2 stops — possible self-transfer",
+      "airline": "Vueling, Iberia",
+      "depart": "07:20",
+      "notes": "pair for 2 adults, nonstop, 07:20–08:55, 1h 35m",
       "adults": 2,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE2agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 174
+      "arrive": "08:55",
+      "duration": "1h 35m",
+      "price_eur": 88
     },
     {
       "id": "bcn-ovd-17",
       "origin": "BCN",
       "destination": "OVD",
       "date": "2026-12-17",
-      "airline": "",
-      "depart": "",
-      "notes": "pair for 2 adults, 1 stop",
+      "airline": "Vueling, Iberia",
+      "depart": "07:20",
+      "notes": "pair for 2 adults, nonstop, 07:20–08:55, 1h 35m",
       "adults": 2,
-      "nonstop": false,
+      "nonstop": true,
       "fetch": true,
       "price_status": "known",
       "gf_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE3agcIARIDQkNOcgcIARIDT1ZEQAFAAUgBcAGCAQsI____________AZgBAg&curr=EUR&hl=en",
-      "price_eur": 390
+      "arrive": "08:55",
+      "duration": "1h 35m",
+      "price_eur": 144
     },
     {
       "id": "haj-agp-18-usd",
@@ -2240,7 +2377,7 @@
       "photo_caption": "A photograph of Palma, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Palma&checkin=2026-12-14&checkout=2026-12-15&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "palma-priv-2",
@@ -2261,7 +2398,7 @@
       "photo_caption": "A photograph of Palma, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Palma&checkin=2026-12-14&checkout=2026-12-16&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "lp-priv-1",
@@ -2282,7 +2419,7 @@
       "photo_caption": "A photograph of Las Palmas, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Las%20Palmas&checkin=2026-12-16&checkout=2026-12-17&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "lp-priv-2",
@@ -2303,7 +2440,7 @@
       "photo_caption": "A photograph of Las Palmas, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Las%20Palmas&checkin=2026-12-16&checkout=2026-12-18&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "masp-priv-1",
@@ -2324,7 +2461,7 @@
       "photo_caption": "A photograph of Maspalomas, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Maspalomas&checkin=2026-12-16&checkout=2026-12-17&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "masp-priv-2",
@@ -2345,7 +2482,7 @@
       "photo_caption": "A photograph of Maspalomas, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Maspalomas&checkin=2026-12-16&checkout=2026-12-18&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "agp-priv-1",
@@ -2366,7 +2503,7 @@
       "photo_caption": "A photograph of Málaga, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=M%C3%A1laga&checkin=2026-12-18&checkout=2026-12-19&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "agp-priv-2",
@@ -2387,7 +2524,7 @@
       "photo_caption": "A photograph of Málaga, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=M%C3%A1laga&checkin=2026-12-18&checkout=2026-12-20&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "bcn-priv-1",
@@ -2408,7 +2545,7 @@
       "photo_caption": "A photograph of Barcelona, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Barcelona&checkin=2026-12-15&checkout=2026-12-16&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "bcn-priv-2",
@@ -2429,7 +2566,7 @@
       "photo_caption": "A photograph of Barcelona, not the hotel.",
       "booking_url": "https://www.booking.com/searchresults.html?ss=Barcelona&checkin=2026-12-15&checkout=2026-12-17&group_adults=2&no_rooms=1&selected_currency=EUR&order=price&nflt=privacy_type%3D2%3Broomfacility%3D38%3Bht_id%3D203%3Bht_id%3D208%3Bht_id%3D216",
       "checked": "2026-11-22",
-      "recheck_live": false
+      "recheck_live": true
     },
     {
       "id": "ab-palma-bano-1",
@@ -2437,8 +2574,8 @@
       "dest": "palma",
       "nights": 1,
       "currency": "EUR",
-      "price": 63,
-      "per_night": 63,
+      "price": 59,
+      "per_night": 59,
       "price_status": "known",
       "checkin": "2026-12-14",
       "checkout": "2026-12-15",
@@ -2451,7 +2588,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.5,
@@ -2477,7 +2614,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.73,
@@ -2489,8 +2626,8 @@
       "dest": "palma",
       "nights": 2,
       "currency": "EUR",
-      "price": 125,
-      "per_night": 62.5,
+      "price": 117,
+      "per_night": 58.5,
       "price_status": "known",
       "checkin": "2026-12-14",
       "checkout": "2026-12-16",
@@ -2503,7 +2640,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.5,
@@ -2529,7 +2666,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.73,
@@ -2541,8 +2678,8 @@
       "dest": "palma",
       "nights": 3,
       "currency": "EUR",
-      "price": 187,
-      "per_night": 62.33,
+      "price": 176,
+      "per_night": 58.67,
       "price_status": "known",
       "checkin": "2026-12-14",
       "checkout": "2026-12-17",
@@ -2555,7 +2692,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.5,
@@ -2581,7 +2718,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.73,
@@ -2593,8 +2730,8 @@
       "dest": "palma",
       "nights": 7,
       "currency": "EUR",
-      "price": 435,
-      "per_night": 62.14,
+      "price": 410,
+      "per_night": 58.57,
       "price_status": "known",
       "checkin": "2026-12-14",
       "checkout": "2026-12-21",
@@ -2607,7 +2744,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.5,
@@ -2633,7 +2770,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1189630582178272314?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1189630582178272314?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.85,
@@ -2659,7 +2796,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/49125025?check_in=2026-12-16&check_out=2026-12-17&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/49125025?check_in=2026-12-16&check_out=2026-12-17&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.73,
@@ -2685,7 +2822,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/26576543?check_in=2026-12-16&check_out=2026-12-17&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/26576543?check_in=2026-12-16&check_out=2026-12-17&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.48,
@@ -2712,10 +2849,11 @@
       "booking_url": "https://www.airbnb.com/rooms/649728177997271973?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/649728177997271973?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.55,
-      "reviews": 31
+      "reviews": 31,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-lp-brocante-2",
@@ -2738,10 +2876,11 @@
       "booking_url": "https://www.airbnb.com/rooms/43818149?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/43818149?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.64,
-      "reviews": 151
+      "reviews": 151,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-lp-canteras-3",
@@ -2764,10 +2903,11 @@
       "booking_url": "https://www.airbnb.com/rooms/1329455057515605400?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1329455057515605400?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.2,
-      "reviews": 54
+      "reviews": 54,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-lp-linda-3",
@@ -2789,7 +2929,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1281183146777399181?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1281183146777399181?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 5.0,
@@ -2816,10 +2956,11 @@
       "booking_url": "https://www.airbnb.com/rooms/18480977?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/18480977?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.64,
-      "reviews": 342
+      "reviews": 342,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-lp-mindfit-7",
@@ -2842,10 +2983,11 @@
       "booking_url": "https://www.airbnb.com/rooms/1183937454852677557?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1183937454852677557?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.42,
-      "reviews": 331
+      "reviews": 331,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-masp-descanso-2",
@@ -2867,7 +3009,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/807751336662960005?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/807751336662960005?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.32,
@@ -2893,7 +3035,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/613764810682076874?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/613764810682076874?check_in=2026-12-16&check_out=2026-12-18&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.92,
@@ -2920,10 +3062,11 @@
       "booking_url": "https://www.airbnb.com/rooms/1434866096222916233?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1434866096222916233?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.85,
-      "reviews": 26
+      "reviews": 26,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-masp-golden-3",
@@ -2945,7 +3088,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1789799526109375250?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1789799526109375250?check_in=2026-12-16&check_out=2026-12-19&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating_label": "New listing"
@@ -2970,7 +3113,7 @@
       "photo_caption": "A photograph of Maspalomas, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/1790031823493057261?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1790031823493057261?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating_label": "New listing"
@@ -2996,10 +3139,11 @@
       "booking_url": "https://www.airbnb.com/rooms/735909769349166270?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/735909769349166270?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.9,
-      "reviews": 10
+      "reviews": 10,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-agp-hab-1",
@@ -3021,7 +3165,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/7599041?check_in=2026-12-18&check_out=2026-12-19&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/7599041?check_in=2026-12-18&check_out=2026-12-19&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.81,
@@ -3047,7 +3191,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1209985226467887125?check_in=2026-12-18&check_out=2026-12-19&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1209985226467887125?check_in=2026-12-18&check_out=2026-12-19&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.89,
@@ -3059,8 +3203,8 @@
       "dest": "malaga",
       "nights": 2,
       "currency": "EUR",
-      "price": 116,
-      "per_night": 58,
+      "price": 112,
+      "per_night": 56,
       "price_status": "known",
       "checkin": "2026-12-18",
       "checkout": "2026-12-20",
@@ -3073,7 +3217,7 @@
       "photo_caption": "A photograph of Málaga, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/29984735?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/29984735?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.8,
@@ -3099,7 +3243,7 @@
       "photo_caption": "A photograph of Málaga, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/27363966?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/27363966?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.6,
@@ -3125,7 +3269,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1209985226467887125?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1209985226467887125?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.89,
@@ -3151,7 +3295,7 @@
       "photo_caption": "From the Airbnb listing.",
       "booking_url": "https://www.airbnb.com/rooms/1691362913350835895?check_in=2026-12-18&check_out=2026-12-25&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1691362913350835895?check_in=2026-12-18&check_out=2026-12-25&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.89,
@@ -3177,7 +3321,7 @@
       "photo_caption": "A photograph of Barcelona, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/1770350867264593321?check_in=2026-12-15&check_out=2026-12-16&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1770350867264593321?check_in=2026-12-15&check_out=2026-12-16&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.67,
@@ -3203,7 +3347,7 @@
       "photo_caption": "A photograph of Barcelona, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/19955807?check_in=2026-12-15&check_out=2026-12-16&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/19955807?check_in=2026-12-15&check_out=2026-12-16&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.47,
@@ -3229,7 +3373,7 @@
       "photo_caption": "A photograph of Barcelona, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/1770350867264593321?check_in=2026-12-15&check_out=2026-12-17&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1770350867264593321?check_in=2026-12-15&check_out=2026-12-17&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.67,
@@ -3256,10 +3400,11 @@
       "booking_url": "https://www.airbnb.com/rooms/14020724?check_in=2026-12-15&check_out=2026-12-17&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/14020724?check_in=2026-12-15&check_out=2026-12-17&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.47,
-      "reviews": 1234
+      "reviews": 1234,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-bcn-centre-3",
@@ -3281,7 +3426,7 @@
       "photo_caption": "A photograph of Barcelona, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/1787632500437078315?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1787632500437078315?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.44,
@@ -3308,10 +3453,11 @@
       "booking_url": "https://www.airbnb.com/rooms/1750175914325689796?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1750175914325689796?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.82,
-      "reviews": 11
+      "reviews": 11,
+      "unverified": "unverified 28 Nov"
     },
     {
       "id": "ab-bcn-terraza-7",
@@ -3333,7 +3479,7 @@
       "photo_caption": "A photograph of Barcelona, not the listing.",
       "booking_url": "https://www.airbnb.com/rooms/44060722?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/44060722?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "recheck_live": false,
       "private": true,
       "rating": 4.44,
@@ -3360,10 +3506,11 @@
       "booking_url": "https://www.airbnb.com/rooms/1157033654900525674?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "airbnb_url": "https://www.airbnb.com/rooms/1157033654900525674?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR",
       "checked": "2026-11-27",
-      "recheck_live": false,
+      "recheck_live": true,
       "private": true,
       "rating": 4.85,
-      "reviews": 205
+      "reviews": 205,
+      "unverified": "unverified 28 Nov"
     }
   ],
   "plans": [
@@ -3394,13 +3541,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 86,
-      "partial_eur": 255,
-      "subtotal_eur": 255,
-      "total_eur": 255,
+      "inbound_eur": 99,
+      "partial_eur": 194,
+      "subtotal_eur": 194,
+      "total_eur": 194,
       "total_complete": true,
-      "alt_subtotal_eur": 268,
-      "alt_total_eur": 268
+      "alt_subtotal_eur": 211,
+      "alt_total_eur": 211
     },
     {
       "id": "palma-2",
@@ -3429,13 +3576,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 86,
-      "partial_eur": 317,
-      "subtotal_eur": 317,
-      "total_eur": 317,
+      "inbound_eur": 99,
+      "partial_eur": 252,
+      "subtotal_eur": 252,
+      "total_eur": 252,
       "total_complete": true,
-      "alt_subtotal_eur": 343,
-      "alt_total_eur": 343
+      "alt_subtotal_eur": 286,
+      "alt_total_eur": 286
     },
     {
       "id": "palma-3",
@@ -3465,13 +3612,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 86,
-      "partial_eur": 341,
-      "subtotal_eur": 341,
-      "total_eur": 341,
+      "inbound_eur": 99,
+      "partial_eur": 343,
+      "subtotal_eur": 343,
+      "total_eur": 343,
       "total_complete": true,
-      "alt_subtotal_eur": 353,
-      "alt_total_eur": 353
+      "alt_subtotal_eur": 366,
+      "alt_total_eur": 366
     },
     {
       "id": "palma-7",
@@ -3501,13 +3648,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 86,
-      "partial_eur": 615,
-      "subtotal_eur": 615,
-      "total_eur": 615,
+      "inbound_eur": 99,
+      "partial_eur": 603,
+      "subtotal_eur": 603,
+      "total_eur": 603,
       "total_complete": true,
-      "alt_subtotal_eur": 652,
-      "alt_total_eur": 652
+      "alt_subtotal_eur": 665,
+      "alt_total_eur": 665
     },
     {
       "id": "masp-1",
@@ -3532,8 +3679,8 @@
       "together_missing": false,
       "hotel_missing": true,
       "fra_known": false,
-      "inbound_eur": 138,
-      "partial_eur": 348,
+      "inbound_eur": 134,
+      "partial_eur": 249,
       "subtotal_eur": null,
       "total_eur": null,
       "total_complete": false
@@ -3565,13 +3712,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 138,
-      "partial_eur": 602,
-      "subtotal_eur": 602,
-      "total_eur": 602,
+      "inbound_eur": 134,
+      "partial_eur": 473,
+      "subtotal_eur": 473,
+      "total_eur": 473,
       "total_complete": true,
-      "alt_subtotal_eur": 622,
-      "alt_total_eur": 622
+      "alt_subtotal_eur": 493,
+      "alt_total_eur": 493
     },
     {
       "id": "masp-3",
@@ -3601,13 +3748,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 138,
-      "partial_eur": 405,
-      "subtotal_eur": 405,
-      "total_eur": 405,
+      "inbound_eur": 134,
+      "partial_eur": 401,
+      "subtotal_eur": 401,
+      "total_eur": 401,
       "total_complete": true,
-      "alt_subtotal_eur": 445,
-      "alt_total_eur": 445
+      "alt_subtotal_eur": 441,
+      "alt_total_eur": 441
     },
     {
       "id": "masp-7",
@@ -3636,13 +3783,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 137,
-      "partial_eur": 763,
-      "subtotal_eur": 763,
-      "total_eur": 763,
+      "inbound_eur": 192,
+      "partial_eur": 806,
+      "subtotal_eur": 806,
+      "total_eur": 806,
       "total_complete": true,
-      "alt_subtotal_eur": 776,
-      "alt_total_eur": 776
+      "alt_subtotal_eur": 819,
+      "alt_total_eur": 819
     },
     {
       "id": "lp-1",
@@ -3671,13 +3818,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 138,
-      "partial_eur": 396,
-      "subtotal_eur": 396,
-      "total_eur": 396,
+      "inbound_eur": 134,
+      "partial_eur": 297,
+      "subtotal_eur": 297,
+      "total_eur": 297,
       "total_complete": true,
-      "alt_subtotal_eur": 423,
-      "alt_total_eur": 423
+      "alt_subtotal_eur": 324,
+      "alt_total_eur": 324
     },
     {
       "id": "lp-2",
@@ -3706,13 +3853,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 138,
-      "partial_eur": 564,
-      "subtotal_eur": 564,
-      "total_eur": 564,
+      "inbound_eur": 134,
+      "partial_eur": 435,
+      "subtotal_eur": 435,
+      "total_eur": 435,
       "total_complete": true,
-      "alt_subtotal_eur": 594,
-      "alt_total_eur": 594
+      "alt_subtotal_eur": 465,
+      "alt_total_eur": 465
     },
     {
       "id": "lp-3",
@@ -3742,13 +3889,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 138,
-      "partial_eur": 370,
-      "subtotal_eur": 370,
-      "total_eur": 370,
+      "inbound_eur": 134,
+      "partial_eur": 366,
+      "subtotal_eur": 366,
+      "total_eur": 366,
       "total_complete": true,
-      "alt_subtotal_eur": 398,
-      "alt_total_eur": 398
+      "alt_subtotal_eur": 394,
+      "alt_total_eur": 394
     },
     {
       "id": "lp-7",
@@ -3778,13 +3925,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 137,
-      "partial_eur": 686,
-      "subtotal_eur": 686,
-      "total_eur": 686,
+      "inbound_eur": 192,
+      "partial_eur": 729,
+      "subtotal_eur": 729,
+      "total_eur": 729,
       "total_complete": true,
-      "alt_subtotal_eur": 708,
-      "alt_total_eur": 708
+      "alt_subtotal_eur": 751,
+      "alt_total_eur": 751
     },
     {
       "id": "malaga-1",
@@ -3813,13 +3960,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 143,
-      "partial_eur": 336,
-      "subtotal_eur": 336,
-      "total_eur": 336,
+      "inbound_eur": 158,
+      "partial_eur": 330,
+      "subtotal_eur": 330,
+      "total_eur": 330,
       "total_complete": true,
-      "alt_subtotal_eur": 365,
-      "alt_total_eur": 365
+      "alt_subtotal_eur": 359,
+      "alt_total_eur": 359
     },
     {
       "id": "malaga-2",
@@ -3848,13 +3995,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 143,
-      "partial_eur": 392,
-      "subtotal_eur": 392,
-      "total_eur": 392,
+      "inbound_eur": 158,
+      "partial_eur": 403,
+      "subtotal_eur": 403,
+      "total_eur": 403,
       "total_complete": true,
-      "alt_subtotal_eur": 408,
-      "alt_total_eur": 408
+      "alt_subtotal_eur": 423,
+      "alt_total_eur": 423
     },
     {
       "id": "malaga-3",
@@ -3882,13 +4029,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 176,
-      "partial_eur": 415,
-      "subtotal_eur": 415,
-      "total_eur": 415,
+      "inbound_eur": 181,
+      "partial_eur": 429,
+      "subtotal_eur": 429,
+      "total_eur": 429,
       "total_complete": true,
-      "alt_subtotal_eur": 449,
-      "alt_total_eur": 449
+      "alt_subtotal_eur": 463,
+      "alt_total_eur": 463
     },
     {
       "id": "malaga-7",
@@ -3916,13 +4063,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 143,
-      "partial_eur": 544,
-      "subtotal_eur": 544,
-      "total_eur": 544,
+      "inbound_eur": 158,
+      "partial_eur": 559,
+      "subtotal_eur": 559,
+      "total_eur": 559,
       "total_complete": true,
-      "alt_subtotal_eur": 651,
-      "alt_total_eur": 651
+      "alt_subtotal_eur": 666,
+      "alt_total_eur": 666
     },
     {
       "id": "bcn-1",
@@ -3951,13 +4098,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 95,
-      "partial_eur": 314,
-      "subtotal_eur": 314,
-      "total_eur": 314,
+      "inbound_eur": 106,
+      "partial_eur": 239,
+      "subtotal_eur": 239,
+      "total_eur": 239,
       "total_complete": true,
-      "alt_subtotal_eur": 340,
-      "alt_total_eur": 340
+      "alt_subtotal_eur": 265,
+      "alt_total_eur": 265
     },
     {
       "id": "bcn-2",
@@ -3986,13 +4133,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 95,
-      "partial_eur": 575,
-      "subtotal_eur": 575,
-      "total_eur": 575,
+      "inbound_eur": 106,
+      "partial_eur": 340,
+      "subtotal_eur": 340,
+      "total_eur": 340,
       "total_complete": true,
-      "alt_subtotal_eur": 636,
-      "alt_total_eur": 636
+      "alt_subtotal_eur": 401,
+      "alt_total_eur": 401
     },
     {
       "id": "bcn-3",
@@ -4021,13 +4168,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 95,
-      "partial_eur": 374,
-      "subtotal_eur": 374,
-      "total_eur": 374,
+      "inbound_eur": 106,
+      "partial_eur": 388,
+      "subtotal_eur": 388,
+      "total_eur": 388,
       "total_complete": true,
-      "alt_subtotal_eur": 386,
-      "alt_total_eur": 386
+      "alt_subtotal_eur": 400,
+      "alt_total_eur": 400
     },
     {
       "id": "bcn-7",
@@ -4057,13 +4204,13 @@
       "together_missing": false,
       "hotel_missing": false,
       "fra_known": false,
-      "inbound_eur": 95,
-      "partial_eur": 670,
-      "subtotal_eur": 670,
-      "total_eur": 670,
+      "inbound_eur": 106,
+      "partial_eur": 663,
+      "subtotal_eur": 663,
+      "total_eur": 663,
       "total_complete": true,
-      "alt_subtotal_eur": 687,
-      "alt_total_eur": 687
+      "alt_subtotal_eur": 680,
+      "alt_total_eur": 680
     }
   ],
   "bundles": [
@@ -4074,7 +4221,7 @@
         "ovd-lpa-16",
         "lpa-ovd-19"
       ],
-      "total_eur": 215
+      "total_eur": 211
     },
     {
       "id": "gc-7",
@@ -4083,7 +4230,7 @@
         "ovd-lpa-15",
         "lpa-ovd-22"
       ],
-      "total_eur": 240
+      "total_eur": 283
     },
     {
       "id": "gc-16-22",
@@ -4092,7 +4239,7 @@
         "ovd-lpa-16",
         "lpa-ovd-22"
       ],
-      "total_eur": 241
+      "total_eur": 225
     }
   ],
   "usd_partials": {
@@ -4100,12 +4247,13 @@
     "malabar": 706
   },
   "notes": {
-    "itinerary": "Ella HAJ→city; Ali OVD→city; private stay for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); days in Asturias at home (no hotel); Ella flies home whenever she chooses. Trip totals do not include her flight home. Totals use the cheapest verified private option (Airbnb 27 Nov vs Booking 22 Nov). Never a shared room.",
-    "ovd_fra": "Home flights are listed separately under ella_home. No December nonstop from Oviedo. OVD→FRA 17 Dec €91, 18–20 Dec €116, 21 Dec €71 Iberia, 22 Dec €116, 23–31 Dec €62. Rechecked 27 Nov 2026.",
+    "itinerary": "Ella HAJ→city; Ali OVD→city; private stay for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); days in Asturias at home (no hotel); Ella flies home whenever she chooses. Trip totals do not include her flight home. Totals use the cheapest verified private option (Airbnb 28 Nov vs Booking 22 Nov). Never a shared room.",
+    "ovd_fra": "Home flights are listed separately under ella_home. No December nonstop from Oviedo. OVD→FRA 17 Dec 91, 18-19 Dec 141, 20 Dec 116, 21 Dec 71 Iberia, 22 Dec 116, 23-31 Dec 62. Rechecked 28 Nov 2026.",
     "needs_check": [
-      "Maspalomas 1n 16–17 Dec: no Airbnb in town within €35–85. Booking search and Google Hotels Axel Beach ~€161. Same LPA flights as Las Palmas 1n.",
-      "Booking.com hotel euro prices: last checked 22 Nov 2026, could not re-verify 27 Nov — recheck live.",
-      "ALSA buses Gijón→BIO/SDR for Ella’s home flight: mid-December tickets not live-verified."
+      "Maspalomas 1n 16–17 Dec: no Airbnb in town within €35–85. Booking search and Google Hotels Axel Beach ~€161. Same LPA flights as Las Palmas 1n. City flights only: 249.",
+      "Booking.com hotel euro prices: last checked 22 Nov 2026, could not re-verify 28 Nov — recheck live.",
+      "ALSA buses Gijón→BIO/SDR for Ella’s home flight: mid-December tickets not live-verified.",
+      "Airbnb listings not found in the 28 Nov search results keep their 27 Nov price - recheck live."
     ]
   }
 }

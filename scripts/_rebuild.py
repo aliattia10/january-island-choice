@@ -72,6 +72,10 @@ def pretty(iso: str) -> str:
     return f"{int(d)} {months[int(m) - 1]}"
 
 
+def pretty_full(iso: str) -> str:
+    return f"{pretty(iso)} {iso.split('-')[0]}"
+
+
 USD_TO_EUR = 0.911
 
 
@@ -154,7 +158,7 @@ AIRPORT = {
 }
 
 
-def flight(id_, origin, dest, date, airline, depart, notes, adults, nonstop, fetch, price_eur, status="known"):
+def flight(id_, origin, dest, date, airline, depart, notes, adults, nonstop, fetch, price_eur, status="known", arrive="", duration=""):
     item = {
         "id": id_,
         "origin": origin,
@@ -169,6 +173,10 @@ def flight(id_, origin, dest, date, airline, depart, notes, adults, nonstop, fet
         "price_status": status,
         "gf_url": gf(date, origin, dest, adults),
     }
+    if arrive:
+        item["arrive"] = arrive
+    if duration:
+        item["duration"] = duration
     if price_eur is None:
         item["price_eur"] = None
     else:
@@ -220,7 +228,7 @@ def hotel(
             kind="private" if search_only else "named",
         ),
         "checked": "2026-11-22",
-        "recheck_live": priced,
+        "recheck_live": True,
     }
     if score is not None:
         item["score"] = score
@@ -289,7 +297,7 @@ def airbnb(
         ),
         "booking_url": url,
         "airbnb_url": url,
-        "checked": "2026-11-27",
+        "checked": "2026-11-28",
         "recheck_live": False,
         "private": True,
     }
@@ -401,44 +409,44 @@ def plan_totals(plan, flights, hotels):
 
 def build_prices() -> dict:
     flights = [
-        flight("haj-pmi-14", "HAJ", "PMI", "2026-12-14", "Eurowings", "07:55", "nonstop", 1, True, True, 63),
-        flight("ovd-pmi-14", "OVD", "PMI", "2026-12-14", "Vueling", "08:50", "", 1, False, True, 23),
+        flight("haj-pmi-14", "HAJ", "PMI", "2026-12-14", "Eurowings", "07:55", "nonstop, 07:55–10:25, 2h 30m", 1, True, True, 73, arrive="10:25", duration="2h 30m"),
+        flight("ovd-pmi-14", "OVD", "PMI", "2026-12-14", "Vueling, Iberia", "08:50", "nonstop, 08:50–10:25, 1h 35m", 1, True, True, 26, arrive="10:25", duration="1h 35m"),
         flight("pmi-ovd-17", "PMI", "OVD", "2026-12-17", "Vueling", "08:00", "pair for 2 adults", 2, False, True, 68),
         flight("pmi-ovd-21", "PMI", "OVD", "2026-12-21", "Vueling", "06:30", "pair for 2 adults", 2, False, True, 94),
         flight("haj-lpa-16", "HAJ", "LPA", "2026-12-16", "Eurowings", "12:50", "nonstop", 1, True, True, 72),
-        flight("ovd-lpa-16", "OVD", "LPA", "2026-12-16", "Air Europa", "", "via Madrid", 1, False, True, 66),
+        flight("ovd-lpa-16", "OVD", "LPA", "2026-12-16", "Air Europa", "10:35", "1 stop via Madrid, 10:35–17:05, 7h 30m", 1, False, True, 62, arrive="17:05", duration="7h 30m"),
         flight("ovd-lpa-16-binter", "OVD", "LPA", "2026-12-16", "Binter", "", "nonstop alternative, not used in totals", 1, True, True, 186),
         flight("lpa-ovd-19", "LPA", "OVD", "2026-12-19", "Volotea", "18:45", "pair for 2 adults", 2, False, True, 77),
-        flight("haj-lpa-15", "HAJ", "LPA", "2026-12-15", "TUI fly", "", "nonstop", 1, True, True, 71),
-        flight("ovd-lpa-15", "OVD", "LPA", "2026-12-15", "", "", "his inbound in the 7-night Gran Canaria flight total", 1, False, True, 66),
-        flight("lpa-ovd-22", "LPA", "OVD", "2026-12-22", "", "", "pair for 2 adults", 2, False, True, 103),
-        flight("haj-agp-15", "HAJ", "AGP", "2026-12-15", "Vueling", "", "1 stop", 1, False, True, 152),
-        flight("ovd-agp-15", "OVD", "AGP", "2026-12-15", "Volotea", "", "", 1, False, True, 24),
-        flight("agp-ovd-18", "AGP", "OVD", "2026-12-18", "", "", "pair for 2 adults", 2, False, True, 124),
-        flight("haj-agp-18", "HAJ", "AGP", "2026-12-18", "Eurowings", "07:10", "nonstop", 1, True, True, 115),
+        flight("haj-lpa-15", "HAJ", "LPA", "2026-12-15", "Vueling, Iberia", "10:10", "1 stop via Barcelona, 10:10–22:35, 13h 25m. TUI fly nonstop no longer shown.", 1, False, True, 130, arrive="22:35", duration="13h 25m"),
+        flight("ovd-lpa-15", "OVD", "LPA", "2026-12-15", "Air Europa", "10:35", "1 stop via Madrid, 10:35–17:05, 7h 30m", 1, False, True, 62, arrive="17:05", duration="7h 30m"),
+        flight("lpa-ovd-22", "LPA", "OVD", "2026-12-22", "Volotea", "09:25", "pair for 2 adults, nonstop, 09:25–13:20, 2h 55m", 2, True, True, 91, arrive="13:20", duration="2h 55m"),
+        flight("haj-agp-15", "HAJ", "AGP", "2026-12-15", "Air France", "07:20", "1 stop via CDG, 07:20–23:30, 16h 10m", 1, False, True, 129, arrive="23:30", duration="16h 10m"),
+        flight("ovd-agp-15", "OVD", "AGP", "2026-12-15", "Volotea", "15:35", "nonstop, 15:35–17:10, 1h 35m", 1, True, True, 52, arrive="17:10", duration="1h 35m"),
+        flight("agp-ovd-18", "AGP", "OVD", "2026-12-18", "Air Europa", "06:20", "pair for 2 adults, 1 stop via Madrid, 06:20–09:45, 3h 25m", 2, False, True, 133, arrive="09:45", duration="3h 25m"),
+        flight("haj-agp-18", "HAJ", "AGP", "2026-12-18", "Eurowings", "07:10", "nonstop, 07:10–10:40, 3h 30m", 1, True, True, 130, arrive="10:40", duration="3h 30m"),
         flight("ovd-agp-18", "OVD", "AGP", "2026-12-18", "Volotea", "", "", 1, False, True, 28),
         flight("agp-ovd-25", "AGP", "OVD", "2026-12-25", "Volotea", "", "pair for 2 adults", 2, False, True, 77),
-        flight("haj-bcn-15", "HAJ", "BCN", "2026-12-15", "Vueling", "10:10", "nonstop", 1, True, True, 77),
-        flight("ovd-bcn-15", "OVD", "BCN", "2026-12-15", "Vueling", "20:55", "", 1, False, True, 18),
-        flight("bcn-ovd-18", "BCN", "OVD", "2026-12-18", "Vueling", "07:20", "pair for 2 adults", 2, False, True, 144),
-        flight("bcn-ovd-22", "BCN", "OVD", "2026-12-22", "Air Europa", "", "pair for 2 adults", 2, False, True, 165),
-        flight("ovd-fra-19", "OVD", "FRA", "2026-12-19", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
+        flight("haj-bcn-15", "HAJ", "BCN", "2026-12-15", "Vueling, Iberia", "10:10", "nonstop, 10:10–12:40, 2h 30m", 1, True, True, 71, arrive="12:40", duration="2h 30m"),
+        flight("ovd-bcn-15", "OVD", "BCN", "2026-12-15", "Vueling, Iberia", "20:55", "nonstop, 20:55–22:30, 1h 35m", 1, True, True, 35, arrive="22:30", duration="1h 35m"),
+        flight("bcn-ovd-18", "BCN", "OVD", "2026-12-18", "Air Europa", "05:45", "pair for 2 adults, 1 stop via Madrid, 05:45–09:45, 4h 00m", 2, False, True, 147, arrive="09:45", duration="4h 00m"),
+        flight("bcn-ovd-22", "BCN", "OVD", "2026-12-22", "Air Europa", "05:45", "pair for 2 adults, 1 stop via Madrid, 05:45–09:45, 4h 00m", 2, False, True, 147, arrive="09:45", duration="4h 00m"),
+        flight("ovd-fra-19", "OVD", "FRA", "2026-12-19", "Air Europa", "21:05", "1 stop via Madrid, 21:05–09:45+1, 12h 40m. Not in trip totals — see Ella’s flight home.", 1, False, True, 141, arrive="09:45+1", duration="12h 40m"),
         flight("ovd-fra-20", "OVD", "FRA", "2026-12-20", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
         flight("ovd-fra-21", "OVD", "FRA", "2026-12-21", "Iberia", "13:20", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 71),
         flight("ovd-fra-23", "OVD", "FRA", "2026-12-23", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 62),
         flight("ovd-fra-24", "OVD", "FRA", "2026-12-24", "Air Europa", "10:35", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 62),
         flight("ovd-fra-27", "OVD", "FRA", "2026-12-27", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 62),
         flight("ovd-fra-17", "OVD", "FRA", "2026-12-17", "Air Europa", "10:35", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 91),
-        flight("ovd-fra-18", "OVD", "FRA", "2026-12-18", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
+        flight("ovd-fra-18", "OVD", "FRA", "2026-12-18", "Air Europa", "10:35", "1 stop via Madrid, 10:35–17:55, 7h 20m. Not in trip totals — see Ella’s flight home.", 1, False, True, 141, arrive="17:55", duration="7h 20m"),
         flight("ovd-fra-22", "OVD", "FRA", "2026-12-22", "Air Europa", "", "1 stop via Madrid. Not in trip totals — see Ella’s flight home.", 1, False, True, 116),
-        flight("pmi-ovd-15", "PMI", "OVD", "2026-12-15", "", "", "pair for 2 adults, 1 stop", 2, False, True, 106),
-        flight("pmi-ovd-16", "PMI", "OVD", "2026-12-16", "", "", "pair for 2 adults, 1 stop", 2, False, True, 106),
-        flight("lpa-ovd-17", "LPA", "OVD", "2026-12-17", "", "", "pair for 2 adults, 1 stop", 2, False, True, 210),
-        flight("lpa-ovd-18", "LPA", "OVD", "2026-12-18", "", "", "pair for 2 adults, 1 stop", 2, False, True, 316),
-        flight("agp-ovd-19", "AGP", "OVD", "2026-12-19", "", "", "pair for 2 adults, 1 stop", 2, False, True, 154),
+        flight("pmi-ovd-15", "PMI", "OVD", "2026-12-15", "Vueling, Iberia", "06:30", "pair for 2 adults, nonstop, 06:30–08:15, 1h 45m", 2, True, True, 36, arrive="08:15", duration="1h 45m"),
+        flight("pmi-ovd-16", "PMI", "OVD", "2026-12-16", "Vueling, Iberia", "06:30", "pair for 2 adults, nonstop, 06:30–08:15, 1h 45m", 2, True, True, 36, arrive="08:15", duration="1h 45m"),
+        flight("lpa-ovd-17", "LPA", "OVD", "2026-12-17", "Air Europa", "06:05", "pair for 2 adults, 1 stop via Madrid, 06:05–20:15, 13h 10m", 2, False, True, 115, arrive="20:15", duration="13h 10m"),
+        flight("lpa-ovd-18", "LPA", "OVD", "2026-12-18", "Air Europa", "06:05", "pair for 2 adults, 1 stop via Madrid, 06:05–20:15, 13h 10m", 2, False, True, 191, arrive="20:15", duration="13h 10m"),
+        flight("agp-ovd-19", "AGP", "OVD", "2026-12-19", "Air Europa", "06:20", "pair for 2 adults, 1 stop via Madrid, 06:20–09:45, 3h 25m", 2, False, True, 133, arrive="09:45", duration="3h 25m"),
         flight("agp-ovd-20", "AGP", "OVD", "2026-12-20", "", "", "pair for 2 adults, 1 stop", 2, False, True, 133),
-        flight("bcn-ovd-16", "BCN", "OVD", "2026-12-16", "", "", "pair for 2 adults, 2 stops — possible self-transfer", 2, False, True, 174),
-        flight("bcn-ovd-17", "BCN", "OVD", "2026-12-17", "", "", "pair for 2 adults, 1 stop", 2, False, True, 390),
+        flight("bcn-ovd-16", "BCN", "OVD", "2026-12-16", "Vueling, Iberia", "07:20", "pair for 2 adults, nonstop, 07:20–08:55, 1h 35m", 2, True, True, 88, arrive="08:55", duration="1h 35m"),
+        flight("bcn-ovd-17", "BCN", "OVD", "2026-12-17", "Vueling, Iberia", "07:20", "pair for 2 adults, nonstop, 07:20–08:55, 1h 35m", 2, True, True, 144, arrive="08:55", duration="1h 35m"),
         {
             "id": "haj-agp-18-usd",
             "origin": "HAJ",
@@ -510,13 +518,13 @@ def build_prices() -> dict:
         hotel("agp-priv-2", "Málaga private-room search", "malaga", 2, "EUR", None, "2026-12-18", "2026-12-20", "Málaga", None, None, True, 1),
         hotel("bcn-priv-1", "Barcelona private-room search", "barcelona", 1, "EUR", None, "2026-12-15", "2026-12-16", "Barcelona", None, None, True, 0),
         hotel("bcn-priv-2", "Barcelona private-room search", "barcelona", 2, "EUR", None, "2026-12-15", "2026-12-17", "Barcelona", None, None, True, 1),
-        airbnb("ab-palma-bano-1", "Habitacion con bano privado, Palma", "palma", 1, 63, 63, "2026-12-14", "2026-12-15", "private room, private bath", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
+        airbnb("ab-palma-bano-1", "Habitacion con bano privado, Palma", "palma", 1, 59, 59, "2026-12-14", "2026-12-15", "private room, private bath", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
         airbnb("ab-palma-bonany-1", "Hostal Bonany, double A/C + pool", "palma", 1, 76, 76, "2026-12-14", "2026-12-15", "private room", "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-15&adults=2&currency=EUR", 4.73, 236, PHOTO_PALMA_BONANY, 1),
-        airbnb("ab-palma-bano-2", "Habitacion con bano privado", "palma", 2, 125, 62.50, "2026-12-14", "2026-12-16", "private room", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
+        airbnb("ab-palma-bano-2", "Habitacion con bano privado", "palma", 2, 117, 58.50, "2026-12-14", "2026-12-16", "private room", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
         airbnb("ab-palma-bonany-2", "Hostal Bonany", "palma", 2, 151, 75.50, "2026-12-14", "2026-12-16", "private room", "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-16&adults=2&currency=EUR", 4.73, 236, PHOTO_PALMA_BONANY, 1),
-        airbnb("ab-palma-bano-3", "Habitacion con bano privado", "palma", 3, 187, 62.33, "2026-12-14", "2026-12-17", "private room", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
+        airbnb("ab-palma-bano-3", "Habitacion con bano privado", "palma", 3, 176, 58.67, "2026-12-14", "2026-12-17", "private room", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
         airbnb("ab-palma-bonany-3", "Hostal Bonany", "palma", 3, 226, 75.33, "2026-12-14", "2026-12-17", "private room", "https://www.airbnb.com/rooms/567818665423745418?check_in=2026-12-14&check_out=2026-12-17&adults=2&currency=EUR", 4.73, 236, PHOTO_PALMA_BONANY, 1),
-        airbnb("ab-palma-bano-7", "Habitacion con bano privado", "palma", 7, 435, 62.14, "2026-12-14", "2026-12-21", "private room", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
+        airbnb("ab-palma-bano-7", "Habitacion con bano privado", "palma", 7, 410, 58.57, "2026-12-14", "2026-12-21", "private room", "https://www.airbnb.com/rooms/1660088592494940730?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR", 4.5, 22, PHOTO_PALMA_BANO, 0),
         airbnb("ab-palma-ensuite-7", "Habitacion en suite con balcon privado", "palma", 7, 589, 84.14, "2026-12-14", "2026-12-21", "private ensuite, double bed", "https://www.airbnb.com/rooms/1189630582178272314?check_in=2026-12-14&check_out=2026-12-21&adults=2&currency=EUR", 4.85, 53, PHOTO_PALMA_ENSUITE, 2),
         airbnb("ab-lp-isleta-1", "La Casa De La Isleta, private bath", "laspalmas", 1, 48, 48, "2026-12-16", "2026-12-17", "private room, queen", "https://www.airbnb.com/rooms/49125025?check_in=2026-12-16&check_out=2026-12-17&adults=2&currency=EUR", 4.73, 203, PHOTO_LP_ISLETA, 0),
         airbnb("ab-lp-vegueta-1", "Vacacional Vegueta II", "laspalmas", 1, 75, 75, "2026-12-16", "2026-12-17", "entire apt", "https://www.airbnb.com/rooms/26576543?check_in=2026-12-16&check_out=2026-12-17&adults=2&currency=EUR", 4.48, 29, PHOTO_LP_VEGUETA, 1),
@@ -534,7 +542,7 @@ def build_prices() -> dict:
         airbnb("ab-masp-oasis-7", "Green Oasis Bungalow 1207", "maspalomas", 7, 592, 84.57, "2026-12-15", "2026-12-22", "entire bungalow", "https://www.airbnb.com/rooms/735909769349166270?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR", 4.9, 10, PHOTO_MASP_OASIS, 0),
         airbnb("ab-agp-hab-1", "Habitacion privada 1", "malaga", 1, 39, 39, "2026-12-18", "2026-12-19", "private room", "https://www.airbnb.com/rooms/7599041?check_in=2026-12-18&check_out=2026-12-19&adults=2&currency=EUR", 4.81, 671, PHOTO_AGP_HAB, 0),
         airbnb("ab-agp-rosa-1", "Apartamentos de Rosa Mari", "malaga", 1, 68, 68, "2026-12-18", "2026-12-19", "entire apt", "https://www.airbnb.com/rooms/1209985226467887125?check_in=2026-12-18&check_out=2026-12-19&adults=2&currency=EUR", 4.89, 1330, PHOTO_AGP_ROSA, 1),
-        airbnb("ab-agp-suenos-2", "Despierta con tus suenos, near centre", "malaga", 2, 116, 58, "2026-12-18", "2026-12-20", "private room", "https://www.airbnb.com/rooms/29984735?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR", 4.8, 92, None, 0),
+        airbnb("ab-agp-suenos-2", "Despierta con tus suenos, near centre", "malaga", 2, 112, 56, "2026-12-18", "2026-12-20", "private room", "https://www.airbnb.com/rooms/29984735?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR", 4.8, 92, None, 0),
         airbnb("ab-agp-druida-2", "La Casa del Druida, Apt hierbabuena", "malaga", 2, 132, 66, "2026-12-18", "2026-12-20", "entire apt", "https://www.airbnb.com/rooms/27363966?check_in=2026-12-18&check_out=2026-12-20&adults=2&currency=EUR", 4.6, 872, None, 1),
         airbnb("ab-agp-rosa-3", "Apartamentos de Rosa Mari", "malaga", 3, 149, 49.67, "2026-12-15", "2026-12-18", "entire apt", "https://www.airbnb.com/rooms/1209985226467887125?check_in=2026-12-15&check_out=2026-12-18&adults=2&currency=EUR", 4.89, 1330, PHOTO_AGP_ROSA, 1),
         airbnb("ab-agp-rosa-7", "Apartamentos de Rosa Mari", "malaga", 7, 431, 61.57, "2026-12-18", "2026-12-25", "entire apt", "https://www.airbnb.com/rooms/1691362913350835895?check_in=2026-12-18&check_out=2026-12-25&adults=2&currency=EUR", 4.89, 1330, PHOTO_AGP_ROSA, 1),
@@ -547,6 +555,17 @@ def build_prices() -> dict:
         airbnb("ab-bcn-terraza-7", "Precioso apartamento, terraza doble, A/C", "barcelona", 7, 480, 68.57, "2026-12-15", "2026-12-22", "entire apt", "https://www.airbnb.com/rooms/44060722?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR", 4.44, 166, None, 1),
         airbnb("ab-bcn-fabrica-7", "La Fabrica &Co, studio double bed", "barcelona", 7, 550, 78.57, "2026-12-15", "2026-12-22", "entire studio", "https://www.airbnb.com/rooms/1157033654900525674?check_in=2026-12-15&check_out=2026-12-22&adults=2&currency=EUR", 4.85, 205, None, 2),
     ]
+
+    not_found_28 = {
+        "ab-lp-rose-2", "ab-lp-brocante-2", "ab-lp-canteras-3", "ab-lp-loft-7", "ab-lp-mindfit-7",
+        "ab-masp-camara-3", "ab-masp-oasis-7",
+        "ab-bcn-fifteen-2", "ab-bcn-sagrada-3", "ab-bcn-fabrica-7",
+    }
+    for h in hotels:
+        if h.get("source") == "airbnb" and h["id"] in not_found_28:
+            h["checked"] = "2026-11-27"
+            h["recheck_live"] = True
+            h["unverified"] = "unverified 28 Nov"
 
     airbnb_for_plan = {
         "palma-1": ["ab-palma-bano-1", "ab-palma-bonany-1"],
@@ -700,10 +719,10 @@ def build_prices() -> dict:
         pick_stay(plan, hlookup, airbnb_for_plan)
 
     data = {
-        "snapshot": "2026-11-27",
+        "snapshot": "2026-11-28",
         "hotels_checked": "2026-11-22",
-        "rooms_checked": "2026-11-27",
-        "home_flights_checked": "2026-11-27",
+        "rooms_checked": "2026-11-28",
+        "home_flights_checked": "2026-11-28",
         "usd_to_eur": USD_TO_EUR,
         "ella_home": ella_home_data.payload(gf),
         "flights": flights,
@@ -716,12 +735,13 @@ def build_prices() -> dict:
         ],
         "usd_partials": {"alameda": 651, "malabar": 706},
         "notes": {
-            "itinerary": "Ella HAJ→city; Ali OVD→city; private stay for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); days in Asturias at home (no hotel); Ella flies home whenever she chooses. Trip totals do not include her flight home. Totals use the cheapest verified private option (Airbnb 27 Nov vs Booking 22 Nov). Never a shared room.",
-            "ovd_fra": "Home flights are listed separately under ella_home. No December nonstop from Oviedo. OVD→FRA 17 Dec €91, 18–20 Dec €116, 21 Dec €71 Iberia, 22 Dec €116, 23–31 Dec €62. Rechecked 27 Nov 2026.",
+            "itinerary": "Ella HAJ→city; Ali OVD→city; private stay for all N city nights (1, 2, 3 or 7); both city→OVD (2 adults, stored as a pair); days in Asturias at home (no hotel); Ella flies home whenever she chooses. Trip totals do not include her flight home. Totals use the cheapest verified private option (Airbnb 28 Nov vs Booking 22 Nov). Never a shared room.",
+            "ovd_fra": "Home flights are listed separately under ella_home. No December nonstop from Oviedo. OVD→FRA 17 Dec 91, 18-19 Dec 141, 20 Dec 116, 21 Dec 71 Iberia, 22 Dec 116, 23-31 Dec 62. Rechecked 28 Nov 2026.",
             "needs_check": [
-                "Maspalomas 1n 16–17 Dec: no Airbnb in town within €35–85. Booking search and Google Hotels Axel Beach ~€161. Same LPA flights as Las Palmas 1n.",
-                "Booking.com hotel euro prices: last checked 22 Nov 2026, could not re-verify 27 Nov — recheck live.",
+                "Maspalomas 1n 16–17 Dec: no Airbnb in town within €35–85. Booking search and Google Hotels Axel Beach ~€161. Same LPA flights as Las Palmas 1n. City flights only: 249.",
+                "Booking.com hotel euro prices: last checked 22 Nov 2026, could not re-verify 28 Nov — recheck live.",
                 "ALSA buses Gijón→BIO/SDR for Ella’s home flight: mid-December tickets not live-verified.",
+                "Airbnb listings not found in the 28 Nov search results keep their 27 Nov price - recheck live.",
             ],
         },
     }
@@ -825,7 +845,9 @@ def stay_block(plan, fmap, hmap, dest_id, extra_html=""):
         alt_price = euro(ah["price"]) if ah["currency"] == "EUR" else f"${ah['price']}"
         alt_tot = display_plan({"total_complete": plan.get("total_complete") and plan.get("alt_total_eur") is not None, "total_eur": plan.get("alt_total_eur"), "subtotal_eur": plan.get("alt_subtotal_eur")})
         if ah.get("source") == "airbnb":
-            src_note = "Airbnb, fees included, 27 November"
+            src_note = f"Airbnb, fees included, {pretty(ah.get('checked') or '2026-11-28')}"
+            if ah.get("recheck_live"):
+                src_note += " — not found 28 November, recheck live"
         elif ah.get("recheck_live"):
             src_note = "Booking.com, 22 November — recheck live"
         else:
@@ -841,9 +863,13 @@ def stay_block(plan, fmap, hmap, dest_id, extra_html=""):
     if hotel.get("source") == "airbnb":
         hotel_price_html = f'<span data-bind="h:{hotel["id"]}">{euro(hotel["price"])}</span>'
         hotel_who = escape(hotel["name"])
+        checked_bit = (
+            f"checked {escape(pretty_full(hotel.get('checked') or '2026-11-28'))}"
+            + (" — not found in the 28 November search, recheck live" if hotel.get("recheck_live") else "")
+        )
         stay_copy = (
             f"Private stay for two at {hotel_who} ({escape(hotel['room_type'])}). "
-            f"Airbnb, fees included, checked <span data-bind=\"rooms_checked\">27 November 2026</span>. "
+            f"Airbnb, fees included, {checked_bit}. "
             f"Check-in on the day you arrive, check-out on the day you fly together to Asturias. "
             f"<strong>{hotel_price_html}</strong> for {hotel_nights_label} (2 adults). "
             f"The trip total uses this price. Booking hotel figures below were last checked "
@@ -912,7 +938,7 @@ def stay_block(plan, fmap, hmap, dest_id, extra_html=""):
     if airbnb_cards:
         airbnb_block = f"""
         <h4 class="hotels-title">Airbnb for these dates</h4>
-        <p class="fine">Private rooms and whole places only — never a shared room. Stay totals from airbnb.es on <span data-bind="rooms_checked">27 November 2026</span>, fees included, 2 adults.</p>
+        <p class="fine">Private rooms and whole places only — never a shared room. Stay totals from airbnb.es on <span data-bind="rooms_checked">28 November 2026</span>, fees included, 2 adults. Listings not found today keep the 27 November price — recheck live.</p>
         <div class="hotel-grid">
           {''.join(airbnb_cards)}
         </div>"""
@@ -997,7 +1023,8 @@ def hotel_card(h, used_in=""):
         night_bit = f'{euro_night(h.get("per_night"))} per night'
         approx = (
             f'<p class="hotel-approx">EUR stay total, Airbnb, fees included, 2 adults. '
-            f"{night_bit}. Checked 27 November 2026.</p>"
+            f"{night_bit}. Checked {pretty_full(h.get('checked') or '2026-11-28')}"
+            f"{' — not found 28 November, recheck live' if h.get('recheck_live') else ''}.</p>"
         )
         see = h["airbnb_url"]
         see_label = "Book on Airbnb"
@@ -1103,7 +1130,7 @@ DESTS = [
         "extra": {
             "lp-1": '<p class="fine">Uses Ella’s <span data-bind="f:haj-lpa-16">€72</span> nonstop on 16 December. The 17 December flight home for two is dearer than the 19 December three-night return. Hotels for one night (Google Hotels): <a href="https://www.google.com/travel/hotels/entity/ChkI55fevZql9bNDGg0vZy8xMXA5bnowM2M1EAE?checkin=2026-12-16&amp;checkout=2026-12-17&amp;adults=2&amp;curr=EUR" target="_blank" rel="noopener noreferrer">Alma Canaria Apartments &amp; Rooms</a> about €45. Display only — not in the trip total.</p>',
             "lp-2": '<p class="fine">Same cheap 16 December inbounds. The 18 December flight home for two is expensive.</p>',
-            "lp-7": '<p class="fine">Arriving a day later, 16–22 December, keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (city flights <span data-bind="b:gc-16-22">€241</span>). That is not the headline seven-night total.</p>',
+            "lp-7": '<p class="fine">The 15 December Hannover hop no longer shows the TUI fly nonstop at €71 — cheapest on Google Flights is now Vueling/Iberia, 1 stop via Barcelona, <span data-bind="f:haj-lpa-15">€130</span> (nonstop gone/unverified). Arriving a day later, 16–22 December, keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> Eurowings nonstop (city flights <span data-bind="b:gc-16-22">€225</span>). That is not the headline seven-night total.</p>',
         },
     },
     {
@@ -1126,8 +1153,8 @@ DESTS = [
         "extra": {
             "masp-1": '<p class="fine">Same Gran Canaria flights as Las Palmas — airport LPA, Ella’s 16 December nonstop. No Airbnb in town within €35–85 — <a href="https://www.airbnb.es/s/Maspalomas--Spain/homes?checkin=2026-12-16&amp;checkout=2026-12-17&amp;adults=2&amp;price_min=35&amp;price_max=85&amp;currency=EUR" target="_blank" rel="noopener noreferrer">check live on Airbnb</a>. Cheapest hotel that night on Google: Axel Beach Maspalomas about €161. Display only — not in the trip total.</p>',
             "masp-2": '<p class="fine">Same 16 December inbounds. The 18 December LPA→OVD pair is expensive.</p>',
-            "masp-3": '<p class="fine">Ali’s inbound has a dearer Binter nonstop at <span data-bind="f:ovd-lpa-16-binter">€186</span>; the total uses Air Europa via Madrid at <span data-bind="f:ovd-lpa-16">€66</span>.</p>',
-            "masp-7": '<p class="fine">Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> nonstop (city flights <span data-bind="b:gc-16-22">€241</span>). That is not the headline seven-night total.</p>',
+            "masp-3": '<p class="fine">Ali’s inbound has a dearer Binter nonstop at <span data-bind="f:ovd-lpa-16-binter">€186</span>; the total uses Air Europa via Madrid at <span data-bind="f:ovd-lpa-16">€62</span>.</p>',
+            "masp-7": '<p class="fine">The 15 December Hannover hop no longer shows the TUI fly nonstop at €71 — cheapest on Google Flights is now Vueling/Iberia, 1 stop via Barcelona, <span data-bind="f:haj-lpa-15">€130</span> (nonstop gone/unverified). Arriving 16–22 December keeps Ella on the <span data-bind="f:haj-lpa-16">€72</span> Eurowings nonstop (city flights <span data-bind="b:gc-16-22">€225</span>). That is not the headline seven-night total.</p>',
         },
     },
     {
@@ -1175,8 +1202,8 @@ DESTS = [
             "house-bcn-7": "Cheapest verified private stay for a week — used in the total. Booking.com, 22 November — recheck live.",
         },
         "extra": {
-            "bcn-1": '<p class="fine">Both arrive 15 December on cheap Vueling. The 16 December flight home has two stops — possible self-transfer, separate tickets. Hotels for one night (Google Hotels): cheapest about €92 (Negresco Princess / Acta Voraport). Display only — not in the trip total.</p>',
-            "bcn-2": '<p class="fine">Same 15 December inbounds. The 17 December flight home for two is expensive.</p>',
+            "bcn-1": '<p class="fine">Both arrive 15 December on Vueling. The 16 December flight home is now a Vueling/Iberia nonstop. Hotels for one night (Google Hotels): cheapest about €92 (Negresco Princess / Acta Voraport). Display only — not in the trip total.</p>',
+            "bcn-2": '<p class="fine">Same 15 December inbounds. The 17 December flight home for two is a Vueling/Iberia nonstop.</p>',
         },
     },
 ]
@@ -1338,7 +1365,7 @@ def home_section(data: dict) -> str:
         <div>
           <p class="kicker">Whenever you like</p>
           <h2>Ella’s flight home</h2>
-          <p>Stay in Asturias as long as you want — Ali is happy if you stay longer. This is separate from the city trip totals, so you can pick the day. Window 17 December 2026 – 4 January 2027. Home is near Hannover, so these options land at Hannover, Hamburg, Bremen, Düsseldorf or Cologne — Frankfurt is the backup. Amsterdam is too far. Prices checked <span data-bind="home_flights_checked">27 November 2026</span>, one adult, economy, one way, euros including taxes as Google Flights showed them. Nothing is booked.</p>
+          <p>Stay in Asturias as long as you want — Ali is happy if you stay longer. This is separate from the city trip totals, so you can pick the day. Window 17 December 2026 – 4 January 2027. Home is near Hannover, so these options land at Hannover, Hamburg, Bremen, Düsseldorf or Cologne — Frankfurt is the backup. Amsterdam is too far. Prices checked <span data-bind="home_flights_checked">28 November 2026</span>, one adult, economy, one way, euros including taxes as Google Flights showed them. Nothing is booked.</p>
           <p>There is <strong>no December nonstop from Oviedo</strong> to Hannover, Frankfurt, Hamburg or Düsseldorf. Lufthansa’s Oviedo–Frankfurt nonstop starts in March 2027. The one confirmed nonstop is Eurowings Bilbao → Düsseldorf.</p>
         </div>
       </header>
@@ -1372,12 +1399,12 @@ def home_section(data: dict) -> str:
         </table>
       </div>
       <h3 class="hotels-title">Pick a date: Oviedo → Frankfurt</h3>
-      <p class="fine">Confirmed opened fares, 27 November 2026. 21 December is Iberia; the rest are Air Europa, one stop via Madrid.</p>
+      <p class="fine">Confirmed opened fares, 28 November 2026. 21 December is Iberia; the rest are Air Europa, one stop via Madrid.</p>
       <div class="date-pills">
         {date_pills(home["calendar"]["ovd_fra"], "homecal")}
       </div>
       <h3 class="hotels-title">Pick a date: Oviedo → Hannover</h3>
-      <p class="fine">Confirmed opened fares that land at home. Other dates we opened were €196–300, or 34 hours on 24 December — skip those.</p>
+      <p class="fine">Confirmed opened fares that land at home. Other dates we opened cost more (17 Dec €467, 19 Dec €300, 24 Dec €180, 26 Dec €363). Skip the 34-hour 24 December itinerary.</p>
       <div class="date-pills">
         {date_pills(home["calendar"]["ovd_haj"], "homecal")}
       </div>
@@ -1444,7 +1471,8 @@ def build_html(data: dict) -> str:
                     return f"Cheapest verified private stay for {nights} {word} — used in the total."
                 if plan.get("alt_hotel") == hid:
                     src = (
-                        "Airbnb, 27 November"
+                        f"Airbnb, {pretty(hmap[hid].get('checked') or '2026-11-28')}"
+                        + (" — recheck live" if hmap[hid].get("recheck_live") else "")
                         if hmap[hid].get("source") == "airbnb"
                         else "Booking.com, 22 November — recheck live"
                     )
@@ -1547,7 +1575,7 @@ def build_html(data: dict) -> str:
     <div class="container">
       <p class="kicker">For Ella</p>
       <h2>How this trip actually works</h2>
-      <p>You fly from Hannover to the city. Ali flies from Oviedo. Trip length is flexible: one night, two, three, or a week. You share a <strong>private stay for two</strong> for every night in the city — check-in on the day you arrive, check-out on the day you fly together to Asturias. Then days in Asturias at home, no hotel — stay as long as you like. Your flight home is separate, so you can pick the day. Totals use the cheapest verified private option: Airbnb checked <span data-bind="rooms_checked">27 November 2026</span> versus Booking hotels checked <span data-bind="hotels_checked">22 November 2026</span> (recheck Booking live — we could not re-verify those today). Never a shared room.</p>
+      <p>You fly from Hannover to the city. Ali flies from Oviedo. Trip length is flexible: one night, two, three, or a week. You share a <strong>private stay for two</strong> for every night in the city — check-in on the day you arrive, check-out on the day you fly together to Asturias. Then days in Asturias at home, no hotel — stay as long as you like. Your flight home is separate, so you can pick the day. Totals use the cheapest verified private option: Airbnb checked <span data-bind="rooms_checked">28 November 2026</span> versus Booking hotels checked <span data-bind="hotels_checked">22 November 2026</span> (recheck Booking live — we could not re-verify those today). Never a shared room.</p>
       <ol class="shape">
         <li><strong>You</strong> — Hannover (HAJ) → the city.</li>
         <li><strong>Ali</strong> — Oviedo / Asturias (OVD) → the city.</li>
@@ -1556,7 +1584,7 @@ def build_html(data: dict) -> str:
         <li><strong>Days in Asturias</strong> — at home, no hotel. Stay longer if you want.</li>
         <li><strong>You</strong> — fly home whenever you choose. See <a href="#ella-home">Ella’s flight home</a>. Not in the trip totals.</li>
       </ol>
-      <p class="aside">This page does not process payment. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>. Booking hotels last checked <span data-bind="hotels_checked">22 November 2026</span> — recheck live. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
+      <p class="aside">This page does not process payment. Flight snapshot <span data-bind="snapshot">28 November 2026</span>. Rooms checked <span data-bind="rooms_checked">28 November 2026</span>. Booking hotels last checked <span data-bind="hotels_checked">22 November 2026</span> — recheck live. Flights are economy, no checked bags. Recheck before you pay. Food, buses, transfers, tickets, bags and insurance are not included. Self-transfers are separate tickets.</p>
     </div>
   </section>
 
@@ -1593,7 +1621,7 @@ def build_html(data: dict) -> str:
   <footer class="site-foot">
     <div class="container">
       <p>A private page for two people. Ella’s first name is on the buttons because Ali asked. No last names. Photographs are Wikimedia Commons files — credits in <a href="./photos/CREDITS.md">photos/CREDITS.md</a>.</p>
-      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">27 November 2026</span>. Rooms checked <span data-bind="rooms_checked">27 November 2026</span>. Home flights checked <span data-bind="home_flights_checked">27 November 2026</span>.</p>
+      <p>Live at <a href="https://aliattia10.github.io/january-island-choice/">aliattia10.github.io/january-island-choice</a>. Flight snapshot <span data-bind="snapshot">28 November 2026</span>. Rooms checked <span data-bind="rooms_checked">28 November 2026</span>. Home flights checked <span data-bind="home_flights_checked">28 November 2026</span>.</p>
     </div>
   </footer>
   <script src="./app.js" defer></script>

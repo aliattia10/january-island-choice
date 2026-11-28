@@ -23,23 +23,23 @@ There is no December nonstop from Oviedo. Lufthansa’s direct starts in March 2
 
 Prices come from [`data/prices.json`](data/prices.json). Flight fares can be refreshed with [`scripts/update_prices.py`](scripts/update_prices.py) (`fast-flights`) and by the daily GitHub Action at 06:30 UTC, which stops after 14 December 2026. That script also refreshes `ella_home` options and the Oviedo date lists. Rebuild the page with [`scripts/_rebuild.py`](scripts/_rebuild.py).
 
-Flight snapshot is 27 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults.
+Flight snapshot is 28 November 2026. Economy, no checked bags. Inbound is one adult. The dest→OVD figure in the totals is for two adults.
 
-Rooms were checked 27 November 2026 on Airbnb (airbnb.es, EUR stay totals for 2 adults, fees included). Booking.com hotel euro prices were last checked 22 November 2026 and could not be re-verified on 27 November — the page labels them **recheck live**, but they still compete with Airbnb when choosing the cheapest stay. Nicer 3–4★ rooms from the Booking check came back in USD and stay out of euro totals. 1 USD ≈ 0.911 EUR (EUR/USD ~1.0975 on 27 November) is only for those USD cards.
+Rooms were checked 28 November 2026 on Airbnb (airbnb.es, EUR stay totals for 2 adults, fees included). Listings not found in that search keep the 27 November price and are labelled recheck live. Booking.com hotel euro prices were last checked 22 November 2026 and could not be re-verified on 28 November — the page labels them **recheck live**, but they still compete with Airbnb when choosing the cheapest stay. Nicer 3–4★ rooms from the Booking check came back in USD and stay out of euro totals. 1 USD ≈ 0.911 EUR (EUR/USD ~1.0975 on 27 November) is only for those USD cards.
 
 Google Hotels one-night lines are display only, not in the trip total.
 
-Home flights (`ella_home`) were checked 27 November 2026 on Google Flights (`home_flights_checked`).
+Home flights (`ella_home`) were checked 28 November 2026 on Google Flights (`home_flights_checked`). Near Hannover only: HAJ, HAM, BRE, DUS, CGN, plus FRA as a backup.
 
-**Cheapest complete trip** (city flights + room, no home flight): 1 night Palma €255. **Best value** per city is the cheapest full city stay (room + all three city flights).
+**Cheapest complete trip** (city flights + room, no home flight): 1 night Palma €194. **Best value** per city is the cheapest full city stay (room + all three city flights).
 
 | City | 1 night | 2 nights | 3 nights | 7 nights |
 | --- | --- | --- | --- | --- |
-| Palma | €255 complete (Airbnb €63) | €317 complete (Airbnb €125) | €341 complete (Airbnb €187) | €615 complete (Airbnb €435) |
-| Las Palmas | €396 complete (Airbnb €48) | €564 complete (Airbnb €110) | €370 complete (Booking Isleta €155) | €686 complete (Airbnb €446) |
-| Maspalomas | flights €348 + room check live | €602 complete (Airbnb €148) | €405 complete (Airbnb €190) | €763 complete (Airbnb €523) |
-| Málaga | €336 complete (Airbnb €39) | €392 complete (Airbnb €116) | €415 complete (Booking NV €115) | €544 complete (Booking NV €324) |
-| Barcelona | €314 complete (Airbnb €45) | €575 complete (Airbnb €90) | €374 complete (Airbnb €135) | €670 complete (Booking House €410) |
+| Palma | €194 complete (Airbnb €59) | €252 complete (Airbnb €117) | €343 complete (Airbnb €176) | €603 complete (Airbnb €410) |
+| Las Palmas | €297 complete (Airbnb €48) | €435 complete (Airbnb €110) | €366 complete (Booking Isleta €155) | €729 complete (Airbnb €446) |
+| Maspalomas | flights €249 + room check live | €473 complete (Airbnb €148) | €401 complete (Airbnb €190) | €806 complete (Airbnb €523) |
+| Málaga | €330 complete (Airbnb €39) | €403 complete (Airbnb €112) | €429 complete (Booking NV €115) | €559 complete (Booking NV €324) |
+| Barcelona | €239 complete (Airbnb €45) | €340 complete (Airbnb €90) | €388 complete (Airbnb €135) | €663 complete (Booking House €410) |
 
 Maspalomas 1 night had no Airbnb in town within €35–85 — check live. All other 1n/2n stays now have a stored Airbnb price.
 
@@ -47,6 +47,7 @@ Still needs a live check:
 
 - Maspalomas 1n 16–17 December private stay
 - Booking.com hotel euro prices (22 November snapshot)
+- Airbnb listings not found on 28 November (keep 27 November price)
 - ALSA buses Gijón → Bilbao / Santander for Ella’s home flight (mid-December tickets not live-verified)
 
 All 1n/2n **returns to Asturias are verified**. Do not fetch those again unless they look stale.
